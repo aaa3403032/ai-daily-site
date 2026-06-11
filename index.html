@@ -72,7 +72,7 @@
     <div class="search-box">
       <input id="search" type="search" placeholder="检索全部摘要,如:MCP、支付、端侧…" autocomplete="off">
     </div>
-    <button class="ask-btn" title="阶段 2 接入智能问答,敬请期待">提问 · 即将上线</button>
+    <button class="ask-btn" id="askBtn" title="向 AI 情报助手提问">提问</button>
   </div>
 </header>
 
@@ -199,6 +199,29 @@ async function init() {
   }
 }
 init();
+</script>
+
+<!-- 阶段2:Coze 智能问答(令牌仅含对话权限,2026-07-12 过期需更换) -->
+<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+<script>
+(function () {
+  var COZE_TOKEN = 'pat_Po9wVMao5MAag06K1CKfgMrYRh09f16dMmcbT0S2ECy9rcT4TbYRLjlCcGPusleJ';
+  var client = new CozeWebSDK.WebChatClient({
+    config: { bot_id: '7650151806630313984' },
+    componentProps: { title: 'AI情报助手' },
+    auth: {
+      type: 'token',
+      token: COZE_TOKEN,
+      onRefreshToken: function () { return COZE_TOKEN; }
+    }
+  });
+  var askBtn = document.getElementById('askBtn');
+  if (askBtn) {
+    askBtn.addEventListener('click', function () {
+      try { client.showChatBot(); } catch (e) { /* 悬浮球兜底 */ }
+    });
+  }
+})();
 </script>
 </body>
 </html>
