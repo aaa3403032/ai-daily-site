@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>Chat SDK 测试</title></head>
+<body>
+<h3>Coze Chat SDK 匿名模式测试页</h3>
+<script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.19/libs/cn/index.js"></script>
+<script>
+  new CozeWebSDK.WebChatClient({
+    config: { bot_id: '7650151806630313984' },
+    componentProps: { title: 'AI情报助手' },
+    auth: { type: 'unauth' }
+  });
+</script>
+</body>
+</html>
