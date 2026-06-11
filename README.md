@@ -31,3 +31,7 @@ ai-daily-site/
 2. 上传本文件夹内全部内容(保持 `posts/` 子目录结构)
 3. 仓库 Settings → Pages → Branch 选 `main`、目录选 `/ (root)` → Save
 4. 1-2 分钟后访问 `https://<你的用户名>.github.io/ai-daily/`
+
+## 自动发布
+
+本站由 Cowork 定时任务 `daily-ai-news-digest` 每日 09:06 自动生成摘要并 push 上线,无需手动操作。
