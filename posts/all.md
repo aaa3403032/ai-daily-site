@@ -1,0 +1,40 @@
+# AI 每日情报站 — 全部摘要汇总
+
+
+---
+
+# AI / Agent 领域新闻摘要 — 2026-06-11
+
+## 今日要点
+
+**1. Anthropic 发布 Claude Fable 5:首个公开的"Mythos 级"模型(6月9日)**
+Anthropic 推出 Claude Fable 5,定位高于 Opus 的新档位("Mythos 级"指 Anthropic 内部能力最强的模型层级,此前只对受信任伙伴开放)。在软件工程、知识工作、科研等几乎所有基准上达到最强,任务越长越复杂优势越大;在网络安全、生物等高风险领域会自动回退到 Opus 4.8 作答。定价 $10/百万输入 tokens、$50/百万输出,是 Opus 4.8 的两倍。
+**PM 信号:** 模型市场出现"超旗舰"分层——顶级能力开始按风险分级开放、按倍数定价,选型时要把"能力档位 × 安全限制 × 成本"三个变量一起算。
+来源:[Anthropic 官方](https://www.anthropic.com/news/claude-fable-5-mythos-5)、[TechCrunch](https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/)、[CNBC](https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html)
+
+**2. Google 开源 DiffusionGemma:不逐字生成、快 4 倍(6月10日)**
+26B 参数 MoE 开源模型(推理只激活 3.8B),用"文本扩散"方式一次并行生成 256 个 token 的整块文本(类似图像生成里从噪点逐步还原画面),单张 H100 上超 1000 tokens/秒,比传统逐字生成快约 4 倍。Apache 2.0 许可,256K 上下文,但 Google 明确说质量低于自家 Gemma 4,适合行内补全、文档解析等"快比好重要"的场景。
+**PM 信号:** 速度型模型正在成为独立产品类目——不是所有功能都需要最聪明的模型,补全、解析类功能可以用快 4 倍、便宜得多的扩散模型做。
+来源:[Google 官方博客](https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/)、[The Decoder](https://the-decoder.com/googles-new-open-model-diffusiongemma-generates-text-from-noise-instead-of-word-by-word/)
+
+**3. 企业 Agent 平台战:"治理"成为决胜点**
+2026 年 6 月的企业自动化市场已演变成 RPA 厂商、Copilot 生态、工作流编排器三方争夺 Agent 控制权的平台战,微软借 Windows Copilot Runtime 把"信任与治理"直接嵌进操作系统。同时微软研究院 5 月论文显示:只有 32% 的知识工作者会主动使用 Agent,其余是被动响应或干脆忽略。
+**PM 信号:** Agent 产品的瓶颈已从"能不能做到"转向"用户敢不敢用、会不会主动用"——采用率设计(信任、可控感)比能力堆叠更值得投入。
+来源:[Windows News](https://windowsnews.ai/article/2026-enterprise-ai-automation-the-agent-platform-war-behind-rpa-copilots-governance.424066)、[AI Agents News](https://blog.mean.ceo/ai-agents-news-june-2026/)
+
+**4. Agent 创业融资分化:仅 11-14% 企业试点能规模化**
+独立数据显示企业 Agent 试点只有 11%-14% 能走到规模化落地,营收现实正迫使部分创业公司折价融资;风投资金高度集中流向少数核心基础设施平台,功能单薄的"套壳"创业公司被挤出。
+**PM 信号:** "做 Agent 功能"和"做 Agent 基础设施"是两条完全不同的生死曲线——评估合作方或竞品时,先看它在哪条曲线上。
+来源:[AI Agent Funding 分析](https://productleadersdayindia.org/blogs/multi-agent-orchestration-news/ai-agent-startup-funding-news.html)
+
+**5. AI 资本市场:SpaceX 今日 IPO 定价,Anthropic 已秘密递交上市申请**
+SpaceX 定于 6月11日 IPO 定价,目标估值 1.75 万亿美元以上;Anthropic 已于 6月1日 秘密递交 IPO 申请,OpenAI 也在推进。SpaceX 定价结果被视为整个 AI IPO 潮的投资者风向标。
+**PM 信号:** 头部 AI 公司从"融资叙事"进入"上市叙事",意味着收入、毛利、留存这些传统指标会重新主导行业话语——对下游产品是好事,供应商定价会更透明。
+来源:[WaveSpeed 6月发布全景](https://wavespeed.ai/blog/posts/june-2026-ai-launch-wave/)
+
+## 趋势一句话
+
+模型层在向两极分化——上有按风险分级、双倍定价的"超旗舰"(Fable 5),下有快 4 倍的速度型架构(DiffusionGemma);而企业侧的真瓶颈已是治理与采用率,不是模型能力。
+
+---
+
