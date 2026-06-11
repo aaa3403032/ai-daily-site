@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日情报站</title>
+<meta name="description" content="AI / Agent 领域每日新闻摘要,由 Agent 自动生成">
+<style>
+  :root { color-scheme: light; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #faf9f7; color: #1f1f1f;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+  header { background: #fff; border-bottom: 1px solid #e8e5e0; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; gap: 16px; flex-wrap: wrap; }
+  h1.site { font-size: 20px; font-weight: 800; letter-spacing: .01em; }
+  h1.site span { color: #b05730; }
+  .search-box { flex: 1; min-width: 220px; max-width: 380px; position: relative; }
+  .search-box input {
+    width: 100%; padding: 9px 14px; border: 1px solid #ddd6cb; border-radius: 20px;
+    font-size: 13.5px; background: #faf9f7; outline: none; font-family: inherit;
+  }
+  .search-box input:focus { border-color: #b05730; }
+  .ask-btn {
+    padding: 8px 16px; border: 1px dashed #c9c2b6; border-radius: 20px; background: none;
+    font-size: 13px; color: #9a9a9a; cursor: not-allowed; font-family: inherit;
+  }
+  .layout { display: flex; gap: 32px; padding: 28px 0 60px; }
+  nav.dates { width: 150px; flex-shrink: 0; }
+  nav.dates .nav-title { font-size: 11px; color: #9a9a9a; margin-bottom: 10px; text-transform: uppercase; letter-spacing: .06em; }
+  nav.dates button {
+    display: block; width: 100%; text-align: left; padding: 7px 10px; margin-bottom: 2px;
+    border: none; border-radius: 6px; background: none; font-size: 13px; color: #555;
+    cursor: pointer; font-family: inherit;
+  }
+  nav.dates button:hover { background: #f0ede7; }
+  nav.dates button.active { background: #ede5d8; color: #1f1f1f; font-weight: 600; }
+  main { flex: 1; min-width: 0; }
+  article h1 { font-size: 19px; font-weight: 800; margin-bottom: 16px; line-height: 1.4; }
+  article h2 { font-size: 15px; font-weight: 700; margin: 24px 0 12px; }
+  article p { font-size: 14px; line-height: 1.85; margin-bottom: 12px; }
+  article .note {
+    font-size: 12.5px; color: #777; border-left: 3px solid #ddd6cb; padding: 6px 14px;
+    margin-bottom: 16px; background: #f4f1ec; border-radius: 0 6px 6px 0;
+  }
+  article a { color: #b05730; text-decoration: none; border-bottom: 1px solid #e3c4b3; }
+  article a:hover { border-bottom-color: #b05730; }
+  .result-card {
+    background: #fff; border: 1px solid #e8e5e0; border-radius: 10px;
+    padding: 16px 18px; margin-bottom: 12px; cursor: pointer;
+  }
+  .result-card:hover { border-color: #c9b8a8; }
+  .result-card .rc-date { font-size: 12px; color: #b05730; font-weight: 600; margin-bottom: 6px; }
+  .result-card .rc-snippet { font-size: 13px; color: #555; line-height: 1.7; }
+  .result-card mark { background: #f6dfc8; color: inherit; border-radius: 2px; padding: 0 1px; }
+  .state { padding: 48px 0; text-align: center; color: #9a9a9a; font-size: 13.5px; }
+  footer { border-top: 1px solid #e8e5e0; padding: 18px 0 28px; font-size: 12px; color: #9a9a9a; }
+  @media (max-width: 640px) {
+    .layout { flex-direction: column; gap: 16px; }
+    nav.dates { width: 100%; display: flex; overflow-x: auto; gap: 4px; }
+    nav.dates .nav-title { display: none; }
+    nav.dates button { width: auto; white-space: nowrap; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap header-inner">
+    <h1 class="site">AI <span>·</span> 每日情报站</h1>
+    <div class="search-box">
+      <input id="search" type="search" placeholder="检索全部摘要,如:MCP、支付、端侧…" autocomplete="off">
+    </div>
+    <button class="ask-btn" title="阶段 2 接入智能问答,敬请期待">提问 · 即将上线</button>
+  </div>
+</header>
+
+<div class="wrap layout">
+  <nav class="dates">
+    <div class="nav-title">往期</div>
+    <div id="date-list"><div class="state">加载中…</div></div>
+  </nav>
+  <main id="content"><div class="state">加载中…</div></main>
+</div>
+
+<footer><div class="wrap">由 AI Agent 每日自动生成 · 内容含来源链接,请以原文为准</div></footer>
+
+<script>
+let manifest = [];          // ["2026-06-11", ...] 新→旧
+const cache = {};           // date -> markdown 原文
+let current = null;
+
+function esc(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function inline(s) {
+  return s
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+}
+function renderMd(md) {
+  const lines = md.split('\n');
+  let html = '', para = [];
+  const flush = () => { if (para.length) { html += '<p>' + inline(para.join(' ')) + '</p>'; para = []; } };
+  for (const raw of lines) {
+    const line = esc(raw.trimEnd());
+    if (/^# /.test(line)) { flush(); html += '<h1>' + inline(line.slice(2)) + '</h1>'; }
+    else if (/^## /.test(line)) { flush(); html += '<h2>' + inline(line.slice(3)) + '</h2>'; }
+    else if (/^&gt; /.test(line)) { flush(); html += '<div class="note">' + inline(line.slice(5)) + '</div>'; }
+    else if (line.trim() === '') { flush(); }
+    else { para.push(line); }
+  }
+  flush();
+  return '<article>' + html + '</article>';
+}
+
+async function fetchPost(date) {
+  if (cache[date]) return cache[date];
+  const r = await fetch('posts/' + date + '.md');
+  if (!r.ok) throw new Error('加载失败 ' + date);
+  const md = await r.text();
+  cache[date] = md;
+  return md;
+}
+
+async function showPost(date) {
+  current = date;
+  document.getElementById('search').value = '';
+  document.querySelectorAll('nav.dates button').forEach(b =>
+    b.classList.toggle('active', b.dataset.date === date));
+  const main = document.getElementById('content');
+  main.innerHTML = '<div class="state">加载中…</div>';
+  try {
+    main.innerHTML = renderMd(await fetchPost(date));
+  } catch (e) {
+    main.innerHTML = '<div class="state">这期摘要加载失败了,稍后再试。</div>';
+  }
+  window.scrollTo(0, 0);
+}
+
+async function runSearch(q) {
+  const main = document.getElementById('content');
+  q = q.trim();
+  if (!q) { if (current) showPost(current); return; }
+  main.innerHTML = '<div class="state">检索中…</div>';
+  await Promise.all(manifest.map(d => fetchPost(d).catch(() => '')));
+  const hits = [];
+  for (const d of manifest) {
+    const md = cache[d] || '';
+    const idx = md.toLowerCase().indexOf(q.toLowerCase());
+    if (idx === -1) continue;
+    const start = Math.max(0, idx - 60);
+    const snippet = (start > 0 ? '…' : '') + md.slice(start, idx + q.length + 90).replace(/\n+/g, ' ') + '…';
+    hits.push({ d, snippet });
+  }
+  if (!hits.length) {
+    main.innerHTML = '<div class="state">没有找到「' + esc(q) + '」相关内容</div>';
+    return;
+  }
+  const re = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+  main.innerHTML = hits.map(h =>
+    '<div class="result-card" data-date="' + h.d + '">' +
+      '<div class="rc-date">' + h.d + '</div>' +
+      '<div class="rc-snippet">' + esc(h.snippet).replace(re, m => '<mark>' + m + '</mark>') + '</div>' +
+    '</div>'
+  ).join('');
+  main.querySelectorAll('.result-card').forEach(c =>
+    c.addEventListener('click', () => showPost(c.dataset.date)));
+}
+
+let timer = null;
+document.getElementById('search').addEventListener('input', e => {
+  clearTimeout(timer);
+  timer = setTimeout(() => runSearch(e.target.value), 250);
+});
+
+async function init() {
+  try {
+    const r = await fetch('posts/index.json');
+    manifest = (await r.json()).sort().reverse();
+    const list = document.getElementById('date-list');
+    if (!manifest.length) {
+      list.innerHTML = '<div class="state">暂无内容</div>';
+      document.getElementById('content').innerHTML = '<div class="state">第一期摘要还在路上</div>';
+      return;
+    }
+    list.innerHTML = '';
+    for (const d of manifest) {
+      const btn = document.createElement('button');
+      btn.textContent = d;
+      btn.dataset.date = d;
+      btn.onclick = () => showPost(d);
+      list.appendChild(btn);
+    }
+    showPost(manifest[0]);
+  } catch (e) {
+    document.getElementById('content').innerHTML = '<div class="state">站点数据加载失败,请检查 posts/index.json 是否存在。</div>';
+  }
+}
+init();
+</script>
+</body>
+</html>
