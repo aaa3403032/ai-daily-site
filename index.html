@@ -177,7 +177,7 @@ document.getElementById('search').addEventListener('input', e => {
 
 async function init() {
   try {
-    const r = await fetch('posts/index.json');
+    const r = await fetch('posts/index.json?t=' + Date.now());
     manifest = (await r.json()).sort().reverse();
     const list = document.getElementById('date-list');
     if (!manifest.length) {
