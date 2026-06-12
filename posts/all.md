@@ -35,3 +35,39 @@ SpaceX 定于 6月11日 IPO 定价,目标估值 1.75 万亿美元以上;Anthropi
 
 ---
 
+# AI / Agent 领域新闻摘要 — 2026-06-12
+
+## 今日要点
+
+**1. 苹果 WWDC:Siri 重生于 Gemini,iOS 27 开放第三方 AI"扩展"(6月8日)**
+苹果宣布与 Google 达成多年合作(约 10 亿美元/年),用一个为 Siri 定制的 1.2 万亿参数 Gemini 模型重建 Siri,推理跑在苹果自家 Private Cloud Compute 上,Google 拿不到用户数据。同时 iOS 27 推出"Extensions"机制:用户可在设置里把 ChatGPT、Gemini 或 Claude 设为 Siri 背后的默认 AI。
+**PM 信号:** 苹果把"AI 入口"变成了可更换的插槽——10 亿级移动入口上,模型厂商第一次要靠用户主动选择来竞争,品牌和体验差异化比跑分更值钱了。
+来源:[TechCrunch](https://techcrunch.com/2026/06/08/wwdc-2026-what-to-expect-from-siris-highly-anticipated-revamp-to-apple-intelligence-and-ios-27/)、[MacRumors](https://www.macrumors.com/guide/wwdc-2026-what-to-expect/)
+
+**2. Gemini 3.5 Pro 临近发布:200 万 token 上下文 + Deep Think 推理**
+Google I/O 上 Gemini 3.5 Flash 已正式可用,Pro 版预计 6 月内上线,主打 200 万 token 上下文(约可一次读完几十份长文档)和"Deep Think"深度推理模式;Google 还将在未来几周为第三方应用开放 MCP 支持(MCP 是让 AI 连接外部工具的通用协议)。
+**PM 信号:** 6 月是模型"洪峰月"——Fable 5、Gemini 3.5 Pro、传闻中的 GPT-5.6 同期落地,选型决策建议拖到月底,避免为即将过时的方案锁定成本。
+来源:[Google 官方博客](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/)、[TechTimes](https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm)
+
+**3. Fable 5 发布后续:安全护栏"误伤"正常请求引争议(6月10日)**
+昨天我们报道了 Claude Fable 5 发布;媒体实测发现其新增的高风险领域安全护栏会误拒一些无害请求(如普通生物课问题被当作风险内容拦截)。Anthropic 称护栏平均触发率低于 5% 的会话,但争议聚焦在误报对正常用户的打扰。
+**PM 信号:** 安全机制的"误伤率"正在成为模型选型的隐性成本——如果你的产品用户会触碰医疗、安全等边缘话题,上线前要专门测误拒率,这直接影响留存。
+来源:[The Register](https://www.theregister.com/ai-and-ml/2026/06/10/anthropic-claude-fable-5-refuses-innocuous-prompts/5253754)、[Anthropic 官方](https://www.anthropic.com/news/claude-fable-5-mythos-5)
+
+**4. 阿里发布 Qwen3.7-Plus:视觉 + 语言统一的多模态智能体基座(6月2日)**
+Qwen3.7 的多模态升级版,支持图像、视频、屏幕、网页输入,能直接操作 GUI(图形界面)和命令行完成办公与软件任务;Vision Arena 排名全球前 5、中国第 1,已通过阿里云百炼提供服务。有评测称其可 11 小时自主闭环开发一个真实 App。
+**PM 信号:** "能看屏幕、会点按钮"的模型正在把 Agent 的落地范围从 API 世界扩展到一切有界面的软件——没有 API 的老系统也能被自动化了。
+来源:[新浪科技](https://finance.sina.com.cn/tech/digi/2026-06-02/doc-inhzyhiy3416019.shtml)、[IT之家](https://www.ithome.com/0/958/449.htm)
+
+**5. 英伟达 RTX Spark:专为"个人智能体"设计的 PC 超级芯片(6月1日 GTC 台北)**
+3nm 工艺,1 Petaflop AI 算力,最高 128GB 统一内存,可在本地运行 120B 参数、100 万 token 上下文的模型——意味着个人智能体可以完全离线跑在自己电脑上。华硕、戴尔、联想等 OEM 整机今年秋季上市。
+**PM 信号:** "本地跑 Agent"从极客玩法变成硬件厂商押注的主流路线——数据不出本机的隐私卖点,可能重塑对云端订阅模式的预期。
+来源:[NVIDIA 中文博客](https://blogs.nvidia.cn/blog/nvidia-microsoft-windows-pcs-agents-rtx-spark/)、[IT之家](https://www.ithome.com/0/958/578.htm)
+
+## 趋势一句话
+
+入口与算力都在"去中心化"——苹果把 AI 入口做成可换插槽,英伟达把 Agent 算力塞进个人电脑;模型厂商的护城河正从"能力领先"转向"被用户主动选择"。
+
+*注:过去 24 小时无重大独立事件,本期覆盖近 10 天内未报道过的要点,均标注原始日期。*
+
+---
