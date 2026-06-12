@@ -24,7 +24,8 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 POSTS_DIR = REPO_ROOT / "posts"
 BASE = "https://open.bigmodel.cn/api/paas/v4"
 MODEL = os.environ.get("DIGEST_MODEL", "glm-5.1")
-SEARCH_ENGINE = "search_pro"  # ¥0.03/次
+# 按优先级轮询:谁返回带链接的结果就用谁(实测 search_pro 的 link 字段为空)
+ENGINES = ["search_pro_sogou", "search_pro_quark", "search_std", "search_pro"]
 
 
 def get_api_key() -> str:
@@ -46,13 +47,13 @@ def search_queries(today: str) -> list[str]:
     ]
 
 
-def web_search(key: str, query: str, recency: str) -> list[dict]:
+def web_search(key: str, query: str, recency: str, engine: str) -> list[dict]:
     r = requests.post(
         f"{BASE}/web_search",
         headers={"Authorization": f"Bearer {key}"},
         json={
             "search_query": query[:70],
-            "search_engine": SEARCH_ENGINE,
+            "search_engine": engine,
             "search_intent": False,
             "count": 10,
             "search_recency_filter": recency,
@@ -63,30 +64,31 @@ def web_search(key: str, query: str, recency: str) -> list[dict]:
     items = []
     if r.status_code == 200:
         items = r.json().get("search_result") or []
-    print(f"搜索[{recency}] {query[:35]} → 状态{r.status_code} 条数{len(items)}", flush=True)
-    if not items:  # 调试:失败或 0 结果时打印原始响应
-        print(f"  响应体:{r.text[:300]}", flush=True)
-    return items
+    linked = [it for it in items if (it.get("link") or "").strip()]
+    print(f"搜索[{engine}/{recency}] {query[:30]} → 状态{r.status_code} "
+          f"条数{len(items)} 带链接{len(linked)}", flush=True)
+    if not linked:
+        print(f"  响应体:{r.text[:200]}", flush=True)
+    return linked
 
 
 def gather_material(key: str, today: str) -> str:
     results, seen = [], set()
-    shown = False
-    for recency in ("oneDay", "oneWeek", "noLimit"):  # 逐级放宽时间范围
-        for q in search_queries(today):
-            for item in web_search(key, q, recency):
-                if not shown:  # 调试:打印第一条的全部字段名(content 截断)
-                    sample = {k: str(v)[:80] for k, v in item.items()}
-                    print("样本字段:", json.dumps(sample, ensure_ascii=False), flush=True)
-                    shown = True
-                link = item.get("link") or item.get("url") or ""
-                if link and link not in seen:
-                    seen.add(link)
-                    results.append(item)
-        if len(results) >= 15:
+    for engine in ENGINES:  # 逐个引擎试,拿到足够带链接的结果就停
+        for recency in ("oneDay", "oneWeek"):
+            for q in search_queries(today):
+                for item in web_search(key, q, recency, engine):
+                    link = item["link"].strip()
+                    if link not in seen:
+                        seen.add(link)
+                        results.append(item)
+            if len(results) >= 15:
+                break
+        print(f"引擎 {engine} 累计有效条目:{len(results)}", flush=True)
+        if len(results) >= 8:
             break
     if len(results) < 8:
-        sys.exit(f"错误:搜索结果只有 {len(results)} 条,不足以成稿")
+        sys.exit(f"错误:有效搜索结果只有 {len(results)} 条,不足以成稿")
     lines = []
     for i, it in enumerate(results, 1):
         lines.append(
