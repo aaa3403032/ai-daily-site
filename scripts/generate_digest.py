@@ -75,8 +75,9 @@ def gather_material(key: str, today: str) -> str:
     for recency in ("oneDay", "oneWeek", "noLimit"):  # 逐级放宽时间范围
         for q in search_queries(today):
             for item in web_search(key, q, recency):
-                if not shown:  # 调试:打印第一条原始条目,确认字段名
-                    print("样本条目:", json.dumps(item, ensure_ascii=False)[:400], flush=True)
+                if not shown:  # 调试:打印第一条的全部字段名(content 截断)
+                    sample = {k: str(v)[:80] for k, v in item.items()}
+                    print("样本字段:", json.dumps(sample, ensure_ascii=False), flush=True)
                     shown = True
                 link = item.get("link") or item.get("url") or ""
                 if link and link not in seen:
