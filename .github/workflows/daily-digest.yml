@@ -1,0 +1,43 @@
+# AI 每日情报 — 云端定时生成(阶段3)
+# 平行期:写到 actions-test 分支,与 Cowork 任务(写 main)互不干扰
+# 转正时:把下面 TARGET_BRANCH 改成 main,并关闭 Cowork 任务的生成步骤
+name: daily-digest
+
+on:
+  workflow_dispatch:        # 手动触发(测试用)
+  schedule:
+    - cron: '0 1 * * *'    # UTC 01:00 = 北京 09:00(实际会延迟 3-15 分钟,正常)
+
+env:
+  TARGET_BRANCH: actions-test
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 安装依赖
+        run: pip install requests
+
+      - name: 生成摘要
+        env:
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+        run: python scripts/generate_digest.py
+
+      - name: 提交推送
+        run: |
+          git config user.name "AI Daily Agent (Actions)"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -B "$TARGET_BRANCH"
+          git add posts/
+          git diff --cached --quiet && { echo "无变更,跳过提交"; exit 0; }
+          git commit -m "auto: 每日摘要 $(TZ=Asia/Shanghai date +%F) [Actions]"
+          git push -f origin "$TARGET_BRANCH"
