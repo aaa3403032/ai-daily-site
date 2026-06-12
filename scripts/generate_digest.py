@@ -71,10 +71,14 @@ def web_search(key: str, query: str, recency: str) -> list[dict]:
 
 def gather_material(key: str, today: str) -> str:
     results, seen = [], set()
+    shown = False
     for recency in ("oneDay", "oneWeek", "noLimit"):  # 逐级放宽时间范围
         for q in search_queries(today):
             for item in web_search(key, q, recency):
-                link = item.get("link", "")
+                if not shown:  # 调试:打印第一条原始条目,确认字段名
+                    print("样本条目:", json.dumps(item, ensure_ascii=False)[:400], flush=True)
+                    shown = True
+                link = item.get("link") or item.get("url") or ""
                 if link and link not in seen:
                     seen.add(link)
                     results.append(item)
