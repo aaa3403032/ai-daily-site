@@ -60,13 +60,12 @@ def web_search(key: str, query: str, recency: str) -> list[dict]:
         },
         timeout=60,
     )
-    if r.status_code != 200:
-        print(f"警告:搜索失败({r.status_code}){query} → {r.text[:200]}")
-        return []
-    data = r.json()
-    items = data.get("search_result") or []
-    if not items:  # 调试:0 结果时打印原始响应,便于在 Actions 日志里定位
-        print(f"调试:0 结果 [{recency}] {query} → {json.dumps(data, ensure_ascii=False)[:300]}")
+    items = []
+    if r.status_code == 200:
+        items = r.json().get("search_result") or []
+    print(f"搜索[{recency}] {query[:35]} → 状态{r.status_code} 条数{len(items)}", flush=True)
+    if not items:  # 调试:失败或 0 结果时打印原始响应
+        print(f"  响应体:{r.text[:300]}", flush=True)
     return items
 
 
