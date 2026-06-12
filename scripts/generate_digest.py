@@ -63,12 +63,16 @@ def web_search(key: str, query: str, recency: str) -> list[dict]:
     if r.status_code != 200:
         print(f"警告:搜索失败({r.status_code}){query} → {r.text[:200]}")
         return []
-    return r.json().get("search_result") or []
+    data = r.json()
+    items = data.get("search_result") or []
+    if not items:  # 调试:0 结果时打印原始响应,便于在 Actions 日志里定位
+        print(f"调试:0 结果 [{recency}] {query} → {json.dumps(data, ensure_ascii=False)[:300]}")
+    return items
 
 
 def gather_material(key: str, today: str) -> str:
     results, seen = [], set()
-    for recency in ("oneDay", "oneWeek"):  # 先搜一天内,不够再放宽到一周
+    for recency in ("oneDay", "oneWeek", "noLimit"):  # 逐级放宽时间范围
         for q in search_queries(today):
             for item in web_search(key, q, recency):
                 link = item.get("link", "")
