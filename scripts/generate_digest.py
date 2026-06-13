@@ -24,6 +24,8 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 POSTS_DIR = REPO_ROOT / "posts"
 BASE = "https://open.bigmodel.cn/api/paas/v4"
 MODEL = os.environ.get("DIGEST_MODEL", "glm-5.1")
+# 降到 0.3:Run#11 里 0.6 诱导 GLM 编造"看起来像真的"tier-1 URL。低温更守素材。
+TEMPERATURE = float(os.environ.get("DIGEST_TEMPERATURE", "0.3"))
 # 跑全部引擎再合并(实测 search_pro 的 link 字段为空,已剔除)。
 # 不再"够数就停"——单引擎短路是来源单一(全企鹅号)的根因。
 ENGINES = ["search_pro_sogou", "search_pro_quark", "search_std"]
@@ -269,7 +271,7 @@ def call_glm(key: str, prompt: str) -> dict:
             "model": MODEL,
             "messages": [{"role": "user", "content": prompt}],
             "max_tokens": 8000,
-            "temperature": 0.6,
+            "temperature": TEMPERATURE,
         },
         timeout=300,
     )
@@ -286,7 +288,53 @@ def extract_digest(data: dict) -> str:
     return m.group(1).strip() + "\n"
 
 
-def validate(digest: str, today: str, material: str):
+def _split_items(digest: str):
+    """切成 (头部行, [条目块...], 尾部趋势段行)。条目块以 **N. 开头。结构异常返回 None。"""
+    lines = digest.splitlines()
+    start = next((i for i, l in enumerate(lines)
+                  if l.strip().startswith("## 今日要点")), None)
+    trend = next((i for i, l in enumerate(lines)
+                  if l.strip().startswith("##") and "趋势" in l
+                  and (start is None or i > start)), None)
+    if start is None or trend is None:
+        return None
+    head, body, tail = lines[:start + 1], lines[start + 1:trend], lines[trend:]
+    blocks, cur = [], []
+    for l in body:
+        if re.match(r"^\*\*\d+\.", l.strip()):
+            if cur:
+                blocks.append(cur)
+            cur = [l]
+        elif cur:
+            cur.append(l)
+    if cur:
+        blocks.append(cur)
+    return head, blocks, tail
+
+
+def validate(digest: str, today: str, material: str) -> str:
+    """校验 + 优雅降级:丢掉含编造链接的条目,重新编号;剩余 ≥4 条才通过。返回清洗后的 digest。"""
+    split = _split_items(digest)
+    if split:
+        head, blocks, tail = split
+        kept, dropped = [], []
+        for blk in blocks:
+            bad = [u for u in re.findall(r"\]\((https?://[^)]+)\)", "\n".join(blk))
+                   if u not in material]
+            (dropped if bad else kept).append(bad if bad else blk)
+        dropped = [d for d in dropped if d]  # dropped 里存的是坏链接列表
+        if dropped:
+            print(f"⚠️ 优雅降级:丢弃 {len(dropped)} 条含编造链接的条目:{dropped}", flush=True)
+        rebuilt = head + [""]
+        for n, blk in enumerate(kept, 1):
+            blk = blk[:]
+            while blk and not blk[-1].strip():  # 去块尾空行,避免重排后双空行
+                blk.pop()
+            blk[0] = re.sub(r"^(\s*)\*\*\d+\.", rf"\g<1>**{n}.", blk[0])
+            rebuilt += blk + [""]
+        rebuilt += tail
+        digest = "\n".join(rebuilt).rstrip() + "\n"
+
     problems = []
     if today not in digest.splitlines()[0]:
         problems.append("标题行缺少当日日期")
@@ -294,7 +342,7 @@ def validate(digest: str, today: str, material: str):
         problems.append("缺少'## 今日要点'")
     items = re.findall(r"^\*\*\d+\.", digest, re.MULTILINE)
     if len(items) < 4:
-        problems.append(f"条目数只有 {len(items)},少于 4")
+        problems.append(f"降级后有效条目仅 {len(items)} 条,少于 4")
     if "趋势" not in digest:
         problems.append("缺少趋势段")
     links = re.findall(r"\]\((https?://[^)]+)\)", digest)
@@ -302,9 +350,10 @@ def validate(digest: str, today: str, material: str):
         problems.append("来源链接过少")
     fabricated = [u for u in links if u not in material]
     if fabricated:
-        problems.append(f"发现不在素材里的链接(疑似编造):{fabricated[:3]}")
+        problems.append(f"降级后仍有编造链接(异常):{fabricated[:3]}")
     if problems:
         sys.exit("错误:摘要未通过校验:" + ";".join(problems) + "\n---\n" + digest)
+    return digest
 
 
 def write_outputs(digest: str, today: str):
@@ -325,7 +374,7 @@ def main():
     print(f"日期 {today},去重条目 {len(dedup)} 条,调用 {MODEL} ...")
     data = call_glm(key, build_prompt(today, material, dedup))
     digest = extract_digest(data)
-    validate(digest, today, material)
+    digest = validate(digest, today, material)
     write_outputs(digest, today)
     u = data.get("usage", {})
     print(f"完成:posts/{today}.md 已写入,index.json/all.md 已更新")
