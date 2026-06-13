@@ -30,6 +30,7 @@ jobs:
       - name: 生成摘要
         env:
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           PYTHONUNBUFFERED: "1"
         run: python scripts/generate_digest.py
 

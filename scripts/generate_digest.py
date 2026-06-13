@@ -24,8 +24,20 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 POSTS_DIR = REPO_ROOT / "posts"
 BASE = "https://open.bigmodel.cn/api/paas/v4"
 MODEL = os.environ.get("DIGEST_MODEL", "glm-5.1")
-# 按优先级轮询:谁返回带链接的结果就用谁(实测 search_pro 的 link 字段为空)
-ENGINES = ["search_pro_sogou", "search_pro_quark", "search_std", "search_pro"]
+# 跑全部引擎再合并(实测 search_pro 的 link 字段为空,已剔除)。
+# 不再"够数就停"——单引擎短路是来源单一(全企鹅号)的根因。
+ENGINES = ["search_pro_sogou", "search_pro_quark", "search_std"]
+TARGET = 15          # 目标候选素材条数
+MAX_PER_MEDIA = 2    # 单一来源最多入选几条(轮转抽取时的软上限,凑不够会放宽)
+# Tavily:西方搜索源,补一线国际原始源(OpenAI官方/Bloomberg 等),修智谱"中文二三线站+浅链接"短板。
+# 有 TAVILY_API_KEY 才启用,没有则自动退回纯智谱,不阻塞流水线。
+TAVILY_URL = "https://api.tavily.com/search"
+# 走 Tavily 的查询(英文一线源向),与智谱中文结果互补
+INTL_QUERIES = [
+    "OpenAI Anthropic Google DeepMind latest announcement",
+    "AI agent product launch funding round",
+    "new large language model release",
+]
 
 
 def get_api_key() -> str:
@@ -41,9 +53,11 @@ def get_api_key() -> str:
 def search_queries(today: str) -> list[str]:
     return [
         f"AI Agent 大模型 重要新闻 {today}",
-        "OpenAI Anthropic Google AI news announcement",
         "国产大模型 发布 动态 智谱 阿里 字节 DeepSeek",
-        "AI agent product launch funding news",
+        # 英文词偏向一线原始源(官方/权威媒体),抵消搜狗的腾讯系偏好
+        "OpenAI Anthropic Google DeepMind announcement official blog",
+        "AI agent startup funding launch TechCrunch Bloomberg Reuters",
+        "LLM model release research paper enterprise adoption",
     ]
 
 
@@ -72,23 +86,112 @@ def web_search(key: str, query: str, recency: str, engine: str) -> list[dict]:
     return linked
 
 
+def tavily_search(key: str, query: str) -> list[dict]:
+    """Tavily news 搜索;返回结果归一成与智谱一致的字段(title/link/media/publish_date/content)。"""
+    try:
+        r = requests.post(
+            TAVILY_URL,
+            headers={"Authorization": f"Bearer {key}",
+                     "Content-Type": "application/json"},
+            json={
+                "query": query[:380],
+                "topic": "news",
+                "search_depth": "basic",
+                "days": 7,
+                "max_results": 8,
+            },
+            timeout=60,
+        )
+    except requests.RequestException as e:
+        print(f"Tavily[{query[:30]}] 请求异常:{e}", flush=True)
+        return []
+    if r.status_code != 200:
+        print(f"Tavily[{query[:30]}] 状态{r.status_code}:{r.text[:200]}", flush=True)
+        return []
+    out = []
+    for it in r.json().get("results") or []:
+        link = (it.get("url") or "").strip()
+        if not link:
+            continue
+        host = re.sub(r"^https?://(www\.)?", "", link).split("/")[0]
+        out.append({
+            "title": it.get("title", ""),
+            "link": link,
+            "media": host,                       # 用域名当来源名
+            "publish_date": it.get("published_date", ""),
+            "content": it.get("content", ""),
+        })
+    print(f"Tavily[{query[:30]}] → 条数{len(out)}", flush=True)
+    return out
+
+
+def _media_of(item: dict) -> str:
+    m = (item.get("media") or "").strip()
+    if m:
+        return m
+    # 无 media 字段时用域名兜底,避免都归到"未知"互相挤掉
+    link = (item.get("link") or "").strip()
+    host = re.sub(r"^https?://(www\.)?", "", link).split("/")[0]
+    return host or "未知"
+
+
+def _diversify(pool: list[dict], target: int, cap: int) -> list[dict]:
+    """按来源轮转抽取:先保证多样性(每来源不超过 cap),凑不够再放宽。"""
+    from collections import OrderedDict
+    by_media: "OrderedDict[str, list]" = OrderedDict()
+    for it in pool:
+        by_media.setdefault(_media_of(it), []).append(it)
+    selected, used = [], {m: 0 for m in by_media}
+    # 第一轮:每来源最多 cap 条,轮流取
+    for _ in range(cap):
+        for media, lst in by_media.items():
+            if used[media] < cap and used[media] < len(lst):
+                selected.append(lst[used[media]])
+                used[media] += 1
+                if len(selected) >= target:
+                    return selected
+    # 凑不够 target,放宽上限继续填(保持已有顺序、避免重复)
+    for media, lst in by_media.items():
+        for it in lst[used[media]:]:
+            selected.append(it)
+            if len(selected) >= target:
+                return selected
+    return selected
+
+
 def gather_material(key: str, today: str) -> str:
-    results, seen = [], set()
-    for engine in ENGINES:  # 逐个引擎试,拿到足够带链接的结果就停
+    pool, seen = [], set()
+    # 跑完所有引擎再合并,不中途短路——这是来源多样性的关键
+    for engine in ENGINES:
+        before = len(pool)
         for recency in ("oneDay", "oneWeek"):
             for q in search_queries(today):
                 for item in web_search(key, q, recency, engine):
                     link = item["link"].strip()
                     if link not in seen:
                         seen.add(link)
-                        results.append(item)
-            if len(results) >= 15:
-                break
-        print(f"引擎 {engine} 累计有效条目:{len(results)}", flush=True)
-        if len(results) >= 8:
-            break
-    if len(results) < 8:
-        sys.exit(f"错误:有效搜索结果只有 {len(results)} 条,不足以成稿")
+                        pool.append(item)
+        print(f"引擎 {engine} 新增 {len(pool)-before} 条,池累计 {len(pool)}", flush=True)
+    # 西方源(Tavily):有 Key 才跑,补一线国际原始源;没有则跳过(纯智谱兜底)
+    tav_key = os.environ.get("TAVILY_API_KEY", "").strip()
+    if tav_key:
+        before = len(pool)
+        for q in INTL_QUERIES:
+            for item in tavily_search(tav_key, q):
+                link = item["link"].strip()
+                if link not in seen:
+                    seen.add(link)
+                    pool.append(item)
+        print(f"Tavily 新增 {len(pool)-before} 条,池累计 {len(pool)}", flush=True)
+    else:
+        print("未配置 TAVILY_API_KEY,跳过西方源(仅用智谱)", flush=True)
+    if len(pool) < 8:
+        sys.exit(f"错误:有效搜索结果只有 {len(pool)} 条,不足以成稿")
+    results = _diversify(pool, TARGET, MAX_PER_MEDIA)
+    dist = {}
+    for it in results:
+        dist[_media_of(it)] = dist.get(_media_of(it), 0) + 1
+    print(f"来源分布(抽取后):{dist}", flush=True)
     lines = []
     for i, it in enumerate(results, 1):
         lines.append(
@@ -143,6 +246,7 @@ def build_prompt(today: str, material: str, dedup: list[str]) -> str:
 - 来源链接只能从上面素材的"链接"字段里选,一字不改,严禁编造或拼接 URL
 - 每条至少 1 个来源;同一事件有多条素材时可给 2 个来源
 - 优先选影响面大的事件(模型发布、平台政策、重要产品、行业格局),忽略软文和重复信息
+- 来源多样性:尽量让选中的 4-6 条来自不同媒体,不要 4 条都出自同一来源;同等重要时优先选官方公告、权威媒体(Bloomberg/Reuters/TechCrunch 等)或一线科技媒体,而非二手转载聚合号
 - 把最终成品完整放在 <digest> 和 </digest> 之间,标签外不要放正文"""
 
 
