@@ -38,6 +38,14 @@ INTL_QUERIES = [
     "AI agent product launch funding round",
     "new large language model release",
 ]
+# 一线源白名单:只让 Tavily 从这些官方/权威媒体取结果,避免上次那种 vendor 博客/保险站噪音。
+# 实测(Run#10):不限域名时 Tavily 返回 boltinsurance.com / vlasti.net 等低质源,GLM 合理地全弃之。
+TIER1_DOMAINS = [
+    "openai.com", "anthropic.com", "deepmind.google", "blog.google",
+    "bloomberg.com", "reuters.com", "techcrunch.com", "theverge.com",
+    "arstechnica.com", "venturebeat.com", "wired.com",
+    "technologyreview.com", "theinformation.com", "semianalysis.com",
+]
 
 
 def get_api_key() -> str:
@@ -99,6 +107,7 @@ def tavily_search(key: str, query: str) -> list[dict]:
                 "search_depth": "basic",
                 "days": 7,
                 "max_results": 8,
+                "include_domains": TIER1_DOMAINS,  # 只取一线源
             },
             timeout=60,
         )
@@ -173,21 +182,22 @@ def gather_material(key: str, today: str) -> str:
                         pool.append(item)
         print(f"引擎 {engine} 新增 {len(pool)-before} 条,池累计 {len(pool)}", flush=True)
     # 西方源(Tavily):有 Key 才跑,补一线国际原始源;没有则跳过(纯智谱兜底)
+    tav_pool = []
     tav_key = os.environ.get("TAVILY_API_KEY", "").strip()
     if tav_key:
-        before = len(pool)
         for q in INTL_QUERIES:
             for item in tavily_search(tav_key, q):
                 link = item["link"].strip()
                 if link not in seen:
                     seen.add(link)
-                    pool.append(item)
-        print(f"Tavily 新增 {len(pool)-before} 条,池累计 {len(pool)}", flush=True)
+                    tav_pool.append(item)
+        print(f"Tavily 新增 {len(tav_pool)} 条(一线源白名单)", flush=True)
     else:
         print("未配置 TAVILY_API_KEY,跳过西方源(仅用智谱)", flush=True)
-    if len(pool) < 8:
-        sys.exit(f"错误:有效搜索结果只有 {len(pool)} 条,不足以成稿")
-    results = _diversify(pool, TARGET, MAX_PER_MEDIA)
+    if len(pool) + len(tav_pool) < 8:
+        sys.exit(f"错误:有效搜索结果只有 {len(pool)+len(tav_pool)} 条,不足以成稿")
+    # Tavily 一线源放前面:轮转抽取从西方源起步,确保它们进素材且 GLM 先看到
+    results = _diversify(tav_pool + pool, TARGET, MAX_PER_MEDIA)
     dist = {}
     for it in results:
         dist[_media_of(it)] = dist.get(_media_of(it), 0) + 1
@@ -247,6 +257,7 @@ def build_prompt(today: str, material: str, dedup: list[str]) -> str:
 - 每条至少 1 个来源;同一事件有多条素材时可给 2 个来源
 - 优先选影响面大的事件(模型发布、平台政策、重要产品、行业格局),忽略软文和重复信息
 - 来源多样性:尽量让选中的 4-6 条来自不同媒体,不要 4 条都出自同一来源;同等重要时优先选官方公告、权威媒体(Bloomberg/Reuters/TechCrunch 等)或一线科技媒体,而非二手转载聚合号
+- 国际视野:素材里若有来自 openai.com/anthropic.com/bloomberg.com/techcrunch.com 等国际一线源的条目,在同等重要前提下至少纳入 1-2 条,避免整篇只有国内新闻
 - 把最终成品完整放在 <digest> 和 </digest> 之间,标签外不要放正文"""
 
 
