@@ -196,10 +196,22 @@ def gather_material(key: str, today: str) -> str:
         print(f"Tavily 新增 {len(tav_pool)} 条(一线源白名单)", flush=True)
     else:
         print("未配置 TAVILY_API_KEY,跳过西方源(仅用智谱)", flush=True)
-    if len(pool) + len(tav_pool) < 8:
-        sys.exit(f"错误:有效搜索结果只有 {len(pool)+len(tav_pool)} 条,不足以成稿")
-    # Tavily 一线源放前面:轮转抽取从西方源起步,确保它们进素材且 GLM 先看到
-    results = _diversify(tav_pool + pool, TARGET, MAX_PER_MEDIA)
+    # RSS 多源(阶段A):零成本、官方一线直链、自带题图。抓取失败不阻塞(退回智谱+Tavily)。
+    rss_pool = []
+    try:
+        import feeds
+        for item in feeds.fetch_feeds():
+            link = (item.get("link") or "").strip()
+            if link and link not in seen:
+                seen.add(link)
+                rss_pool.append(item)
+        print(f"RSS 新增 {len(rss_pool)} 条(官方源+题图)", flush=True)
+    except Exception as e:
+        print(f"RSS 抓取失败,跳过(不阻塞):{e}", flush=True)
+    if len(rss_pool) + len(pool) + len(tav_pool) < 8:
+        sys.exit(f"错误:有效搜索结果只有 {len(rss_pool)+len(pool)+len(tav_pool)} 条,不足以成稿")
+    # 抽取优先级:RSS(官方直链+题图)> Tavily(西方一线)> 智谱(中文索引)
+    results = _diversify(rss_pool + tav_pool + pool, TARGET, MAX_PER_MEDIA)
     dist = {}
     for it in results:
         dist[_media_of(it)] = dist.get(_media_of(it), 0) + 1

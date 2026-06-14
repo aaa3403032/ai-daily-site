@@ -4,11 +4,17 @@ name: daily-digest
 
 on:
   workflow_dispatch:        # 手动触发(测试用)
+    inputs:
+      target_branch:
+        description: '推送目标分支。测试时填测试分支(如 actions-test),切勿填 main。留空=main。'
+        default: 'main'
+        required: false
   schedule:
     - cron: '0 1 * * *'    # UTC 01:00 = 北京 09:00(实际会延迟 3-15 分钟,正常)
 
+# cron 不传 inputs → 回落 main(生产行为不变);手动触发可指定测试分支,保护 main。
 env:
-  TARGET_BRANCH: main
+  TARGET_BRANCH: ${{ github.event.inputs.target_branch || 'main' }}
 
 permissions:
   contents: write
@@ -40,4 +46,8 @@ jobs:
           git add posts/
           git diff --cached --quiet && { echo "无变更,跳过提交"; exit 0; }
           git commit -m "auto: 每日摘要 $(TZ=Asia/Shanghai date +%F) [Actions]"
-          git push origin HEAD:"$TARGET_BRANCH"
+          if [ "$TARGET_BRANCH" = "main" ]; then
+            git push origin HEAD:main                       # 生产:普通推送,绝不强推
+          else
+            git push -f origin HEAD:"$TARGET_BRANCH"         # 测试分支:可强推,免非快进失败
+          fi
