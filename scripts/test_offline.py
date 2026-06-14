@@ -225,6 +225,21 @@ def test_ai_gate():
     ok(classify.is_ai_relevant(
         {"title": "网信办开设涉AI举报专区", "content": "网络安全", "media": "x"}),
         "中文夹缝里的 AI 应判相关")
+    # Run#18 收紧回归:标题非AI + 无具名实体 + 正文仅捎带泛词(算力)→ 应被剔
+    ok(not classify.is_ai_relevant(
+        {"title": "读懂SpaceX的两万亿故事", "content": "马斯克 商业航天 算力 资本",
+         "media": "36氪", "category_hint": "biz"}),
+        "SpaceX 商业稿(正文捎带算力)收紧后应被剔")
+    ok(not classify.is_ai_relevant(
+        {"title": "The bill that would let Jimmy Kimmel sue Brendan Carr is here",
+         "content": "FCC chairman lawsuit free speech", "media": "theverge.com",
+         "category_hint": "policy"}),
+        "Kimmel/FCC 法案(非AI)收紧后应被剔")
+    # 标题无AI词但正文含*具名*实体 → 仍放行(不误杀重要条目,如官方声明)
+    ok(classify.is_ai_relevant(
+        {"title": "Statement on US government directive to suspend access to flagship",
+         "content": "Claude models affected", "media": "reuters.com"}),
+        "标题无AI但正文含具名实体(Claude)应放行")
 
 
 # ───────────── ⑤ 教程软文过滤 ─────────────
@@ -246,6 +261,13 @@ def test_tutorial_filter():
     ok(classify.is_tutorial_softarticle(
         {"title": "国产大模型排行大盘点", "media": "cnblogs", "link": "http://x"}),
         "排行/盘点 应判软文")
+    # ⑤ 续:深度解读/深入解读/干货 listicle(Run#18 漏网的 csdn/音乐报告)
+    ok(classify.is_tutorial_softarticle(
+        {"title": "深度解读:网信办清朗整治AI应用乱象专项行动", "media": "blog.csdn.net",
+         "link": "https://blog.csdn.net/x"}), "深度解读 应判软文")
+    ok(classify.is_tutorial_softarticle(
+        {"title": "全球音乐报告2026深入解读(究极干货)", "media": "rainlain.com",
+         "link": "https://rainlain.com/y"}), "深入解读/干货 应判软文")
     # 普通新闻标题不命中
     ok(not classify.is_tutorial_softarticle(
         {"title": "OpenAI launches new model", "media": "openai", "link": "x"}),

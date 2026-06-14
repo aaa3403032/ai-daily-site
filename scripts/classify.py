@@ -178,8 +178,9 @@ _COMMON_MODEL_NAMES = {
 
 # 教程/软文标题特征(中文长尾站常见;一线源的合法 how-to 不在此列,见下方白名单判断)
 _TUTORIAL_RE = re.compile(
-    r"完全指南|实战|手把手|保姆级|从入门到|入门教程|新手|详解|避坑|纯干货|教程|攻略|"
-    r"榜单|天梯|排行|盘点|合集|一文(读懂|搞懂|看懂)|step[- ]by[- ]step", re.I)
+    r"完全指南|实战|手把手|保姆级|从入门到|入门教程|新手|详解|避坑|干货|教程|攻略|"
+    r"榜单|天梯|排行|盘点|合集|一文(读懂|搞懂|看懂)|step[- ]by[- ]step|"
+    r"深度解读|深入解读|深度解析|究极", re.I)
 
 
 def _hay(item: dict) -> str:
@@ -224,12 +225,20 @@ _PURE_AI_SOURCES = ("openai", "anthropic", "deepmind", "hugging face", "huggingf
 
 
 def is_ai_relevant(item: dict) -> bool:
-    """AI 相关性闸:过滤混入的非 AI 新闻(SpaceX 估值 / 华为鸿蒙观点文等)。
-    §5.10 教训:带 category_hint 的 RSS 不能一律放行——泛科技 feed(VentureBeat/Ars/
-    Verge…)的 SpaceX/无人机会借 hint 绕过。改为统一过闸,仅对一手纯 AI 官博兜底放行。"""
-    if _has_ai_term(_hay(item)):
+    """AI 相关性闸:过滤混入的非 AI 新闻(SpaceX 估值 / Jimmy Kimmel 法案 / 音乐报告等)。
+    Run#18 教训:旧版「正文任意位置命中一次泛 AI 词就放行」太松——SpaceX/Kimmel 的
+    原始正文里捎带一句"AI/算力"就过闸了。收紧为需要*真信号*之一:
+      ① 标题层面有 AI 信号(标题就在讲 AI),或
+      ② 出现*具名* AI 实体/模型(OpenAI/Claude/GPT-5…;捎带的泛"AI"字不算),或
+      ③ 来自一手纯 AI 官博。
+    弃掉「正文泛词单次命中」这条漏路。宁可漏掉边缘条目(数据中心抗议/某机器人公司),
+    换更高精度——质量优先(doc 定调)。"""
+    if _has_ai_term(str(item.get("title", "")).lower()):           # ① 标题有 AI 信号
         return True
-    media = (item.get("media") or "").lower()
+    hay = _hay(item)
+    if _AI_ENT_RE.search(hay) or _MODEL_VER_RE.search(hay):        # ② 具名实体/模型(全文)
+        return True
+    media = (item.get("media") or "").lower()                       # ③ 一手纯 AI 官博
     return any(s in media for s in _PURE_AI_SOURCES)
 
 
