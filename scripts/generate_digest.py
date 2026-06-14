@@ -423,8 +423,24 @@ def write_outputs(obj: dict, markdown: str, today: str):
 
 
 # ──────────────────────────── 主流程 ────────────────────────────
+def export_date_to_ci(today: str):
+    """把内容日期写进 GITHUB_ENV,让 workflow 提交步骤复用同一个日期。
+    根因:Python 在 main 开头算 today(北京),而生成耗时约 8 分钟;若运行跨午夜,
+    提交步骤自己再 `date` 会比内容晚一天(Run#17:内容06-14 / 提交06-15)。
+    单一真相源 = 这里导出,workflow 不再独立取 date。"""
+    env_file = os.environ.get("GITHUB_ENV")
+    if env_file:
+        try:
+            with open(env_file, "a", encoding="utf-8") as f:
+                f.write(f"DIGEST_DATE={today}\n")
+            print(f"已导出 DIGEST_DATE={today} 给 workflow", flush=True)
+        except OSError as e:
+            print(f"导出 DIGEST_DATE 失败(不阻塞):{e}", flush=True)
+
+
 def main():
     today = datetime.now(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d")
+    export_date_to_ci(today)
     key = get_api_key()
     now = time.time()
 

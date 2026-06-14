@@ -137,10 +137,14 @@ ACTION_CONCEPTS = {
 ACTION_TO_CAT = {"acquire": "biz", "funding": "biz", "lawsuit": "policy", "regulate": "policy"}
 
 # AI 实体白名单(品牌/产品名)。作 AI 相关性闸 + 事件去重的实体签名。
+# 补齐常被报道的大厂(amazon/apple/xai…):同一事件不同媒体常各执一个主语
+# (一家说 Anthropic、一家说 Amazon),实体表越全,跨框架同事件越能并到一起。
 AI_ENTITIES = [
-    "openai", "anthropic", "google deepmind", "deepmind", "microsoft", "nvidia",
-    "meta ai", "perplexity", "midjourney", "stability ai", "cohere", "mistral",
+    "openai", "anthropic", "google deepmind", "deepmind", "google", "microsoft",
+    "nvidia", "amazon", "apple", "xai", "grok", "meta ai", "meta", "perplexity",
+    "midjourney", "stability ai", "cohere", "mistral", "ibm", "salesforce",
     "hugging face", "huggingface", "databricks", "scale ai", "runway",
+    "bytedance", "字节跳动", "字节", "阿里巴巴", "阿里", "腾讯", "百度", "月之暗面",
     "chatgpt", "gpt", "claude", "gemini", "llama", "qwen", "deepseek", "doubao",
     "豆包", "kimi", "文心", "通义", "智谱", "sora", "copilot",
 ]
@@ -156,6 +160,21 @@ _AI_ENT_RE = re.compile(
 # 模型版本号 token(gpt-5 / claude 3 / gemini 2 / glm-5.1 ...)——增强实体签名
 _MODEL_VER_RE = re.compile(
     r"\b(gpt|claude|gemini|llama|qwen|glm|mistral|grok|sora|o\d)[- ]?\d+(?:\.\d+)?\b", re.I)
+
+# 罕见专名/型号实体:TitleCase 词 + 版本号(Fable 5 / Mythos 5 / Grok 4 / Orion 2)。
+# 这类「产品代号 + 数字」是极强的同事件信号——比动作词表稳:动作动词千变万化
+# (offline/ban/crackdown/directive…),3 轮词表都漏;但同一型号名几乎必然共现。
+# 跨中英也稳:中文媒体通常保留拉丁原名(36氪也会写 "Fable 5")。
+# 需原始大小写文本(非 lowercased hay),首字母大写才是专名信号。
+_RARE_RE = re.compile(r"\b([A-Z][A-Za-z]{2,})[ -]?(\d+(?:\.\d+)?)\b")
+# 常见非 AI 消费品/系统名:带版本号但不是 AI 型号,排除以降噪。
+_RARE_STOP = {"windows", "iphone", "ipad", "ios", "macos", "android", "covid"}
+# 常见模型家族:每天被大量不同文章提及(GPT-5 出现在几十篇里),不算"罕见"——
+# 否则两篇无关的 GPT-5 新闻会被误并。它们已由 _entities 的模型版本号通道覆盖。
+_COMMON_MODEL_NAMES = {
+    "gpt", "claude", "gemini", "llama", "qwen", "glm", "mistral", "grok",
+    "sora", "gemma", "phi", "deepseek", "doubao", "kimi", "qwq",
+}
 
 # 教程/软文标题特征(中文长尾站常见;一线源的合法 how-to 不在此列,见下方白名单判断)
 _TUTORIAL_RE = re.compile(
@@ -183,16 +202,35 @@ def _entities(hay: str) -> set:
     return ents
 
 
+def _rare_entities(text: str) -> set:
+    """罕见专名/型号实体(需原始大小写文本)。返回归一化 token 如 {'fable5','mythos5'}。
+    用于事件去重的强信号:两条共享一个型号代号 → 极可能同事件。"""
+    out = set()
+    for m in _RARE_RE.finditer(text or ""):
+        name = m.group(1).lower()
+        if name in _RARE_STOP or name in _COMMON_MODEL_NAMES or len(name) < 3:
+            continue
+        out.add(name + m.group(2))
+    return out
+
+
 def _has_ai_term(hay: str) -> bool:
     return bool(_AI_TERM_RE.search(hay) or _AI_ENT_RE.search(hay))
 
 
+# 一手 AI 官博:即使某篇正文没命中 AI 关键词也放行(它们是纯 AI 机构,几乎不会发非 AI 内容)。
+# 注意只认这几个"纯 AI"源;泛科技 feed(VentureBeat/Verge/Register/36氪…)即便带 hint 也要过闸。
+_PURE_AI_SOURCES = ("openai", "anthropic", "deepmind", "hugging face", "huggingface")
+
+
 def is_ai_relevant(item: dict) -> bool:
-    """AI 相关性闸:过滤混入的非 AI 新闻(如"China Inc layoffs")。
-    RSS 源(带 category_hint)本身已是 AI 策展,直接放行,避免误杀官博。"""
-    if (item.get("category_hint") or "").strip():
+    """AI 相关性闸:过滤混入的非 AI 新闻(SpaceX 估值 / 华为鸿蒙观点文等)。
+    §5.10 教训:带 category_hint 的 RSS 不能一律放行——泛科技 feed(VentureBeat/Ars/
+    Verge…)的 SpaceX/无人机会借 hint 绕过。改为统一过闸,仅对一手纯 AI 官博兜底放行。"""
+    if _has_ai_term(_hay(item)):
         return True
-    return _has_ai_term(_hay(item))
+    media = (item.get("media") or "").lower()
+    return any(s in media for s in _PURE_AI_SOURCES)
 
 
 def is_tutorial_softarticle(item: dict) -> bool:
@@ -224,38 +262,52 @@ def _title_sim(a: str, b: str) -> float:
 
 # 标题相似度兜底阈值(高=保守,只并近重复标题)
 TITLE_SIM_THRESHOLD = 0.5
+# 罕见实体(型号代号)命中时的相似度阈值——低:同一日报内共享一个罕见型号代号
+# (Fable 5)几乎必是同事件,标题相似度只作微弱 sanity 检查。
+# 「发布 vs 停用同型号」的误并由下方"动作冲突"守卫处理,不靠这个阈值。
+RARE_SIM_THRESHOLD = 0.2
 
 
 def dedup_events(items: list, now: float = None) -> list:
     """事件级去重:把"同一事件被多源/多语言报道"的条目归并成一条(保最高分)。
-    主判定:两条共享 ≥1 个 AI 实体 且 共享 ≥1 个动作概念 → 同一事件。
-    兜底:有实体但没命中任何动作概念的条目,用标题相似度并入同实体高相似组
-          (阈值 TITLE_SIM_THRESHOLD,保守;治"动作词不在表里"的漏并)。纯函数。"""
-    groups = []  # 每组:{"ents":set,"acts":set,"title":str,"members":[item]}
+    每条对每个已存在组按强→弱顺序判定是否同一事件:
+      A. 共享 ≥1 AI 实体 且 共享 ≥1 动作概念(最强,直接并)。
+      B. 共享 ≥1 罕见型号实体(Fable 5…) 且 标题相似度 ≥ RARE_SIM_THRESHOLD
+         —— 不要求动作命中(治"动作动词千变万化、词表永远漏"的结构性坑)。
+      C. 有实体、本条无动作命中、标题相似度 ≥ TITLE_SIM_THRESHOLD(保守兜底)。
+    保最高分条目,记 _merged_from。纯函数。"""
+    groups = []  # 每组:{"ents":set,"rare":set,"acts":set,"title":str,"members":[item]}
     for it in items:
         hay = _hay(it)
-        ents, acts = _entities(hay), _actions(hay)
+        raw = str(it.get("title", "")) + " " + str(it.get("content", ""))  # 原始大小写,供罕见实体
+        title = str(it.get("title", ""))
+        ents, acts, rare = _entities(hay), _actions(hay), _rare_entities(raw)
         placed = False
-        if ents and acts:
-            for g in groups:
-                if (ents & g["ents"]) and (acts & g["acts"]):
-                    g["members"].append(it)
-                    g["ents"] |= ents
-                    g["acts"] |= acts
-                    placed = True
-                    break
-        # 兜底:有实体但无动作命中 → 标题相似度并入同实体高相似组(只对无动作条目,极保守)
-        if not placed and ents and not acts:
-            for g in groups:
-                if (ents & g["ents"]) and \
-                   _title_sim(it.get("title", ""), g["title"]) >= TITLE_SIM_THRESHOLD:
-                    g["members"].append(it)
-                    g["ents"] |= ents
-                    placed = True
-                    break
+        for g in groups:
+            # 动作冲突:两条都命中动作概念但无交集(如 launch vs retire)→ 不同事件,B/C 不并。
+            action_conflict = bool(acts and g["acts"] and not (acts & g["acts"]))
+            same = (
+                (ents and acts and (ents & g["ents"]) and (acts & g["acts"]))           # A
+                # B-1:共享罕见型号代号 + 同公司实体 → 同事件(单日报内同型号同公司几乎必同事件;
+                #      动作检测噪声大,不让它否决——治 Run#17:官方声明被误判 launch、
+                #      WIRED 判 retire,实为同一停用事件,靠 fable5+anthropic 收掉)。
+                or (rare and (rare & g["rare"]) and (ents & g["ents"]))                 # B-1
+                # B-2:共享罕见型号 + 标题重合(无同公司时的较弱路径,保留动作冲突守卫防误并)。
+                or (rare and (rare & g["rare"]) and not action_conflict                 # B-2
+                    and _title_sim(title, g["title"]) >= RARE_SIM_THRESHOLD)
+                or (ents and not acts and (ents & g["ents"])                            # C
+                    and _title_sim(title, g["title"]) >= TITLE_SIM_THRESHOLD)
+            )
+            if same:
+                g["members"].append(it)
+                g["ents"] |= ents
+                g["rare"] |= rare
+                g["acts"] |= acts
+                placed = True
+                break
         if not placed:
-            groups.append({"ents": set(ents), "acts": set(acts),
-                           "title": str(it.get("title", "")), "members": [it]})
+            groups.append({"ents": set(ents), "rare": set(rare), "acts": set(acts),
+                           "title": title, "members": [it]})
     out = []
     for g in groups:
         if len(g["members"]) == 1:

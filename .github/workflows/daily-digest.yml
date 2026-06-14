@@ -47,7 +47,10 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add posts/
           git diff --cached --quiet && { echo "无变更,跳过提交"; exit 0; }
-          git commit -m "auto: 每日摘要 $(TZ=Asia/Shanghai date +%F) [Actions]"
+          # 日期用生成脚本导出的 DIGEST_DATE(与内容/文件名同一来源);未导出才回退实时取。
+          # 防跨午夜错位:8 分钟生成若跨午夜,提交步骤自取 date 会比内容晚一天(Run#17)。
+          DIGEST_DATE="${DIGEST_DATE:-$(TZ=Asia/Shanghai date +%F)}"
+          git commit -m "auto: 每日摘要 $DIGEST_DATE [Actions]"
           if [ "$TARGET_BRANCH" = "main" ]; then
             git push origin HEAD:main                       # 生产:普通推送,绝不强推
           else

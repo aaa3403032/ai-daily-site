@@ -94,6 +94,71 @@ def test_dedup_cutoff_and_titlesim():
     ok(len(classify.dedup_events(diff_title, now=now)) == 2, "同实体无动作但标题差异大不应并")
 
 
+# ───────────── ① 续:罕见实体(型号代号)驱动的结构性去重 ─────────────
+def test_dedup_rare_entity():
+    """Run#17 硬伤:「美政府要求 Anthropic 停用 Fable 5/Mythos 5」一事件出现4次/跨3类。
+    动词是 offline/directive/orders/force,全不在动作词表 → 词表路线必漏。
+    罕见型号代号 Fable 5 是极强同事件信号,应把 4 条并成 1。"""
+    now = time.time()
+    ban = [
+        {"title": "Anthropic takes Fable 5 and Mythos 5 offline after US government directive",
+         "content": "compliance directive", "media": "anthropic.com",
+         "link": "https://anthropic.com/a", "published_ts": now},
+        {"title": "Anthropic pulls Fable 5 and Mythos 5 offline under US order",
+         "content": "national security", "media": "wired.com",
+         "link": "https://wired.com/b", "published_ts": now},
+        {"title": "US government orders Anthropic to take Fable 5 offline",
+         "content": "white house", "media": "theverge.com",
+         "link": "https://theverge.com/c", "published_ts": now},
+        {"title": "Amazon research pushes White House to force Anthropic Fable 5 offline",
+         "content": "amazon", "media": "36氪",
+         "link": "https://36kr.com/d", "published_ts": now},
+    ]
+    out = classify.dedup_events(ban, now=now)
+    ok(len(out) == 1, f"Fable 5 停用事件4条应并为1,实际 {len(out)}({[o['title'][:30] for o in out]})")
+    ok(out[0].get("_merged_from") and len(out[0]["_merged_from"]) == 3,
+       "应记录被并的另外3源")
+
+    # 同型号 + 同公司 + 不同框架(动作检测可能噪声) → 单日报内按同事件并(B-1)。
+    # 这正是 Run#17 漏并的结构:官方声明被误判 launch、WIRED 判 retire,实为同一停用事件。
+    same_model_company = [
+        {"title": "Anthropic statement on Fable 5", "content": "introduce launch",
+         "media": "anthropic.com", "link": "https://anthropic.com/1", "published_ts": now},
+        {"title": "Anthropic takes Fable 5 offline", "content": "retire deprecate",
+         "media": "wired.com", "link": "https://wired.com/2", "published_ts": now},
+    ]
+    ok(len(classify.dedup_events(same_model_company, now=now)) == 1,
+       "同型号+同公司(即便动作检测分歧)应并为同事件")
+
+    # 守卫1b:同型号但不同公司 + 标题差异大 → 不应并(B-1 不触发,B-2 标题不过线)
+    diff_company = [
+        {"title": "Anthropic launches Fable 5 for coding", "content": "release",
+         "media": "a.com", "link": "https://a.com/1", "published_ts": now},
+        {"title": "Reseller bundles Fable 5 into enterprise suite pricing tiers",
+         "content": "channel partner", "media": "b.com", "link": "https://b.com/2",
+         "published_ts": now},
+    ]
+    ok(len(classify.dedup_events(diff_company, now=now)) == 2,
+       "同型号但不同公司+标题差异大不应并")
+
+    # 守卫2:常见模型家族(GPT-5)不算罕见实体——两篇无关 GPT-5 新闻不应靠型号误并
+    common = [
+        {"title": "GPT-5 tops new coding benchmark", "content": "benchmark",
+         "media": "a.com", "link": "https://a.com/3", "published_ts": now},
+        {"title": "GPT-5 API pricing cut for developers", "content": "pricing",
+         "media": "b.com", "link": "https://b.com/4", "published_ts": now},
+    ]
+    ok(len(classify.dedup_events(common, now=now)) == 2,
+       "无关的两篇 GPT-5(常见家族)不应靠型号误并")
+
+    # 守卫3:不同罕见型号(Fable 5 vs Orion 2)不共享实体,不应并
+    diff_model = [
+        {"title": "Anthropic ships Fable 5", "content": "", "media": "a", "link": "5", "published_ts": now},
+        {"title": "OpenAI ships Orion 2", "content": "", "media": "b", "link": "6", "published_ts": now},
+    ]
+    ok(len(classify.dedup_events(diff_model, now=now)) == 2, "不同型号不应并")
+
+
 # ───────────── ② 分类收紧 ─────────────
 def test_classify_actions():
     # acquire → biz,即使媒体先验是 OpenAI(llm)
@@ -134,9 +199,24 @@ def test_ai_gate():
         "非 AI 新闻应被判不相关")
     ok(classify.is_ai_relevant(
         {"title": "OpenAI ships agent", "content": "", "media": "x"}), "含实体应相关")
+    # 一手纯 AI 官博:正文没 AI 词也兜底放行(它们几乎不发非 AI 内容)
     ok(classify.is_ai_relevant(
         {"title": "Some post", "content": "", "media": "OpenAI", "category_hint": "llm"}),
-        "RSS 源(带 hint)直接放行")
+        "纯 AI 官博(OpenAI)兜底放行")
+    # §5.10 核心修复:带 hint 的泛科技 RSS 不再一律放行——非 AI 内容要被剔
+    ok(not classify.is_ai_relevant(
+        {"title": "SpaceX valuation hits new high", "content": "rocket launch funding",
+         "media": "VentureBeat", "category_hint": "biz"}),
+        "VentureBeat 的 SpaceX 估值(非 AI)即便带 hint 也应被剔")
+    ok(not classify.is_ai_relevant(
+        {"title": "华为鸿蒙生态再思考", "content": "操作系统 国产替代 观点",
+         "media": "半佛仙人", "category_hint": "product"}),
+        "鸿蒙观点文(非 AI)即便带 hint 也应被剔")
+    # 带 hint 但确含 AI 内容 → 仍放行(不误杀)
+    ok(classify.is_ai_relevant(
+        {"title": "VentureBeat: new LLM agent platform", "content": "large language model",
+         "media": "VentureBeat", "category_hint": "agent"}),
+        "带 hint 且含 AI 词应放行")
     # 'ai' 词边界:不被 'available/email' 误命中
     ok(not classify.is_ai_relevant(
         {"title": "New email available now", "content": "campaign maintain", "media": "x"}),
@@ -295,6 +375,7 @@ def test_parse_json_array():
 
 if __name__ == "__main__":
     for fn in [test_dedup_events, test_dedup_cutoff_and_titlesim,
+               test_dedup_rare_entity,
                test_classify_actions, test_ai_gate,
                test_tutorial_filter, test_selfmedia_weight,
                test_parse, test_time_filter,
