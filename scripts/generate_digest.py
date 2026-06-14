@@ -45,7 +45,7 @@ TEMPERATURE = float(os.environ.get("DIGEST_TEMPERATURE", "0.3"))
 #   recency 2→1,query 6→3 → 总搜索 36→6 次,省搜索资源包 + 提速。
 ENGINES = ["search_pro_sogou", "search_pro_quark"]
 ZHIPU_RECENCY = os.environ.get("ZHIPU_RECENCY", "oneWeek")  # 单档(时效交给 RSS)
-PER_CAT_MAX = int(os.environ.get("DIGEST_PER_CAT_MAX", "12"))   # 每类最多取几条喂 GLM(控成本主旋钮)
+PER_CAT_MAX = int(os.environ.get("DIGEST_PER_CAT_MAX", "15"))   # 每类最多取几条喂 GLM(控成本主旋钮;doc 目标10-15)
 MIN_TOTAL = int(os.environ.get("DIGEST_MIN_TOTAL", "8"))         # 候选总量下限,不足则不成稿
 MIN_PUBLISH = int(os.environ.get("DIGEST_MIN_PUBLISH", "4"))     # 最终成品条数下限,不足则 fail
 
@@ -180,7 +180,15 @@ def gather_candidates(key: str, today: str) -> list[dict]:
     except Exception as e:
         print(f"RSS 抓取失败,跳过(不阻塞):{e}", flush=True)
 
-    # 2) Tavily(西方一线源白名单)——有 Key 才跑
+    # 2) Hacker News(免费热度源)——填 points 热度槽 + 一线英文,失败不阻塞
+    hn = []
+    try:
+        add(feeds.fetch_hackernews(), hn)
+        print(f"HN 入池 {len(hn)} 条", flush=True)
+    except Exception as e:
+        print(f"HN 抓取失败,跳过(不阻塞):{e}", flush=True)
+
+    # 3) Tavily(西方一线源白名单)——有 Key 才跑
     tav = []
     tav_key = os.environ.get("TAVILY_API_KEY", "").strip()
     if tav_key:
@@ -190,15 +198,16 @@ def gather_candidates(key: str, today: str) -> list[dict]:
     else:
         print("未配置 TAVILY_API_KEY,跳过西方源", flush=True)
 
-    # 3) 智谱搜索(中文补充)——⑥ 已砍量:2 引擎 × 3 query × 1 recency = 6 次(原 36)
+    # 4) 智谱搜索(中文补充)——⑥ 已砍量:2 引擎 × 3 query × 1 recency = 6 次(原 36)
     zhi = []
     for engine in ENGINES:
         for q in search_queries(today):
             add(web_search(key, q, ZHIPU_RECENCY, engine), zhi)
     print(f"智谱入池 {len(zhi)} 条(搜索 {len(ENGINES) * len(search_queries(today))} 次)", flush=True)
 
-    pool = rss + tav + zhi   # 优先级:RSS > Tavily > 智谱
-    print(f"候选合计 {len(pool)} 条(RSS {len(rss)} / Tavily {len(tav)} / 智谱 {len(zhi)})", flush=True)
+    pool = rss + hn + tav + zhi   # 优先级:RSS > HN > Tavily > 智谱
+    print(f"候选合计 {len(pool)} 条(RSS {len(rss)} / HN {len(hn)} / "
+          f"Tavily {len(tav)} / 智谱 {len(zhi)})", flush=True)
     return pool
 
 

@@ -265,6 +265,28 @@ def test_assemble_render():
     ok("绝对不要" not in md, "无 prompt 泄漏")
 
 
+# ───────────── Hacker News 热度源(映射 + points 进排序) ─────────────
+def test_hackernews():
+    hit = {"title": "Big AI model released &amp; open", "url": "https://example.com/x",
+           "points": 250, "created_at": "2026-06-14T00:00:00Z",
+           "created_at_i": 1781740800, "story_text": "<p>some text</p>"}
+    it = feeds._hn_item(hit)
+    ok(it is not None and it["points"] == 250, "HN hit 映射出 points")
+    ok(it["link"] == "https://example.com/x" and it["media"] == "example.com",
+       "HN 链接/来源域名")
+    ok(it["published_ts"] == 1781740800.0, "HN 时间戳")
+    ok("<p>" not in it["content"] and "&" in it["title"], "HN 正文去标签 + 标题反转义")
+    ok(feeds._hn_item({"title": "Ask HN: thoughts?", "url": ""}) is None,
+       "无外链(Ask HN)应丢弃")
+    # points 进 score:高热度应抬分(填上之前恒 0 的热度槽)
+    now = time.time()
+    hot = classify.score({"published_ts": now, "media": "example.com",
+                          "link": "https://example.com/a", "points": 300}, now)
+    cold = classify.score({"published_ts": now, "media": "example.com",
+                           "link": "https://example.com/b", "points": 0}, now)
+    ok(hot > cold, "高 points 应抬分(热度槽生效)")
+
+
 def test_parse_json_array():
     ok(gd.parse_json_array('```json\n[{"n":1}]\n```') == [{"n": 1}], "容忍代码围栏")
     ok(gd.parse_json_array("前言 [{\"n\":2}] 后语") == [{"n": 2}], "容忍前后说明")
@@ -276,7 +298,8 @@ if __name__ == "__main__":
                test_classify_actions, test_ai_gate,
                test_tutorial_filter, test_selfmedia_weight,
                test_parse, test_time_filter,
-               test_score_rank, test_assemble_render, test_parse_json_array]:
+               test_score_rank, test_hackernews,
+               test_assemble_render, test_parse_json_array]:
         fn()
         print(f"  ✓ {fn.__name__}")
     print(f"\n全部通过:{PASS} 项断言")

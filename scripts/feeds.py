@@ -41,7 +41,15 @@ NS = {
 
 # 默认:每源最多取几条、只要近几天的
 PER_FEED_CAP = int(os.environ.get("RSS_PER_FEED_CAP", "12"))
-RECENT_DAYS = int(os.environ.get("RSS_RECENT_DAYS", "4"))
+RECENT_DAYS = int(os.environ.get("RSS_RECENT_DAYS", "7"))   # 4→7:候选池更大(用户要"数据多")
+
+# ── Hacker News(免费热度源)──
+# 用 Algolia 公开 API(无需 Key),抓 AI 相关高分 story,带 points → 填上 classify.score 的热度槽。
+# 这是"最热门"真正能排序的关键:RSS/Tavily 给的是"最新/一线",HN 给的是"社区最热"。
+HN_API = "https://hn.algolia.com/api/v1/search"
+HN_QUERIES = ["AI", "LLM", "AI agent", "OpenAI", "Anthropic", "open source model"]
+HN_MIN_POINTS = int(os.environ.get("HN_MIN_POINTS", "30"))   # 热度门槛,低于此不要
+HN_PER_QUERY = int(os.environ.get("HN_PER_QUERY", "20"))
 
 # 选源清单:(RSS 地址, 来源显示名, 分类提示)
 # 分类提示只是粗标,最终分类由 classify.py 决定;这里给一手倾向。
@@ -64,8 +72,12 @@ FEEDS = [
     # 研究/论文(arXiv 用 export 端点,RSS 1.0/RDF 格式;解析已兼容)
     ("https://export.arxiv.org/rss/cs.AI", "arXiv cs.AI", "research"),
     ("https://export.arxiv.org/rss/cs.CL", "arXiv cs.CL", "research"),
-    # 中文(36氪有原生 feed;机器之心/量子位需 RSSHub,阶段B 再加)
+    # 更多一线媒体(用户要"数据多";直链优先,RSSHub 兜底,失败不阻塞)
+    ("https://www.technologyreview.com/feed/", "MIT Tech Review", ""),
+    ("https://www.theregister.com/software/ai_ml/headlines.atom", "The Register", ""),
+    # 中文(36氪原生 feed;机器之心走 RSSHub)
     ("https://36kr.com/feed", "36氪", "biz"),
+    ("https://rsshub.app/jiqizhixin/main", "机器之心", ""),
 ]
 
 
@@ -248,6 +260,63 @@ def fetch_feeds(timeout: int = 30, feeds: list = None,
         except requests.RequestException as e:
             print(f"RSS[{source}] 请求异常:{e},跳过", flush=True)
     print(f"RSS 合计 {len(pool)} 条(来自 {len(feeds)} 个源)", flush=True)
+    return pool
+
+
+def _hn_item(hit: dict):
+    """单条 HN hit → 候选 dict(纯函数,可离线单测)。无外链(Ask HN 等)返回 None。"""
+    url = (hit.get("url") or "").strip()
+    if not url:
+        return None
+    host = re.sub(r"^https?://(www\.)?", "", url).split("/")[0]
+    cts = hit.get("created_at_i")
+    return {
+        "title": unescape(hit.get("title") or ""),
+        "link": url,
+        "media": host or "Hacker News",
+        "publish_date": hit.get("created_at", ""),
+        "published_ts": float(cts) if cts else None,
+        "content": _clean_text(hit.get("story_text") or ""),
+        "image": "",
+        "category_hint": "",
+        "points": int(hit.get("points") or 0),   # 热度信号 → classify.score 的 points 槽
+    }
+
+
+def fetch_hackernews(queries: list = None, min_points: int = None, days: int = None,
+                     per_query: int = None, timeout: int = 20) -> list[dict]:
+    """抓 HN 上 AI 相关高分 story(Algolia 公开 API,无需 Key)。按外链去重。失败不阻塞。"""
+    queries = queries if queries is not None else HN_QUERIES
+    min_points = HN_MIN_POINTS if min_points is None else min_points
+    days = RECENT_DAYS if days is None else days
+    per_query = HN_PER_QUERY if per_query is None else per_query
+    cutoff = int((datetime.now(timezone.utc) - timedelta(days=days)).timestamp())
+    pool, seen = [], set()
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; AIDailyBot/1.0)"}
+    for q in queries:
+        try:
+            r = requests.get(HN_API, headers=headers, timeout=timeout, params={
+                "tags": "story", "query": q,
+                "numericFilters": f"points>{min_points},created_at_i>{cutoff}",
+                "hitsPerPage": per_query,
+            })
+            if r.status_code != 200:
+                print(f"HN[{q}] 状态 {r.status_code},跳过", flush=True)
+                continue
+            hits = r.json().get("hits") or []
+        except (requests.RequestException, ValueError) as e:
+            print(f"HN[{q}] 请求异常:{e},跳过", flush=True)
+            continue
+        n = 0
+        for h in hits:
+            it = _hn_item(h)
+            if it and it["link"] not in seen:
+                seen.add(it["link"])
+                pool.append(it)
+                n += 1
+        print(f"HN[{q}] 命中 {len(hits)} → 入池 {n}", flush=True)
+    pool.sort(key=lambda x: x.get("points", 0), reverse=True)
+    print(f"HN 合计 {len(pool)} 条(去重后,按 points 排序)", flush=True)
     return pool
 
 
