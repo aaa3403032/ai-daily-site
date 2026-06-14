@@ -37,6 +37,8 @@ jobs:
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           PYTHONUNBUFFERED: "1"
+          FETCH_OGIMAGE: "1"        # 对入选但缺图的条目补抓 og:image(配图是核心需求)
+          OGIMAGE_LIMIT: "25"
         run: python scripts/generate_digest.py
 
       - name: 提交推送

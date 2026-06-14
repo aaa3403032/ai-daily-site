@@ -72,6 +72,8 @@ KEYWORDS = {
         "ban", "禁令", "lawsuit", "诉讼", "court", "法院", "compliance", "合规",
         "antitrust", "反垄断", "executive order", "白宫", "eu ai act", "版权",
         "copyright", "privacy", "隐私", "safety regulation", "government", "政府",
+        "investigation", "investigates", "probe", "sue", "sued", "attorney general",
+        "subpoena", "起诉", "调查", "传票",
     ],
 }
 
@@ -103,9 +105,122 @@ TIER1 = {
 # 明显低质 vendor / SEO 站(降权)。命中即压到底。
 LOWQ = {"boltinsurance", "vlasti", "admin5", "ipkd"}
 
+# ── 动作概念(双语)── 用于:① 事件级去重的"动作签名" ② 分类的强信号。
+# 同一事件常被中英多源报道(Anthropic retires ↔ Anthropic 停用),
+# 单靠标题分词跨语言匹配不到;用"实体 + 动作概念"双语签名才抓得住。
+ACTION_CONCEPTS = {
+    "acquire":  ["acquire", "acquisition", "acquired", "acquires", "buys", "买下", "收购", "并购"],
+    "funding":  ["funding", "raises", "raised", "investment", "valuation", "series a",
+                 "series b", "series c", "ipo", "融资", "投资", "估值", "上市"],
+    "launch":   ["launch", "launches", "release", "releases", "released", "unveil",
+                 "unveils", "rolls out", "introduce", "introduces", "推出", "发布", "上线", "亮相"],
+    "retire":   ["retire", "retires", "deprecate", "deprecates", "shut down", "shuts down",
+                 "discontinue", "sunset", "停用", "下架", "弃用", "关停", "停服", "退役"],
+    "lawsuit":  ["lawsuit", "sue", "sues", "sued", "investigation", "investigates", "probe",
+                 "antitrust", "subpoena", "attorney general", " ags ", "诉讼", "起诉", "调查",
+                 "反垄断", "传票"],
+    "regulate": ["regulation", "regulate", "ban ", "bans ", "legislation", "executive order",
+                 "监管", "禁令", "法案", "立法"],
+    "partner":  ["partnership", "teams up", "collaborate", "collaboration", "携手", "联手", "合作"],
+    "layoff":   ["layoff", "layoffs", "lays off", "job cuts", "裁员"],
+}
+# 动作概念 → 分类(强先验,只放歧义小的;launch/retire 留给关键词,避免误判模型发布)
+ACTION_TO_CAT = {"acquire": "biz", "funding": "biz", "lawsuit": "policy", "regulate": "policy"}
+
+# AI 实体白名单(品牌/产品名)。作 AI 相关性闸 + 事件去重的实体签名。
+AI_ENTITIES = [
+    "openai", "anthropic", "google deepmind", "deepmind", "microsoft", "nvidia",
+    "meta ai", "perplexity", "midjourney", "stability ai", "cohere", "mistral",
+    "hugging face", "huggingface", "databricks", "scale ai", "runway",
+    "chatgpt", "gpt", "claude", "gemini", "llama", "qwen", "deepseek", "doubao",
+    "豆包", "kimi", "文心", "通义", "智谱", "sora", "copilot",
+]
+_AI_TERM_RE = re.compile(
+    r"\bai\b|\bais\b|a\.i\.|artificial intelligence|machine learning|deep learning|"
+    r"neural network|generative|large language model|\bllms?\b|chatbot|agentic|\bmodel\b|"
+    r"人工智能|机器学习|深度学习|神经网络|大模型|语言模型|生成式|智能体|算力|多模态",
+    re.I)
+_AI_ENT_RE = re.compile(
+    "|".join(re.escape(e) for e in sorted(AI_ENTITIES, key=len, reverse=True)), re.I)
+# 模型版本号 token(gpt-5 / claude 3 / gemini 2 / glm-5.1 ...)——增强实体签名
+_MODEL_VER_RE = re.compile(
+    r"\b(gpt|claude|gemini|llama|qwen|glm|mistral|grok|sora|o\d)[- ]?\d+(?:\.\d+)?\b", re.I)
+
+# 教程/软文标题特征(中文长尾站常见;一线源的合法 how-to 不在此列,见下方白名单判断)
+_TUTORIAL_RE = re.compile(
+    r"完全指南|实战|手把手|保姆级|从入门到|入门教程|新手|详解|避坑|纯干货|教程|攻略|"
+    r"一文(读懂|搞懂|看懂)|step[- ]by[- ]step", re.I)
+
 
 def _hay(item: dict) -> str:
     return (str(item.get("title", "")) + " " + str(item.get("content", ""))).lower()
+
+
+def _actions(hay: str) -> set:
+    """命中的动作概念集合。"""
+    out = set()
+    for concept, words in ACTION_CONCEPTS.items():
+        if any(w in hay for w in words):
+            out.add(concept)
+    return out
+
+
+def _entities(hay: str) -> set:
+    """命中的 AI 实体 + 模型版本号(品牌跨语言通常仍是拉丁字母,可跨中英匹配)。"""
+    ents = set(m.group(0).lower() for m in _AI_ENT_RE.finditer(hay))
+    ents |= set(re.sub(r"[- ]", "", m.group(0).lower()) for m in _MODEL_VER_RE.finditer(hay))
+    return ents
+
+
+def _has_ai_term(hay: str) -> bool:
+    return bool(_AI_TERM_RE.search(hay) or _AI_ENT_RE.search(hay))
+
+
+def is_ai_relevant(item: dict) -> bool:
+    """AI 相关性闸:过滤混入的非 AI 新闻(如"China Inc layoffs")。
+    RSS 源(带 category_hint)本身已是 AI 策展,直接放行,避免误杀官博。"""
+    if (item.get("category_hint") or "").strip():
+        return True
+    return _has_ai_term(_hay(item))
+
+
+def is_tutorial_softarticle(item: dict) -> bool:
+    """教程/软文判定:标题命中特征 且 来源非一线。一线媒体的正经 how-to 不误杀。"""
+    if not _TUTORIAL_RE.search(str(item.get("title", ""))):
+        return False
+    blob = ((item.get("media") or "") + " " + (item.get("link") or "")).lower()
+    return not any(t in blob for t in TIER1)
+
+
+def dedup_events(items: list, now: float = None) -> list:
+    """事件级去重:把"同一事件被多源/多语言报道"的条目归并成一条(保最高分)。
+    判定:两条共享 ≥1 个 AI 实体 且 共享 ≥1 个动作概念 → 同一事件。
+    无动作概念的条目不参与归并(保守,避免把同公司不同事件误并)。纯函数。"""
+    groups = []  # 每组:{"ents":set,"acts":set,"members":[item]}
+    for it in items:
+        hay = _hay(it)
+        ents, acts = _entities(hay), _actions(hay)
+        placed = False
+        if ents and acts:
+            for g in groups:
+                if (ents & g["ents"]) and (acts & g["acts"]):
+                    g["members"].append(it)
+                    g["ents"] |= ents
+                    g["acts"] |= acts
+                    placed = True
+                    break
+        if not placed:
+            groups.append({"ents": set(ents), "acts": set(acts), "members": [it]})
+    out = []
+    for g in groups:
+        if len(g["members"]) == 1:
+            out.append(g["members"][0])
+            continue
+        winner = max(g["members"], key=lambda x: score(x, now))
+        best = dict(winner)
+        best["_merged_from"] = [m.get("media", "") for m in g["members"] if m is not winner]
+        out.append(best)
+    return out
 
 
 def classify(item: dict) -> str:
@@ -128,6 +243,13 @@ def classify(item: dict) -> str:
     mh = MEDIA_HINT.get((item.get("media") or "").strip())
     if mh in scores:
         scores[mh] += 1
+
+    # 4) 动作概念:强信号(覆盖媒体先验/弱关键词)。收购/融资→biz,诉讼/监管→policy。
+    #    治"OpenAI to acquire Ona"被媒体先验拉进 llm、"投诉/调查"误进 llm 等错分。
+    for a in _actions(hay):
+        cat = ACTION_TO_CAT.get(a)
+        if cat in scores:
+            scores[cat] += 4
 
     best = max(scores, key=lambda k: scores[k])
     if scores[best] == 0:

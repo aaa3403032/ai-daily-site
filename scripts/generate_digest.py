@@ -419,10 +419,22 @@ def main():
     now = time.time()
 
     cands = gather_candidates(key, today)
+
+    # 过滤:① 非 AI 新闻(China Inc layoffs 类) ② 教程/软文(CSDN「完全指南」类)
+    before = len(cands)
+    cands = [c for c in cands
+             if classify.is_ai_relevant(c) and not classify.is_tutorial_softarticle(c)]
+    print(f"AI相关性+软文过滤:{before} → {len(cands)} 条", flush=True)
+
     if len(cands) < MIN_TOTAL:
         sys.exit(f"错误:候选只有 {len(cands)} 条(<{MIN_TOTAL}),不足以成稿")
 
     cands = drop_recent(cands, recent_titles())
+
+    # 事件级去重:同一事件被多源/多语言报道只留最高分一条(治"同事件出现4次")
+    before = len(cands)
+    cands = classify.dedup_events(cands, now=now)
+    print(f"事件级去重:{before} → {len(cands)} 条", flush=True)
 
     # 分类 + 类内排序取 TopN(控成本:只把 TopN 喂 GLM)
     for c in cands:
