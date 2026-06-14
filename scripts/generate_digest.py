@@ -1,47 +1,58 @@
 #!/usr/bin/env python3
 """
-AI 每日情报 — 云端生成脚本(阶段3,智谱 GLM 版)
-两段式:① Web Search API 按固定搜索词拿真实结果 ② GLM 从结果中筛选写摘要。
-来源链接只允许取自搜索结果,从根上避免编造链接。
+AI 每日情报 — 云端生成脚本(阶段B,聚合模式)。
 
-本地运行:python scripts/generate_digest.py
-  Key 来源:环境变量 ZHIPU_API_KEY,或仓库上一级目录的 anthropic_key.txt(文件名历史遗留)
-GitHub Actions:Key 来自 Secrets(环境变量 ZHIPU_API_KEY)
-任何一步失败都以非零退出码结束,避免提交残缺内容。
+产品架构从「策展」升级到「聚合」:
+  旧:搜几条 → GLM 选 5 条 → 写单列表 markdown。
+  新:多源大量抓(RSS+Tavily+智谱)→ 去重 → 分类(7类)→ 类内排序取TopN
+      → 分类分批喂 GLM 只写文字(sum/lead/take)→ 组装分类 JSON + 反渲染 markdown。
+
+关键安全升级:GLM 只写文字,url/img/src/title 全程由程序从素材带过去、GLM 碰不到链接,
+  → 编造链接从结构上不可能(比旧版 validate() 兜底强一个量级)。
+
+输出:
+  posts/{date}.json  —— 前端(网站版)用的分类结构(含 hero + 7 分类 + 每条字段)
+  posts/{date}.md    —— 反渲染的 markdown(保 Coze/看板/旧前端不断)
+  posts/index.json   —— 日期列表
+  posts/all.md       —— 全量聚合(Coze 知识库源,勿删)
+
+Key:环境变量 ZHIPU_API_KEY(或 ../anthropic_key.txt,文件名历史遗留);TAVILY_API_KEY 可选。
+任何关键步骤失败以非零退出,避免提交残缺内容。
 """
 
 import json
 import os
 import re
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 import requests
 
+import classify
+import feeds
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 POSTS_DIR = REPO_ROOT / "posts"
 BASE = "https://open.bigmodel.cn/api/paas/v4"
 MODEL = os.environ.get("DIGEST_MODEL", "glm-5.1")
-# 降到 0.3:Run#11 里 0.6 诱导 GLM 编造"看起来像真的"tier-1 URL。低温更守素材。
 TEMPERATURE = float(os.environ.get("DIGEST_TEMPERATURE", "0.3"))
-# 跑全部引擎再合并(实测 search_pro 的 link 字段为空,已剔除)。
-# 不再"够数就停"——单引擎短路是来源单一(全企鹅号)的根因。
+
+# 智谱搜索引擎(search_pro 的 link 字段为空,已剔除);跑全引擎不短路。
 ENGINES = ["search_pro_sogou", "search_pro_quark", "search_std"]
-TARGET = 15          # 目标候选素材条数
-MAX_PER_MEDIA = 2    # 单一来源最多入选几条(轮转抽取时的软上限,凑不够会放宽)
-# Tavily:西方搜索源,补一线国际原始源(OpenAI官方/Bloomberg 等),修智谱"中文二三线站+浅链接"短板。
-# 有 TAVILY_API_KEY 才启用,没有则自动退回纯智谱,不阻塞流水线。
+PER_CAT_MAX = int(os.environ.get("DIGEST_PER_CAT_MAX", "12"))   # 每类最多取几条喂 GLM(控成本主旋钮)
+MIN_TOTAL = int(os.environ.get("DIGEST_MIN_TOTAL", "8"))         # 候选总量下限,不足则不成稿
+MIN_PUBLISH = int(os.environ.get("DIGEST_MIN_PUBLISH", "4"))     # 最终成品条数下限,不足则 fail
+
 TAVILY_URL = "https://api.tavily.com/search"
-# 走 Tavily 的查询(英文一线源向),与智谱中文结果互补
 INTL_QUERIES = [
     "OpenAI Anthropic Google DeepMind latest announcement",
     "AI agent product launch funding round",
     "new large language model release",
+    "AI regulation policy lawsuit",
 ]
-# 一线源白名单:只让 Tavily 从这些官方/权威媒体取结果,避免上次那种 vendor 博客/保险站噪音。
-# 实测(Run#10):不限域名时 Tavily 返回 boltinsurance.com / vlasti.net 等低质源,GLM 合理地全弃之。
 TIER1_DOMAINS = [
     "openai.com", "anthropic.com", "deepmind.google", "blog.google",
     "bloomberg.com", "reuters.com", "techcrunch.com", "theverge.com",
@@ -50,6 +61,7 @@ TIER1_DOMAINS = [
 ]
 
 
+# ──────────────────────────── Key ────────────────────────────
 def get_api_key() -> str:
     key = os.environ.get("ZHIPU_API_KEY", "").strip()
     if key:
@@ -60,64 +72,57 @@ def get_api_key() -> str:
     sys.exit("错误:未找到 API Key(环境变量 ZHIPU_API_KEY 或 ../anthropic_key.txt)")
 
 
+# ──────────────────────────── 抓取 ────────────────────────────
 def search_queries(today: str) -> list[str]:
     return [
         f"AI Agent 大模型 重要新闻 {today}",
         "国产大模型 发布 动态 智谱 阿里 字节 DeepSeek",
-        # 英文词偏向一线原始源(官方/权威媒体),抵消搜狗的腾讯系偏好
         "OpenAI Anthropic Google DeepMind announcement official blog",
         "AI agent startup funding launch TechCrunch Bloomberg Reuters",
         "LLM model release research paper enterprise adoption",
+        "AI 监管 政策 法案 版权 诉讼",
     ]
 
 
 def web_search(key: str, query: str, recency: str, engine: str) -> list[dict]:
-    r = requests.post(
-        f"{BASE}/web_search",
-        headers={"Authorization": f"Bearer {key}"},
-        json={
-            "search_query": query[:70],
-            "search_engine": engine,
-            "search_intent": False,
-            "count": 10,
-            "search_recency_filter": recency,
-            "content_size": "high",
-        },
-        timeout=60,
-    )
-    items = []
-    if r.status_code == 200:
-        items = r.json().get("search_result") or []
-    linked = [it for it in items if (it.get("link") or "").strip()]
-    print(f"搜索[{engine}/{recency}] {query[:30]} → 状态{r.status_code} "
-          f"条数{len(items)} 带链接{len(linked)}", flush=True)
-    if not linked:
-        print(f"  响应体:{r.text[:200]}", flush=True)
-    return linked
-
-
-def tavily_search(key: str, query: str) -> list[dict]:
-    """Tavily news 搜索;返回结果归一成与智谱一致的字段(title/link/media/publish_date/content)。"""
     try:
         r = requests.post(
-            TAVILY_URL,
-            headers={"Authorization": f"Bearer {key}",
-                     "Content-Type": "application/json"},
+            f"{BASE}/web_search",
+            headers={"Authorization": f"Bearer {key}"},
             json={
-                "query": query[:380],
-                "topic": "news",
-                "search_depth": "basic",
-                "days": 7,
-                "max_results": 8,
-                "include_domains": TIER1_DOMAINS,  # 只取一线源
+                "search_query": query[:70], "search_engine": engine,
+                "search_intent": False, "count": 10,
+                "search_recency_filter": recency, "content_size": "high",
             },
             timeout=60,
         )
     except requests.RequestException as e:
-        print(f"Tavily[{query[:30]}] 请求异常:{e}", flush=True)
+        print(f"搜索[{engine}/{recency}] 请求异常:{e}", flush=True)
+        return []
+    items = r.json().get("search_result") or [] if r.status_code == 200 else []
+    linked = [it for it in items if (it.get("link") or "").strip()]
+    print(f"搜索[{engine}/{recency}] {query[:24]} → 状态{r.status_code} "
+          f"条数{len(items)} 带链接{len(linked)}", flush=True)
+    if not linked and r.status_code != 200:
+        print(f"  响应体:{r.text[:160]}", flush=True)
+    return linked
+
+
+def tavily_search(key: str, query: str) -> list[dict]:
+    """Tavily news 搜索;归一字段并保留 relevance(score)用于排序。"""
+    try:
+        r = requests.post(
+            TAVILY_URL,
+            headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+            json={"query": query[:380], "topic": "news", "search_depth": "basic",
+                  "days": 7, "max_results": 8, "include_domains": TIER1_DOMAINS},
+            timeout=60,
+        )
+    except requests.RequestException as e:
+        print(f"Tavily[{query[:24]}] 请求异常:{e}", flush=True)
         return []
     if r.status_code != 200:
-        print(f"Tavily[{query[:30]}] 状态{r.status_code}:{r.text[:200]}", flush=True)
+        print(f"Tavily[{query[:24]}] 状态{r.status_code}:{r.text[:160]}", flush=True)
         return []
     out = []
     for it in r.json().get("results") or []:
@@ -126,250 +131,279 @@ def tavily_search(key: str, query: str) -> list[dict]:
             continue
         host = re.sub(r"^https?://(www\.)?", "", link).split("/")[0]
         out.append({
-            "title": it.get("title", ""),
-            "link": link,
-            "media": host,                       # 用域名当来源名
+            "title": it.get("title", ""), "link": link, "media": host,
             "publish_date": it.get("published_date", ""),
+            "published_ts": _ts(it.get("published_date", "")),
             "content": it.get("content", ""),
+            "image": "", "category_hint": "",
+            "relevance": it.get("score"),
         })
-    print(f"Tavily[{query[:30]}] → 条数{len(out)}", flush=True)
+    print(f"Tavily[{query[:24]}] → 条数{len(out)}", flush=True)
     return out
+
+
+def _ts(s: str):
+    from feeds import _parse_date
+    return _parse_date(s)
 
 
 def _media_of(item: dict) -> str:
     m = (item.get("media") or "").strip()
     if m:
         return m
-    # 无 media 字段时用域名兜底,避免都归到"未知"互相挤掉
     link = (item.get("link") or "").strip()
-    host = re.sub(r"^https?://(www\.)?", "", link).split("/")[0]
-    return host or "未知"
+    return re.sub(r"^https?://(www\.)?", "", link).split("/")[0] or "未知"
 
 
-def _diversify(pool: list[dict], target: int, cap: int) -> list[dict]:
-    """按来源轮转抽取:先保证多样性(每来源不超过 cap),凑不够再放宽。"""
-    from collections import OrderedDict
-    by_media: "OrderedDict[str, list]" = OrderedDict()
-    for it in pool:
-        by_media.setdefault(_media_of(it), []).append(it)
-    selected, used = [], {m: 0 for m in by_media}
-    # 第一轮:每来源最多 cap 条,轮流取
-    for _ in range(cap):
-        for media, lst in by_media.items():
-            if used[media] < cap and used[media] < len(lst):
-                selected.append(lst[used[media]])
-                used[media] += 1
-                if len(selected) >= target:
-                    return selected
-    # 凑不够 target,放宽上限继续填(保持已有顺序、避免重复)
-    for media, lst in by_media.items():
-        for it in lst[used[media]:]:
-            selected.append(it)
-            if len(selected) >= target:
-                return selected
-    return selected
-
-
-def gather_material(key: str, today: str) -> str:
+def gather_candidates(key: str, today: str) -> list[dict]:
+    """多源抓取 + 按 link 去重,返回结构化候选 list(不再拼 markdown)。"""
     pool, seen = [], set()
-    # 跑完所有引擎再合并,不中途短路——这是来源多样性的关键
-    for engine in ENGINES:
-        before = len(pool)
-        for recency in ("oneDay", "oneWeek"):
-            for q in search_queries(today):
-                for item in web_search(key, q, recency, engine):
-                    link = item["link"].strip()
-                    if link not in seen:
-                        seen.add(link)
-                        pool.append(item)
-        print(f"引擎 {engine} 新增 {len(pool)-before} 条,池累计 {len(pool)}", flush=True)
-    # 西方源(Tavily):有 Key 才跑,补一线国际原始源;没有则跳过(纯智谱兜底)
-    tav_pool = []
+
+    def add(items, bucket):
+        n = 0
+        for it in items:
+            link = (it.get("link") or "").strip()
+            if link and link not in seen:
+                seen.add(link)
+                it.setdefault("media", _media_of(it))
+                bucket.append(it)
+                n += 1
+        return n
+
+    # 1) RSS(免费主力,官方直链+题图)——失败不阻塞
+    rss = []
+    try:
+        add(feeds.fetch_feeds(), rss)
+        print(f"RSS 入池 {len(rss)} 条", flush=True)
+    except Exception as e:
+        print(f"RSS 抓取失败,跳过(不阻塞):{e}", flush=True)
+
+    # 2) Tavily(西方一线源白名单)——有 Key 才跑
+    tav = []
     tav_key = os.environ.get("TAVILY_API_KEY", "").strip()
     if tav_key:
         for q in INTL_QUERIES:
-            for item in tavily_search(tav_key, q):
-                link = item["link"].strip()
-                if link not in seen:
-                    seen.add(link)
-                    tav_pool.append(item)
-        print(f"Tavily 新增 {len(tav_pool)} 条(一线源白名单)", flush=True)
+            add(tavily_search(tav_key, q), tav)
+        print(f"Tavily 入池 {len(tav)} 条", flush=True)
     else:
-        print("未配置 TAVILY_API_KEY,跳过西方源(仅用智谱)", flush=True)
-    # RSS 多源(阶段A):零成本、官方一线直链、自带题图。抓取失败不阻塞(退回智谱+Tavily)。
-    rss_pool = []
-    try:
-        import feeds
-        for item in feeds.fetch_feeds():
-            link = (item.get("link") or "").strip()
-            if link and link not in seen:
-                seen.add(link)
-                rss_pool.append(item)
-        print(f"RSS 新增 {len(rss_pool)} 条(官方源+题图)", flush=True)
-    except Exception as e:
-        print(f"RSS 抓取失败,跳过(不阻塞):{e}", flush=True)
-    if len(rss_pool) + len(pool) + len(tav_pool) < 8:
-        sys.exit(f"错误:有效搜索结果只有 {len(rss_pool)+len(pool)+len(tav_pool)} 条,不足以成稿")
-    # 抽取优先级:RSS(官方直链+题图)> Tavily(西方一线)> 智谱(中文索引)
-    results = _diversify(rss_pool + tav_pool + pool, TARGET, MAX_PER_MEDIA)
-    dist = {}
-    for it in results:
-        dist[_media_of(it)] = dist.get(_media_of(it), 0) + 1
-    print(f"来源分布(抽取后):{dist}", flush=True)
-    lines = []
-    for i, it in enumerate(results, 1):
-        lines.append(
-            f"[{i}] {it.get('title','')}\n"
-            f"  来源:{it.get('media','')} | 发布:{it.get('publish_date','')} | 链接:{it.get('link','')}\n"
-            f"  内容:{(it.get('content') or '')[:600]}"
-        )
-    print(f"搜索完成:{len(results)} 条候选素材")
-    return "\n\n".join(lines)
+        print("未配置 TAVILY_API_KEY,跳过西方源", flush=True)
+
+    # 3) 智谱搜索(中文长尾补充)——跑全引擎不短路
+    zhi = []
+    for engine in ENGINES:
+        for recency in ("oneDay", "oneWeek"):
+            for q in search_queries(today):
+                add(web_search(key, q, recency, engine), zhi)
+    print(f"智谱入池 {len(zhi)} 条", flush=True)
+
+    pool = rss + tav + zhi   # 优先级:RSS > Tavily > 智谱
+    print(f"候选合计 {len(pool)} 条(RSS {len(rss)} / Tavily {len(tav)} / 智谱 {len(zhi)})", flush=True)
+    return pool
 
 
+# ──────────────────────────── 去重(对历史) ────────────────────────────
 def recent_titles(n_posts: int = 3) -> list[str]:
     titles = []
     for f in sorted(POSTS_DIR.glob("20??-??-??.md"))[-n_posts:]:
         for line in f.read_text(encoding="utf-8").splitlines():
             m = re.match(r"\*\*\d+\.\s*(.+?)\*\*\s*$", line.strip())
             if m:
-                titles.append(f"[{f.stem}] {m.group(1)}")
+                titles.append(m.group(1))
     return titles
 
 
-def build_prompt(today: str, material: str, dedup: list[str]) -> str:
-    dedup_block = "\n".join(f"- {t}" for t in dedup) if dedup else "(无)"
-    return f"""你是"AI 每日情报站"的编辑,读者是中文产品经理。今天是 {today}(北京时间)。
+def _norm(s: str) -> str:
+    return re.sub(r"[^a-z0-9一-鿿]", "", (s or "").lower())
 
-下面是搜索引擎抓回的候选素材(标题/来源/发布时间/链接/内容):
+
+def drop_recent(cands: list[dict], recent: list[str]) -> list[dict]:
+    """过滤掉与近几日标题高度重合的候选(避免重复报道同一事件)。"""
+    rn = [_norm(t) for t in recent if t]
+    out = []
+    for c in cands:
+        cn = _norm(c.get("title", ""))
+        if cn and any(cn == r or (len(cn) > 8 and cn in r) or (len(r) > 8 and r in cn) for r in rn):
+            continue
+        out.append(c)
+    if len(cands) != len(out):
+        print(f"对历史去重:{len(cands)} → {len(out)} 条", flush=True)
+    return out
+
+
+# ──────────────────────────── 生成(分类分批) ────────────────────────────
+def build_category_prompt(cat_label: str, items: list[dict], today: str) -> str:
+    lines = []
+    for i, it in enumerate(items, 1):
+        lines.append(
+            f"[{i}] 标题:{it.get('title','')}\n"
+            f"    来源:{_media_of(it)} | 时间:{it.get('publish_date','')}\n"
+            f"    内容:{(it.get('content') or '')[:500]}"
+        )
+    material = "\n".join(lines)
+    return f"""你是"智读 · AI每日情报"的编辑,读者是中文产品经理。今天 {today}(北京时间)。
+下面是「{cat_label}」分类下的候选素材(已按重要性排序):
 
 {material}
 
-任务:从素材中挑出 4-6 条对 AI/Agent 领域最重要的新闻,写成中文摘要。
+任务:为其中**值得报道**的每条,写中文摘要。质量优先,软文/重复/价值低的可跳过(不必每条都写)。
 
-已报道过的条目(必须避开,不可重复报道同一事件):
-{dedup_block}
+每条输出这些字段:
+- "n":素材编号(整数,对应上面的 [n])
+- "sum":一句话摘要(≤40字,用于卡片)
+- "lead":2-3 个段落的正文摘要(数组,每段 1-3 句;新名词用括号给白话解释)
+- "take":一句"PM 视角解读",讲清这对做产品意味着什么
 
-输出格式(严格遵守):
-# AI / Agent 领域新闻摘要 — {today}
+严格输出一个 JSON 数组,形如:
+[{{"n":1,"sum":"...","lead":["第一段","第二段"],"take":"..."}}, ...]
 
-## 今日要点
-
-**1. 标题(含事件日期,如"6月10日")**
-事实摘要 2-4 句,新名词用括号给一句白话解释。
-**PM 信号:** 一句对产品经理的启示,讲清"这对做产品意味着什么"。
-来源:[媒体名](链接)
-
-(2-6 条同上)
-
-## 趋势一句话
-
-一句话概括今天几条新闻背后的共同趋势。
-
-硬性要求:
-- 来源链接只能从上面素材的"链接"字段里选,一字不改,严禁编造或拼接 URL
-- 每条至少 1 个来源;同一事件有多条素材时可给 2 个来源
-- 优先选影响面大的事件(模型发布、平台政策、重要产品、行业格局),忽略软文和重复信息
-- 来源多样性:尽量让选中的 4-6 条来自不同媒体,不要 4 条都出自同一来源;同等重要时优先选官方公告、权威媒体(Bloomberg/Reuters/TechCrunch 等)或一线科技媒体,而非二手转载聚合号
-- 国际视野:素材里若有来自 openai.com/anthropic.com/bloomberg.com/techcrunch.com 等国际一线源的条目,在同等重要前提下至少纳入 1-2 条,避免整篇只有国内新闻
-- 把最终成品完整放在 <digest> 和 </digest> 之间,标签外不要放正文"""
+只输出 JSON 数组本身,不要加解释、不要加 markdown 代码围栏、**绝对不要输出任何 URL 或链接**(链接由系统自动附加)。"""
 
 
-def call_glm(key: str, prompt: str) -> dict:
-    r = requests.post(
-        f"{BASE}/chat/completions",
-        headers={"Authorization": f"Bearer {key}"},
-        json={
-            "model": MODEL,
-            "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": 8000,
-            "temperature": TEMPERATURE,
-        },
-        timeout=300,
-    )
+def call_glm(key: str, prompt: str, max_tokens: int = 6000):
+    try:
+        r = requests.post(
+            f"{BASE}/chat/completions",
+            headers={"Authorization": f"Bearer {key}"},
+            json={"model": MODEL, "messages": [{"role": "user", "content": prompt}],
+                  "max_tokens": max_tokens, "temperature": TEMPERATURE},
+            timeout=300,
+        )
+    except requests.RequestException as e:
+        print(f"  GLM 请求异常:{e}", flush=True)
+        return None
     if r.status_code != 200:
-        sys.exit(f"错误:生成调用失败({r.status_code}):{r.text[:500]}")
+        print(f"  GLM 调用失败({r.status_code}):{r.text[:300]}", flush=True)
+        return None
     return r.json()
 
 
-def extract_digest(data: dict) -> str:
-    text = data["choices"][0]["message"]["content"] or ""
-    m = re.search(r"<digest>(.*?)</digest>", text, re.DOTALL)
-    if not m:
-        sys.exit("错误:回复里没有 <digest> 标签,内容如下供排查:\n" + text[:2000])
-    return m.group(1).strip() + "\n"
-
-
-def _split_items(digest: str):
-    """切成 (头部行, [条目块...], 尾部趋势段行)。条目块以 **N. 开头。结构异常返回 None。"""
-    lines = digest.splitlines()
-    start = next((i for i, l in enumerate(lines)
-                  if l.strip().startswith("## 今日要点")), None)
-    trend = next((i for i, l in enumerate(lines)
-                  if l.strip().startswith("##") and "趋势" in l
-                  and (start is None or i > start)), None)
-    if start is None or trend is None:
+def parse_json_array(text: str):
+    """从 GLM 回复里抽出 JSON 数组。容忍代码围栏/前后说明。"""
+    if not text:
         return None
-    head, body, tail = lines[:start + 1], lines[start + 1:trend], lines[trend:]
-    blocks, cur = [], []
-    for l in body:
-        if re.match(r"^\*\*\d+\.", l.strip()):
-            if cur:
-                blocks.append(cur)
-            cur = [l]
-        elif cur:
-            cur.append(l)
-    if cur:
-        blocks.append(cur)
-    return head, blocks, tail
+    text = re.sub(r"```(?:json)?", "", text)
+    m = re.search(r"\[.*\]", text, re.DOTALL)
+    if not m:
+        return None
+    try:
+        data = json.loads(m.group(0))
+        return data if isinstance(data, list) else None
+    except json.JSONDecodeError:
+        return None
 
 
-def validate(digest: str, today: str, material: str) -> str:
-    """校验 + 优雅降级:丢掉含编造链接的条目,重新编号;剩余 ≥4 条才通过。返回清洗后的 digest。"""
-    split = _split_items(digest)
-    if split:
-        head, blocks, tail = split
-        kept, dropped = [], []
-        for blk in blocks:
-            bad = [u for u in re.findall(r"\]\((https?://[^)]+)\)", "\n".join(blk))
-                   if u not in material]
-            (dropped if bad else kept).append(bad if bad else blk)
-        dropped = [d for d in dropped if d]  # dropped 里存的是坏链接列表
-        if dropped:
-            print(f"⚠️ 优雅降级:丢弃 {len(dropped)} 条含编造链接的条目:{dropped}", flush=True)
-        rebuilt = head + [""]
-        for n, blk in enumerate(kept, 1):
-            blk = blk[:]
-            while blk and not blk[-1].strip():  # 去块尾空行,避免重排后双空行
-                blk.pop()
-            blk[0] = re.sub(r"^(\s*)\*\*\d+\.", rf"\g<1>**{n}.", blk[0])
-            rebuilt += blk + [""]
-        rebuilt += tail
-        digest = "\n".join(rebuilt).rstrip() + "\n"
-
-    problems = []
-    if today not in digest.splitlines()[0]:
-        problems.append("标题行缺少当日日期")
-    if "## 今日要点" not in digest:
-        problems.append("缺少'## 今日要点'")
-    items = re.findall(r"^\*\*\d+\.", digest, re.MULTILINE)
-    if len(items) < 4:
-        problems.append(f"降级后有效条目仅 {len(items)} 条,少于 4")
-    if "趋势" not in digest:
-        problems.append("缺少趋势段")
-    links = re.findall(r"\]\((https?://[^)]+)\)", digest)
-    if len(links) < 4:
-        problems.append("来源链接过少")
-    fabricated = [u for u in links if u not in material]
-    if fabricated:
-        problems.append(f"降级后仍有编造链接(异常):{fabricated[:3]}")
-    if problems:
-        sys.exit("错误:摘要未通过校验:" + ";".join(problems) + "\n---\n" + digest)
-    return digest
+def summarize_category(key: str, cat_code: str, cat_label: str,
+                       items: list[dict], today: str) -> list[dict]:
+    """对一个分类调一次 GLM,把 sum/lead/take 回填到对应素材;返回成功写好的条目。"""
+    if not items:
+        return []
+    data = call_glm(key, build_category_prompt(cat_label, items, today))
+    if not data:
+        print(f"  [{cat_label}] GLM 无响应,跳过该类", flush=True)
+        return []
+    arr = parse_json_array(data["choices"][0]["message"]["content"] or "")
+    if arr is None:
+        print(f"  [{cat_label}] JSON 解析失败,跳过该类", flush=True)
+        return []
+    out = []
+    for rec in arr:
+        try:
+            n = int(rec.get("n"))
+        except (TypeError, ValueError):
+            continue
+        if not (1 <= n <= len(items)):
+            continue
+        it = items[n - 1]
+        lead = rec.get("lead")
+        if isinstance(lead, str):
+            lead = [lead]
+        if not isinstance(lead, list) or not lead:
+            continue
+        it = dict(it)  # 不污染原候选
+        it["category"] = cat_code
+        it["sum"] = str(rec.get("sum", "")).strip()
+        it["lead"] = [str(p).strip() for p in lead if str(p).strip()]
+        it["take"] = str(rec.get("take", "")).strip()
+        if it["sum"] and it["lead"]:
+            out.append(it)
+    u = data.get("usage", {})
+    print(f"  [{cat_label}] 候选{len(items)} → 写成{len(out)} 条 "
+          f"(in {u.get('prompt_tokens')} / out {u.get('completion_tokens')} tok)", flush=True)
+    return out
 
 
-def write_outputs(digest: str, today: str):
-    (POSTS_DIR / f"{today}.md").write_text(digest, encoding="utf-8")
+# ──────────────────────────── 组装输出 ────────────────────────────
+def assemble(today: str, buckets: dict) -> tuple[dict, list[dict]]:
+    """按分类顺序拼最终 items,选出全局最高分为 hero。返回 (json_obj, items)。"""
+    items = []
+    for code, _label, _color in classify.CATEGORIES:
+        items.extend(buckets.get(code, []))
+    if items:
+        hero = max(items, key=lambda x: x.get("_score", 0))
+        for it in items:
+            it["hero"] = (it is hero)
+    # 只保留出现的分类(前端按此渲染 tab)
+    present = [c for c in classify.CAT_CODES if buckets.get(c)]
+    cats_meta = [{"code": c, "label": classify.CAT_LABEL[c], "color": classify.CAT_COLOR[c]}
+                 for c in present]
+    json_items = [{
+        "hero": bool(it.get("hero")),
+        "category": it["category"],
+        "src": _media_of(it),
+        "title": it.get("title", ""),
+        "url": it.get("link", ""),
+        "img": it.get("image", "") or "",
+        "sum": it.get("sum", ""),
+        "lead": it.get("lead", []),
+        "take": it.get("take", ""),
+    } for it in items]
+    obj = {
+        "date": today,
+        "generated_at": datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds"),
+        "categories": cats_meta,
+        "items": json_items,
+    }
+    return obj, items
+
+
+def render_markdown(obj: dict) -> str:
+    """从 JSON 反渲染 markdown(保 Coze all.md / 看板 / 旧前端不断)。"""
+    today = obj["date"]
+    by_cat = {}
+    for it in obj["items"]:
+        by_cat.setdefault(it["category"], []).append(it)
+    lines = [f"# AI / Agent 领域新闻摘要 — {today}", ""]
+    n = 0
+    for code, label, _ in classify.CATEGORIES:
+        group = by_cat.get(code)
+        if not group:
+            continue
+        lines.append(f"## {label}")
+        lines.append("")
+        for it in group:
+            n += 1
+            lines.append(f"**{n}. {it['title']}**")
+            lines.append(it.get("sum", ""))
+            for p in it.get("lead", []):
+                lines.append(p)
+            if it.get("take"):
+                lines.append(f"**PM 信号:** {it['take']}")
+            if it.get("url"):
+                lines.append(f"来源:[{it['src']}]({it['url']})")
+            lines.append("")
+    # 趋势段(保留旧结构锚点;简单聚合)
+    lines.append("## 趋势一句话")
+    lines.append("")
+    lines.append(f"今日共 {n} 条,覆盖 {len([c for c in by_cat if by_cat[c]])} 个分类。")
+    lines.append("")
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def write_outputs(obj: dict, markdown: str, today: str):
+    POSTS_DIR.mkdir(exist_ok=True)
+    (POSTS_DIR / f"{today}.json").write_text(
+        json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+    (POSTS_DIR / f"{today}.md").write_text(markdown, encoding="utf-8")
     dates = sorted(f.stem for f in POSTS_DIR.glob("20??-??-??.md"))
     (POSTS_DIR / "index.json").write_text(
         json.dumps(dates, ensure_ascii=False), encoding="utf-8")
@@ -378,19 +412,52 @@ def write_outputs(digest: str, today: str):
     (POSTS_DIR / "all.md").write_text(all_md, encoding="utf-8")
 
 
+# ──────────────────────────── 主流程 ────────────────────────────
 def main():
     today = datetime.now(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%d")
     key = get_api_key()
-    material = gather_material(key, today)
-    dedup = recent_titles()
-    print(f"日期 {today},去重条目 {len(dedup)} 条,调用 {MODEL} ...")
-    data = call_glm(key, build_prompt(today, material, dedup))
-    digest = extract_digest(data)
-    digest = validate(digest, today, material)
-    write_outputs(digest, today)
-    u = data.get("usage", {})
-    print(f"完成:posts/{today}.md 已写入,index.json/all.md 已更新")
-    print(f"用量:输入 {u.get('prompt_tokens')} tok,输出 {u.get('completion_tokens')} tok")
+    now = time.time()
+
+    cands = gather_candidates(key, today)
+    if len(cands) < MIN_TOTAL:
+        sys.exit(f"错误:候选只有 {len(cands)} 条(<{MIN_TOTAL}),不足以成稿")
+
+    cands = drop_recent(cands, recent_titles())
+
+    # 分类 + 类内排序取 TopN(控成本:只把 TopN 喂 GLM)
+    for c in cands:
+        c["category"] = classify.classify_or_default(c)
+    buckets = classify.rank_within_categories(cands, per_cat_max=PER_CAT_MAX, now=now)
+    dist = {classify.CAT_LABEL[c]: len(v) for c, v in buckets.items() if v}
+    print(f"分类分布(排序后取TopN):{dist}", flush=True)
+
+    # 分类分批生成(GLM 只写文字)
+    written = {}
+    for code, label, _ in classify.CATEGORIES:
+        got = summarize_category(key, code, label, buckets.get(code, []), today)
+        if got:
+            written[code] = got
+    total = sum(len(v) for v in written.values())
+    if total < MIN_PUBLISH:
+        sys.exit(f"错误:成品仅 {total} 条(<{MIN_PUBLISH}),不发布")
+
+    obj, items = assemble(today, written)
+
+    # 可选:对入选但缺图的条目补抓 og:image(配图是核心需求)
+    if os.environ.get("FETCH_OGIMAGE") == "1":
+        try:
+            feeds.backfill_images(items, limit=int(os.environ.get("OGIMAGE_LIMIT", "20")))
+            obj, items = assemble(today, written)  # 重组以带上补到的图
+        except Exception as e:
+            print(f"og:image 兜底失败(不阻塞):{e}", flush=True)
+
+    markdown = render_markdown(obj)
+    write_outputs(obj, markdown, today)
+
+    withimg = sum(1 for it in obj["items"] if it["img"])
+    print(f"完成:posts/{today}.json + .md 已写入;index.json/all.md 已更新")
+    print(f"成品 {total} 条,分类 {len(obj['categories'])} 个,带题图 {withimg} 条,"
+          f"hero={next((i['title'][:30] for i in obj['items'] if i['hero']), '无')}")
 
 
 if __name__ == "__main__":
