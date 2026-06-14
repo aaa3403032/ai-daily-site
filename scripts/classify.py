@@ -74,6 +74,8 @@ KEYWORDS = {
         "copyright", "privacy", "隐私", "safety regulation", "government", "政府",
         "investigation", "investigates", "probe", "sue", "sued", "attorney general",
         "subpoena", "起诉", "调查", "传票",
+        "ruled", "ruling", "verdict", " liable", "settlement", "court order",
+        "网信办", "举报", "备案", "网络安全", "监管部门",
     ],
 }
 
@@ -104,6 +106,9 @@ TIER1 = {
 }
 # 明显低质 vendor / SEO 站(降权)。命中即压到底。
 LOWQ = {"boltinsurance", "vlasti", "admin5", "ipkd"}
+# 中文自媒体/博客平台(软降权,非清零)——它们常是当天唯一中文声音,
+# 给 0.2 低权:类目内有一线源时自然沉底,类目薄时仍可保底出场,不全杀。
+SELFMEDIA = {"csdn", "cnblogs", "企鹅号", "半佛仙人", "百家号", "脉脉", "简书"}
 
 # ── 动作概念(双语)── 用于:① 事件级去重的"动作签名" ② 分类的强信号。
 # 同一事件常被中英多源报道(Anthropic retires ↔ Anthropic 停用),
@@ -115,12 +120,16 @@ ACTION_CONCEPTS = {
     "launch":   ["launch", "launches", "release", "releases", "released", "unveil",
                  "unveils", "rolls out", "introduce", "introduces", "推出", "发布", "上线", "亮相"],
     "retire":   ["retire", "retires", "deprecate", "deprecates", "shut down", "shuts down",
-                 "discontinue", "sunset", "停用", "下架", "弃用", "关停", "停服", "退役"],
+                 "discontinue", "sunset", "cut off", "cuts off", "cutting off",
+                 "revoke", "revokes", "block access", "blocks access", "pull access",
+                 "停用", "下架", "弃用", "关停", "停服", "退役", "切断", "封禁",
+                 "撤销访问", "撤销", "限制访问"],
     "lawsuit":  ["lawsuit", "sue", "sues", "sued", "investigation", "investigates", "probe",
                  "antitrust", "subpoena", "attorney general", " ags ", "诉讼", "起诉", "调查",
-                 "反垄断", "传票"],
+                 "反垄断", "传票", "ruled", "ruling", "verdict", " liable", "settlement",
+                 "court order", "court rules", "起诉书", "判决"],
     "regulate": ["regulation", "regulate", "ban ", "bans ", "legislation", "executive order",
-                 "监管", "禁令", "法案", "立法"],
+                 "监管", "禁令", "法案", "立法", "网信办", "举报", "备案", "监管部门"],
     "partner":  ["partnership", "teams up", "collaborate", "collaboration", "携手", "联手", "合作"],
     "layoff":   ["layoff", "layoffs", "lays off", "job cuts", "裁员"],
 }
@@ -136,7 +145,9 @@ AI_ENTITIES = [
     "豆包", "kimi", "文心", "通义", "智谱", "sora", "copilot",
 ]
 _AI_TERM_RE = re.compile(
-    r"\bai\b|\bais\b|a\.i\.|artificial intelligence|machine learning|deep learning|"
+    # (?<![a-z])ai(?![a-z]) 抓独立的 "AI" token,含中文夹缝里的(如 "涉AI举报"),
+    # 但不误命中 email/available/campaign 等子串。
+    r"(?<![a-z])ais?(?![a-z])|a\.i\.|artificial intelligence|machine learning|deep learning|"
     r"neural network|generative|large language model|\bllms?\b|chatbot|agentic|\bmodel\b|"
     r"人工智能|机器学习|深度学习|神经网络|大模型|语言模型|生成式|智能体|算力|多模态",
     re.I)
@@ -149,7 +160,7 @@ _MODEL_VER_RE = re.compile(
 # 教程/软文标题特征(中文长尾站常见;一线源的合法 how-to 不在此列,见下方白名单判断)
 _TUTORIAL_RE = re.compile(
     r"完全指南|实战|手把手|保姆级|从入门到|入门教程|新手|详解|避坑|纯干货|教程|攻略|"
-    r"一文(读懂|搞懂|看懂)|step[- ]by[- ]step", re.I)
+    r"榜单|天梯|排行|盘点|合集|一文(读懂|搞懂|看懂)|step[- ]by[- ]step", re.I)
 
 
 def _hay(item: dict) -> str:
@@ -192,11 +203,35 @@ def is_tutorial_softarticle(item: dict) -> bool:
     return not any(t in blob for t in TIER1)
 
 
+def _title_tokens(s: str) -> set:
+    """标题分词:拉丁词(≥4字母)+ 中文 2-gram。用于标题相似度兜底。"""
+    s = (s or "").lower()
+    toks = set(w for w in re.findall(r"[a-z0-9]+", s) if len(w) >= 4)
+    for run in re.findall(r"[一-鿿]+", s):
+        if len(run) == 1:
+            toks.add(run)
+        for i in range(len(run) - 1):
+            toks.add(run[i:i + 2])
+    return toks
+
+
+def _title_sim(a: str, b: str) -> float:
+    ta, tb = _title_tokens(a), _title_tokens(b)
+    if not ta or not tb:
+        return 0.0
+    return len(ta & tb) / len(ta | tb)
+
+
+# 标题相似度兜底阈值(高=保守,只并近重复标题)
+TITLE_SIM_THRESHOLD = 0.5
+
+
 def dedup_events(items: list, now: float = None) -> list:
     """事件级去重:把"同一事件被多源/多语言报道"的条目归并成一条(保最高分)。
-    判定:两条共享 ≥1 个 AI 实体 且 共享 ≥1 个动作概念 → 同一事件。
-    无动作概念的条目不参与归并(保守,避免把同公司不同事件误并)。纯函数。"""
-    groups = []  # 每组:{"ents":set,"acts":set,"members":[item]}
+    主判定:两条共享 ≥1 个 AI 实体 且 共享 ≥1 个动作概念 → 同一事件。
+    兜底:有实体但没命中任何动作概念的条目,用标题相似度并入同实体高相似组
+          (阈值 TITLE_SIM_THRESHOLD,保守;治"动作词不在表里"的漏并)。纯函数。"""
+    groups = []  # 每组:{"ents":set,"acts":set,"title":str,"members":[item]}
     for it in items:
         hay = _hay(it)
         ents, acts = _entities(hay), _actions(hay)
@@ -209,8 +244,18 @@ def dedup_events(items: list, now: float = None) -> list:
                     g["acts"] |= acts
                     placed = True
                     break
+        # 兜底:有实体但无动作命中 → 标题相似度并入同实体高相似组(只对无动作条目,极保守)
+        if not placed and ents and not acts:
+            for g in groups:
+                if (ents & g["ents"]) and \
+                   _title_sim(it.get("title", ""), g["title"]) >= TITLE_SIM_THRESHOLD:
+                    g["members"].append(it)
+                    g["ents"] |= ents
+                    placed = True
+                    break
         if not placed:
-            groups.append({"ents": set(ents), "acts": set(acts), "members": [it]})
+            groups.append({"ents": set(ents), "acts": set(acts),
+                           "title": str(it.get("title", "")), "members": [it]})
     out = []
     for g in groups:
         if len(g["members"]) == 1:
@@ -270,6 +315,8 @@ def _source_weight(item: dict) -> float:
         return 0.0
     if any(t in blob for t in TIER1):
         return 1.0
+    if any(t in blob for t in SELFMEDIA):
+        return 0.2   # 中文自媒体软降权:沉底但保命(可能是唯一中文声音)
     # arXiv / 官方域名一手
     if "arxiv" in blob or item.get("media", "") in MEDIA_HINT:
         return 0.8

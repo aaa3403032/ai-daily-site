@@ -63,6 +63,37 @@ def test_dedup_events():
     ok(len(classify.dedup_events(diff_ent, now=now)) == 2, "不同实体同动作不应并")
 
 
+# ───────────── ① 续:cut off 词表 + 标题相似度兜底 ─────────────
+def test_dedup_cutoff_and_titlesim():
+    now = time.time()
+    # Run#16 真实漏并:shuts down(在表) + cuts off access(原不在表)→ 词表补全后应并
+    cutoff = [
+        {"title": "Ars: Anthropic shuts down older Claude models", "content": "shut down",
+         "media": "arstechnica.com", "link": "https://arstechnica.com/x", "published_ts": now},
+        {"title": "The Verge: Anthropic cuts off access to flagship Claude",
+         "content": "cuts off", "media": "theverge.com", "link": "https://theverge.com/y",
+         "published_ts": now},
+    ]
+    ok(len(classify.dedup_events(cutoff, now=now)) == 1, "cut off + shuts down 应并为1事件")
+
+    # 标题相似度兜底:同实体 + 无动作命中 + 标题近重复 → 并
+    titlesim = [
+        {"title": "OpenAI overview of its Sora video tool", "content": "profile",
+         "media": "a.com", "link": "https://a.com/1", "published_ts": now},
+        {"title": "OpenAI overview of its Sora video tool today", "content": "profile",
+         "media": "b.com", "link": "https://b.com/2", "published_ts": now},
+    ]
+    ok(len(classify.dedup_events(titlesim, now=now)) == 1, "同实体无动作近重复标题应兜底并")
+
+    # 同实体无动作但标题不同 → 不并(保守)
+    diff_title = [
+        {"title": "OpenAI overview of Sora", "content": "", "media": "a", "link": "1", "published_ts": now},
+        {"title": "OpenAI dashboard for enterprise billing analytics", "content": "",
+         "media": "b", "link": "2", "published_ts": now},
+    ]
+    ok(len(classify.dedup_events(diff_title, now=now)) == 2, "同实体无动作但标题差异大不应并")
+
+
 # ───────────── ② 分类收紧 ─────────────
 def test_classify_actions():
     # acquire → biz,即使媒体先验是 OpenAI(llm)
@@ -85,6 +116,16 @@ def test_classify_actions():
           "media": "OpenAI", "category_hint": "llm"}
     ok(classify.classify(it) == "llm", "模型发布应留 llm")
 
+    # ② 续:法院判决 → policy(曾误进 product)
+    it = {"title": "Google found liable in AI copyright case, court rules",
+          "content": "verdict ruling", "media": "wired.com", "category_hint": ""}
+    ok(classify.classify(it) == "policy", f"法院判决应进 policy,实际 {classify.classify(it)}")
+
+    # ② 续:网信办/举报 → policy(中文监管,曾误进 llm)
+    it = {"title": "网信办开设涉AI举报专区", "content": "网络安全 规范 监管部门",
+          "media": "36氪", "category_hint": ""}
+    ok(classify.classify(it) == "policy", f"网信办举报应进 policy,实际 {classify.classify(it)}")
+
 
 # ───────────── AI 相关性闸 ─────────────
 def test_ai_gate():
@@ -100,6 +141,10 @@ def test_ai_gate():
     ok(not classify.is_ai_relevant(
         {"title": "New email available now", "content": "campaign maintain", "media": "x"}),
         "ai 子串不应误命中 email/available")
+    # 中文夹缝里的独立 "AI" token 应判相关(治"涉AI举报"被相关性闸误杀)
+    ok(classify.is_ai_relevant(
+        {"title": "网信办开设涉AI举报专区", "content": "网络安全", "media": "x"}),
+        "中文夹缝里的 AI 应判相关")
 
 
 # ───────────── ⑤ 教程软文过滤 ─────────────
@@ -114,10 +159,29 @@ def test_tutorial_filter():
     ok(not classify.is_tutorial_softarticle(
         {"title": "How to use Claude step-by-step", "media": "theverge.com",
          "link": "https://theverge.com/x"}), "一线源 how-to 不应误杀")
+    # ⑤ 续:榜单/天梯/排行/盘点 listicle 应判软文
+    ok(classify.is_tutorial_softarticle(
+        {"title": "2026 大模型天梯榜单出炉", "media": "csdn.net", "link": "https://csdn.net/y"}),
+        "天梯/榜单 应判软文")
+    ok(classify.is_tutorial_softarticle(
+        {"title": "国产大模型排行大盘点", "media": "cnblogs", "link": "http://x"}),
+        "排行/盘点 应判软文")
     # 普通新闻标题不命中
     ok(not classify.is_tutorial_softarticle(
         {"title": "OpenAI launches new model", "media": "openai", "link": "x"}),
         "普通新闻不应判软文")
+
+
+# ───────────── ⑤ 续:自媒体软降权(沉底不清零) ─────────────
+def test_selfmedia_weight():
+    now = time.time()
+    cn = classify.score({"published_ts": now, "media": "CSDN", "link": "https://csdn.net/a"}, now)
+    t1 = classify.score({"published_ts": now, "media": "The Verge", "link": "https://theverge.com/a"}, now)
+    mid = classify.score({"published_ts": now, "media": "某中文站", "link": "https://x.cn/a"}, now)
+    low = classify.score({"published_ts": now, "media": "ipkd", "link": "https://ipkd.cn/a"}, now)
+    ok(cn < t1, "自媒体(CSDN)应低于一线源")
+    ok(cn < mid, "自媒体(0.2)应低于普通二三线站(0.45)")
+    ok(cn > low, "自媒体(0.2)应高于 LOWQ 低质站(0)——保命不清零")
 
 
 # ───────────── 回归:parse / score / rank / assemble / render ─────────────
@@ -208,8 +272,10 @@ def test_parse_json_array():
 
 
 if __name__ == "__main__":
-    for fn in [test_dedup_events, test_classify_actions, test_ai_gate,
-               test_tutorial_filter, test_parse, test_time_filter,
+    for fn in [test_dedup_events, test_dedup_cutoff_and_titlesim,
+               test_classify_actions, test_ai_gate,
+               test_tutorial_filter, test_selfmedia_weight,
+               test_parse, test_time_filter,
                test_score_rank, test_assemble_render, test_parse_json_array]:
         fn()
         print(f"  ✓ {fn.__name__}")

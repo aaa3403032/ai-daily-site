@@ -56,7 +56,9 @@ FEEDS = [
     # 一线科技媒体(带题图,文章级直链)
     ("https://techcrunch.com/category/artificial-intelligence/feed/", "TechCrunch", "product"),
     ("https://venturebeat.com/category/ai/feed/", "VentureBeat", "biz"),
-    ("https://arstechnica.com/ai/feed/", "Ars Technica", "research"),
+    # Ars 的 /ai/ feed 混入大量泛科技(SpaceX/无人机/Pokémon),且非论文。
+    # 去 hint:① 不再灌满 research ② 无 hint → 过 AI 相关性闸,泛科技被剔。
+    ("https://arstechnica.com/ai/feed/", "Ars Technica", ""),
     ("https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "The Verge", "product"),
     ("https://www.wired.com/feed/tag/ai/latest/rss", "WIRED", "product"),
     # 研究/论文(arXiv 用 export 端点,RSS 1.0/RDF 格式;解析已兼容)

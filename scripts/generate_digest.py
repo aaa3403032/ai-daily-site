@@ -40,8 +40,11 @@ BASE = "https://open.bigmodel.cn/api/paas/v4"
 MODEL = os.environ.get("DIGEST_MODEL", "glm-5.1")
 TEMPERATURE = float(os.environ.get("DIGEST_TEMPERATURE", "0.3"))
 
-# 智谱搜索引擎(search_pro 的 link 字段为空,已剔除);跑全引擎不短路。
-ENGINES = ["search_pro_sogou", "search_pro_quark", "search_std"]
+# 智谱搜索引擎(search_pro 的 link 字段为空,已剔除)。
+# ⑥ 降为补充:RSS 已是主力,智谱只补中文国产模型/政策。引擎 3→2(去 search_std 兜底引擎),
+#   recency 2→1,query 6→3 → 总搜索 36→6 次,省搜索资源包 + 提速。
+ENGINES = ["search_pro_sogou", "search_pro_quark"]
+ZHIPU_RECENCY = os.environ.get("ZHIPU_RECENCY", "oneWeek")  # 单档(时效交给 RSS)
 PER_CAT_MAX = int(os.environ.get("DIGEST_PER_CAT_MAX", "12"))   # 每类最多取几条喂 GLM(控成本主旋钮)
 MIN_TOTAL = int(os.environ.get("DIGEST_MIN_TOTAL", "8"))         # 候选总量下限,不足则不成稿
 MIN_PUBLISH = int(os.environ.get("DIGEST_MIN_PUBLISH", "4"))     # 最终成品条数下限,不足则 fail
@@ -74,13 +77,12 @@ def get_api_key() -> str:
 
 # ──────────────────────────── 抓取 ────────────────────────────
 def search_queries(today: str) -> list[str]:
+    # 智谱已降为"中文补充":英文一线源由 RSS+Tavily 覆盖,这里只补它们抓不到的——
+    # 国产大模型动态 + 当日综合 + 中文政策。3 条足够,别再跑 OpenAI/TechCrunch 等(RSS 已有)。
     return [
+        "国产大模型 发布 动态 智谱 阿里 字节 DeepSeek 月之暗面",
         f"AI Agent 大模型 重要新闻 {today}",
-        "国产大模型 发布 动态 智谱 阿里 字节 DeepSeek",
-        "OpenAI Anthropic Google DeepMind announcement official blog",
-        "AI agent startup funding launch TechCrunch Bloomberg Reuters",
-        "LLM model release research paper enterprise adoption",
-        "AI 监管 政策 法案 版权 诉讼",
+        "AI 监管 政策 法案 版权 诉讼 网信办",
     ]
 
 
@@ -188,13 +190,12 @@ def gather_candidates(key: str, today: str) -> list[dict]:
     else:
         print("未配置 TAVILY_API_KEY,跳过西方源", flush=True)
 
-    # 3) 智谱搜索(中文长尾补充)——跑全引擎不短路
+    # 3) 智谱搜索(中文补充)——⑥ 已砍量:2 引擎 × 3 query × 1 recency = 6 次(原 36)
     zhi = []
     for engine in ENGINES:
-        for recency in ("oneDay", "oneWeek"):
-            for q in search_queries(today):
-                add(web_search(key, q, recency, engine), zhi)
-    print(f"智谱入池 {len(zhi)} 条", flush=True)
+        for q in search_queries(today):
+            add(web_search(key, q, ZHIPU_RECENCY, engine), zhi)
+    print(f"智谱入池 {len(zhi)} 条(搜索 {len(ENGINES) * len(search_queries(today))} 次)", flush=True)
 
     pool = rss + tav + zhi   # 优先级:RSS > Tavily > 智谱
     print(f"候选合计 {len(pool)} 条(RSS {len(rss)} / Tavily {len(tav)} / 智谱 {len(zhi)})", flush=True)
