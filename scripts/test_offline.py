@@ -191,6 +191,15 @@ def test_classify_actions():
           "media": "36氪", "category_hint": ""}
     ok(classify.classify(it) == "policy", f"网信办举报应进 policy,实际 {classify.classify(it)}")
 
+    # Run#21:开源模型发布(标题含 open-source)→ oss,治被 model/coding 关键词拉进 llm
+    it = {"title": "Kimi K2.7-Code: open-source coding model released",
+          "content": "weights coding model", "media": "huggingface.co", "category_hint": ""}
+    ok(classify.classify(it) == "oss", f"开源模型发布应进 oss,实际 {classify.classify(it)}")
+    # 不误伤:标题无开源词的普通模型发布不被 oss 抢(仍 llm)
+    it = {"title": "OpenAI releases GPT new model", "content": "large language model",
+          "media": "OpenAI", "category_hint": "llm"}
+    ok(classify.classify(it) == "llm", "非开源模型发布仍留 llm(oss 不误抢)")
+
 
 # ───────────── AI 相关性闸 ─────────────
 def test_ai_gate():
@@ -240,6 +249,16 @@ def test_ai_gate():
         {"title": "Statement on US government directive to suspend access to flagship",
          "content": "Claude models affected", "media": "reuters.com"}),
         "标题无AI但正文含具名实体(Claude)应放行")
+    # Run#21 修:arXiv 论文标题用 VLM/diffusion 等术语不含"AI"字,但 arxiv 是纯 AI 研究源 → 放行
+    ok(classify.is_ai_relevant(
+        {"title": "When Good Verifiers Go Bad: Self-Improving VLMs",
+         "content": "vision language model", "media": "arXiv cs.AI", "category_hint": "research"}),
+        "arXiv 论文(标题无AI字)应放行(纯AI研究源白名单)")
+    # 不放宽过头:非白名单泛源、标题无AI信号、正文无具名实体 → 仍被剔
+    ok(not classify.is_ai_relevant(
+        {"title": "When Good Verifiers Go Bad", "content": "generic systems work",
+         "media": "someblog.com", "category_hint": "research"}),
+        "非白名单源、标题无AI信号应被剔")
     # Run#19 长尾修:36氪「9点1氪」晨间快讯大杂烩——正文捎带 AI 公司名也应被挡
     ok(not classify.is_ai_relevant(
         {"title": "9点1氪 | SpaceX估值创新高;胖东来回应;OpenAI 据传新融资",

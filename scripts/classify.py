@@ -226,9 +226,12 @@ def _has_ai_term(hay: str) -> bool:
     return bool(_AI_TERM_RE.search(hay) or _AI_ENT_RE.search(hay))
 
 
-# 一手 AI 官博:即使某篇正文没命中 AI 关键词也放行(它们是纯 AI 机构,几乎不会发非 AI 内容)。
+# 一手 AI 官博 + 纯 AI 研究源:即使某篇标题没命中 AI 关键词也放行(它们几乎不发非 AI 内容)。
 # 注意只认这几个"纯 AI"源;泛科技 feed(VentureBeat/Verge/Register/36氪…)即便带 hint 也要过闸。
-_PURE_AI_SOURCES = ("openai", "anthropic", "deepmind", "hugging face", "huggingface")
+# arxiv(cs.AI/cs.CL)+ Google Research:论文标题常用 VLM/diffusion/verifier 等术语不含"AI"字,
+# 若不放行会被 AI 闸误杀(Run#21 实证:24 篇 arXiv 仅 2 篇活下来)→ 把这两类研究源也纳入白名单。
+_PURE_AI_SOURCES = ("openai", "anthropic", "deepmind", "hugging face", "huggingface",
+                    "arxiv", "google research")
 
 
 def is_ai_relevant(item: dict) -> bool:
@@ -350,6 +353,13 @@ def classify(item: dict) -> str:
         for w in words:
             if w in hay:
                 scores[cat] += 1
+
+    # 1.5) 标题级"开源发布"强信号 → oss。治"Kimi 开源编码模型"被 model/coding 关键词拉进 llm:
+    #      开源模型/权重发布本就属"开源发布"类。仅认标题(正文捎带不算),强度同动作概念。
+    title_l = str(item.get("title", "")).lower()
+    if any(s in title_l for s in ("open source", "open-source", "开源",
+                                  "open weights", "open-weight", "open model", "开放权重")):
+        scores["oss"] += 3
 
     # 2) RSS 的 category_hint:中等先验
     hint = (item.get("category_hint") or "").strip()
