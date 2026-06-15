@@ -240,6 +240,21 @@ def test_ai_gate():
         {"title": "Statement on US government directive to suspend access to flagship",
          "content": "Claude models affected", "media": "reuters.com"}),
         "标题无AI但正文含具名实体(Claude)应放行")
+    # Run#19 长尾修:36氪「9点1氪」晨间快讯大杂烩——正文捎带 AI 公司名也应被挡
+    ok(not classify.is_ai_relevant(
+        {"title": "9点1氪 | SpaceX估值创新高;胖东来回应;OpenAI 据传新融资",
+         "content": "OpenAI Anthropic 融资 商业航天 FIFA", "media": "36氪",
+         "category_hint": "biz"}),
+        "36氪 9点1氪 晨间快讯(大杂烩)即便正文有 AI 公司名也应被挡")
+    ok(not classify.is_ai_relevant(
+        {"title": "AI 晚报:今日要点速览", "content": "OpenAI GPT 模型",
+         "media": "36氪", "category_hint": "llm"}),
+        "晚报/早报聚合栏目应被挡")
+    # 不误杀:正经单条 AI 新闻标题(非快讯格式)仍放行
+    ok(classify.is_ai_relevant(
+        {"title": "OpenAI 发布 GPT-6 推理模型", "content": "新模型 发布",
+         "media": "36氪", "category_hint": "llm"}),
+        "正经单条 AI 新闻(非快讯格式)不应误杀")
 
 
 # ───────────── ⑤ 教程软文过滤 ─────────────

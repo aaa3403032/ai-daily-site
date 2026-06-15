@@ -182,6 +182,13 @@ _TUTORIAL_RE = re.compile(
     r"榜单|天梯|排行|盘点|合集|一文(读懂|搞懂|看懂)|step[- ]by[- ]step|"
     r"深度解读|深入解读|深度解析|究极", re.I)
 
+# 聚合快讯/早晚报专栏标题特征(36氪「9点1氪」、晨间快讯、早报/晚报…)。
+# 这类是把当天 SpaceX/胖东来/FIFA 等大杂烩塞一篇,即便捎带点了 AI 公司名也非单条 AI 新闻。
+# Run#19 教训:它们靠"正文含具名实体"路绕过 AI 闸,需在标题层面直接挡掉。
+_BRIEF_RE = re.compile(
+    r"\d+\s*点\s*\d+\s*氪|晨间快讯|晚间快讯|晨间播报|晚间播报|早间播报|"
+    r"早报|晚报|一周(融资|大事|要闻|热点)|本周(融资|大事|要闻)", re.I)
+
 
 def _hay(item: dict) -> str:
     return (str(item.get("title", "")) + " " + str(item.get("content", ""))).lower()
@@ -232,8 +239,12 @@ def is_ai_relevant(item: dict) -> bool:
       ② 出现*具名* AI 实体/模型(OpenAI/Claude/GPT-5…;捎带的泛"AI"字不算),或
       ③ 来自一手纯 AI 官博。
     弃掉「正文泛词单次命中」这条漏路。宁可漏掉边缘条目(数据中心抗议/某机器人公司),
-    换更高精度——质量优先(doc 定调)。"""
-    if _has_ai_term(str(item.get("title", "")).lower()):           # ① 标题有 AI 信号
+    换更高精度——质量优先(doc 定调)。
+    Run#19 补:聚合快讯专栏(36氪 9点1氪 等大杂烩)即便正文有 AI 公司名也先挡掉。"""
+    title = str(item.get("title", ""))
+    if _BRIEF_RE.search(title):                                    # ⓪ 聚合快讯专栏 = 大杂烩,直接挡
+        return False
+    if _has_ai_term(title.lower()):                                # ① 标题有 AI 信号
         return True
     hay = _hay(item)
     if _AI_ENT_RE.search(hay) or _MODEL_VER_RE.search(hay):        # ② 具名实体/模型(全文)
