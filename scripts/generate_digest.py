@@ -349,10 +349,16 @@ def assemble(today: str, buckets: dict) -> tuple[dict, list[dict]]:
     for code, _label, _color in classify.CATEGORIES:
         items.extend(buckets.get(code, []))
     if items:
-        # 头条优先从*有题图*的高分条目里选——付费墙源(WSJ/NYT/Bloomberg)常无 og 图,
-        # 让它当头条会渲染成空白大块(难看)。全部无图才退回纯按分排序。
+        # 头条选取优先级:一线源+有图 > 有图 > 任意。
+        # ① 有图:付费墙源(WSJ/NYT/Bloomberg)常无 og 图,当头条会渲染成空白块(难看)。
+        # ② 一线源:HN/github 高赞但冷门/负面帖(如"某LLM套壳")分高会被当头条,不够重磅;
+        #    优先 TIER1(OpenAI/Reuters/TechCrunch/Verge…)让头条更权威。
+        def _is_tier1(x):
+            blob = ((x.get("media") or "") + " " + (x.get("link") or "")).lower()
+            return any(t in blob for t in classify.TIER1)
         with_img = [x for x in items if x.get("image")]
-        hero = max(with_img or items, key=lambda x: x.get("_score", 0))
+        t1_img = [x for x in with_img if _is_tier1(x)]
+        hero = max(t1_img or with_img or items, key=lambda x: x.get("_score", 0))
         for it in items:
             it["hero"] = (it is hero)
     # 只保留出现的分类(前端按此渲染 tab)

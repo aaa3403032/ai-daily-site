@@ -38,7 +38,11 @@ jobs:
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           PYTHONUNBUFFERED: "1"
           FETCH_OGIMAGE: "1"        # 对入选但缺图的条目补抓 og:image(配图是核心需求)
-          OGIMAGE_LIMIT: "25"
+          OGIMAGE_LIMIT: "40"       # 25→40:条目变多,配图兜底上限同步抬
+          # 中等扩量(用户拍板,接受月成本升至 ¥40-70):把候选池做大,供给足的类目自然涨
+          RSS_PER_FEED_CAP: "20"    # 12→20:每源抓更多
+          RSS_RECENT_DAYS: "10"     # 7→10:时间窗放宽
+          HN_MIN_POINTS: "15"       # 30→15:纳入更多社区热帖
         run: python scripts/generate_digest.py
 
       - name: 提交推送

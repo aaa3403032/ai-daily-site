@@ -401,6 +401,17 @@ def test_assemble_render():
     })
     h2 = [i for i in obj2["items"] if i["hero"]]
     ok(len(h2) == 1 and h2[0]["title"] == "N2", "全无图时退回最高分为 hero")
+    # hero 一线源优先:一线源+有图 即便分低,也胜过非一线(github/HN)+有图的高分
+    obj3, _ = gd.assemble(today, {
+        "llm": [{"category": "llm", "title": "HN1", "link": "https://github.com/x",
+                 "media": "github.com", "image": "https://e.com/h.jpg",
+                 "sum": "s", "lead": ["p"], "take": "k", "_score": 9.0}],
+        "biz": [{"category": "biz", "title": "R1", "link": "https://reuters.com/x",
+                 "media": "reuters.com", "image": "https://e.com/r.jpg",
+                 "sum": "s", "lead": ["p"], "take": "k", "_score": 4.0}],
+    })
+    h3 = [i for i in obj3["items"] if i["hero"]]
+    ok(len(h3) == 1 and h3[0]["title"] == "R1", "hero 优先一线源(reuters 胜 github 高赞)")
     ok({c["code"] for c in obj["categories"]} == {"llm", "biz"}, "只含出现的分类")
     for i in obj["items"]:
         ok(set(i) >= {"hero", "category", "src", "title", "url", "img", "sum",
