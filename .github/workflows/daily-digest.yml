@@ -4,11 +4,17 @@ name: daily-digest
 
 on:
   workflow_dispatch:        # 手动触发(测试用)
+    inputs:
+      target_branch:
+        description: '推送目标分支。测试时填测试分支(如 actions-test),切勿填 main。留空=main。'
+        default: 'main'
+        required: false
   schedule:
     - cron: '0 1 * * *'    # UTC 01:00 = 北京 09:00(实际会延迟 3-15 分钟,正常)
 
+# cron 不传 inputs → 回落 main(生产行为不变);手动触发可指定测试分支,保护 main。
 env:
-  TARGET_BRANCH: main
+  TARGET_BRANCH: ${{ github.event.inputs.target_branch || 'main' }}
 
 permissions:
   contents: write
@@ -31,6 +37,12 @@ jobs:
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           PYTHONUNBUFFERED: "1"
+          FETCH_OGIMAGE: "1"        # 对入选但缺图的条目补抓 og:image(配图是核心需求)
+          OGIMAGE_LIMIT: "40"       # 25→40:条目变多,配图兜底上限同步抬
+          # 中等扩量(用户拍板,接受月成本升至 ¥40-70):把候选池做大,供给足的类目自然涨
+          RSS_PER_FEED_CAP: "20"    # 12→20:每源抓更多
+          RSS_RECENT_DAYS: "10"     # 7→10:时间窗放宽
+          HN_MIN_POINTS: "15"       # 30→15:纳入更多社区热帖
         run: python scripts/generate_digest.py
 
       - name: 提交推送
@@ -39,5 +51,12 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add posts/
           git diff --cached --quiet && { echo "无变更,跳过提交"; exit 0; }
-          git commit -m "auto: 每日摘要 $(TZ=Asia/Shanghai date +%F) [Actions]"
-          git push origin HEAD:"$TARGET_BRANCH"
+          # 日期用生成脚本导出的 DIGEST_DATE(与内容/文件名同一来源);未导出才回退实时取。
+          # 防跨午夜错位:8 分钟生成若跨午夜,提交步骤自取 date 会比内容晚一天(Run#17)。
+          DIGEST_DATE="${DIGEST_DATE:-$(TZ=Asia/Shanghai date +%F)}"
+          git commit -m "auto: 每日摘要 $DIGEST_DATE [Actions]"
+          if [ "$TARGET_BRANCH" = "main" ]; then
+            git push origin HEAD:main                       # 生产:普通推送,绝不强推
+          else
+            git push -f origin HEAD:"$TARGET_BRANCH"         # 测试分支:可强推,免非快进失败
+          fi
