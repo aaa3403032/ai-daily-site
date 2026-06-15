@@ -423,10 +423,13 @@ def write_outputs(obj: dict, markdown: str, today: str):
     (POSTS_DIR / f"{today}.json").write_text(
         json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
     (POSTS_DIR / f"{today}.md").write_text(markdown, encoding="utf-8")
-    dates = sorted(f.stem for f in POSTS_DIR.glob("20??-??-??.md"))
+    # 前端日期列表只列有 .json 的日期(可被网站版渲染);旧格式仅 .md 的日期不进下拉,避免点进空白
+    json_dates = sorted(f.stem for f in POSTS_DIR.glob("20??-??-??.json"))
     (POSTS_DIR / "index.json").write_text(
-        json.dumps(dates, ensure_ascii=False), encoding="utf-8")
-    parts = [(POSTS_DIR / f"{d}.md").read_text(encoding="utf-8").strip() for d in dates]
+        json.dumps(json_dates, ensure_ascii=False), encoding="utf-8")
+    # all.md(Coze 知识库源)仍汇总全部 .md,保留历史不丢
+    md_dates = sorted(f.stem for f in POSTS_DIR.glob("20??-??-??.md"))
+    parts = [(POSTS_DIR / f"{d}.md").read_text(encoding="utf-8").strip() for d in md_dates]
     all_md = "# AI 每日情报站 — 全部摘要汇总\n\n" + "\n\n---\n\n".join(parts) + "\n"
     (POSTS_DIR / "all.md").write_text(all_md, encoding="utf-8")
 
