@@ -371,7 +371,17 @@ def test_assemble_render():
     obj, items = gd.assemble(today, written)
     ok(obj["date"] == today and len(obj["items"]) == 2, "组装条数")
     heroes = [i for i in obj["items"] if i["hero"]]
-    ok(len(heroes) == 1 and heroes[0]["title"] == "T1", "最高分为 hero")
+    ok(len(heroes) == 1 and heroes[0]["title"] == "T2",
+       "hero 优先有题图条目(T2 有图,即便分低于无图的 T1)")
+    # 兜底:全部无题图时退回纯按分选最高(N2 7.0 > N1 3.0)
+    obj2, _ = gd.assemble(today, {
+        "llm": [{"category": "llm", "title": "N1", "link": "https://e.com/n1",
+                 "media": "x", "image": "", "sum": "s", "lead": ["p"], "take": "k", "_score": 3.0}],
+        "biz": [{"category": "biz", "title": "N2", "link": "https://e.com/n2",
+                 "media": "y", "image": "", "sum": "s", "lead": ["p"], "take": "k", "_score": 7.0}],
+    })
+    h2 = [i for i in obj2["items"] if i["hero"]]
+    ok(len(h2) == 1 and h2[0]["title"] == "N2", "全无图时退回最高分为 hero")
     ok({c["code"] for c in obj["categories"]} == {"llm", "biz"}, "只含出现的分类")
     for i in obj["items"]:
         ok(set(i) >= {"hero", "category", "src", "title", "url", "img", "sum",

@@ -349,7 +349,10 @@ def assemble(today: str, buckets: dict) -> tuple[dict, list[dict]]:
     for code, _label, _color in classify.CATEGORIES:
         items.extend(buckets.get(code, []))
     if items:
-        hero = max(items, key=lambda x: x.get("_score", 0))
+        # 头条优先从*有题图*的高分条目里选——付费墙源(WSJ/NYT/Bloomberg)常无 og 图,
+        # 让它当头条会渲染成空白大块(难看)。全部无图才退回纯按分排序。
+        with_img = [x for x in items if x.get("image")]
+        hero = max(with_img or items, key=lambda x: x.get("_score", 0))
         for it in items:
             it["hero"] = (it is hero)
     # 只保留出现的分类(前端按此渲染 tab)

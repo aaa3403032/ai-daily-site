@@ -69,9 +69,12 @@ FEEDS = [
     ("https://arstechnica.com/ai/feed/", "Ars Technica", ""),
     ("https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "The Verge", "product"),
     ("https://www.wired.com/feed/tag/ai/latest/rss", "WIRED", "product"),
-    # 研究/论文(arXiv 用 export 端点,RSS 1.0/RDF 格式;解析已兼容)
-    ("https://export.arxiv.org/rss/cs.AI", "arXiv cs.AI", "research"),
-    ("https://export.arxiv.org/rss/cs.CL", "arXiv cs.CL", "research"),
+    # 研究/论文。⚠️ arXiv 旧 /rss/ 端点在 CI 实测返回 0 条(Run#20),改用 Atom API query 端点(更稳、Atom 已兼容)。
+    ("https://export.arxiv.org/api/query?search_query=cat:cs.AI&sortBy=submittedDate&sortOrder=descending&max_results=20", "arXiv cs.AI", "research"),
+    ("https://export.arxiv.org/api/query?search_query=cat:cs.CL&sortBy=submittedDate&sortOrder=descending&max_results=20", "arXiv cs.CL", "research"),
+    # 异构研究/开源源(不走 arXiv/RSSHub 同一套基础设施;arXiv 即便被 CI 限,这俩兜底 research/oss)
+    ("https://research.google/blog/rss/", "Google Research", "research"),
+    ("https://www.marktechpost.com/feed/", "MarkTechPost", ""),
     # 更多一线媒体(用户要"数据多";直链优先,RSSHub 兜底,失败不阻塞)
     ("https://www.technologyreview.com/feed/", "MIT Tech Review", ""),
     ("https://www.theregister.com/software/ai_ml/headlines.atom", "The Register", ""),
