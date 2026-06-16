@@ -255,16 +255,25 @@ def build_category_prompt(cat_label: str, items: list[dict], today: str) -> str:
 
 {material}
 
-任务:为其中**值得报道**的每条,写中文摘要。质量优先,软文/重复/价值低的可跳过(不必每条都写)。
+任务:先**逐条判断是否合格**,再只为合格的写中文摘要。质量优先,宁缺毋滥。
 
-每条输出这些字段:
+判为**不合格(keep=false,必须剔除)**的标准:
+① 聚合快讯/整点速递/早晚报/榜单合集——把当天多条凑成一篇的(如"新浪AI热点小时报""36氪9点1氪""一周融资"),不是单篇新闻;
+② 教程/软文/营销/凑数水文;
+③ 与 AI 无实质关系(只是捎带提到 AI);
+④ 与本批其它条目**同一事件**的重复(留信息最全的一条,其余判 keep=false)。
+
+**每条素材都要输出一条记录**:
 - "n":素材编号(整数,对应上面的 [n])
-- "sum":一句话摘要(≤40字,用于卡片)
-- "lead":2-3 个段落的正文摘要(数组,每段 1-3 句;新名词用括号给白话解释)
-- "take":一句"PM 视角解读",讲清这对做产品意味着什么
+- "keep":true 或 false
+- 当 keep=false:给 "reason":一句剔除理由(便于复查),其余字段可省
+- 当 keep=true:再给:
+  - "sum":一句话摘要(≤40字,用于卡片)
+  - "lead":2-3 个段落的正文摘要(数组,每段 1-3 句;新名词用括号给白话解释)
+  - "take":一句"PM 视角解读",讲清这对做产品意味着什么
 
 严格输出一个 JSON 数组,形如:
-[{{"n":1,"sum":"...","lead":["第一段","第二段"],"take":"..."}}, ...]
+[{{"n":1,"keep":true,"sum":"...","lead":["第一段","第二段"],"take":"..."}},{{"n":2,"keep":false,"reason":"聚合快讯,非单篇新闻"}}]
 
 只输出 JSON 数组本身,不要加解释、不要加 markdown 代码围栏、**绝对不要输出任何 URL 或链接**(链接由系统自动附加)。"""
 
@@ -302,6 +311,40 @@ def parse_json_array(text: str):
         return None
 
 
+def _apply_glm_records(arr: list, items: list[dict], cat_code: str):
+    """把 GLM 返回的记录套回素材。GLM 显式判 keep=false 的剔除并记原因(治本:语义判垃圾,
+    不再依赖正则穷举)。纯函数,便于离线单测。返回 (写好的条目, [(标题, 剔除理由)])。
+    注:无 keep 字段=默认保留(向后兼容,绝不因缺字段误删全部)。"""
+    out, dropped = [], []
+    for rec in arr:
+        if not isinstance(rec, dict):
+            continue
+        try:
+            n = int(rec.get("n"))
+        except (TypeError, ValueError):
+            continue
+        if not (1 <= n <= len(items)):
+            continue
+        it = items[n - 1]
+        if rec.get("keep") is False:                       # GLM 显式判定剔除
+            dropped.append((str(it.get("title", ""))[:30],
+                            str(rec.get("reason", "")).strip()[:50]))
+            continue
+        lead = rec.get("lead")
+        if isinstance(lead, str):
+            lead = [lead]
+        if not isinstance(lead, list) or not lead:
+            continue
+        it = dict(it)  # 不污染原候选
+        it["category"] = cat_code
+        it["sum"] = str(rec.get("sum", "")).strip()
+        it["lead"] = [str(p).strip() for p in lead if str(p).strip()]
+        it["take"] = str(rec.get("take", "")).strip()
+        if it["sum"] and it["lead"]:
+            out.append(it)
+    return out, dropped
+
+
 def summarize_category(key: str, cat_code: str, cat_label: str,
                        items: list[dict], today: str) -> list[dict]:
     """对一个分类调一次 GLM,把 sum/lead/take 回填到对应素材;返回成功写好的条目。"""
@@ -315,30 +358,13 @@ def summarize_category(key: str, cat_code: str, cat_label: str,
     if arr is None:
         print(f"  [{cat_label}] JSON 解析失败,跳过该类", flush=True)
         return []
-    out = []
-    for rec in arr:
-        try:
-            n = int(rec.get("n"))
-        except (TypeError, ValueError):
-            continue
-        if not (1 <= n <= len(items)):
-            continue
-        it = items[n - 1]
-        lead = rec.get("lead")
-        if isinstance(lead, str):
-            lead = [lead]
-        if not isinstance(lead, list) or not lead:
-            continue
-        it = dict(it)  # 不污染原候选
-        it["category"] = cat_code
-        it["sum"] = str(rec.get("sum", "")).strip()
-        it["lead"] = [str(p).strip() for p in lead if str(p).strip()]
-        it["take"] = str(rec.get("take", "")).strip()
-        if it["sum"] and it["lead"]:
-            out.append(it)
+    out, dropped = _apply_glm_records(arr, items, cat_code)
     u = data.get("usage", {})
     print(f"  [{cat_label}] 候选{len(items)} → 写成{len(out)} 条 "
+          f"(GLM 剔除{len(dropped)} 条) "
           f"(in {u.get('prompt_tokens')} / out {u.get('completion_tokens')} tok)", flush=True)
+    for title, reason in dropped:
+        print(f"      ✗ 剔除:{title} — {reason}", flush=True)
     return out
 
 

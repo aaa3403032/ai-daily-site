@@ -450,6 +450,38 @@ def test_parse_json_array():
     ok(gd.parse_json_array("no array") is None, "无数组返回 None")
 
 
+# ───────────── 治本:GLM keep/drop 质量判断(语义判垃圾,替代正则穷举) ─────────────
+def test_glm_keepdrop():
+    items = [
+        {"title": "OpenAI 发布 GPT-6 推理模型", "content": "新模型"},
+        {"title": "新浪AI热点小时报08时_今日实时AI热点速递", "content": "杂烩"},
+        {"title": "Anthropic 完成新一轮融资", "content": "funding"},
+        {"title": "大模型应用完全指南合集", "content": "x"},
+    ]
+    arr = [
+        {"n": 1, "keep": True, "sum": "s1", "lead": ["p1", "p2"], "take": "t1"},
+        {"n": 2, "keep": False, "reason": "聚合快讯,非单篇新闻"},
+        {"n": 3, "sum": "s3", "lead": ["q1"], "take": "t3"},      # 无 keep=默认保留
+        {"n": 4, "keep": False, "reason": "教程合集"},
+    ]
+    out, dropped = gd._apply_glm_records(arr, items, "llm")
+    titles = [o["title"] for o in out]
+    ok(len(out) == 2, f"keep=false 应剔除,剩 2 条,实际 {len(out)}")
+    ok(titles[0].startswith("OpenAI") and titles[1].startswith("Anthropic"),
+       "保留的是合格条目(新浪快讯/教程被剔)")
+    ok(all(o["category"] == "llm" for o in out), "category 回填")
+    ok(len(dropped) == 2 and any("快讯" in r for _, r in dropped),
+       "剔除记录带理由(便于复查)")
+    # 向后兼容:GLM 万一不给 keep 字段,默认保留(绝不误删全部)
+    out2, _ = gd._apply_glm_records(
+        [{"n": 1, "sum": "s", "lead": ["p"], "take": "t"}], [{"title": "X"}], "biz")
+    ok(len(out2) == 1, "无 keep 字段默认保留(不误删)")
+    # keep=true 但 sum/lead 残缺 → 不计入(数据不完整)
+    out3, _ = gd._apply_glm_records(
+        [{"n": 1, "keep": True, "sum": "", "lead": []}], [{"title": "Y"}], "biz")
+    ok(len(out3) == 0, "keep=true 但缺 sum/lead 不计入")
+
+
 if __name__ == "__main__":
     for fn in [test_dedup_events, test_dedup_cutoff_and_titlesim,
                test_dedup_rare_entity,
@@ -457,7 +489,8 @@ if __name__ == "__main__":
                test_tutorial_filter, test_selfmedia_weight,
                test_parse, test_time_filter,
                test_score_rank, test_hackernews,
-               test_assemble_render, test_parse_json_array]:
+               test_assemble_render, test_parse_json_array,
+               test_glm_keepdrop]:
         fn()
         print(f"  ✓ {fn.__name__}")
     print(f"\n全部通过:{PASS} 项断言")
