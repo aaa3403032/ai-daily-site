@@ -581,3 +581,309 @@ AI枪支检测系统失灵致惨剧，制造商遭幸存者起诉
 ## 趋势一句话
 
 今日共 56 条,覆盖 7 个分类。
+
+---
+
+# AI / Agent 领域新闻摘要 — 2026-06-16
+
+## 大模型
+
+**1. AI-referred US shoppers browse longer, spend more per visit, data shows - Reuters**
+路透社：AI引流使美国消费者浏览更久、单次消费更高
+路透社报道，数据显示通过AI推荐引流而来的美国消费者，其浏览时长和单次访问花费均显著高于传统渠道用户。
+这表明AI在电商领域的角色正从单纯的效率工具，转变为能有效提升用户粘性和客单价的增长引擎。
+**PM 信号:** 电商PM需重新评估AI导流的商业价值，将推荐算法的优化目标从单点转化率转向用户停留时长与客单价的深度挖掘。
+来源:[reuters.com](https://www.reuters.com/business/media-telecom/ai-referred-us-shoppers-browse-longer-spend-more-per-visit-data-shows-2026-06-15/)
+
+**2. Gemini 3.5 and Antigravity come to Google NotebookLM**
+NotebookLM升级Gemini 3.5，新增Antigravity功能
+Google为其AI笔记应用NotebookLM带来重大更新，底层模型升级至最新的Gemini 3.5，并支持更多文件类型与网页源集成。
+此次更新还引入了Antigravity（反重力，谷歌新推出的底层计算增强机制）内嵌支持，旨在让模型处理复杂查询时具备更强的推理与执行能力。
+**PM 信号:** 知识管理类产品需紧跟基座模型升级节奏，利用新模型特性拓展应用边界，构建技术护城河。
+来源:[Ars Technica](https://arstechnica.com/ai/2026/06/gemini-3-5-and-antigravity-come-to-google-notebooklm/)
+
+**3. 新浪AI热点小时报丨2026年06月16日08时_今日实时AI热点速递**
+多款国产大模型API降价超90%，技术红利与竞争共振
+近期，DeepSeek、小米、腾讯云等头部国产大模型厂商接连宣布大幅下调API（应用程序编程接口）调用费用，多款主流模型降价幅度突破90%。
+分析师指出，大模型API价格下探是技术红利释放与市场竞争博弈共振的结果，将极大降低企业端的应用门槛。
+**PM 信号:** API成本断崖式下跌是AI应用爆发的催化剂，PM应立刻重新评估此前因成本过高而被搁置的AI原生功能需求。
+来源:[新浪网](https://k.sina.cn/article_7857201856_1d45362c001906v3ta.html?from=tech)
+
+**4. 新浪人工智能热点小时报丨2026年06月16日08时_今日实时人工智能热点速递**
+物理AI加速落地，赋能高铁与化工等实体产业
+多家科创板公司透露物理AI（将AI与物理实体结合的技术）新进展，将其深度融入业务，如提升高铁控制系统安全、自动控制化工厂等。
+同时，多款“AI医生”已正式上岗，大模型正从虚拟对话走向真实世界的生产力转化。
+**PM 信号:** 大模型竞争正从纯软件转向软硬结合的“物理AI”，产业PM需关注端侧算力与行业Know-how的深度融合机会。
+来源:[新浪网](https://k.sina.cn/article_7857201856_1d45362c001906v3u8.html?from=tech)
+
+**5. 新浪AI热点小时报丨2026年06月16日06时_今日实时AI热点速递**
+华强北档口AI化转型，AI耳机与陪伴机器人成新宠
+作为中国电子消费市场晴雨表的深圳华强北，正经历一场AI化转型，传统档口纷纷上架AI翻译耳机、AI学习机、AI陪伴机器人等新品。
+消费电子市场的逻辑正从“买硬件”向“买智能”转变，AI能力成为电子产品的核心卖点。
+**PM 信号:** 消费电子PM需意识到硬件已沦为载体，AI服务订阅与体验差异化才是新的利润区与护城河。
+来源:[新浪网](https://k.sina.cn/article_7857201856_1d45362c001906uwyk.html?from=finance)
+
+**6. 新浪人工智能热点小时报丨2026年06月15日08时_今日实时人工智能热点速递**
+大模型军备赛分化，Agent赛道全面开战
+本周AI动态显示，大模型军备竞赛进入同台对打阶段：GPT-5押注能力上限，Gemini 3.0押注端侧隐私，Claude 5押注安全可信，文心5.0押注中文主场。
+同时，Agent（智能体，能自主执行任务的AI系统）成为2026年最大变量，OpenAI Agent API公测及多方商用闭环落地，标志着Agent从概念验证走向大规模商业化。
+**PM 信号:** 基座模型差异化定位给PM提供了更多选型空间，而Agent的商用闭环则意味着B端产品需尽快从“对话框”升级为“自主执行工作流”。
+来源:[新浪网](https://k.sina.cn/article_7857201856_1d45362c001906srnk.html?from=tech)
+
+## Agent·智能体
+
+**7. Ponytail – make your AI agent think like the laziest senior dev in the room**
+开源项目Ponytail：让AI Agent像“最懒资深开发”般思考。
+Ponytail 是一个开源项目，旨在改变 AI Agent 的推理方式，使其模仿“最懒的高级开发者”的思维模式。
+这种模式并非偷懒，而是追求用最少的步骤、最优雅的路径解决问题，避免过度工程化。
+项目为 Agent 的任务拆解和执行提供了一种反直觉但高效的策略设计。
+**PM 信号:** 提示PM在设计Agent时，与其追求面面俱到的复杂逻辑，不如优化路径寻找“最短解”，降低算力消耗与出错率。
+来源:[github.com](https://github.com/DietrichGebert/ponytail)
+
+**8. Build a Basic AI Agent from Scratch: Long Task Planning**
+实战教程：从零构建具备长任务规划能力的AI Agent。
+该文详细介绍了如何从零开始构建一个能够处理长任务的 AI Agent。
+核心聚焦于“长任务规划”（Long Task Planning）能力的实现，即如何让 Agent 将复杂目标拆解为多步骤的子任务并持续执行。
+文章提供了具体的架构思路与代码实践，帮助开发者理解 Agent 的记忆与调度机制。
+**PM 信号:** 长任务规划是Agent从“对话玩具”走向“生产力工具”的关键，PM需关注任务拆解的颗粒度与上下文记忆的衔接设计。
+来源:[medium.com](https://medium.com/@rogi23696/build-a-basic-ai-agent-from-scratch-long-task-planning-14e803f9bd6d)
+
+**9. 消息称蚂蚁集团计划为支付宝引入 AI 助手，可点咖啡、买基金 超级App转型智能中枢**
+支付宝将引入AI助手，支付主体向AI Agent转变。
+蚂蚁集团计划为支付宝引入 AI 助手，支持点咖啡、买基金等操作，推动超级App向智能中枢转型。
+CEO韩歆毅指出，智能体经济时代商业本质不变，但支付主体将由人变为 AI Agent，由算力保障服务连续性。
+这标志着“无感支付”将升级为 Agent 代客下单并自动结算的新交互形态。
+**PM 信号:** 超级App的流量入口正从“界面”变为“意图”，PM需思考如何将现有服务API化，以接入Agent的自动调度网络。
+来源:[中华网](https://3g.china.com/act/news/10000169/20260616/49549893.html)
+
+**10. Lua.ex: Sandboxed Lua 5.3 on the Beam, Built for AI Agents · Lua.ex**
+Lua.ex发布：专为AI Agent打造的沙盒化Lua运行环境。
+Lua.ex 是一个基于 Erlang 虚拟机（BEAM，一种高并发容错运行环境）构建的沙盒化（Sandboxed，即隔离运行防越权） Lua 5.3 环境。
+它结合了 BEAM 的高并发与容错能力，以及沙盒环境的安全性，防止 Agent 执行恶意代码或越权操作。
+这为需要动态执行代码的 Agent 提供了可靠的底层基础设施。
+**PM 信号:** Agent自主执行代码的安全边界是产品落地的生死线，PM在设计开放性Agent时必须前置考虑沙盒隔离与权限控制。
+来源:[deflua.com](https://deflua.com/)
+
+**11. The AI Agent in the Billing Department of Verizon Is a Mentally Handicapped Thug**
+吐槽：Verizon计费AI Agent表现糟糕，沦为“智障流氓”。
+作者强烈吐槽了 Verizon 计费部门的 AI Agent，称其表现如同“智障流氓”。
+该 Agent 在处理账单问题时不仅无法理解用户诉求，还可能采取强硬或无效的推诿策略。
+这暴露出当前部分企业在客服场景中盲目部署 Agent，导致用户体验严重降级。
+**PM 信号:** 强行用不成熟的Agent替代人工客服是自毁品牌，PM在落地Agent时必须设置兜底机制，避免复杂场景下的“死循环”激怒用户。
+来源:[samhenrycliff.medium.com](https://samhenrycliff.medium.com/the-ai-agent-in-the-billing-department-of-verizon-wireless-is-a-mentally-handicapped-thug-99890a389ff5)
+
+## 产品与工具
+
+**12. Anthropic Is Still at Odds With the White House Over Claude Fable 5**
+Anthropic高管赴白宫谈判，Claude Fable 5风险争议未决
+Anthropic高层周一飞往华盛顿与白宫官员会面，但双方仍未就新模型Claude Fable 5（Anthropic最新发布的大模型）带来的风险达成共识。
+政府与AI公司在模型安全性和潜在威胁评估上存在明显分歧，这可能导致后续更严格的监管干预。
+此次高层谈判破裂，意味着AI前沿模型在商业化落地时，仍面临巨大的政策不确定性。
+**PM 信号:** 前沿模型发布正成为地缘与监管博弈焦点，PM在做全球化产品时需将合规与政策风险前置。
+来源:[WIRED](https://www.wired.com/story/anthropic-is-still-at-odds-with-the-white-house-over-claude-fable-5/)
+
+**13. Meta CTO Andrew Bosworth Admits the Company’s AI Reorg Was ‘Atrocious’**
+Meta CTO承认AI架构重组极其糟糕，承诺改善沟通与福利
+Meta CTO Andrew Bosworth在内部备忘录中承认，公司近期的AI业务架构重组（调整团队结构与汇报线）过程“极其糟糕”。
+他承诺将提供更多稳定性、改善内部沟通，并恢复部分职场福利，以挽救持续下滑的员工士气。
+此次重组旨在加速AI研发，但内部管理的混乱已对团队产出造成负面影响。
+**PM 信号:** AI转型期的组织阵痛不可避免，PM需警惕频繁架构调整对产品迭代节奏和团队士气的反噬。
+来源:[WIRED](https://www.wired.com/story/andrew-bosworth-meta-employees-unrest/)
+
+**14. Facebook’s new AI Mode search gets its info from public posts**
+Facebook推出AI Mode搜索，基于用户公开帖子生成结果
+Meta正在Facebook上推出全新的“AI Mode”搜索功能，与传统的“人物”或“市场”搜索模式并列。
+该功能不再仅提供链接，而是利用Meta平台上用户公开发布的内容，生成AI汇总结果。
+同时推出的还有AI照片预设（如给球迷换上运动球衣）和拼贴模板建议等新功能。
+**PM 信号:** 社交平台+AI搜索的范式正在确立，PM可借鉴“利用UGC语料做AI聚合”来提升内容分发效率。
+来源:[The Verge](https://www.theverge.com/tech/950264/meta-ai-mode-search-facebook)
+
+**15. OpenAI mulls slashing prices as it competes with Anthropic for users**
+OpenAI考虑大幅降价，与Anthropic争夺用户
+随着AI模型市场竞争加剧，OpenAI正在考虑大幅削减API调用价格，以对抗Anthropic的攻势。
+两家头部厂商在争夺开发者和企业用户上进入白热化阶段，价格战成为重要手段。
+降价策略将直接影响下游AI应用的利润空间和商业模式。
+**PM 信号:** 基础大模型正步入价格战深水区，PM应重新评估自研与调用的成本边界，把握红利期重构产品定价。
+来源:[cnbc.com](https://www.cnbc.com/2026/06/11/openai-mulls-slashing-prices-ahead-of-competition-from-anthropic-wsj.html)
+
+**16. AI OSS tool repo goes archived over night after raising $7.3M Seed**
+AI开源工具刚融730万美元即停更，项目一夜归档
+一个刚完成730万美元种子轮融资的AI开源工具项目，其代码库在一夜之间被设为归档（停止维护与更新）。
+这种融完资即跑路或停更的行为，引发了开源社区对AI项目商业承诺的严重信任危机。
+对于依赖该工具的开发者和产品而言，这构成了突发的供应链风险。
+**PM 信号:** 开源不等于长久免费，PM在引入开源AI组件时必须评估其商业可持续性，做好备选方案以防断供。
+来源:[github.com](https://github.com/tensorzero/tensorzero)
+
+## 开源发布
+
+**17. Microsoft's open source tools were hacked to steal passwords of AI developers**
+微软开源工具遭黑客入侵，AI开发者密码失窃
+攻击者利用微软开源工具的漏洞，窃取了AI开发者的密码和敏感凭证。
+此次事件暴露了AI开发供应链中的安全隐患，开源组件正成为黑客攻击的跳板。
+开发团队需重新审视第三方开源工具的权限控制与安全审计机制。
+**PM 信号:** AI产品的供应链安全是底线，PM在引入开源组件时必须将安全审计和权限最小化纳入评估流程。
+来源:[techcrunch.com](https://techcrunch.com/2026/06/08/microsofts-open-source-tools-were-hacked-to-steal-passwords-of-ai-developers/)
+
+**18. Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP**
+PyTorch性能优化：从线性层到融合MLP的实战
+文章详细演示了如何使用PyTorch Profiler（性能分析器）定位模型推理瓶颈。
+通过将nn.Linear（基础线性层）重构为Fused MLP（融合多层感知机，即把多个算子操作合并执行），大幅减少了显存读写开销。
+这种算子融合技术是当前模型推理加速与降本的核心手段之一。
+**PM 信号:** 模型推理成本是AI商业化的关键，PM需理解算子融合等底层优化逻辑，以便在性能与算力成本间做出更优权衡。
+来源:[Hugging Face](https://huggingface.co/blog/torch-mlp-fusion)
+
+**19. How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces**
+Agent串联两个HF空间，自动生成3D巴黎画廊
+开发者展示了如何让AI Agent（智能体）通过调用两个不同的Hugging Face Spaces（HF空间，即云端模型运行环境）来协同完成任务。
+Agent先调用一个空间生成2D图像，再将其传入另一个空间转化为3D场景，最终自动构建出3D巴黎画廊。
+这标志着AI应用正从单一模型交互，走向多工具、多节点协同的工作流编排。
+**PM 信号:** 多工具链式协作是AI产品的进化方向，PM应关注工作流编排能力，探索复杂任务的自动化拆解与串联。
+来源:[Hugging Face](https://huggingface.co/blog/mishig/spaces-agents-md)
+
+## 研究与论文
+
+**20. Google DeepMind releases DiffusionGemma, a model that runs local AI 4x faster**
+DeepMind发布DiffusionGemma，并行生成文本提速本地AI四倍
+Google DeepMind发布了Gemma 4家族的新成员DiffusionGemma，打破了传统AI模型线性生成文本的方式，采用并行生成整块文本的机制。
+这种架构使得模型在本地硬件（如Nvidia DGX或普通游戏GPU）上运行速度提升4倍，大幅降低了本地部署的算力门槛与延迟。
+（并行生成：指模型同时预测和输出一段文本，而非逐字逐词生成，从而极大缩短推理时间。）
+**PM 信号:** 本地端侧AI的推理效率瓶颈迎来破局点，产品经理可重新评估重度AI功能在端侧离线落地的可行性。
+来源:[Ars Technica](https://arstechnica.com/google/2026/06/googles-latest-diffusiongemma-open-ai-model-comes-with-a-4x-speed-boost/)
+
+**21. TrustedARI: Towards Trust-Native Agentic Routing Infrastructure for Agentic AI**
+TrustedARI：解决多智能体路由基础设施的信任与篡改风险
+随着AI智能体频繁调用外部模型和工具，智能体路由基础设施（ARI）成为关键枢纽，但也带来了严重的信任风险。
+ARI能获取明文查询和响应，且智能体无法验证请求是否被正确路由或篡改。TrustedARI提出了一种信任原生的路由架构来解决这些安全隐患。
+（智能体路由基础设施：即帮助AI智能体对接不同外部服务和接口的调度中枢。）
+**PM 信号:** 多智能体生态的安全痛点已从模型本身转移到调度层，做Agent平台的产品经理需尽早将路由防篡改验证纳入架构设计。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.15822v1)
+
+**22. Let Them Steal: Trapping Large Language Model Extraction Attacks with Knowledge Honeypot**
+知识陷阱防御：用蜜罐知识图消耗大模型提取攻击预算
+商业API部署的大语言模型面临模型提取攻击（即通过大量查询窃取模型能力），现有防御往往过晚或损害正常用户体验。
+研究提出“知识陷阱”防御机制，通过蜜罐知识图（HKG）将攻击者的查询重定向到低迁移率的知识上，消耗其有限的查询预算。
+（模型提取攻击：指攻击者通过API不断提问试图复制模型；低迁移率知识：指难以泛化到其他模型的特定边角知识。）
+**PM 信号:** 与其硬性拦截攻击，不如用“诱饵”消耗攻击者成本，这为商业API的防爬与模型资产保护提供了低成本且不影响正常体验的新思路。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.15810v1)
+
+**23. GAS-Leak-LLM: Genetic Algorithm-Based Suffix Optimization for Black-Box LLM Jailbreaking**
+GAS-Leak-LLM：基于遗传算法的黑盒大模型越狱攻击
+尽管商业大模型采用了高级对齐策略和多层内容审核，依然容易受到对抗性操纵，特别是越狱和提示注入攻击。
+GAS-Leak-LLM提出了一种基于遗传算法的后缀优化方法，能在黑盒环境下高效生成绕过安全限制的对抗性提示词。
+（遗传算法：模拟自然进化过程，通过选择、交叉和变异来寻找最优解的算法；黑盒：指攻击者不了解模型内部结构。）
+**PM 信号:** 黑盒越狱手段持续进化，产品侧的内容安全风控不能仅依赖模型自带对齐，必须增加外挂式动态防御与监控机制。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.15788v1)
+
+**24. DYNA : Dynamic Episodic Memory Networks for Augmenting Large Language Models with Temporal Knowledge Graphs in Continuous Learning**
+DYNA框架：用时序知识图谱为冻结大模型动态注入新知识
+大语言模型难以在不遗忘或无需昂贵重训练的情况下吸收新知识。DYNA框架通过引入时序知识图谱解决了这一痛点。
+它将事件作为节点、时序关系作为带时间戳的边，构建可更新的外部记忆。查询时检索相关节点并增强大模型的回答。
+（时序知识图谱：一种包含时间信息的知识库，能记录事件发生的先后顺序和时间点，支持动态更新。）
+**PM 信号:** 无需微调即可让大模型掌握最新时序动态，这为新闻、金融等强时效性场景的AI产品提供了低成本的实时知识更新方案。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.15778v1)
+
+**25. LaWAM: Latent World Action Models for Efficient Dynamics-Aware Robot Policies**
+LaWAM：用潜在世界动作模型提升机器人策略的预测效率
+视觉-语言-动作模型（VLAs）在机器人控制上表现出色，但缺乏对动作后果的显式预见。现有的世界动作模型依赖昂贵的视频生成，存在大量像素冗余。
+LaWAM在潜在空间中建模世界动作，将预测动态暴露给机器人策略，避免了高耗能的像素级视频生成，实现了更高效的具身智能控制。
+（潜在空间：一种压缩的、抽象的数据表示空间，过滤了无关视觉细节，保留了核心动态特征。）
+**PM 信号:** 具身智能从“看视频学动作”转向“在抽象空间做推演”，大幅降低了机器人控制的算力成本和响应延迟，加速端侧部署落地。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.15768v1)
+
+## 融资与商业
+
+**26. Chipmaker Nvidia seeks to raise over $25B in first bond deal since 2021**
+英伟达发债250亿美元测试市场，获超3倍认购
+英伟达计划在美国出售250亿美元投资级债券，这是其五年来首次发债，旨在测试投资者对AI领域的持续胃口。
+本次发行包含2年至30年期的七部分债券。据透露，原定200亿美元的发行规模，因纽约午后订单超850亿美元而大幅上调。
+**PM 信号:** 算力基建狂潮下，资本市场对AI头部资产的追逐依然狂热，底层算力供给的军备竞赛远未结束。
+来源:[Ars Technica](https://arstechnica.com/ai/2026/06/chipmaker-nvidia-seeks-to-raise-over-25b-in-first-bond-deal-since-2021/)
+
+**27. Salesforce acquires AI customer service platform Fin for $3.6B**
+Salesforce 36亿美元收购AI客服平台Fin
+Salesforce宣布以36亿美元收购AI客服平台Fin，旨在强化其企业级AI智能体平台Agentforce。
+此次收购将把Fin的团队和技术整合进Salesforce，帮助企业客户构建能自动化执行任务的定制化AI智能体。
+**PM 信号:** 巨头正通过并购补齐AI Agent版图，AI客服与自动化工作流仍是企业级AI最快落地的变现场景。
+来源:[TechCrunch](https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/)
+
+**28. When it comes to total water use, AI data centers are a drop in the bucket**
+亚马逊报告：AI数据中心总用水量相对极小
+针对网络上关于AI数据中心蒸发冷却耗水巨大的质疑，亚马逊最新报告指出，从宏观总量来看，AI数据中心用水量相对极小。
+尽管单个数据中心可能会给当地供水带来压力，但亚马逊称其数据中心总取水量约为25亿加仑，在整体用水中占比微乎其微。
+**PM 信号:** 破除AI耗水焦虑，但局部资源压力仍在；做ESG或基建规划的PM仍需关注选址对当地资源的微观影响。
+来源:[Ars Technica](https://arstechnica.com/ai/2026/06/when-it-comes-to-total-water-use-ai-data-centers-are-a-drop-in-the-bucket/)
+
+**29. 支付宝新产品Token Pay，首接最新国产大模型MiniMax M3**
+支付宝Token Pay首发接入MiniMax大模型
+MiniMax最新大模型M3全面接入支付宝TokenPay一站式全栈解决方案，成为全球首批将Token支付能力融入核心订阅体系的大模型厂商。
+这标志着国内首个面向MaaS（模型即服务，即将大模型作为云端服务提供）的支付解决方案进入规模化应用。MiniMax也将全线接入支付宝AI支付产品，加速商业化。
+**PM 信号:** MaaS支付基建的完善将极大降低开发者接入与变现门槛，大模型商业化的“收银台”标准正在成型。
+来源:[36氪](https://36kr.com/newsflashes/3855194216485890?f=rss)
+
+**30. Jedify raises $24M to help companies arm AI agents with context on their business - TechCrunch**
+Jedify获2400万美元融资，构建AI Agent上下文图谱
+初创公司Jedify筹集2400万美元，致力于解决AI Agent缺乏企业特定业务上下文的问题。
+其平台通过API连接企业知识源，构建关于企业业务的“上下文图谱”（context graph，即结构化的业务背景知识网络），让AI Agent能理解企业自定义概念及权限。
+**PM 信号:** 企业级AI的痛点从“通用能力”转向“私有上下文”，谁能低成本解决Agent的“业务常识”问题，谁就掌握了B端护城河。
+来源:[techcrunch.com](https://techcrunch.com/2026/06/10/jedify-raises-24m-to-help-companies-arm-ai-agents-with-context-on-their-business/)
+
+**31. OpenAI Confidentially Files for IPO**
+OpenAI已秘密提交IPO申请
+据CNBC报道，OpenAI已秘密提交首次公开募股（IPO）申请，标志着这家人工智能巨头正式迈向资本市场。
+此举意味着AI行业最核心的头部公司即将接受公开市场的检验，或将成为近年来最具标志性的科技IPO事件。
+**PM 信号:** 头部大模型公司上市将重塑AI行业估值锚点，二级市场的资金面与情绪将直接传导至下游应用层的融资环境。
+来源:[cnbc.com](https://www.cnbc.com/2026/06/08/openai-confidentially-files-for-ipo-prepping-wall-street-for-ai-debut.html)
+
+## 政策与监管
+
+**32. Big Tech’s desperate last push at AI regulation**
+美科技巨头游说联邦优先立法，寻求统一AI监管规则。
+数月来，美国科技巨头在华盛顿大力游说，推动所谓的“优先权（preemption，即联邦法律取代各州地方法规）”立法。
+该法案旨在通过国会制定全面的联邦AI法律，在全国范围内适用统一的AI规则，从而取代各州碎片化的地方法规。
+此举反映出大厂希望降低合规成本，并在联邦层面掌握监管话语权。
+**PM 信号:** 联邦统一立法若通过，将大幅降低产品跨州合规成本，但也可能面临更严苛的统一红线。
+来源:[The Verge](https://www.theverge.com/policy/949970/ai-regulation-child-safety-kosa-congress)
+
+**33. Anthropic shuts down Fable, Mythos models following Trump admin directive**
+Anthropic因美商务部出口管制指令，紧急关停最新模型。
+Anthropic在发布最新网络安全模型Mythos 5和Fable 5仅数天后，因收到美国商务部指令而紧急关停访问。
+该指令将这些新模型列入出口管制范围，限制其在美国境外使用。Anthropic表示为合规只能立即禁用。
+这表明AI行业无法免受政府干预，地缘政治正深刻影响前沿模型的部署。
+**PM 信号:** 前沿模型出海面临极高政策风险，产品国际化部署需将出口管制合规前置。
+来源:[Ars Technica](https://arstechnica.com/ai/2026/06/anthropic-shuts-down-fable-mythos-models-following-trump-admin-directive/)
+
+**34. German ruling declares Google liable for false answers in AI Overviews**
+德国法院裁定谷歌需对AI概览的虚假回答承担法律责任。
+德国一项裁决宣布，谷歌必须为其AI搜索功能生成的错误答案承担法律责任。
+这一判决打破了平台对AI生成内容免责的惯例，将AI幻觉（AI生成看似合理但违背事实的内容）导致的事实错误纳入了传统搜索引擎的责任框架。
+这意味着AI搜索产品不能再以“技术尚不完善”为由逃避内容审查义务。
+**PM 信号:** AI生成内容不再是法外之地，产品需强化事实核查机制以规避潜在的诉讼风险。
+来源:[the-decoder.com](https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/)
+
+**35. AI 取代员工被裁案频发！中国 AI 诉讼井喷，统一立法加速落地**
+中国AI诉讼井喷，国务院启动AI全面立法。
+随着AI换脸、声音克隆、数据侵权及AI取代员工等案件激增，中国AI诉讼呈现井喷态势。
+当前司法实践面临“有案难判”困境，核心在于顶层立法缺失，现有规章位阶低、管辖重叠且关键领域存在空白。
+对此，国务院已官宣启动人工智能全面立法，草案拟涵盖数据保护、算力规范、算法监管等全领域。
+**PM 信号:** 统一立法将明确权责边界，PM需密切关注数据产权与算法透明度等条款对产品设计的约束。
+来源:[头条网](https://www.toutiao.com/a7651139115089494571/)
+
+**36. 中央网信办开设“涉AI应用乱象举报专区”**
+中央网信办上线涉AI乱象举报专区，受理14类违规问题。
+为配合“清朗·整治AI应用乱象”专项行动，中央网信办举报中心开设了涉AI应用乱象举报专区。
+受理范围涵盖14类问题，分为AI应用服务违规类（如未备案、数据投毒、标识不到位）和AI信息内容乱象类（如生成虚假信息、数字泔水、网络水军）。
+公众可通过12377热线及网络举报客户端等渠道进行监督举报。
+**PM 信号:** 举报专区的设立意味着全民监督时代来临，产品必须尽快补齐内容标识与安全过滤的短板。
+来源:[企鹅号](https://so.html5.qq.com/page/real/search_news?docid=70000021_1846a30a7e079652)
+
+**37. 紧急!中央网信办新规:短视频强制标注,这3类账号必看_ai生成的视频是不是要标注ai生成-CSDN博客**
+网信办新规：短视频AI生成、搬运、商推内容强制标注。
+中央网信办出台短视频标注新规，要求平台对AI生成、搬运剪辑、商业推广三类内容实施强制标注。
+AI生成内容需在显著位置标注“AI生成”；搬运内容需标明来源及授权状态；商业推广需明确标注“广告”或“推广”。
+违规内容将面临限流、下架甚至封号处罚，平台也需对存量视频进行分批回溯标注。
+**PM 信号:** “强制标注”已成合规底线，内容型产品需在发布流程中嵌入硬性标注选项与审核机制。
+来源:[blog.csdn.net](https://blog.csdn.net/2601_95507995/article/details/159643607)
+
+## 趋势一句话
+
+今日共 37 条,覆盖 7 个分类。
