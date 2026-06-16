@@ -40,8 +40,10 @@
 
   /* picbox: 永不空白,图失败退回来源封面 */
   .picbox{position:relative;overflow:hidden;background:var(--bg-soft)}
-  .picbox .fb{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:var(--ink-soft);font-size:12px;text-align:center;padding:10px}
-  .picbox .fb b{font-family:var(--serif);font-size:18px;color:var(--ink)}
+  .picbox .fb{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center;padding:16px;overflow:hidden}
+  .picbox .fb .fb-mono{position:absolute;right:4px;bottom:-22px;font-family:var(--serif);font-weight:700;font-size:118px;line-height:1;opacity:.12;pointer-events:none;user-select:none}
+  .picbox .fb .fb-tag{position:relative;z-index:1;font-size:11px;font-weight:700;letter-spacing:.06em;padding:3px 10px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--ink-soft)}
+  .picbox .fb b{position:relative;z-index:1;font-family:var(--serif);font-size:20px;font-weight:700;color:var(--ink);line-height:1.25;max-width:92%}
   .picbox img{position:relative;z-index:1}
 
   .hero{display:grid;grid-template-columns:1.4fr 1fr;gap:30px;padding:14px 0 30px;border-bottom:1px solid var(--line)}
@@ -150,7 +152,8 @@ function IMG(u,w){
 function picbox(n,w,cls,extra){
   extra=extra||"";
   const c=col(n.cat);
-  const fb=`<div class="fb" style="background:linear-gradient(135deg,${c}22,${c}0a)"><b>${esc(n.src)}</b><span>${n.img?"题图":"该文暂无题图"} · 来源标识</span></div>`;
+  const initial=esc((String(n.src||"").trim().charAt(0)||"·").toUpperCase());
+  const fb=`<div class="fb"><span class="fb-mono" style="color:${c}">${initial}</span><span class="fb-tag">${esc(label(n.cat))}</span><b>${esc(n.src)}</b></div>`;
   const im=n.img?`<img loading="lazy" src="${IMG(n.img,w)}" alt="" onerror="this.remove()">`:"";
   return `<div class="picbox ${cls}" style="background:linear-gradient(135deg,${c}22,${c}0a)">${fb}${extra}${im}</div>`;
 }
