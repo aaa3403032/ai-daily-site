@@ -274,6 +274,17 @@ def test_ai_gate():
         {"title": "OpenAI 发布 GPT-6 推理模型", "content": "新模型 发布",
          "media": "36氪", "category_hint": "llm"}),
         "正经单条 AI 新闻(非快讯格式)不应误杀")
+    # M1 收紧:新浪整点快讯仍被挡
+    ok(not classify.is_ai_relevant(
+        {"title": "新浪AI热点小时报08时_今日实时AI热点速递", "content": "杂烩", "media": "新浪网"}),
+        "新浪热点小时报应被挡")
+    # M1 收紧后不误杀:"小时报告""实时…速递功能"等正经新闻应放行
+    ok(classify.is_ai_relevant(
+        {"title": "OpenAI 发布实时语音速递功能", "content": "模型", "media": "36氪"}),
+        "实时语音速递(正经产品)不应误杀")
+    ok(classify.is_ai_relevant(
+        {"title": "GPT-5 小时报告显示推理提升", "content": "模型基准", "media": "x"}),
+        "小时报告(非快讯)不应误杀")
 
 
 # ───────────── ⑤ 教程软文过滤 ─────────────
@@ -448,6 +459,13 @@ def test_parse_json_array():
     ok(gd.parse_json_array('```json\n[{"n":1}]\n```') == [{"n": 1}], "容忍代码围栏")
     ok(gd.parse_json_array("前言 [{\"n\":2}] 后语") == [{"n": 2}], "容忍前后说明")
     ok(gd.parse_json_array("no array") is None, "无数组返回 None")
+    # S1 修:数组后多余 [n] 引用,括号配平只取第一个平衡数组(不再整类静默丢失)
+    ok(gd.parse_json_array('[{"n":1,"keep":true}] 注:已剔除[3]号') == [{"n": 1, "keep": True}],
+       "数组后多余[n]引用不破坏解析")
+    # S1 修:LLM 常见尾逗号,剥掉后能解析
+    ok(gd.parse_json_array('[{"n":1},{"n":2},]') == [{"n": 1}, {"n": 2}], "尾逗号容错")
+    # S1:字符串内的 ] 不误判数组结束
+    ok(gd.parse_json_array('[{"n":1,"sum":"a]b"}]') == [{"n": 1, "sum": "a]b"}], "字符串内]不误判")
 
 
 # ───────────── 治本:GLM keep/drop 质量判断(语义判垃圾,替代正则穷举) ─────────────

@@ -263,6 +263,8 @@ def build_category_prompt(cat_label: str, items: list[dict], today: str) -> str:
 ③ 与 AI 无实质关系(只是捎带提到 AI);
 ④ 与本批其它条目**同一事件**的重复(留信息最全的一条,其余判 keep=false)。
 
+⚠️ 例外:研究论文 / 技术报告(arXiv、Google Research、机器之心论文解读等)即便不像传统新闻、与产品无直接关系,只要是真实 AI 研究成果就**算合格(keep=true)**,别因"不像新闻"剔除——research 类全靠它们,宁可保留。
+
 **每条素材都要输出一条记录**:
 - "n":素材编号(整数,对应上面的 [n])
 - "keep":true 或 false
@@ -297,18 +299,37 @@ def call_glm(key: str, prompt: str, max_tokens: int = 6000):
 
 
 def parse_json_array(text: str):
-    """从 GLM 回复里抽出 JSON 数组。容忍代码围栏/前后说明。"""
+    """从 GLM 回复里抽出 JSON 数组。容忍代码围栏/前后说明/数组后多余的 [n] 引用/尾逗号。
+    用括号配平(字符串感知)取第一个平衡数组——避免贪婪 .* 把后文的 ] 也吞进来,
+    否则 GLM 多打一句带方括号或尾逗号就会让**整类**解析失败、静默丢光(S1)。"""
     if not text:
         return None
     text = re.sub(r"```(?:json)?", "", text)
-    m = re.search(r"\[.*\]", text, re.DOTALL)
-    if not m:
+    start = text.find("[")
+    if start < 0:
         return None
-    try:
-        data = json.loads(m.group(0))
-        return data if isinstance(data, list) else None
-    except json.JSONDecodeError:
-        return None
+    depth = 0; in_str = False; esc = False; end = -1
+    for i in range(start, len(text)):
+        ch = text[i]
+        if in_str:
+            if esc: esc = False
+            elif ch == "\\": esc = True
+            elif ch == '"': in_str = False
+        elif ch == '"': in_str = True
+        elif ch == "[": depth += 1
+        elif ch == "]":
+            depth -= 1
+            if depth == 0:
+                end = i; break
+    chunk = text[start:end + 1] if end >= 0 else text[start:]
+    for attempt in (chunk, re.sub(r",(\s*[\]}])", r"\1", chunk)):   # 第二次:剥 LLM 常见尾逗号再试
+        try:
+            data = json.loads(attempt)
+            if isinstance(data, list):
+                return data
+        except json.JSONDecodeError:
+            continue
+    return None
 
 
 def _apply_glm_records(arr: list, items: list[dict], cat_code: str):
