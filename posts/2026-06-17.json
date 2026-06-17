@@ -1,0 +1,476 @@
+{
+  "date": "2026-06-17",
+  "generated_at": "2026-06-17T11:52:22+08:00",
+  "categories": [
+    {
+      "code": "llm",
+      "label": "大模型",
+      "color": "#4b3bff"
+    },
+    {
+      "code": "agent",
+      "label": "Agent·智能体",
+      "color": "#0a8f6a"
+    },
+    {
+      "code": "product",
+      "label": "产品与工具",
+      "color": "#d6932b"
+    },
+    {
+      "code": "oss",
+      "label": "开源发布",
+      "color": "#c8472b"
+    },
+    {
+      "code": "biz",
+      "label": "融资与商业",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "policy",
+      "label": "政策与监管",
+      "color": "#8a8d99"
+    }
+  ],
+  "items": [
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "TechCrunch",
+      "title": "ChatGPT’s market share slips below 50% for first time",
+      "url": "https://techcrunch.com/2026/06/16/chatgpts-market-share-slips-below-50-for-first-time/",
+      "img": "https://techcrunch.com/wp-content/uploads/2025/04/GettyImages-2205105208.jpg?resize=1200,800",
+      "sum": "ChatGPT市场份额首跌破50%，仍居首，Gemini与Claude分列二三",
+      "lead": [
+        "ChatGPT的市场份额首次跌破50%，但仍以超11亿月活用户位居全球AI助手首位。",
+        "Gemini以6.62亿月活位居第二，Claude以2.45亿月活排名第三。"
+      ],
+      "take": "头部产品份额被瓜分，AI助手市场从赢者通吃走向多极化，PM需在细分场景寻找差异化破局点。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "Ars Technica",
+      "title": "Anthropic says these topics are too dangerous to let its Fable 5 model talk about",
+      "url": "https://arstechnica.com/ai/2026/06/anthropic-says-these-topics-are-too-dangerous-to-let-its-fable-5-model-talk-about/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/GettyImages-1599973349-1152x648.jpg",
+      "sum": "Anthropic发Claude Fable 5模型，设安全护栏拒答高危话题",
+      "lead": [
+        "Anthropic发布首个“Mythos级”（神话级，指代其最新最高能力级别）模型Claude Fable 5，整体能力超越前代Opus。",
+        "该模型与Mythos 5同源，但设置了严格的安全护栏，拒绝回答网络安全、生物和化学等可能被恶意利用的高危问题。"
+      ],
+      "take": "前沿模型能力与安全博弈加剧，产品侧需提前规划内容风控策略，平衡用户体验与合规风险。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "Supporting Europe’s work in ensuring a trustworthy AI ecosystem",
+      "url": "https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/2nHP3xnASZcBNZlIiE1QsM/c7de0b335c1c6a7c5c6bad6813fcf355/Frame.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI支持欧盟AI内容透明度准则，推进生成内容溯源",
+      "lead": [
+        "OpenAI宣布支持欧盟《AI内容透明度行为准则》，推进内容来源标准与相关工具。",
+        "此举旨在帮助用户更好地识别和理解AI生成的内容，构建可信赖的AI生态。"
+      ],
+      "take": "AI生成内容溯源成合规刚需，出海欧洲的AI产品需尽早将内容水印与溯源机制纳入研发规划。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "Access OpenAI models and Codex through your Oracle cloud commitment",
+      "url": "https://openai.com/index/openai-on-oracle-cloud",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/5YxRwes6xIOtUirJPj9Tqq/2897a1a8061bf93e016c0c12385b3f55/OAI_Oracle_Partnership_16x9_Art_Card.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI模型及Codex接入Oracle Cloud，深化企业级云服务",
+      "lead": [
+        "用户现可通过Oracle Cloud访问OpenAI模型和Codex，利用现有云承诺进行构建与部署。",
+        "此举进一步强化了OpenAI在企业级市场的安全与治理能力部署。"
+      ],
+      "take": "大模型厂商绑定云巨头拓展B端，企业级AI产品可借力此类合作降低私有化部署与合规成本。"
+    },
+    {
+      "hero": false,
+      "category": "agent",
+      "src": "Ars Technica",
+      "title": "Anthropic \"pauses\" token-based billing for its Claude Agent SDK",
+      "url": "https://arstechnica.com/ai/2026/06/anthropic-pauses-token-based-billing-for-its-claude-agent-sdk/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2025/02/claude37_header-1152x648.jpg",
+      "sum": "Anthropic 暂停 Claude Agent SDK 计费变更，维持原订阅额度。",
+      "lead": [
+        "Anthropic 原计划对 Claude Agent SDK（专为自动化任务设计的开发工具包）实施基于 token 的新计费方式，这将大幅增加重度用户的成本。",
+        "就在新规即将生效之际，Anthropic 突然宣布暂停该定价调整，允许用户继续享受现有订阅中更宽裕的使用额度。"
+      ],
+      "take": "SDK 定价策略的反复表明 Agent 生态的商业化仍在探索期；PM 接入第三方 Agent 能力时，需将底层计费规则突变纳入成本风险评估。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "Ars Technica",
+      "title": "Pentagon boasts of using AI to write reports mandated by Congress",
+      "url": "https://arstechnica.com/ai/2026/06/pentagon-boasts-of-using-ai-to-write-reports-mandated-by-congress/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/Hegseth-Congress-1024x648.jpg",
+      "sum": "五角大楼用生成式AI代写国会报告",
+      "lead": [
+        "美国国防部官员表示，他们正利用生成式AI工具来撰写国会每年要求的大量国家安全报告。",
+        "五角大楼首席技术官将AI生成报告作为国防部提高效率的关键案例，表明AI在政务文书处理中已进入实质性应用阶段。"
+      ],
+      "take": "AI在B端/G端提效场景落地极快，政务文书自动化是刚需，产品可深挖此类高频低创的生成场景。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "WIRED",
+      "title": "‘Dangerous’ AI Models Are Coming No Matter What",
+      "url": "https://www.wired.com/story/dangerous-ai-models-are-coming-no-matter-what/",
+      "img": "https://media.wired.com/photos/6a30202e9402edb0adc1701d/master/pass/GettyImages-2280291188.jpg",
+      "sum": "具备高级黑客能力的危险AI模型将成为常态",
+      "lead": [
+        "美国政府近期对Anthropic的Claude Fable 5和Mythos 5模型进行打压，但专家指出具备高级黑客能力的AI模型即将成为常态。",
+        "尽管监管趋严，但AI能力的演进方向不可逆转，具备网络安全攻防能力的模型将不可避免地涌现。"
+      ],
+      "take": "具备安全攻防能力的AI是必然趋势，安全类AI产品经理需提前布局攻防演练与红蓝对抗场景。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "The Verge",
+      "title": "Apple 2027 rumors: AirPods with cameras for AI and the second folding iPhone",
+      "url": "https://www.theverge.com/tech/950826/apple-airpod-camera-ai-foldable-iphone-rumor",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/257943_Airpods_Pro3_AKrales_0078.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "苹果拟2027年底推出带摄像头的AI版AirPods",
+      "lead": [
+        "据爆料，苹果计划在2027年底推出配备摄像头的AirPods，以支持AI视觉功能。",
+        "目前iOS 27的测试版正在推进中，这款带摄像头的耳机将拓展苹果的端侧AI感知能力。"
+      ],
+      "take": "可穿戴设备+视觉AI是端侧智能的下一个爆发点，硬件产品需提前考虑多模态传感器的融合交互。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "The Verge",
+      "title": "Qualcomm’s latest chip hints that more powerful smart glasses could be on the way",
+      "url": "https://www.theverge.com/gadgets/950229/qualcomm-snapdragon-reality-elite-xr-smart-glasses-wearables",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/snapdragonreality.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "高通发布新XR芯片Snapdragon Reality Elite",
+      "lead": [
+        "高通在增强现实世界博览会上发布了新款芯片Snapdragon Reality Elite，旨在为下一代XR设备提供算力。",
+        "上个月谷歌I/O上展示的Xreal Aura眼镜已率先搭载该芯片，预示着更强大的AI智能眼镜即将到来。"
+      ],
+      "take": "XR专用AI芯片迭代加速，智能眼镜算力瓶颈正在解除，产品经理可着手规划重度AI交互的AR应用。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "WIRED",
+      "title": "My Father Wants to Age in Place. AI Will Be Watching",
+      "url": "https://www.wired.com/story/sensi-ai-seniors-home-care-aging-in-place/",
+      "img": "https://media.wired.com/photos/6a20764c9e9ae62de4e328fc/master/pass/Sensi_housePillar.jpg",
+      "sum": "AI监控设备正成为居家养老新选择",
+      "lead": [
+        "能够监控老年人安全的AI设备正吸引着担忧的家属和资源不足的家庭护理机构。",
+        "这类设备通过AI实时监测老人状态，在保障安全与隐私之间寻找平衡，满足了居家养老的刚性需求。"
+      ],
+      "take": "银发经济是AI落地的优质赛道，居家安全监控产品需在“无感监测”与“隐私保护”间找到体验平衡点。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "Anthropic’s latest feud with the Trump admin may actually help it, sales data suggests",
+      "url": "https://techcrunch.com/2026/06/16/anthropics-latest-feud-with-the-trump-admin-may-actually-help-it-sales-data-suggests/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/03/Dario-Amodei-Anthropic-viva-tech.jpg?w=1024",
+      "sum": "Anthropic与政府争端反促其企业销售增长",
+      "lead": [
+        "尽管Anthropic近期与美国政府发生冲突，但其企业用户受欢迎程度却在上升。",
+        "Ramp（企业支出管理平台）的销售数据显示，这场争端可能反而提升了Anthropic在商业市场的关注度与认可度。"
+      ],
+      "take": "品牌在合规或监管争议中可能获得特定客群的情感认同，B端产品需关注危机公关中的品牌势能转化。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "Ars Technica",
+      "title": "Critical Copilot vulnerability allowed hackers to steal 2FA code from users",
+      "url": "https://arstechnica.com/security/2026/06/critical-copilot-vulnerability-allowed-hackers-to-seal-2fa-code-from-users/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/GettyImages-2242817595-1152x648.jpg",
+      "sum": "微软Copilot爆出严重漏洞，可泄露2FA验证码",
+      "lead": [
+        "微软修补了M365 Copilot中的一个最高级别严重漏洞，该漏洞允许黑客窃取用户的2FA（双因素认证）验证码等敏感邮件数据。",
+        "根本原因在于AI机器人无法区分恶意请求，LLM（大语言模型）提供商目前仍难以阻止产品泄露数据。"
+      ],
+      "take": "AI产品接入企业数据时的越权与泄露风险极高，安全隔离与权限边界设计是AI Native应用的生命线。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "WIRED",
+      "title": "‘Pretty Crazy’ Token Usage Is Testing Bosses’ Bet on AI",
+      "url": "https://www.wired.com/story/claude-tokens-compute-cost-code-8x8/",
+      "img": "https://media.wired.com/photos/6a28a1a365e0fc8f488095dc/master/pass/How-Software-Company-Is-Saving-Money-By-Spending-Big-on-Claude-Business.jpg",
+      "sum": "疯狂的Token消耗正考验企业对AI的投资回报",
+      "lead": [
+        "随着企业级AI应用的深入，高昂的Token（AI模型的计费单位）使用量正成为新的成本挑战。",
+        "硅谷软件公司和电商企业正在探索如何应对这种“Token经济学”带来的成本控制难题。"
+      ],
+      "take": "Token成本已成为AI应用商业化的核心痛点，产品经理需在模型路由、缓存策略和功能降级上做精细化设计。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "Android 17 launches with new multitasking tools as Google expands Gemini features",
+      "url": "https://techcrunch.com/2026/06/16/android-17-launches-with-new-multitasking-tools-as-google-expands-gemini-features/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/06/gemini-app-GettyImages-2276204472.jpg?w=1024",
+      "sum": "谷歌发布Android 17，深度扩展Gemini功能",
+      "lead": [
+        "谷歌正式发布Android 17及Wear OS 7，带来新的多任务处理和安全功能。",
+        "同时，Pixel Drop更新将谷歌最新的AI模型引入设备，Gemini在系统层的整合进一步加深。"
+      ],
+      "take": "OS级AI整合是智能手机的必然走向，应用层产品需思考如何利用系统级AI能力，而非与系统功能重复造轮子。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "Sixty percent of US consumers say ‘AI’ in brand messaging is a turnoff, survey finds",
+      "url": "https://techcrunch.com/2026/06/16/sixty-percent-of-u-s-consumers-say-ai-in-brand-messaging-is-a-turnoff-survey-finds/",
+      "img": "https://techcrunch.com/wp-content/uploads/2024/09/wordpress-v1.jpg?resize=1200,675",
+      "sum": "调查称六成美国消费者对品牌宣传AI感到反感",
+      "lead": [
+        "WordPress VIP的最新调查显示，60%的美国消费者认为品牌信息中强调AI令人反感。",
+        "尽管企业越来越将AI搜索视为重要的引流渠道，但消费者对AI生成的内容仍持警惕态度。"
+      ],
+      "take": "消费者对“AI噱头”已产生疲劳，C端产品应回归价值本身，用AI隐形提升体验，而非把AI当营销卖点。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "Plaud says its software business topped $100M in ARR after shipping over 2M AI notetakers",
+      "url": "https://techcrunch.com/2026/06/16/plaud-says-its-software-business-topped-100m-in-arr-after-shipping-over-2m-ai-notetakers/",
+      "img": "https://techcrunch.com/wp-content/uploads/2025/08/SilverBlack-Plaud-Note-Pro.jpeg?resize=1200,675",
+      "sum": "AI会议记录仪Plaud年经常性收入破1亿美元",
+      "lead": [
+        "在拥挤的AI会议记录市场中，Plaud宣布其软件业务ARR（年经常性收入）已突破1亿美元。",
+        "该公司已售出超过200万台AI记录硬件，成功跑通了硬件+软件的商业模式。"
+      ],
+      "take": "AI+硬件的商业模式已跑通千万美元ARR，垂直场景的软硬一体化是避开大厂绞杀的有效护城河。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces",
+      "url": "https://huggingface.co/blog/mishig/spaces-agents-md",
+      "img": "https://cdn-uploads.huggingface.co/production/uploads/60a551a34ecc5d054c8ad93e/0tamlKpAvO3lZEklNmwHT.png",
+      "sum": "Agent串联两个HF Spaces构建3D画廊，展示工作流潜力",
+      "lead": [
+        "本文展示了如何利用AI Agent（智能体）将两个Hugging Face Spaces（模型部署空间）串联起来，自动构建出一个3D巴黎画廊。",
+        "该案例证明了Agent能够通过组合不同AI能力完成复杂任务，为多步骤工作流的落地提供了参考。"
+      ],
+      "take": "PM可关注Agent在组合调用多工具/模型上的产品化潜力，探索“工作流即服务”的新场景"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "Ars Technica",
+      "title": "SpaceX to acquire AI coding platform Cursor for $60 billion",
+      "url": "https://arstechnica.com/ai/2026/06/spacex-will-acquire-coding-tool-cursor-to-compete-with-anthropic-openai/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/Cursor-1152x648-1781627048.png",
+      "sum": "SpaceX 600亿美元全股票收购AI编程工具Cursor",
+      "lead": [
+        "SpaceX宣布以600亿美元全股票交易收购AI编码工具Cursor，预计三季度完成。",
+        "Cursor是首批将大语言模型深度集成到IDE（集成开发环境）的工具，基于VS Code分支开发。",
+        "此次收购发生在SpaceX上市后仅两天，也是其与xAI合并数月后的重大重组动作。"
+      ],
+      "take": "AI编程赛道天花板再被刷新，巨头全栈整合趋势明显，独立AI编程工具需尽快建立护城河。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "Ars Technica",
+      "title": "Leaked financial docs show OpenAI is losing billions of dollars a year",
+      "url": "https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/GettyImages-1828746438-1152x648.jpg",
+      "sum": "OpenAI IPO前财务泄露：年收超百亿仍巨亏",
+      "lead": [
+        "OpenAI在IPO前泄露的审计财务文件显示，公司收入从2024年37亿美元增至2025年130.7亿美元。",
+        "尽管收入快速增长，但更大的支出导致公司每年仍亏损数十亿美元。",
+        "该文件由独立记者获取并经金融时报核实，揭示了当前大模型商业化的高成本挑战。"
+      ],
+      "take": "大模型营收增速虽快但盈利仍遥遥无期，PM在做AI功能商业化时需极度关注推理成本与毛利空间。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "TechCrunch",
+      "title": "Probably raises $9M to build a more reliable kind of AI",
+      "url": "https://techcrunch.com/2026/06/16/probably-raises-9m-to-build-a-more-reliable-kind-of-ai/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/06/probably-peter-elias.png?resize=1200,800",
+      "sum": "Probably获900万美元融资，专攻消除AI幻觉",
+      "lead": [
+        "初创公司Probably完成900万美元融资，致力于构建更可靠的AI系统。",
+        "该公司旨在防止AI幻觉和事实错误传达给用户，力求达到确定性系统（即输出结果绝对稳定准确的系统）的准确率。"
+      ],
+      "take": "AI可靠性成为新创业焦点，B端产品可关注“防幻觉”中间件或评估工具的集成机会。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "arXiv cs.AI",
+      "title": "RubricsTree: Scalable and Evolving Open-Ended Evaluation of Personal Health Agents across Health Memory and Medical Skills",
+      "url": "https://arxiv.org/abs/2606.18203v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "RubricsTree：个人健康AI代理的可扩展评估框架",
+      "lead": [
+        "当前基于大模型的个人健康代理在临床部署中，面临医生标注成本高、LLM评估主观不一致的瓶颈。",
+        "论文提出RubricsTree，一个可扩展的评估框架，用于跨健康记忆和医疗技能对个人健康代理进行开放式评估。"
+      ],
+      "take": "医疗AI产品落地受限于评估标准，该框架为健康类Agent的规模化评测提供了新思路，值得医疗产品线关注。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "arXiv cs.AI",
+      "title": "The Stanford EDGAR Filings Dataset: Reconstructing U.S. Corporate and Financial Disclosures into Layout-Faithful and Token-Efficient Pretraining Data",
+      "url": "https://arxiv.org/abs/2606.18192v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "斯坦福发布SEFD：金融大模型预训练新语料",
+      "lead": [
+        "随着高质量公共网页语料枯竭，干净的长上下文文档成为大模型训练的稀缺资源。",
+        "论文推出Stanford EDGAR Filings Dataset（SEFD），将SEC（美国证券交易委员会）文件重建为保留布局且节省Token的MultiMarkdown格式。",
+        "该数据集为金融语言模型提供了开源、高质量的长文本预训练语料。"
+      ],
+      "take": "垂直领域高质量数据成为核心壁垒，金融AI产品可利用此类专业语料微调，提升财报分析等长文本处理能力。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "arXiv cs.AI",
+      "title": "The Measurement Gap in the Automation of EU Law: Benchmarking Doctrinal Legal Reasoning under the EU AI Act",
+      "url": "https://arxiv.org/abs/2606.18158v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "EU AI Act下法律推理基准：填补自动化测量空白",
+      "lead": [
+        "现有法律AI评估多测量辅助性律师任务，缺乏对教义法律推理（法律解释核心工作）的基准测试。",
+        "论文指出这一测量空白不仅是方法论的，更是法律层面的：欧盟AI法案要求高风险司法AI具备“适当准确性”，但目前无法验证。",
+        "研究提出了针对欧盟AI法案下教义法律推理的基准测试。"
+      ],
+      "take": "合规正在成为AI产品的硬约束，出海欧洲的法律/合规AI产品必须重视并对接此类权威评测基准。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "arXiv cs.CL",
+      "title": "HistoRAG: Embedding Historical Methodology in Retrieval-Augmented Generation Through Critical Technical Practice",
+      "url": "https://arxiv.org/abs/2606.18103v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "HistoRAG：将史学方法论嵌入RAG架构",
+      "lead": [
+        "主流RAG（检索增强生成）的评估和配置主要面向事实性问答，与历史学等解释性学科的学术实践相冲突。",
+        "论文提出HistoRAG框架，将史学原则转化为具体的架构干预，分离检索策略以适应学术研究需求。"
+      ],
+      "take": "RAG不是万能药，面向专业领域的AI产品需根据领域逻辑定制RAG架构，而非套用通用问答模式。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "TechCrunch",
+      "title": "Malaysia’s AI agent-powered messaging app Respond.io raises $62.5M, eyes acquisitions",
+      "url": "https://techcrunch.com/2026/06/15/malaysias-respond-io-raises-62-5m-eyes-acquisitions-in-north-america-and-europe/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/06/respond-team-comp-2.webp?resize=1200,800",
+      "sum": "大马AI客服应用Respond.io获6250万美元融资",
+      "lead": [
+        "马来西亚初创公司Respond.io获得6250万美元融资，并计划进行收购。",
+        "该公司使用AI代理处理大量客户咨询，其商业模式按对话次数收费，而非传统的按座位收费。"
+      ],
+      "take": "按用量计费替代按席位计费正成为AI原生SaaS的新共识，PM需重新审视定价模型以降低客户试用门槛。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "36氪",
+      "title": "吴清：依法从严打击利用人工智能非法荐股等乱象",
+      "url": "https://36kr.com/newsflashes/3856716954719234?f=rss",
+      "img": "https://img.36krcdn.com/20191024/v2_1571894049839_img_jpg",
+      "sum": "证监会：将严打利用AI非法荐股等乱象",
+      "lead": [
+        "证监会主席吴清在2026陆家嘴论坛表示，将严查借科技之名蹭热点、炒概念及操纵市场等行为。",
+        "将适时发布规范发展资本市场人工智能的指导意见，依法从严打击利用AI非法荐股、造谣传谣及违法交易等乱象。"
+      ],
+      "take": "金融AI监管收紧，智能投顾/投研产品需尽早进行合规自查，避免触碰“非法荐股”红线。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "Hugging Face",
+      "title": "olmo-eval: An evaluation workbench for the model development loop",
+      "url": "https://huggingface.co/blog/allenai/olmo-eval",
+      "img": "https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/gacAOFYwPkpxu7cC4eeey.png",
+      "sum": "OLMO-eval：模型开发循环的评估工作台",
+      "lead": [
+        "Hugging Face发布了olmo-eval，一个专为模型开发循环设计的评估工作台。",
+        "该工具旨在帮助开发者在模型迭代过程中更高效地进行性能评估。"
+      ],
+      "take": "模型评估正深度融入开发流程，AI应用团队可借鉴其工作流，将评测环节前置以降低试错成本。"
+    },
+    {
+      "hero": true,
+      "category": "policy",
+      "src": "Ars Technica",
+      "title": "Trump admin tries to block Clean Air Act lawsuit over xAI's gas turbines",
+      "url": "https://arstechnica.com/tech-policy/2026/06/trump-admin-helps-xai-fight-pollution-lawsuit-says-military-needs-grok-for-war/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/xai-grok-1152x648.jpg",
+      "sum": "美政府以军方需求为由，试图阻止xAI环保诉讼",
+      "lead": [
+        "特朗普政府正介入帮助马斯克的xAI公司应对NAACP（美国全国有色人种协进会）提起的《清洁空气法》诉讼。",
+        "政府方声称，该诉讼威胁到了为军方Grok系统提供算力支持的xAI数据中心。NAACP则指控xAI在密西西比州无证运营27台燃气轮机，严重违反环保法规。"
+      ],
+      "take": "政治力量与AI算力基建的深度绑定，提示PM在规划大型数据中心时需将地缘政治与环保合规纳入核心风险评估。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "arXiv cs.AI",
+      "title": "IUU+DB: Tracking Illegal, Unreported, and Unregulated Fishing, Seafood Fraud, and Labor Abuse through LLM-driven Information Extraction",
+      "url": "https://arxiv.org/abs/2606.18181v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "arXiv论文：用LLM追踪非法捕捞与供应链犯罪",
+      "lead": [
+        "该研究提出IUU+概念，涵盖更广泛的渔业环境犯罪及供应链贸易违规行为。",
+        "研究者利用大语言模型（LLM）驱动的信息提取技术，对非法、未报告和无管制（IUU）的捕捞活动及相关犯罪进行量化追踪，以弥补传统方法在频次和规模统计上的不足。"
+      ],
+      "take": "LLM在非结构化数据提取和垂直监管领域的应用潜力巨大，为合规与风控类产品提供了新的技术路径。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "TechCrunch",
+      "title": "The US government’s Anthropic models ban was never about an AI jailbreak",
+      "url": "https://techcrunch.com/2026/06/15/the-us-governments-anthropic-models-ban-was-never-about-an-ai-jailbreak/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/06/trump-2267050833.jpg?resize=1200,800",
+      "sum": "美政府强制Anthropic下架网安模型，干预AI产业",
+      "lead": [
+        "特朗普政府近期迫使Anthropic撤回其最新的网络安全模型，此举并非单纯出于AI越狱（即绕过安全限制）风险考量。",
+        "分析指出，该禁令可能具有报复性或反应过度，但释放了明确信号：AI行业无法免受美国政府的直接干预。"
+      ],
+      "take": "AI安全与国家利益的博弈加剧，PM在做网安、底层模型等敏感产品时，必须将政策合规与政府审查作为前置条件。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "Ars Technica",
+      "title": "Google sues Chinese cybercrime network that used Gemini to automate scams",
+      "url": "https://arstechnica.com/google/2026/06/google-sues-chinese-cybercrime-network-that-used-gemini-to-automate-scams/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2025/05/google-logo-green-terminal-1152x648.jpg",
+      "sum": "Google起诉利用Gemini自动化诈骗的黑客组织",
+      "lead": [
+        "Google对名为Outsider Enterprise的中国网络犯罪组织发起诉讼，指控其利用Gemini大模型大规模自动化实施诈骗。",
+        "Google正与执法部门和移动运营商合作打击该组织，并强调AI在赋能创新的同时，也被广泛应用于犯罪活动。"
+      ],
+      "take": "AI被武器化进行黑产攻击已成现实，安全防务与反欺诈产品需加速引入AI对抗机制。"
+    }
+  ]
+}
