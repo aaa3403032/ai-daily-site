@@ -1,0 +1,312 @@
+{
+  "date": "2026-06-20",
+  "generated_at": "2026-06-20T13:24:10+08:00",
+  "categories": [
+    {
+      "code": "llm",
+      "label": "大模型",
+      "color": "#4b3bff"
+    },
+    {
+      "code": "product",
+      "label": "产品与工具",
+      "color": "#d6932b"
+    },
+    {
+      "code": "biz",
+      "label": "融资与商业",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "policy",
+      "label": "政策与监管",
+      "color": "#8a8d99"
+    }
+  ],
+  "items": [
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "MIT Tech Review",
+      "title": "The Download: AI bottleneck debates, and BCI trials take off",
+      "url": "https://www.technologyreview.com/2026/06/19/1139327/the-download-llms-bottleneck-breakthrough-bci-trials-take-off/",
+      "img": "https://wp.technologyreview.com/wp-content/uploads/2020/12/JF21_intro.jpeg?w=2600",
+      "sum": "AI初创宣称突破困扰LLM十年的计算瓶颈",
+      "lead": [
+        "AI初创公司Subquadratic宣称解决了困扰大语言模型近十年的数学瓶颈。",
+        "该突破主要通过大幅减少Transformer(一种主流深度学习模型架构)生成时所需的计算量来实现。",
+        "若技术属实，将显著降低大模型的训练与推理成本。"
+      ],
+      "take": "底层算力瓶颈突破可能大幅降低大模型应用成本，产品经理需关注算力门槛降低带来的新应用场景红利。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "How an astrophysicist uses Codex to help simulate black holes",
+      "url": "https://openai.com/index/using-codex-to-simulate-black-holes",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/2werzLSxuGbJH8PlE7OUjI/e2b93554902c5d96ef2550b4fd3579d6/Frame__5_.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "天体物理学家用Codex构建黑洞模拟",
+      "lead": [
+        "天体物理学家Chi-kwan Chan利用Codex(OpenAI的AI代码生成模型)构建黑洞模拟程序。",
+        "该应用帮助科学家研究极端物理并测试爱因斯坦广义相对论。",
+        "这展示了AI代码工具在复杂科研计算场景中的实际价值。"
+      ],
+      "take": "AI代码工具在垂直科研领域的深度应用，提示产品经理可探索AI在专业极客场景下的高价值工具化机会。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "PRC-linked influence operations are targeting AI debates in the US",
+      "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/2QCspAgfjkdGeWDut7k5MN/030874503264f486120aaa1b1e623b3e/Threat-Intelligence-Repart-SEO.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI报告揭露关联PRC的影响力操作利用AI干预美科技辩论",
+      "lead": [
+        "OpenAI发布新报告，披露关联PRC的影响力操作(利用网络水军或机器人干预舆论)利用AI干预美国科技辩论。",
+        "这些操作涉及数据中心叙事、关税问题及关于ChatGPT的虚假声明。",
+        "该事件凸显了AI工具在地缘政治与舆论战中的滥用风险。"
+      ],
+      "take": "AI安全与合规风险日益凸显，出海产品经理需高度重视AI生成内容的防滥用机制与地缘合规审查。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "bloomberg.com",
+      "title": "Nobel Winner John Jumper to Leave Google DeepMind for Anthropic - Bloomberg.com",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-19/nobel-winner-john-jumper-to-leave-google-deepmind-for-anthropic",
+      "img": "",
+      "sum": "诺奖得主John Jumper离开DeepMind加入Anthropic",
+      "lead": [
+        "2024年诺贝尔化学奖得主、Google DeepMind副总裁John Jumper宣布离职，将加入Anthropic PBC。",
+        "Jumper一直是Google AI编码开发团队的核心成员，他的离职进一步加剧了Google在AI领域对抗Anthropic的压力。"
+      ],
+      "take": "顶尖AI人才流动加剧，大模型在代码生成等垂直领域的竞争正从技术比拼延伸到核心人才争夺。"
+    },
+    {
+      "hero": true,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "From PGP to Mythos: a brief history of export controls that didn’t stop anyone",
+      "url": "https://techcrunch.com/2026/06/19/encryption-spyware-and-now-mythos-history-shows-why-cyber-export-control-doesnt-work/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/06/donald-trump-open-mouth.jpg?resize=1200,800",
+      "sum": "评论称Anthropic网络安全模型Mythos的出口管制难奏效",
+      "lead": [
+        "文章回顾了过去30年网络安全软件出口管制无效的历史，指出类似管制对Anthropic的网络安全模型Mythos同样难以起效。",
+        "这引发了对AI安全模型监管有效性的质疑，认为技术流动很难被物理边界限制。"
+      ],
+      "take": "AI安全与监管的博弈加剧，产品出海需关注政策风险，但历史表明技术封锁往往难以阻挡产品全球化。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "Billionaire Ambani wants AI in every call, app, and home",
+      "url": "https://techcrunch.com/2026/06/19/billionaire-ambani-wants-ai-in-every-call-app-and-home/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/02/reliance-mukesh-ambani.jpg?resize=1200,800",
+      "sum": "印度首富安巴尼将AI融入5亿用户的电信服务",
+      "lead": [
+        "信实工业（Reliance）正在将AI技术深度整合到其电信服务中，覆盖超过5亿用户。",
+        "该举措旨在让AI渗透到通话、应用和家庭等各个场景，推动AI的大规模普惠化落地。"
+      ],
+      "take": "AI与基础通信服务结合是下沉市场渗透的绝佳路径，场景化嵌入比独立App更容易实现用户教育。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "The CEO of Allbirds’ new AI biz has a plan, but no team",
+      "url": "https://techcrunch.com/2026/06/19/the-ceo-of-allbirds-new-ai-biz-has-a-plan-but-no-employees/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/06/Nadia-Carlsten-HS.png?w=1024",
+      "sum": "Allbirds新AI业务CEO获大额种子轮但尚无团队",
+      "lead": [
+        "Allbirds前高管创立的新AI业务虽然获得了大额种子轮融资，但目前仅有创始人一人，尚无团队。",
+        "该公司的下一步计划尚不明确，反映出当前AI创业中资本先行与团队建设脱节的现象。"
+      ],
+      "take": "资本狂热下AI创业需警惕“重融资轻团队”陷阱，产品落地最终依赖组织能力而非PPT。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "MIT Tech Review",
+      "title": "Brain-computer interface trials are taking off",
+      "url": "https://www.technologyreview.com/2026/06/19/1139270/brain-computer-interface-trials-are-taking-off/",
+      "img": "https://wp.technologyreview.com/wp-content/uploads/2026/06/bci-brain2.jpg?resize=1200,600",
+      "sum": "脑机接口试验加速，ALS患者成首位“重度用户”",
+      "lead": [
+        "一位患有ALS（肌萎缩侧索硬化症）的患者成为脑机接口（BCI：将大脑信号转化为外部设备指令的技术）的“首位重度用户”，通过植入设备实现了“说话”、上网和独立工作。",
+        "自2023年植入以来，该技术已帮助他维持了近三年的正常生活，标志着脑机接口试验正在快速兴起并走向实用。"
+      ],
+      "take": "脑机接口与AI解码技术的结合正从实验室走向临床实用，未来可能催生全新的交互范式和辅助产品生态。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "Source: Elastic agrees to buy CRV-backed Deductive AI for up to $85M",
+      "url": "https://techcrunch.com/2026/06/18/source-elastic-agrees-to-buy-crv-backed-deductiveai-for-up-to-85m/",
+      "img": "https://techcrunch.com/wp-content/uploads/2018/03/gettyimages-824355868.jpg?resize=1200,760",
+      "sum": "Elastic拟8500万美元收购AI除虫初创Deductive AI",
+      "lead": [
+        "搜索巨头Elastic已同意以最高8500万美元的价格收购初创公司Deductive AI。",
+        "Deductive AI成立于三年前，专注于利用AI技术捕捉和解决软件中的Bug，此次收购将增强Elastic在智能运维领域的实力。"
+      ],
+      "take": "AI代码调试与修复工具成为大厂并购标的，AI赋能研发工具链是确定性趋势。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "Ars Technica",
+      "title": "Ten months later, the $100 Google Home Speaker is finally available for preorder",
+      "url": "https://arstechnica.com/google/2026/06/the-gemini-powered-google-home-speaker-arrives-on-june-25-for-100/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/Google-Home-Speaker-Jade-copy-1152x648.jpg",
+      "sum": "谷歌新款智能音箱Google Home Speaker开放预购",
+      "lead": [
+        "谷歌时隔近六年推出的首款智能家居音频设备Google Home Speaker终于开放预购，售价100美元。",
+        "该产品自去年8月宣布以来历经十个月才上市，旨在重塑谷歌在智能家居硬件市场的地位。"
+      ],
+      "take": "大模型落地终端的硬件载体持续迭代，智能音箱有望借力多模态AI重获新生，但硬件交付节奏仍是挑战。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "Ars Technica",
+      "title": "SpaceX is now a public company valued for its AI potential, so what comes next?",
+      "url": "https://arstechnica.com/space/2026/06/spacex-is-now-a-public-company-valued-for-its-ai-potential-so-what-comes-next/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/GettyImages-2281248250-1024x648.jpg",
+      "sum": "SpaceX上市，AI潜力推高估值至近1.8万亿美元",
+      "lead": [
+        "SpaceX正式挂牌上市，首日股价大涨19%，市值接近1.8万亿美元，马斯克因此成为全球首位万亿富翁。",
+        "市场对其估值很大程度上基于其AI潜力，这引发了关于太空基础设施与AI结合未来走向的讨论。"
+      ],
+      "take": "AI正成为太空科技等硬核基础设施的估值核心驱动力，产品经理需关注跨行业AI赋能带来的价值重估。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "techcrunch.com",
+      "title": "A satellite just learned to find things on its own — here’s what that means - TechCrunch",
+      "url": "https://techcrunch.com/2026/06/15/a-satellite-just-learned-to-find-things-on-its-own-heres-what-that-means/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/06/coast_ground_postprocess.png?resize=1200,900",
+      "sum": "地球观测卫星首次利用视觉语言模型自主发现目标",
+      "lead": [
+        "一颗地球观测卫星首次在没有地面人工分析师的情况下，自主找到了目标。",
+        "这一里程碑事件标志着视觉语言模型（VLM：能理解图像和文本的AI模型）首次在轨道上使用，展示了AI如何从根本上改变天基传感器的能力和价值。"
+      ],
+      "take": "端侧AI能力从地面走向太空，VLM在极端环境下的自主决策能力将解锁全新的商业卫星应用场景。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "MIT Tech Review",
+      "title": "A startup claims it broke through a bottleneck that’s holding back LLMs",
+      "url": "https://www.technologyreview.com/2026/06/19/1139313/a-startup-claims-it-broke-through-a-bottleneck-thats-holding-back-llms/",
+      "img": "https://wp.technologyreview.com/wp-content/uploads/2026/06/cheetah-speed2a.jpg?resize=1200,600",
+      "sum": "AI初创Subquadratic称突破LLM十年数学瓶颈，独立评估结果佐证。",
+      "lead": [
+        "迈阿密AI初创Subquadratic宣布解决了困扰大语言模型近十年的数学瓶颈，并分享了独立评估结果。",
+        "尽管此前细节薄弱引发质疑，但最新评估结果证明其技术值得重视。"
+      ],
+      "take": "底层算法瓶颈的突破可能重塑LLM训练与推理成本，产品经理需关注未来模型调用降本的可能性。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "36氪",
+      "title": "硬氪首发|moody前高管搭档大疆骨干入局陪伴机器人，锦秋领投，融资数千万",
+      "url": "https://36kr.com/p/3859926114161665?f=rss",
+      "img": "https://img.36krcdn.com/hsossms/20260619/v2_5dcb133f5a434e3496e8ea9773e459ae@6310669_oswg997287oswg900oswg1200_img_jpg?x-oss-process=image/quality,q_90/format,jpg/interlace,1",
+      "sum": "AI陪伴机器人ZuzuZoos获数千万Pre-A融资，主打AI潮玩与IP结合。",
+      "lead": [
+        "AI陪伴机器人品牌ZuzuZoos完成数千万元Pre-A轮融资，由锦秋领投、上海复容跟投。",
+        "团队由moody前高管、大疆硬件负责人及泡泡玛特、智谱等大厂成员组成。",
+        "产品不走“更聪明”路线，而是将AI、潮玩与IP世界观结合，打造有“活人感”的硅基伙伴。"
+      ],
+      "take": "AI硬件破局点不仅在模型智力，更在情绪价值与IP生态的结合，为AI原生硬件的产品定义提供差异化思路。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "Ars Technica",
+      "title": "Chipmaker Nvidia seeks to raise over $25B in first bond deal since 2021",
+      "url": "https://arstechnica.com/ai/2026/06/chipmaker-nvidia-seeks-to-raise-over-25b-in-first-bond-deal-since-2021/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2025/08/nvidia-chip-1152x648-1754500479.jpg",
+      "sum": "英伟达计划发行250亿美元债券，获超850亿美元认购。",
+      "lead": [
+        "英伟达计划出售250亿美元投资级债券，这是其五年来首次发债，旨在测试投资者对AI领域的胃口。",
+        "此次七部分债券发行期限从2年到30年不等，因获超850亿美元认购，发行规模从200亿美元上调。"
+      ],
+      "take": "资本市场对AI算力基础设施的长期增长依然充满信心，底层算力军备竞赛的资金弹药依然充足。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "Ars Technica",
+      "title": "When it comes to total water use, AI data centers are a drop in the bucket",
+      "url": "https://arstechnica.com/ai/2026/06/when-it-comes-to-total-water-use-ai-data-centers-are-a-drop-in-the-bucket/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/GettyImages-1240294200-1024x648.jpg",
+      "sum": "亚马逊报告称AI数据中心总用水量相对极小，缓解环保担忧。",
+      "lead": [
+        "针对AI数据中心消耗大量水资源的批评，亚马逊发布报告称其数据中心总用水量在宏观层面上相对极小。",
+        "尽管个别数据中心可能给当地供水带来压力，但整体来看，AI数据中心的耗水量被夸大了。"
+      ],
+      "take": "环保与可持续性是AI基础设施落地的长期合规风险，该数据为产品PR与ESG评估提供了缓冲空间。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "techcrunch.com",
+      "title": "Salesforce acquires AI customer service platform Fin for $3.6 billion - TechCrunch",
+      "url": "https://techcrunch.com/2026/06/15/salesforce-acquires-ai-customer-service-platform-fin-for-3-6b/",
+      "img": "https://techcrunch.com/wp-content/uploads/2024/06/GettyImages-1125951338.jpg?resize=1200,900",
+      "sum": "Salesforce 36亿美元收购AI客服平台Fin，强化企业AI Agent能力。",
+      "lead": [
+        "Salesforce宣布以36亿美元收购AI客服平台Fin（前身为Intercom）。",
+        "Fin提供跨渠道解决客户查询的AI代理，Salesforce计划利用其团队和技术提升自家企业AI平台Agentforce。"
+      ],
+      "take": "巨头正通过并购补齐AI Agent在垂直场景的落地能力，客服仍是AI商业化最成熟的赛道之一。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "OpenAI",
+      "title": "OpenAI to acquire Ona",
+      "url": "https://openai.com/index/openai-to-acquire-ona",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/3vpY0M1x6mrbhiFVcfTF4Y/99dae42f0ed1030d045f56249385ac3a/OAI-Ona-SEO.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI收购Ona，为Codex扩展云环境以支持长时AI Agent。",
+      "lead": [
+        "OpenAI计划收购Ona，以扩展其Codex平台。",
+        "此次收购旨在为Codex提供安全、持久的云环境，从而支持跨企业工作流的长时运行AI代理。"
+      ],
+      "take": "AI Agent从单次对话走向长时自动化工作流，底层云环境的安全与持久性成为基础设施刚需。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "TechCrunch",
+      "title": "Is the US government’s Anthropic ban accidentally helping the brand?",
+      "url": "https://techcrunch.com/video/is-the-us-governments-anthropic-ban-accidentally-helping-the-brand/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/04/GettyImages-2269811684.jpg?w=1024",
+      "sum": "美政府因安全漏洞禁Anthropic新模型，反引争议或助其品牌",
+      "lead": [
+        "上周美国政府以国家安全为由，迫使Anthropic撤回其最新模型Fable 5和Mythos 5。起因是亚马逊研究员发现可绕过Fable 5的护栏（安全限制机制）。",
+        "网络安全研究员联名发公开信反对该禁令，Anthropic也澄清同类越狱漏洞在其他模型中同样存在。此番监管重拳反而可能为Anthropic带来品牌曝光。"
+      ],
+      "take": "监管对AI安全的“一刀切”易引发行业反弹，产品侧需关注护栏标准与公关风险的联动。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "wired.com",
+      "title": "DOJ Lawyers Argue xAI Is ‘Vital’ for National Security in NAACP Lawsuit - WIRED",
+      "url": "https://www.wired.com/story/doj-lawyers-argue-xai-vital-national-security-naacp-lawsuit/",
+      "img": "https://media.wired.com/photos/6a30b0678f3c861b578bab3f/191:100/w_1280,c_limit/GettyImages-2217198328.jpg",
+      "sum": "美司法部介入xAI环保诉讼，称其AI供电关乎国家安全",
+      "lead": [
+        "美国司法部介入了NAACP（全国有色人种协进会）针对xAI燃气轮机污染的诉讼，并站在xAI一方。",
+        "司法部在文件中称，切断xAI天然气轮机的电力供应将威胁美国国家、经济和能源安全，并强调xAI对军事等行动至关重要。"
+      ],
+      "take": "当AI算力被提升至国家安全高度，基础设施的环保阻力可能被行政力量突破，PM需警惕算力布局的政策依赖风险。"
+    }
+  ]
+}
