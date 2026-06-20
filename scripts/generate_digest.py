@@ -389,6 +389,72 @@ def summarize_category(key: str, cat_code: str, cat_label: str,
     return out
 
 
+def build_tag_prompt(items: list[dict]) -> str:
+    """让 GLM 给候选打两个语义标签(关键词分不准的概念类:企业落地 / AI原生)。"""
+    lines = []
+    for i, it in enumerate(items, 1):
+        lines.append(f"[{i}] {it.get('title','')} | 来源:{_media_of(it)} | "
+                     f"{(it.get('content') or '')[:120]}")
+    material = "\n".join(lines)
+    return f"""你在给 AI 新闻打两个语义标签。逐条判断,为每条输出一条记录。
+
+- "enterprise"(企业落地 AI):传统 / 非 AI 公司如何**部署、应用** AI 的真实案例与方法
+  (如某银行用大模型做客服、某制造厂上 AI 质检、企业级 AI 采购 / 部署 / ROI / 踩坑)。
+  纯模型发布、纯融资、纯消费产品 ≠ 企业落地。
+- "ai_native"(AI 原生):以 AI 为内核**从零构建**的产品 / 公司(如 Perplexity、Cursor 这类 AI-first),
+  区别于"老产品加个 AI 功能"。
+
+素材:
+{material}
+
+为**每条**输出:{{"n":编号,"enterprise":true/false,"ai_native":true/false}}(两者可都 false)。
+严格只输出一个 JSON 数组,无其它文字、无 markdown 围栏。"""
+
+
+def _apply_tags(arr: list, items: list[dict]):
+    """把 GLM 标签套回素材:enterprise=true 改归 enterprise 类;ai_native=true 打观察标记。
+    纯函数,便于离线单测。返回 (企业落地数, AI原生数)。"""
+    ent = ain = 0
+    for rec in arr:
+        if not isinstance(rec, dict):
+            continue
+        try:
+            n = int(rec.get("n"))
+        except (TypeError, ValueError):
+            continue
+        if not (1 <= n <= len(items)):
+            continue
+        it = items[n - 1]
+        if rec.get("ai_native") is True:
+            it["ai_native"] = True
+            ain += 1
+        if rec.get("enterprise") is True:
+            it["category"] = "enterprise"
+            ent += 1
+    return ent, ain
+
+
+def glm_tag_new(key: str, cands: list[dict]):
+    """GLM 语义标注(企业落地归类 + AI原生观察)。分批控输入;失败不阻塞,enterprise 当天可空。"""
+    if not cands:
+        return
+    BATCH = 45
+    ent = ain = 0
+    for s in range(0, len(cands), BATCH):
+        chunk = cands[s:s + BATCH]
+        data = call_glm(key, build_tag_prompt(chunk), max_tokens=4000)
+        if not data:
+            continue
+        arr = parse_json_array(data["choices"][0]["message"]["content"] or "")
+        if not arr:
+            continue
+        e, a = _apply_tags(arr, chunk)
+        ent += e
+        ain += a
+    print(f"GLM 语义标注:企业落地 {ent} 条(归入 enterprise)/ AI原生 {ain} 条(观察,暂不开栏)",
+          flush=True)
+
+
 # ──────────────────────────── 组装输出 ────────────────────────────
 def assemble(today: str, buckets: dict) -> tuple[dict, list[dict]]:
     """按分类顺序拼最终 items,选出全局最高分为 hero。返回 (json_obj, items)。"""
@@ -524,6 +590,7 @@ def main():
     # 分类 + 类内排序取 TopN(控成本:只把 TopN 喂 GLM)
     for c in cands:
         c["category"] = classify.classify_or_default(c)
+    glm_tag_new(key, cands)   # GLM 语义重标:企业落地→enterprise 类 + AI原生打观察标记(关键词分不准的语义类)
     buckets = classify.rank_within_categories(cands, per_cat_max=PER_CAT_MAX, now=now)
     dist = {classify.CAT_LABEL[c]: len(v) for c, v in buckets.items() if v}
     print(f"分类分布(排序后取TopN):{dist}", flush=True)

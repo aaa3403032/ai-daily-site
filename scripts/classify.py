@@ -22,6 +22,7 @@ CATEGORIES = [
     ("llm",      "大模型",       "#4b3bff"),
     ("agent",    "Agent·智能体", "#0a8f6a"),
     ("product",  "产品与工具",   "#d6932b"),
+    ("enterprise","企业落地",    "#0891b2"),
     ("oss",      "开源发布",     "#c8472b"),
     ("research", "研究与论文",   "#7a52cc"),
     ("biz",      "融资与商业",   "#2b7fd6"),

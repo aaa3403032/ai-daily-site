@@ -500,6 +500,27 @@ def test_glm_keepdrop():
     ok(len(out3) == 0, "keep=true 但缺 sum/lead 不计入")
 
 
+# ───────────── 新栏目:GLM 语义标注(企业落地归类 + AI原生观察) ─────────────
+def test_apply_tags():
+    items = [{"title": "某银行用大模型做客服落地", "category": "product"},
+             {"title": "Cursor 是 AI-first 编辑器", "category": "product"},
+             {"title": "OpenAI 发布 GPT-6", "category": "llm"}]
+    arr = [{"n": 1, "enterprise": True, "ai_native": False},
+           {"n": 2, "enterprise": False, "ai_native": True},
+           {"n": 3, "enterprise": False, "ai_native": False}]
+    ent, ain = gd._apply_tags(arr, items)
+    ok(ent == 1 and ain == 1, f"标注计数应 ent=1 ain=1,实际 {ent}/{ain}")
+    ok(items[0]["category"] == "enterprise", "企业落地条改归 enterprise")
+    ok(items[1].get("ai_native") is True, "AI原生条打观察标记(不改类)")
+    ok(items[1]["category"] == "product", "AI原生不改原类(暂不开栏)")
+    ok(items[2]["category"] == "llm", "未命中标签的保持原类")
+    # 坏记录/越界不崩
+    gd._apply_tags([{"n": 99}, "garbage", {"enterprise": True}], items)
+    # enterprise 已在分类表
+    ok("enterprise" in classify.CAT_CODES and classify.CAT_LABEL["enterprise"] == "企业落地",
+       "enterprise 分类已注册")
+
+
 if __name__ == "__main__":
     for fn in [test_dedup_events, test_dedup_cutoff_and_titlesim,
                test_dedup_rare_entity,
@@ -508,7 +529,7 @@ if __name__ == "__main__":
                test_parse, test_time_filter,
                test_score_rank, test_hackernews,
                test_assemble_render, test_parse_json_array,
-               test_glm_keepdrop]:
+               test_glm_keepdrop, test_apply_tags]:
         fn()
         print(f"  ✓ {fn.__name__}")
     print(f"\n全部通过:{PASS} 项断言")
