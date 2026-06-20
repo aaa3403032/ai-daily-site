@@ -521,6 +521,31 @@ def test_apply_tags():
        "enterprise 分类已注册")
 
 
+# ───────────── 人工置顶/添加(manual.json 合并) ─────────────
+def test_parse_manual():
+    today = "2026-06-20"
+    data = [
+        {"date": today, "category": "product", "src": "TechRadar", "title": "Copilot 键可改回",
+         "url": "https://techradar.com/x", "sum": "可重映射 AI 键", "lead": ["段1"],
+         "take": "信号", "pin": True},
+        {"date": "2026-01-01", "category": "llm", "title": "旧", "sum": "s", "lead": ["p"]},  # 非今天→不取
+        {"category": "biz", "title": "无日期常驻", "sum": "s", "lead": ["p"]},                # 无date→取
+        {"date": today, "title": "缺sum/lead", "category": "product"},                        # 不完整→跳
+        "garbage",                                                                            # 坏类型→跳
+    ]
+    out = gd._parse_manual(data, today)
+    ok(len(out) == 2, f"应取 2 条(今天pin + 无日期常驻),实际 {len(out)}")
+    kb = out[0]
+    ok(kb["_pin_hero"] is True and kb["_score"] >= 10000, "pin → 置顶高分(hero 优先)")
+    ok(kb["link"] == "https://techradar.com/x" and kb["media"] == "TechRadar",
+       "url/src 映射到内部 link/media")
+    ok(kb["category"] == "product" and kb["lead"] == ["段1"], "字段正确")
+    out2 = gd._parse_manual(
+        [{"date": today, "category": "无此类", "title": "t", "sum": "s", "lead": ["p"]}], today)
+    ok(out2 and out2[0]["category"] == "product", "未知分类回落 product")
+    ok(gd._parse_manual("not a list", today) == [], "坏数据返回空不崩")
+
+
 if __name__ == "__main__":
     for fn in [test_dedup_events, test_dedup_cutoff_and_titlesim,
                test_dedup_rare_entity,
@@ -529,7 +554,7 @@ if __name__ == "__main__":
                test_parse, test_time_filter,
                test_score_rank, test_hackernews,
                test_assemble_render, test_parse_json_array,
-               test_glm_keepdrop, test_apply_tags]:
+               test_glm_keepdrop, test_apply_tags, test_parse_manual]:
         fn()
         print(f"  ✓ {fn.__name__}")
     print(f"\n全部通过:{PASS} 项断言")

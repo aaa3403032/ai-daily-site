@@ -455,6 +455,61 @@ def glm_tag_new(key: str, cands: list[dict]):
           flush=True)
 
 
+def _parse_manual(data, today):
+    """从 manual.json 取当天(date==today,或无 date=每天置顶)条目,转内部字段。
+    人工条目编辑可信:跳过 GLM / AI闸 / 去重;但字段校验,坏条目跳过不阻塞。纯函数便于单测。"""
+    if not isinstance(data, list):
+        return []
+    out = []
+    for it in data:
+        if not isinstance(it, dict):
+            continue
+        d = it.get("date")
+        if d and d != today:          # 有指定日期且非今天 → 跳过;无日期 = 每天都出
+            continue
+        cat = it.get("category", "product")
+        if cat not in classify.CAT_CODES:
+            cat = "product"
+        title = str(it.get("title", "")).strip()
+        sum_ = str(it.get("sum", "")).strip()
+        lead = it.get("lead") or []
+        if isinstance(lead, str):
+            lead = [lead]
+        lead = [str(p).strip() for p in lead if str(p).strip()]
+        if not (title and sum_ and lead):
+            continue
+        out.append({
+            "category": cat,
+            "media": (str(it.get("src", "")).strip() or "编辑精选"),
+            "title": title,
+            "link": str(it.get("url", "")).strip(),
+            "image": str(it.get("img", "")).strip(),
+            "sum": sum_,
+            "lead": lead,
+            "take": str(it.get("take", "")).strip(),
+            "_score": 10000.0 if it.get("pin") else 50.0,   # pin → 置顶(超高分,hero 优先)
+            "_pin_hero": bool(it.get("pin")),
+            "_manual": True,
+        })
+    return out
+
+
+def load_manual_items(today):
+    """读 posts/manual.json 的人工置顶/补充条目(当天)。坏文件不阻塞,enterprise 同理。"""
+    path = POSTS_DIR / "manual.json"
+    if not path.exists():
+        return []
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as e:
+        print(f"manual.json 读取失败(忽略,不阻塞):{e}", flush=True)
+        return []
+    items = _parse_manual(data, today)
+    if items:
+        print(f"人工条目:并入 {len(items)} 条(manual.json)", flush=True)
+    return items
+
+
 # ──────────────────────────── 组装输出 ────────────────────────────
 def assemble(today: str, buckets: dict) -> tuple[dict, list[dict]]:
     """按分类顺序拼最终 items,选出全局最高分为 hero。返回 (json_obj, items)。"""
@@ -471,7 +526,8 @@ def assemble(today: str, buckets: dict) -> tuple[dict, list[dict]]:
             return any(t in blob for t in classify.TIER1)
         with_img = [x for x in items if x.get("image")]
         t1_img = [x for x in with_img if _is_tier1(x)]
-        hero = max(t1_img or with_img or items, key=lambda x: x.get("_score", 0))
+        pinned = [x for x in items if x.get("_pin_hero")]   # 人工 pin → 强制置顶为头条
+        hero = pinned[0] if pinned else max(t1_img or with_img or items, key=lambda x: x.get("_score", 0))
         for it in items:
             it["hero"] = (it is hero)
     # 只保留出现的分类(前端按此渲染 tab)
@@ -601,6 +657,8 @@ def main():
         got = summarize_category(key, code, label, buckets.get(code, []), today)
         if got:
             written[code] = got
+    for it in load_manual_items(today):          # 人工置顶/补充:并入当天编辑选的条目(cron 覆盖不掉)
+        written.setdefault(it["category"], []).append(it)
     total = sum(len(v) for v in written.values())
     if total < MIN_PUBLISH:
         sys.exit(f"错误:成品仅 {total} 条(<{MIN_PUBLISH}),不发布")

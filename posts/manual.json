@@ -1,0 +1,17 @@
+[
+  {
+    "date": "2026-06-20",
+    "category": "product",
+    "src": "TechRadar",
+    "title": "微软终于让你改回 Copilot 键:Windows 11 支持把 AI 键重映射为右 Ctrl / 菜单键",
+    "url": "https://www.techradar.com/computing/windows/microsofts-finally-letting-you-change-the-copilot-key-back-to-what-it-was-before-windows-11s-ai-assistant-existed",
+    "img": "",
+    "sum": "Windows 11 将允许把专用 Copilot(AI)键重映射为右 Ctrl 或菜单键",
+    "lead": [
+      "微软 2024 年在新 PC 键盘上加了专用 Copilot 键唤起 AI 助手,不少厂商为此砍掉了原有按键。",
+      "面向开发者、IT 管理员、重度表格用户与无障碍用户,右 Ctrl 不可或缺;微软将在 2026 年的 Windows 11 更新里允许把 Copilot 键重映射(设置 → 蓝牙和设备 → 键盘)。"
+    ],
+    "take": "AI 硬件入口(专用 AI 键)被用户用脚投票退回——做 AI 产品别为'新入口'牺牲既有刚需,默认值要尊重老习惯。",
+    "pin": false
+  }
+]
