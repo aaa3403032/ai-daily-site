@@ -1969,3 +1969,124 @@ OpenAI计划收购Ona，以扩展其Codex平台。
 ## 趋势一句话
 
 今日共 20 条,覆盖 4 个分类。
+
+---
+
+# AI / Agent 领域新闻摘要 — 2026-06-21
+
+## 大模型
+
+**1. Supporting Europe’s work in ensuring a trustworthy AI ecosystem**
+OpenAI支持欧盟AI内容透明度准则，推进生成内容来源标准。
+OpenAI宣布支持欧盟关于AI内容透明度的行为准则（EU Code of Practice），主动拥抱监管。
+该准则旨在推进AI生成内容的来源标准与相关工具，帮助用户识别和理解AI生成的内容。
+此举标志着主流大模型厂商在合规与内容可信度上的进一步配合。
+**PM 信号:** PM在设计AI产品时需前置考虑内容透明度与合规性，预留内容溯源（如水印、元数据）的接口与展示机制。
+来源:[OpenAI](https://openai.com/index/supporting-eu-trustworthy-ai-ecosystem)
+
+## Agent·智能体
+
+**2. Anthropic "pauses" token-based billing for its Claude Agent SDK**
+Anthropic暂停Claude Agent SDK按Token计费新规，维持原订阅额度。
+Anthropic原计划对Claude Agent SDK（专为自动化智能体开发的工具包）实施按Token计费的新规，这会大幅增加重度用户的成本。
+但在生效前夕，Anthropic突然宣布暂停该定价变更，允许用户继续享受现有订阅中更宽松的使用额度。
+**PM 信号:** SDK计费策略的反复说明Agent调用成本仍是敏感痛点，做Agent产品需预留计费模式变更的容错空间。
+来源:[Ars Technica](https://arstechnica.com/ai/2026/06/anthropic-pauses-token-based-billing-for-its-claude-agent-sdk/)
+
+## 产品与工具
+
+**3. US scientist John Jumper to leave Google DeepMind for Anthropic - Reuters**
+DeepMind高级研究员John Jumper离职加入Anthropic
+Google DeepMind高级研究科学家John Jumper宣布离职，将加入AI初创公司Anthropic。
+这是DeepMind近期又一起核心人员流失案例，反映出AI顶尖人才在巨头与初创公司间的流动趋势。
+**PM 信号:** 顶尖AI人才的流向往往预示着技术重心的转移，PM需关注竞品核心团队变动对产品研发节奏的潜在影响。
+来源:[reuters.com](https://www.reuters.com/technology/us-scientist-john-jumper-leave-google-deepmind-anthropic-2026-06-19/)
+
+**4. The US banned Anthropic’s Fable 5 release, but the numbers don’t seem to care**
+美国政府以国安为由禁止Anthropic发布Fable 5模型
+美国政府强制Anthropic撤回其最新模型Fable 5和Mythos 5，起因是亚马逊研究人员发现可绕过Fable 5的安全护栏。
+网络安全研究人员签署公开信称此举危险，Anthropic也指出同类越狱漏洞在其他模型中同样存在。
+**PM 信号:** 模型安全护栏的脆弱性正引发监管强干预，PM在设计AI产品时必须将合规与安全风控置于更高优先级。
+来源:[TechCrunch](https://techcrunch.com/podcast/the-us-banned-anthropics-fable-5-release-but-the-numbers-dont-seem-to-care/)
+
+**5. Meta’s AI Workers Are Revolting, Peter Thiel’s Secret Society, and SBF’s Plea to Trump**
+Meta新AI部门内部动荡，员工士气低落
+Meta新成立的AI部门正面临严重的内部功能失调问题。
+这种管理混乱进一步打击了原本就已低迷的员工士气，暴露出大厂在整合AI业务时的组织阵痛。
+**PM 信号:** 大厂AI业务重组未必能1+1>2，组织架构的摩擦会直接拖累产品迭代速度，给竞品留下窗口期。
+来源:[WIRED](https://www.wired.com/story/uncanny-valley-podcast-meta-ai-workers-revolting-peter-thiel-secret-society-sbf-plea-to-trump/)
+
+**6. Critical Copilot vulnerability allowed hackers to steal 2FA code from users**
+微软M365 Copilot爆严重漏洞，可窃取2FA验证码
+微软修补了M365 Copilot的一个最高级别严重漏洞，该漏洞允许黑客通过PoC（概念验证）攻击窃取用户的2FA验证码等敏感邮件数据。
+根本原因在于AI机器人无法区分恶意请求与正常指令，导致LLM提供商难以阻止产品泄露数据。
+**PM 信号:** AI助手接入企业核心数据后，Prompt注入等漏洞的破坏力呈指数级上升，B端产品必须重构数据访问权限隔离机制。
+来源:[Ars Technica](https://arstechnica.com/security/2026/06/critical-copilot-vulnerability-allowed-hackers-to-seal-2fa-code-from-users/)
+
+**7. The new Siri makes one of Apple's most convenient OS features a cumbersome mess**
+新版Siri上手体验：AI堆料导致系统体验变繁琐
+苹果在WWDC推出的AI版Siri并未达到预期，反而让原本便捷的OS功能变得繁琐。
+实测发现，苹果似乎只是将类似Google AI Overviews的功能硬塞进系统，导致整个生态体验变差，为了加AI而加AI。
+**PM 信号:** AI功能的植入不能以牺牲原有核心体验为代价，PM在做AI化改造时应避免“为了AI而AI”的强行堆料。
+来源:[The Register](https://www.theregister.com/ai-and-ml/2026/06/16/the-new-siri-makes-one-of-apples-most-convenient-os-features-a-cumbersome-mess/5256591)
+
+## 企业落地
+
+**8. Pentagon boasts of using AI to write reports mandated by Congress**
+五角大楼用生成式AI代写国会报告
+美国国防部每年需向国会提交数百份国家安全相关的强制报告，如今他们找到了新捷径——使用生成式AI工具代写这些报告。
+五角大楼首席技术官 Emil Michael 将此作为国防部应用AI的关键案例进行高调宣传。
+**PM 信号:** 政企合规场景下，AI替代高频低效的公文撰写是强刚需，但需警惕生成内容的合规与事实风险。
+来源:[Ars Technica](https://arstechnica.com/ai/2026/06/pentagon-boasts-of-using-ai-to-write-reports-mandated-by-congress/)
+
+**9. Access OpenAI models and Codex through your Oracle cloud commitment**
+OpenAI模型及Codex接入Oracle云，支持企业合规部署
+OpenAI 宣布用户可通过 Oracle Cloud（甲骨文云）访问 OpenAI 模型和 Codex（AI代码生成工具）。
+企业能利用现有的云服务承诺额度，在具备企业级安全与治理保障的环境下构建和部署 AI 应用。
+**PM 信号:** 大模型厂商绑定云巨头大客户渠道，产品经理在做企业级AI方案时可借力此类云厂商的合规与计费通道。
+来源:[OpenAI](https://openai.com/index/openai-on-oracle-cloud)
+
+## 融资与商业
+
+**10. SpaceX to acquire AI coding platform Cursor for $60 billion**
+SpaceX 600亿美元全股票收购AI编码工具Cursor
+SpaceX宣布将以600亿美元的全股票交易收购AI编码工具Cursor，预计三季度完成。
+此次收购发生在SpaceX IPO后不久，且距SpaceX与xAI合并仅数月。
+Cursor是最早将大语言模型深度集成到IDE（集成开发环境）的工具之一，基于VS Code深度改造。
+**PM 信号:** AI编码工具正成为科技巨头生态拼图的关键一环，PM需关注AI辅助开发向基础设施化演进的趋势。
+来源:[Ars Technica](https://arstechnica.com/ai/2026/06/spacex-will-acquire-coding-tool-cursor-to-compete-with-anthropic-openai/)
+
+**11. Leaked financial docs show OpenAI is losing billions of dollars a year**
+OpenAI IPO前财务泄露：营收猛增但仍巨额亏损
+OpenAI预期IPO前提交SEC文件，泄露的审计财报显示其营收从2024年37亿美元增至2025年130.7亿美元。
+尽管收入快速增长，但更庞大的支出导致公司每年仍亏损数十亿美元。
+这揭示了当前大模型商业化面临的算力与运营成本挑战。
+**PM 信号:** 大模型商业化仍处“烧钱换规模”阶段，PM做AI产品规划时需极度关注算力与推理成本的边际效应。
+来源:[Ars Technica](https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year/)
+
+## 政策与监管
+
+**12. Trump admin tries to block Clean Air Act lawsuit over xAI's gas turbines**
+特朗普政府以军用需求为由，试图阻止xAI数据中心环保诉讼
+特朗普政府正试图帮助马斯克的xAI公司摆脱NAACP（美国全国有色人种协进会）提起的《清洁空气法》诉讼。
+美国政府声称，该诉讼威胁到为军方所需Grok系统提供动力的xAI数据中心。NAACP则指控xAI在密西西比州无证运营多台燃气轮机，违反了环保法规。
+**PM 信号:** AI基础设施的能源与环保合规正成为政策博弈焦点，PM在做底层算力或大模型合规评估时，需将地缘政治与环保风险纳入考量。
+来源:[Ars Technica](https://arstechnica.com/tech-policy/2026/06/trump-admin-helps-xai-fight-pollution-lawsuit-says-military-needs-grok-for-war/)
+
+**13. 挪威将禁止小学生使用生成式人工智能**
+挪威将禁止小学生使用生成式AI，初高中逐步放开
+挪威首相宣布，为防止对学习产生负面影响，将禁止6至13岁小学生使用生成式AI工具。
+14至16岁初中生可在教师严密监管下谨慎使用，17至19岁高中生则需学习如何恰当使用，以适应未来教育和职场。
+**PM 信号:** 分层分龄的AI监管思路正在教育领域落地，面向K12的AI产品需严格适配当地年龄限制与合规要求，或转向辅助教师而非直接面向低龄学生。
+来源:[36氪](https://36kr.com/newsflashes/3861257682129921?f=rss)
+
+**14. Google sues Chinese cybercrime network that used Gemini to automate scams**
+Google起诉利用Gemini自动化诈骗的中国网络犯罪组织
+Google宣布对名为Outsider Enterprise的中国网络犯罪组织发起法律诉讼，指控其利用Gemini（谷歌的生成式AI模型）进行大规模自动化诈骗。
+Google表示正与执法部门和移动运营商合作打击此类AI犯罪活动，该组织的具体作案手法在法律文件中有详细披露。
+**PM 信号:** 大模型被黑灰产武器化已引发厂商直接诉讼反击，做AI风控与安全产品的PM需关注大模型滥用场景，强化生成端的防伪与追踪机制。
+来源:[Ars Technica](https://arstechnica.com/google/2026/06/google-sues-chinese-cybercrime-network-that-used-gemini-to-automate-scams/)
+
+## 趋势一句话
+
+今日共 14 条,覆盖 6 个分类。
