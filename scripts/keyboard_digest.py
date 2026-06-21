@@ -136,29 +136,24 @@ def build_prompt(items, today):
         lines.append(f"[{i}] 标题:{it.get('title','')}\n"
                      f"    来源:{_media_of(it)} | 内容:{(it.get('content') or '')[:300]}")
     material = "\n".join(lines)
-    cats = "、".join(f"{c}({l})" for c, l, _ in CATEGORIES)
-    return f"""你是「智读 · 键盘日报」的编辑,读者是键盘行业从业者。今天 {today}(北京时间)。
-下面是候选素材(机械键盘 / 外设 / 键盘行业领域)。逐条判断,再为合格的写中文摘要。
+    return f"""你是「智读·键盘日报」编辑,读者是电脑/机械键盘行业从业者。今天 {today}。
+任务:把下面候选里**确实属于电脑/机械键盘及外设行业**的条目,逐条写中文摘要记录。
+- 跳过(不输出该条记录):乐器/MIDI/电子琴键盘、与键盘无关的、纯优惠广告。
+- **尽量多保留合格条目(宁多勿漏)**,只跳明显无关的;别整批都跳。
+- category 四选一:market(市场与品牌)/ hardware(新品与硬件)/ tech(技术趋势)/ community(社区与玩家)。
+- 每条合格记录格式:{{"n":编号,"category":"四选一code","sum":"≤40字一句话","lead":["段落1","段落2"],"take":"给从业者的一句洞察"}}
 
-剔除(keep=false)的:非键盘行业、**乐器键盘 / MIDI / 电子琴 / 合成器(本日报只关注电脑/机械键盘及外设,乐器键盘不算)**、纯带货/优惠广告软文、与键盘无实质关系、与本批其它条目同一事件的重复。
-合格条目的分类 category 必须从这几个里选其一:{cats}。
+只输出一个 JSON 数组(含所有合格记录),不要解释、不要代码围栏、不要输出任何 URL。
 
-每条素材都要输出一条记录:
-- "n":素材编号
-- "keep":true 或 false
-- 当 keep=false:给 "reason"(一句),其余可省
-- 当 keep=true:给 "category"(上面的 code)、"sum"(一句话摘要≤40字)、"lead"(2-3 段正文摘要,数组)、"take"(给键盘从业者的一句洞察:这对产品/市场意味着什么)
-
-严格只输出一个 JSON 数组,形如:
-[{{"n":1,"keep":true,"category":"tech","sum":"...","lead":["..."],"take":"..."}}]
-只输出 JSON 数组本身,不要解释、不要 markdown 围栏、**绝不输出任何 URL 或链接**(链接由系统自动附加)。"""
+候选({len(items)} 条):
+{material}"""
 
 
 def summarize(key, items, today):
     if not items:
         return []
     out, dropped = [], 0
-    BATCH = 12   # 小批:单次 GLM 输出可控,避免被 max_tokens 截断致整批 JSON 解析失败(Run#2 教训)
+    BATCH = 6    # 小批:任务越轻 GLM 越不会整批返回空 [](Run#4 教训:12 条混合判定+分类太重→GLM 摆烂)
     for s in range(0, len(items), BATCH):
         chunk = items[s:s + BATCH]
         data = call_glm(key, build_prompt(chunk, today), max_tokens=8000)
