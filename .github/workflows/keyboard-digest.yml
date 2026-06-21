@@ -1,0 +1,78 @@
+# 智读 · 键盘日报 — 云端定时生成(第二频道,独立于 AI 日报)
+name: keyboard-digest
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_branch:
+        description: '推送目标分支。测试时填测试分支;留空=main。'
+        default: 'main'
+        required: false
+  schedule:
+    - cron: '0 2 * * 1,3,5'     # UTC 02:00 周一三五 = 北京 10:00(键盘新闻量少,每周三次)
+    - cron: '30 3 * * 1,3,5'    # UTC 03:30 周一三五 = 北京 11:30(备份,防 GitHub 整点延迟)
+
+env:
+  TARGET_BRANCH: ${{ github.event.inputs.target_branch || 'main' }}
+
+permissions:
+  contents: write
+
+# 与自身备份班并发保护;不影响 AI 的 daily-digest(不同 group)
+concurrency:
+  group: keyboard-digest
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 安装依赖
+        run: pip install requests
+
+      - name: 判断是否需要生成(备份班次防重复)
+        id: guard
+        run: |
+          DATE=$(TZ=Asia/Shanghai date +%F)
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "手动触发 → 生成"; echo "should_run=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if [ -f "keyboard/posts/$DATE.json" ]; then
+            echo "今天($DATE)已有键盘数据 → 跳过"; echo "should_run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "今天($DATE)无键盘数据 → 生成"; echo "should_run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 生成键盘日报
+        if: steps.guard.outputs.should_run == 'true'
+        env:
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          PYTHONUNBUFFERED: "1"
+          FETCH_OGIMAGE: "1"
+          OGIMAGE_LIMIT: "30"
+          KB_RECENT_DAYS: "10"
+        run: python scripts/keyboard_digest.py
+
+      - name: 提交推送
+        if: steps.guard.outputs.should_run == 'true'
+        run: |
+          git config user.name "Keyboard Daily Agent (Actions)"
+          git config user.email "actions@users.noreply.github.com"
+          git add keyboard/
+          git diff --cached --quiet && { echo "无变更,跳过提交"; exit 0; }
+          KB_DIGEST_DATE="${KB_DIGEST_DATE:-$(TZ=Asia/Shanghai date +%F)}"
+          git commit -m "auto: 键盘日报 $KB_DIGEST_DATE [Actions]"
+          if [ "$TARGET_BRANCH" = "main" ]; then
+            git pull --rebase origin main || true   # 防与 AI 的 cron 并发推送撞非快进(审计 H1)
+            git push origin HEAD:main
+          else
+            git push -f origin HEAD:"$TARGET_BRANCH"
+          fi

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>智读 · 键盘日报</title>
+<style>
+  :root{
+    --bg:#ffffff;--bg-soft:#f6f6f4;--ink:#15161a;--ink-soft:#5b5d66;--line:#e7e7e2;--line-soft:#f0f0ec;
+    --accent:#4b3bff;--accent-soft:#efe9ff;--card:#fff;
+    --serif:"Songti SC","Noto Serif SC",Georgia,ui-serif,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",Roboto,sans-serif;
+    --maxw:1180px;
+  }
+  [data-theme="dark"]{--bg:#0e0f13;--bg-soft:#15171c;--ink:#f1f1ee;--ink-soft:#a0a2ac;--line:#26282f;--line-soft:#1c1e24;--accent:#9c8bff;--accent-soft:#1e1b35;--card:#15171c;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased;transition:background .2s,color .2s}
+  a{color:inherit;text-decoration:none}
+  img{display:block;width:100%;height:100%;object-fit:cover}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .narrow{max-width:760px;margin:0 auto;padding:0 24px}
+  #prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:60;transition:width .08s linear}
+  .sample{background:var(--accent);color:#fff;font-size:12.5px;text-align:center;padding:8px 14px;font-weight:600;line-height:1.5}
+
+  header.mast{border-bottom:1px solid var(--ink)}
+  .mast-in{max-width:var(--maxw);margin:0 auto;padding:20px 24px 15px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;cursor:pointer}
+  .brand h1{font-family:var(--serif);font-size:30px;font-weight:700;line-height:1}
+  .brand .tag{font-size:12px;color:var(--ink-soft);letter-spacing:.18em;text-transform:uppercase}
+  .mast-actions{display:flex;align-items:center;gap:10px}
+  .btn{font-size:13px;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 14px;border-radius:999px;cursor:pointer;white-space:nowrap}
+  .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .icon-btn{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);background:var(--card);cursor:pointer;font-size:15px}
+
+  .dateline{display:flex;align-items:center;gap:14px;padding:18px 0 6px;font-size:13px;color:var(--ink-soft);flex-wrap:wrap}
+  .dateline b{color:var(--ink);font-weight:600}
+  .dot{width:4px;height:4px;border-radius:50%;background:var(--ink-soft);display:inline-block}
+  .datesel{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 10px;cursor:pointer}
+
+  /* picbox: 永不空白,图失败退回来源封面 */
+  .picbox{position:relative;overflow:hidden;background:var(--bg-soft)}
+  .picbox .fb{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center;padding:16px;overflow:hidden}
+  .picbox .fb .fb-mono{position:absolute;right:4px;bottom:-22px;font-family:var(--serif);font-weight:700;font-size:118px;line-height:1;opacity:.12;pointer-events:none;user-select:none}
+  .picbox .fb .fb-tag{position:relative;z-index:1;font-size:11px;font-weight:700;letter-spacing:.06em;padding:3px 10px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--ink-soft)}
+  .picbox .fb b{position:relative;z-index:1;font-family:var(--serif);font-size:20px;font-weight:700;color:var(--ink);line-height:1.25;max-width:92%}
+  .picbox img{position:relative;z-index:1}
+
+  .hero{display:grid;grid-template-columns:1.4fr 1fr;gap:30px;padding:14px 0 30px;border-bottom:1px solid var(--line)}
+  .hero .picbox{aspect-ratio:16/9;border-radius:12px;cursor:pointer}
+  .hero .picbox img{transition:transform .5s}
+  .hero .picbox:hover img{transform:scale(1.04)}
+  .tagline{position:absolute;left:14px;top:14px;background:rgba(0,0,0,.6);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:6px;z-index:3}
+  .hero-lead{display:flex;flex-direction:column;justify-content:center}
+  .hero-lead .kicker{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+  .hero-lead h2{font-family:var(--serif);font-size:31px;line-height:1.22;font-weight:700;margin:10px 0 12px;cursor:pointer}
+  .hero-lead h2:hover{color:var(--accent)}
+  .hero-lead p{font-size:15.5px;color:var(--ink-soft)}
+  .hero-lead .meta{margin-top:14px;font-size:13px;color:var(--ink-soft);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .src{font-weight:600;color:var(--ink)}
+
+  h3.sech{font-family:var(--serif);font-size:22px;font-weight:700;margin:30px 0 4px;display:flex;align-items:center;gap:10px}
+  h3.sech .cdot{width:10px;height:10px;border-radius:3px;display:inline-block}
+  .secsub{font-size:13px;color:var(--ink-soft);margin-bottom:18px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 22px;padding-bottom:20px}
+  .card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);cursor:pointer;transition:transform .18s,box-shadow .18s,border-color .18s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(20,22,30,.10);border-color:var(--accent)}
+  [data-theme="dark"] .card:hover{box-shadow:0 12px 30px rgba(0,0,0,.5)}
+  .card .picbox{aspect-ratio:16/9}
+  .card .picbox img{transition:transform .4s}
+  .card:hover .picbox img{transform:scale(1.05)}
+  .ctag{position:absolute;left:10px;top:10px;font-size:11px;font-weight:700;color:#fff;padding:3px 9px;border-radius:6px;z-index:3}
+  .card .body{padding:14px 15px 16px;display:flex;flex-direction:column;flex:1}
+  .card .body h4{font-size:16px;font-weight:600;line-height:1.4}
+  .card:hover .body h4{color:var(--accent)}
+  .card .body p{font-size:13px;color:var(--ink-soft);margin-top:8px;line-height:1.55;flex:1}
+  .card .body .meta{margin-top:12px;font-size:12px;color:var(--ink-soft);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .readmore{font-size:12.5px;font-weight:600;color:var(--accent)}
+
+  /* 详情页(真页面) */
+  .back{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;color:var(--ink-soft);cursor:pointer;padding:22px 0 6px}
+  .back:hover{color:var(--accent)}
+  .article .kicker{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-top:8px}
+  .article h1{font-family:var(--serif);font-size:34px;line-height:1.28;font-weight:700;margin:12px 0 14px}
+  .article .ameta{font-size:13.5px;color:var(--ink-soft);display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--line-soft);margin-bottom:20px}
+  .article .afig{aspect-ratio:16/9;border-radius:14px;overflow:hidden;margin-bottom:22px}
+  .article .lead{font-size:16.5px;line-height:1.85}
+  .article .lead p{margin-bottom:16px}
+  .article .takeaway{background:var(--accent-soft);border-radius:14px;padding:18px 20px;margin:22px 0;font-size:15px;line-height:1.75}
+  .article .takeaway .lab{font-family:var(--serif);font-weight:700;color:var(--accent);font-size:15px;display:block;margin-bottom:6px}
+  .article .actions{display:flex;gap:12px;align-items:center;margin:24px 0;flex-wrap:wrap;padding-top:20px;border-top:1px solid var(--line-soft)}
+  .article .origin{font-size:14px;font-weight:600;color:#fff;background:var(--accent);border-radius:999px;padding:11px 22px}
+  .article .note{font-size:12px;color:var(--ink-soft)}
+
+  .state{padding:60px 0;text-align:center;color:var(--ink-soft);font-size:15px}
+  footer{padding:32px 0 60px;color:var(--ink-soft);font-size:13px;line-height:1.7;border-top:1px solid var(--line);margin-top:24px}
+  footer b{color:var(--ink)}
+  @media(max-width:880px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:620px){.hero{grid-template-columns:1fr;gap:20px}.grid{grid-template-columns:1fr}.brand h1{font-size:24px}.hero-lead h2{font-size:25px}.article h1{font-size:27px}.mast-actions .btn{display:none}}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<div class="sample" id="banner">智读 · 键盘日报 —— 每日自动抓取、分类、配图。点新闻 = 进入独立页面看完整中文摘要 + 从业者解读(URL 会变、能后退、可分享)。</div>
+
+<header class="mast">
+  <div class="mast-in">
+    <div class="brand" id="home"><h1>智读 · 键盘日报</h1><span class="tag">Daily Keyboard Intelligence</span></div>
+    <div class="mast-actions">
+      <div class="icon-btn" id="theme" title="切换深浅色">◑</div>
+    </div>
+  </div>
+</header>
+
+<div id="view"><div class="wrap"><div class="state">加载中…</div></div></div>
+
+<script>
+/* ───────────────────────────────────────────────────────────
+   数据层:从 posts/index.json(日期列表)+ posts/{date}.json 读真数据。
+   契约(后端 generate_digest.assemble 产出):
+     { date, generated_at, categories:[{code,label,color}],
+       items:[{hero,category,src,title,url,img,sum,lead[],take}] }
+   本地 file:// 双击时 fetch 被浏览器 CORS 拦 → 退回内置样本预览;
+   部署到 https(GitHub Pages)后 fetch 成功,自动显示真实每日数据。
+   ─────────────────────────────────────────────────────────── */
+
+// 7 分类色板兜底(JSON 的 categories 未给色/缺类时用;与后端 classify.CATEGORIES 对齐)
+const CAT_FALLBACK={
+  llm:["大模型","#4b3bff"],agent:["Agent·智能体","#0a8f6a"],product:["产品与工具","#d6932b"],
+  oss:["开源发布","#c8472b"],research:["研究与论文","#7a52cc"],biz:["融资与商业","#2b7fd6"],
+  policy:["政策与监管","#8a8d99"]
+};
+
+// 本地预览兜底样本(部署后被真实 fetch 覆盖,不影响线上)
+const SAMPLE_INDEX=["2026-06-14"];
+const SAMPLE_POSTS={"2026-06-14":{"date":"2026-06-14","categories":[{"code":"llm","label":"大模型","color":"#4b3bff"},{"code":"agent","label":"Agent·智能体","color":"#0a8f6a"},{"code":"product","label":"产品与工具","color":"#d6932b"},{"code":"research","label":"研究与论文","color":"#7a52cc"},{"code":"biz","label":"融资与商业","color":"#2b7fd6"}],"items":[{"hero":true,"category":"llm","src":"wired.com","title":"Anthropic Walks Back Policy That Could Have ‘Sabotaged’ AI Researchers Using Claude - WIRED","url":"https://www.wired.com/story/anthropic-responds-to-backlash-on-claudes-secret-sabotage-on-ai-research/","img":"https://media.wired.com/photos/6a2a474b0ce2fad63750beac/191:100/w_1280,c_limit/Anthropic-Responds-to-Backlash-Business-2276530995.jpg","sum":"Anthropic撤回暗中限制竞品使用Claude的政策","lead":["Anthropic撤回了一项针对新模型Claude Fable 5的争议政策，该政策原本会暗中限制竞争对手使用Claude开发其他AI模型。","在研究人员发声反对后，Anthropic决定改变策略，将前沿大模型开发相关的安全护栏改为可见，而非隐蔽限制。"],"take":"大模型厂商的竞争正从暗斗走向明牌，PM在选型时需警惕底层API的隐性限制条款，避免被供应商锁定。"},{"hero":false,"category":"agent","src":"华为新闻","title":"华为鸿蒙发布系统级智能体框架2.0","url":"https://news.qq.com/rain/a/20260614A06ETH00","img":"https://inews.gtimg.com/om_ls/OPOOG1lXMrVSBAc55Kbr6nz3OIaFIY7vpIeXOZIVyGEJsAA_640330/0","sum":"华为发布鸿蒙智能体框架2.0及系统级智能体“小艺”。","lead":["华为HDC大会带来鸿蒙智能体框架2.0和系统智能体小艺。","其核心变革在于Agent亲和架构，将小艺与操作系统深度融合，使其能力Skill化（将系统功能封装为可调用的模块），让智能体真正拥有“手脚”。"],"take":"端侧Agent的终局是OS级深度融合，PM做移动端Agent需从“应用级工具”向“系统级技能调度”演进。"},{"hero":false,"category":"product","src":"The Verge","title":"My yard is dying, so I made an app for that","url":"https://www.theverge.com/ai-artificial-intelligence/942119/vibecoding-backyard-app-gardening-organizing","img":"https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/268530_SUMMER_UPGRADE_WEEK_VIBECODING_BACKYARD_ADemidova.jpg?quality=90","sum":"Gemini单提示词生成应用，仍需人工介入修Bug","lead":["开发者仅用一段长提示词就让Gemini生成了一个完整的应用，但遇到了通道损坏的Bug。","虽然AI能自动检测到错误，但仍需人工点击按钮确认修复。"],"take":"AI编程工具正从“代码生成”走向“应用生成”，但产品设计中必须保留人工审核与兜底机制。"},{"hero":false,"category":"research","src":"Ars Technica","title":"Anthropic shuts down Fable, Mythos models following directive","url":"https://arstechnica.com/ai/2026/06/anthropic-shuts-down-fable-mythos-models-following-trump-admin-directive/","img":"https://cdn.arstechnica.net/wp-content/uploads/2026/06/fable5-1152x648.webp","sum":"Anthropic因出口管制紧急关停新模型","lead":["Anthropic刚发布Mythos 5和Fable 5模型数天，便因收到美国商务部指令而紧急关停访问权限。","该指令将这两款新模型列入出口管制清单，限制其在境外使用。"],"take":"地缘政治已成为AI产品出海的最大不可控风险，做全球化产品需备好合规断路器。"},{"hero":false,"category":"biz","src":"TechCrunch","title":"Meta reportedly moves to unwind $2B Manus deal after Beijing’s demand","url":"https://techcrunch.com/2026/06/13/meta-reportedly-moves-to-unwind-2b-manus-deal-after-beijings-demand/","img":"https://techcrunch.com/wp-content/uploads/2026/06/Meta-image.jpg?w=1024","sum":"Meta因北京要求，开始撤销20亿美元Manus收购案。","lead":["Meta正着手拆除其高达20亿美元的Manus收购案，原因是北京方面下令要求撤销该交易。","这标志着地缘政治因素正深度介入全球AI并购。"],"take":"地缘政治已成为AI产品出海与并购的最大变量，PM需将合规与区域脱钩风险纳入产品长期规划。"}]}};
+
+const STATE={dates:[],date:null,items:[],C:{},catOrder:[],local:false};
+const $=(s)=>document.querySelector(s);
+
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+function col(cat){return (STATE.C[cat]||CAT_FALLBACK[cat]||["",""])[1]||"#888";}
+function label(cat){return (STATE.C[cat]||CAT_FALLBACK[cat]||[cat,""])[0]||cat;}
+
+// 题图:只对支持 query 缩放的 CDN 加参数,其余原样(避免给任意源加参导致 404)
+function IMG(u,w){
+  if(!u) return "";
+  if(/ctfassets\.net|images\.contentful/.test(u)) return u+(u.includes("?")?"&":"?")+"w="+w+"&q=60";
+  return u;
+}
+function picbox(n,w,cls,extra){
+  extra=extra||"";
+  const c=col(n.cat);
+  const initial=esc((String(n.src||"").trim().charAt(0)||"·").toUpperCase());
+  const fb=`<div class="fb"><span class="fb-mono" style="color:${c}">${initial}</span><span class="fb-tag">${esc(label(n.cat))}</span><b>${esc(n.src)}</b></div>`;
+  const im=n.img?`<img loading="lazy" src="${IMG(n.img,w)}" alt="" onerror="this.remove()">`:"";
+  return `<div class="picbox ${cls}" style="background:linear-gradient(135deg,${c}22,${c}0a)">${fb}${extra}${im}</div>`;
+}
+
+function fmtCN(d){
+  const dt=new Date(d+"T00:00:00");
+  const wk=["日","一","二","三","四","五","六"][dt.getDay()];
+  return `${dt.getFullYear()}年${dt.getMonth()+1}月${dt.getDate()}日 星期${wk}`;
+}
+
+function normalize(obj){
+  const C={}, order=[];
+  (obj.categories||[]).forEach(c=>{
+    const fb=CAT_FALLBACK[c.code]||[c.code,"#888"];
+    C[c.code]=[c.label||fb[0], c.color||fb[1]];
+    order.push(c.code);
+  });
+  const items=(obj.items||[]).map((it,i)=>({
+    i, hero:!!it.hero, cat:it.category, src:it.src||"", t:it.title||"",
+    url:it.url||"", img:it.img||"",
+    sum:it.sum||"", lead:Array.isArray(it.lead)?it.lead:(it.lead?[it.lead]:[]), take:it.take||""
+  }));
+  items.forEach(n=>{ if(!C[n.cat]) C[n.cat]=CAT_FALLBACK[n.cat]||[n.cat,"#888"]; });
+  return {C, order: order.length?order:[...new Set(items.map(n=>n.cat))], items};
+}
+
+async function getJSON(path){
+  const r=await fetch(path+(path.includes("?")?"":"?t="+Date.now()));
+  if(!r.ok) throw new Error("HTTP "+r.status);
+  return r.json();
+}
+
+async function loadIndex(){
+  try{ STATE.dates=await getJSON("posts/index.json"); STATE.local=false; }
+  catch(e){ STATE.dates=SAMPLE_INDEX.slice(); STATE.local=true; }
+  STATE.dates=(STATE.dates||[]).slice().sort().reverse();   // 新→旧
+}
+
+async function loadDate(date){
+  let obj;
+  try{ obj=await getJSON("posts/"+date+".json"); }
+  catch(e){ if(SAMPLE_POSTS[date]){ obj=SAMPLE_POSTS[date]; STATE.local=true; } else { obj={date:date, categories:[], items:[]}; } }
+  const {C,order,items}=normalize(obj);
+  STATE.date=date; STATE.items=items; STATE.C=C; STATE.catOrder=order;
+}
+
+/* ── 渲染 ── */
+function heroBlock(h){
+  return `<div class="hero">
+    ${picbox(h,900,"",`<span class="tagline">今日头条</span>`).replace('class="picbox ','data-go="'+h.i+'" class="picbox ')}
+    <div class="hero-lead"><div class="kicker">${esc(label(h.cat))}</div>
+      <h2 data-go="${h.i}">${esc(h.t)}</h2><p>${esc(h.sum)}</p>
+      <div class="meta"><span class="src">${esc(h.src)}</span><span class="dot"></span><span class="readmore">阅读全文 →</span></div></div>
+  </div>`;
+}
+function card(n){
+  return `<div class="card" data-go="${n.i}">
+    ${picbox(n,600,"",`<span class="ctag" style="background:${col(n.cat)}">${esc(label(n.cat))}</span>`)}
+    <div class="body"><h4>${esc(n.t)}</h4><p>${esc(n.sum)}</p>
+      <div class="meta"><span class="src">${esc(n.src)}</span><span class="dot"></span><span class="readmore">阅读全文 →</span></div></div>
+  </div>`;
+}
+
+function renderHome(){
+  const items=STATE.items;
+  if(!items.length){ $("#view").innerHTML=`<div class="wrap"><div class="state">${esc(STATE.date||"")} 暂无数据。</div></div>`; return; }
+  const hero=items.find(n=>n.hero)||items[0];
+  const opts=STATE.dates.map(d=>`<option value="${d}"${d===STATE.date?" selected":""}>${fmtCN(d)}</option>`).join("");
+  let sections="";
+  STATE.catOrder.forEach(code=>{
+    const group=items.filter(n=>n.cat===code && n!==hero);
+    if(!group.length) return;
+    sections+=`<h3 class="sech"><span class="cdot" style="background:${col(code)}"></span>${esc(label(code))}</h3>`
+      +`<div class="secsub">${group.length} 条</div><div class="grid">${group.map(card).join("")}</div>`;
+  });
+  const localTip=STATE.local?` · <span style="color:var(--accent)">本地预览(内置样本);部署到网址后自动读每日真实数据</span>`:"";
+  $("#view").innerHTML=`<div class="wrap">
+    <div class="dateline"><select id="datesel" class="datesel">${opts}</select>
+      <span class="dot"></span><span><b>${items.length}</b> 条 · ${STATE.catOrder.length} 个分类</span>
+      <span class="dot"></span><span>点新闻进入独立页面${localTip}</span></div>
+    ${heroBlock(hero)}
+    ${sections}
+    <footer><b>关于本站</b> · 每条新闻点进去都是<b>独立页面</b>(网址会变、可前进后退、可单独分享),内容为自有中文摘要 + 从业者解读,不转载原文全文;配图取自各文章题图,缺图时退回来源标识封面。<br><span style="opacity:.8">数据由 RSS / Hacker News / 智谱 / Tavily 多源每日聚合,按「最新 × 最热 × 来源权重」排序分类。</span></footer>
+  </div>`;
+  const sel=$("#datesel"); if(sel) sel.onchange=()=>{location.hash="#/"+sel.value;};
+  window.scrollTo(0,0);
+}
+
+function renderDetail(i){
+  const n=STATE.items[i];
+  if(!n){ location.hash="#/"+(STATE.date||""); return; }
+  $("#view").innerHTML=`<div class="narrow article">
+    <div class="back" data-back>← 返回 ${esc(fmtCN(STATE.date))} 日报</div>
+    <div class="kicker">${esc(label(n.cat))}</div>
+    <h1>${esc(n.t)}</h1>
+    <div class="ameta"><span class="src">${esc(n.src)}</span><span class="dot"></span><span>${esc(fmtCN(STATE.date))}</span><span class="dot"></span><span>中文摘要 · 智读键盘</span></div>
+    <div class="afig">${picbox(n,1000,"")}</div>
+    <div class="lead">${n.lead.map(p=>`<p>${esc(p)}</p>`).join("")}</div>
+    ${n.take?`<div class="takeaway"><span class="lab">从业者视角解读</span>${esc(n.take)}</div>`:""}
+    <div class="actions">
+      ${n.url?`<a class="origin" href="${n.url}" target="_blank" rel="noopener">阅读原文 ↗</a>`:""}
+      <span class="note">原文在新标签页打开 · 本页内容为 AI 生成的中文摘要,非原文转载</span>
+    </div>
+    <div class="back" data-back>← 返回 ${esc(fmtCN(STATE.date))} 日报</div>
+    <footer style="margin-top:8px"><span style="opacity:.8">智读 · 键盘日报 · 自有摘要,不转载原文全文。</span></footer>
+  </div>`;
+  window.scrollTo(0,0);
+}
+
+/* ── 路由(含日期,可分享/后退):#/ | #/{date} | #/{date}/a/{i} ── */
+function parseHash(){
+  const p=location.hash.replace(/^#\/?/,"").split("/").filter(Boolean);
+  let date=null, idx=null;
+  if(p[0] && /^\d{4}-\d{2}-\d{2}$/.test(p[0])) date=p[0];
+  const k=p.indexOf("a");
+  if(k>=0){ const v=parseInt(p[k+1],10); if(!isNaN(v)) idx=v; }
+  return {date, idx};
+}
+
+async function route(){
+  if(!STATE.dates.length) await loadIndex();
+  let {date,idx}=parseHash();
+  if(!date || !STATE.dates.includes(date)) date=STATE.dates[0];
+  if(!date){ $("#view").innerHTML=`<div class="wrap"><div class="state">暂无数据。</div></div>`; return; }
+  if(STATE.date!==date){
+    try{ await loadDate(date); }
+    catch(e){ $("#view").innerHTML=`<div class="wrap"><div class="state">加载失败:${esc(date)}</div></div>`; return; }
+  }
+  if(idx!=null && STATE.items[idx]) renderDetail(idx); else renderHome();
+}
+addEventListener("hashchange",route);
+
+// 委托点击:卡片/标题/封面 → 进入详情页(带日期);返回
+document.addEventListener("click",e=>{
+  const go=e.target.closest("[data-go]");
+  if(go){ location.hash="#/"+STATE.date+"/a/"+go.dataset.go; return; }
+  if(e.target.closest("[data-back]")){ location.hash="#/"+(STATE.date||""); return; }
+});
+$("#home").onclick=()=>{ location.hash="#/"+(STATE.dates[0]||""); };
+
+// theme / progress
+const root=document.documentElement;
+$("#theme").onclick=()=>{root.dataset.theme=root.dataset.theme==="dark"?"":"dark";};
+addEventListener("scroll",()=>{const H=document.documentElement.scrollHeight-innerHeight;$("#prog").style.width=(H>0?scrollY/H*100:0)+"%";},{passive:true});
+
+route();
+</script>
+
+
+</body>
+</html>
