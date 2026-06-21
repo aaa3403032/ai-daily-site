@@ -26,47 +26,122 @@
     {
       "hero": true,
       "category": "market",
-      "src": "pcgamer.com",
-      "title": "Sony files wild patent for reactive buttons that can soften and harden in real-time - PC Gamer",
-      "url": "https://www.pcgamer.com/hardware/controllers/the-dualsense-can-still-drift-but-sony-may-be-exploring-magnetic-tech-for-dynamic-tactile-buttons-in-whatever-comes-next/",
-      "img": "https://cdn.mos.cms.futurecdn.net/qV2bVw74H2XnNEqc4BaVKH-1920-80.jpg",
-      "sum": "机构预测2027年机械键盘市场达50亿美元",
+      "src": "r/MechanicalKeyboards",
+      "title": "Mechanical keyboard heaven",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uaqvn1/mechanical_keyboard_heaven/",
+      "img": "https://preview.redd.it/eatgm7ueae8h1.jpg?width=140&height=105&auto=webp&s=5554c90144dc1946d1f41d3bcf9b7209a6c9bcc6",
+      "sum": "新加坡线下店The Laboratory by RF提供丰富键盘及配件试打。",
       "lead": [
-        "市场研究机构发布最新外设报告。",
-        "预计2027年全球机械键盘市场规模将突破50亿美元。",
-        "亚太地区仍是增长最快的市场。"
+        "\"The Laboratory by RF\" in Singapore. Not affiliated, was just lucky to stumble upon it while visiting.",
+        "Very impressive range of pre-built, barebones, switches and key caps, and you can try most of them!"
       ],
-      "take": "市场大盘持续扩容，亚太区本土品牌将迎来更多出海与下沉机会。"
+      "take": "线下试打体验店是连接产品与消费者的关键场景，值得品牌方关注。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "pcgamer.com",
+      "title": "Melgeek's $140 competitive keyboard is solidly built, but with too many downsides for my liking - PC Gamer",
+      "url": "https://www.pcgamer.com/hardware/gaming-keyboards/melgeek-real81-review/",
+      "img": "https://cdn.mos.cms.futurecdn.net/UQoKbXr85QopFn23S5qEgY-2560-80.jpg",
+      "sum": "PC Gamer评测Melgeek 140美元竞技键盘：做工扎实但槽点多",
+      "lead": [
+        "Melgeek's $140 competitive keyboard is solidly built, but with too many downsides for my liking - PC Gamer"
+      ],
+      "take": "中端价位竞技键盘竞争激烈，仅靠做工不足以支撑口碑，综合体验与细节决定成败。"
     },
     {
       "hero": false,
       "category": "hardware",
-      "src": "kotaku.com",
-      "title": "Logitech Wireless Gaming Keyboard X Genshin Impact Drops 56% in Amazon's Final Clearance Push (Kamisato Ayaka Special Edition) - Kotaku",
-      "url": "https://kotaku.com/logitech-wireless-gaming-keyboard-x-genshin-impact-drops-56-in-amazons-final-clearance-push-kamisato-ayaka-special-edition-2000704606",
-      "img": "https://kotaku.com/app/uploads/2026/06/LogitechGenshinImpactKeyboard.jpg",
-      "sum": "Cherry发布新款MX2A红轴，顺滑度升级",
+      "src": "Keybored",
+      "title": "Celebrating 20 Years of ROG With A $600 Gold Keyboard?!",
+      "url": "https://www.youtube.com/watch?v=75-H8kz5QbY",
+      "img": "https://www.youtube.com/v/75-H8kz5QbY?version=3",
+      "sum": "ROG推20周年纪念款600美元镀金键盘",
       "lead": [
-        "Cherry今日正式发布MX2A系列新款红轴。",
-        "新轴体优化了内部结构，宣称顺滑度较上代提升20%。",
-        "预计将于下月量产供货。"
+        "用一把售价600美元的镀金键盘庆祝ROG 20周年？！"
       ],
-      "take": "传统轴体大厂仍在微调经典结构，国产轴需警惕同质化竞争。"
+      "take": "高溢价纪念款是品牌沉淀核心粉丝价值、拉升高端调性的有效手段。"
     },
     {
       "hero": false,
       "category": "hardware",
-      "src": "pcgamer.com",
-      "title": "Save $60 on this super-fast Asus ROG Falchion Ace 75 HE gaming keyboard - PC Gamer",
-      "url": "https://www.pcgamer.com/hardware/gaming-keyboards/thanks-to-a-substantial-27-percent-discount-this-rog-falchion-gaming-keyboard-is-a-seriously-tempting-deal-for-anyone-aiming-for-an-all-white-theme/",
-      "img": "https://cdn.mos.cms.futurecdn.net/2cBbLSipHFpoD2P7uADYF3-1920-80.jpg",
-      "sum": "Keychron发布Q1 Max量产铝键盘",
+      "src": "Alexotos",
+      "title": "My Second Keyboard Design w/ Bowl — The Schema M60",
+      "url": "https://www.youtube.com/watch?v=z1R7zG-T-Tw",
+      "img": "https://www.youtube.com/v/z1R7zG-T-Tw?version=3",
+      "sum": "Alexotos展示其第二款键盘设计：带碗型外壳的Schema M60",
       "lead": [
-        "Keychron更新Q系列量产铝坨坨键盘。",
-        "Q1 Max支持三模连接及QMK/VIA改键。",
-        "首发定价较前代更具性价比。"
+        "My Second Keyboard Design w/ Bowl — The Schema M60"
       ],
-      "take": "量产铝键盘持续下探价格，客制化与量产边界进一步模糊。"
+      "take": "碗型(Bowl)外壳设计关注人体工学与掌托体验，是客制化套件差异化新方向。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Alexotos",
+      "title": "🔴  the SF60 by Chillkey?",
+      "url": "https://www.youtube.com/watch?v=kQCXg5MyJNI",
+      "img": "https://www.youtube.com/v/kQCXg5MyJNI?version=3",
+      "sum": "Chillkey推出SF60键盘引发社区关注",
+      "lead": [
+        "the SF60 by Chillkey?"
+      ],
+      "take": "头部KOL提及的新品往往能快速在核心玩家圈层获得初始流量。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "theverge.com",
+      "title": "This Ghost in the Shell keyboard makes me want to activate the hundred spidery robot fingers inside my regular fingers - The Verge",
+      "url": "https://www.theverge.com/tech/951371/iqunix-ev63-ghost-in-the-shell-edition-anime-gaming-mechanical-keyboard-review",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/268602_Iqunix_EV63_Ghost_in_the_Shell_mechanical_keyboards_ADiBenedetto_0004.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200",
+      "sum": "Iqunix推出攻壳机动队联名特别版EV63键盘",
+      "lead": [
+        "Iqunix’s special edition EV63 is decked out in ’90s anime charm.",
+        "But these Ghost in the Shell keyboards from Iqunix are some of the coolest examples I’ve seen of anime-inspired"
+      ],
+      "take": "二次元IP联名仍是提升客制化键盘破圈吸引力的重要手段。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Alexotos",
+      "title": "🔴  MANTA WITH TYPE R SWITCHES - FULL STREAM",
+      "url": "https://www.youtube.com/watch?v=7DoG9uT1b1U",
+      "img": "https://www.youtube.com/v/7DoG9uT1b1U?version=3",
+      "sum": "Alexotos直播展示搭载Type R轴的Manta键盘",
+      "lead": [
+        "MANTA WITH TYPE R SWITCHES - FULL STREAM"
+      ],
+      "take": "头部KOL直播仍是新轴体与套件破圈的有效路径，关注Type R轴市场反馈"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "Hipyo Tech",
+      "title": "How to Make a CREAMY Gaming Keyboard...",
+      "url": "https://www.youtube.com/watch?v=O-QJvTKotAM",
+      "img": "https://www.youtube.com/v/O-QJvTKotAM?version=3",
+      "sum": "Hipyo Tech分享打造奶油音游戏键盘教程",
+      "lead": [
+        "知名外设博主Hipyo Tech发布如何打造Creamy（奶油音）游戏键盘的教程。",
+        "此类内容持续推动玩家对键盘声学包及润轴改性的需求。"
+      ],
+      "take": "“奶油音”仍是重要流量密码，声学包与润滑服务是产品增值点。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "Alexotos",
+      "title": "🔴  schema M60, now in HE :D",
+      "url": "https://www.youtube.com/watch?v=fXAJLfxC_tM",
+      "img": "https://www.youtube.com/v/fXAJLfxC_tM?version=3",
+      "sum": "Schema M60推出磁轴(HE)版本，拥抱霍尔效应趋势",
+      "lead": [
+        "🔴 schema M60, now in HE :D"
+      ],
+      "take": "磁轴(HE)技术正快速向各类客制化套件渗透，传统机械轴套件需跟进以保持竞争力。"
     },
     {
       "hero": false,
@@ -75,28 +150,163 @@
       "title": "If You’re a PC Gamer, It’s Time to Upgrade to Magnetic Keyboard Switches - CNET",
       "url": "https://www.cnet.com/tech/gaming/pc-gaming-mechanical-keyboard-magnetic-switches-why-upgrade/",
       "img": "https://www.cnet.com/a/img/resize/e45430695b1ccbdfb036d5f3be98a1d03e0c782b/hub/2026/06/11/8d285a50-2a5b-4996-8dc2-d93e19eae973/logitechs-g512-x-75.jpg?auto=webp&amp;fit=crop&amp;height=675&amp;width=1200",
-      "sum": "佳达道发布0.1ms响应新磁轴传感器",
+      "sum": "CNET呼吁PC玩家升级磁轴键盘，HE与TMR磁轴带来性能提升。",
       "lead": [
-        "佳达道展示最新磁轴传感器技术。",
-        "该方案将理论响应速度压缩至0.1ms，超越现有竞品。",
-        "首批合作厂商名单将于下周公布。"
+        "If You’re a PC Gamer, It’s Time to Upgrade to Magnetic Keyboard Switches.",
+        "While they have a few downsides, if you're a competitive gamer (or hope to be), HE and TMR magnetic switches can make a huge performance difference. It started in controllers a few years ago, and it was only a matter of time"
       ],
-      "take": "磁轴军备竞赛进入毫秒级微操阶段，算法与硬件协同是关键壁垒。"
+      "take": "磁轴正从手柄向键盘渗透，电竞玩家是核心增量市场。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "KeebTalk",
+      "title": "Progress since the 1980s and 1990s",
+      "url": "https://www.keebtalk.com/t/progress-since-the-1980s-and-1990s/24124",
+      "img": "https://www.keebtalk.com/uploads/db8059/optimized/3X/0/c/0c43e62664b7a6388b4a049d1f6211f299eda2f6_2_690x235.jpeg",
+      "sum": "网友回顾数十年进步，强调分体键盘等人体工学方案增多",
+      "lead": [
+        "Did anyone else here grow up in the previous century? So many things have changed and improved since then, I don’t even want to start listing them all.",
+        "In the area of keyboard ergonomics we also have a lot of progress: there are a lot of options of split keyboards, many of them also with finger-frie"
+      ],
+      "take": "人体工学与分体设计正从边缘走向主流，厂商应关注老玩家痛点与新形态需求"
     },
     {
       "hero": false,
       "category": "community",
-      "src": "synthanatomy.com",
-      "title": "Akai MPC Key 37 G2: the keyboard MPC with four times more power and more - synth anatomy",
-      "url": "https://synthanatomy.com/2026/06/akai-mpc-key-37-g2-the-keyboard-mpc-with-four-times-more-power-and-more.html",
-      "img": "https://synthanatomy.com/wp-content/uploads/2026/06/Akai-MPC-Key-37-G2.jpg",
-      "sum": "知名客制化博主A大宣布退圈",
+      "src": "Geekhack",
+      "title": "Re: [IC] GMK CYL Gorp - Lead Vendor Announced!",
+      "url": "https://geekhack.org/index.php?topic=124661.msg3217383#msg3217383",
+      "img": "https://cdn.geekhack.org/Smileys/solosmileys/cheesy.gif",
+      "sum": "GMK CYL Gorp键帽IC公布主代运营商",
       "lead": [
-        "客制化键盘圈知名博主'A大'发文宣布退出。",
-        "其曾主导多款热门客制化套件设计，引发社区热议。",
-        "部分玩家对其离开表示惋惜。"
+        "Geekhack上GMK CYL Gorp键帽兴趣检查(IC)阶段公布主代运营商(Lead Vendor)。",
+        "项目即将进入团购阶段，社区反响热烈。"
       ],
-      "take": "KOL对客制化圈层影响力巨大，品牌需分散合作风险并培育新社群节点。"
+      "take": "关注GMK CYL新高度及热门主题键帽的代运营动向，把握团购流量。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Some recent builds! 🤌🏻",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ubcdic/some_recent_builds/",
+      "img": "https://preview.redd.it/p641x1in9j8h1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=30a44318724afb5f997566d63ad23aa60268c418",
+      "sum": "玩家分享多套近期客制化键盘组装成果",
+      "lead": [
+        "Reddit玩家展示6套近期组装的客制化键盘，包含Pixel 67、Qi65等热门套件。",
+        "搭配了KKB Beige、GMK Cherry Love及MW Gesha等热门键帽。"
+      ],
+      "take": "追踪热门套件与键帽搭配趋势，了解当前玩家审美与组装偏好。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "my nut65",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uauyaw/my_nut65/",
+      "img": "https://preview.redd.it/vmnikpdygf8h1.jpg?width=140&height=93&auto=webp&s=f7150ed68621220d8fc1fd21fc996ad6fa29753f",
+      "sum": "玩家DIY喷涂Nut65键盘，实现梦幻渐变双色效果。",
+      "lead": [
+        "DIY Pastel Fade.",
+        "Attempted a dreamy two-tone spray job for Analog Dream"
+      ],
+      "take": "客制化喷涂仍是玩家彰显个性的重要方式，渐变色系受青睐。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Throwback to when I used ceramic keycaps (my fingers would freeze)",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uapc1n/throwback_to_when_i_used_ceramic_keycaps_my/",
+      "img": "https://preview.redd.it/j0lbgo62ud8h1.jpeg?width=640&crop=smart&auto=webp&s=9bc4d1c92dd6b39ab2f082b054433848843448f5",
+      "sum": "玩家回顾首次客制化组装，分享陶瓷键帽冰凉触感体验。",
+      "lead": [
+        "Throwback to when I used ceramic keycaps (my fingers would freeze)",
+        "This was also my first custom keyboard build"
+      ],
+      "take": "陶瓷键帽虽具独特质感与美学，但冷感体验是影响日常使用的痛点。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Alexotos",
+      "title": "🔴  Vaza green manta for a client ;D",
+      "url": "https://www.youtube.com/watch?v=kt3YZkinJns",
+      "img": "https://www.youtube.com/v/kt3YZkinJns?version=3",
+      "sum": "知名圈层玩家展示为客户定制的Vaza绿色Manta键盘。",
+      "lead": [
+        "🔴  Vaza green manta for a client ;D"
+      ],
+      "take": "KOL定制组装展示具强圈层影响力，独特主题配色是核心溢价点。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "We're expanding our mech keys community",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uaaqpx/were_expanding_our_mech_keys_community/",
+      "img": "https://preview.redd.it/5hez04qsea8h1.jpeg?width=640&crop=smart&auto=webp&s=0ad777311438b2c3a112f9a6c2028620514773c6",
+      "sum": "前Drop员工创立的Apos正扩张客制化机械键盘社区",
+      "lead": [
+        "Apos在r/MechanicalKeyboards发布更新，宣布扩张机械键盘社区。",
+        "团队部分成员曾任职于(Mass)Drop。过去不愿越界，但既然Drop已正式宣布退出，他们决定接管并扩大社区。"
+      ],
+      "take": "Drop退出后的社区真空期，是新兴平台争夺客制化玩家存量的关键窗口。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "My Mode Sonnet has reached its final form",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ua0kzt/my_mode_sonnet_has_reached_its_final_form/",
+      "img": "https://preview.redd.it/uz6utw5qf88h1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=e6d548aa16b99425641136df8d4169ad4e120e76",
+      "sum": "玩家展示Mode Sonnet客制化键盘最终组装形态",
+      "lead": [
+        "我的Mode Sonnet达到了最终形态。",
+        "配置：Mode Sonnet V1搭配铜点缀及全铜底壳、GMK Boho键帽、Cherry MX2A黑轴、铝定位板。"
+      ],
+      "take": "全铜底壳与MX2A轴体搭配，反映出玩家对极致质感与经典手感回归的双重追求。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Still one of my favourite boards...",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1u9w8in/still_one_of_my_favourite_boards/",
+      "img": "https://preview.redd.it/rkp8hhno878h1.jpeg?width=640&crop=smart&auto=webp&s=1987d4595af33786227d85a1364d62e90fc2442d",
+      "sum": "玩家展示Switch Couture Alice套件搭配GMK 80082键帽",
+      "lead": [
+        "Switch Couture Alice w/ GMK 80082 keycaps and deskmat. DIY cable."
+      ],
+      "take": "Alice配列与GMK主题键帽搭配仍是玩家展示审美与个性的主流。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Simplicity",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1u9rlq0/simplicity/",
+      "img": "https://preview.redd.it/n8ak66jwv58h1.jpg?width=140&height=93&auto=webp&s=d9d4f6e82fdc589c95fc367cba2e5d0f536772db",
+      "sum": "老玩家回归感叹客制化进步，偏爱Gok 7V与黑白键帽",
+      "lead": [
+        "Recently got back into the hobby after more than a decade away. Quite surprised and amazed by how much the hobby has advanced.",
+        "After all these years, I'm somehow still drawn to the simple black-and-white keycaps. Keyboards: Gok 7V: Cherry OG US-ANSI WOB + couple"
+      ],
+      "take": "极简黑白(WoB)键帽经久不衰，经典设计在成熟玩家中依然有强大号召力。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "KeebTalk",
+      "title": "Help identifying keycaps",
+      "url": "https://www.keebtalk.com/t/help-identifying-keycaps/24127",
+      "img": "https://www.keebtalk.com/uploads/db8059/optimized/3X/2/2/228ae505545d8ffc59cbd40ac70298d47a62abaa_2_666x500.jpeg",
+      "sum": "玩家在KeebTalk求助辨认五年前的老旧键帽",
+      "lead": [
+        "I can’t remember how I got these, they’re at least 5 years old. I don’t use them and want to pass them on. But it would be handy to know what they are first."
+      ],
+      "take": "二手键帽流通依赖清晰的型号辨识，品牌方应重视键帽底刻或包装的标识传承。"
     }
   ]
 }
