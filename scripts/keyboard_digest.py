@@ -35,19 +35,36 @@ PER_CAT_MAX = int(os.environ.get("KB_PER_CAT_MAX", "10"))
 RECENT_DAYS = int(os.environ.get("KB_RECENT_DAYS", "10"))
 MIN_PUBLISH = int(os.environ.get("KB_MIN_PUBLISH", "4"))
 
-# 键盘 RSS 源(url, 来源名, hint)。hint 留空,分类交给 GLM。失败不阻塞。
+# 键盘 RSS 源(url, 来源名, hint)。hint 留空=分类交给 GLM。单源失败不阻塞(feeds.fetch_feeds 已处理)。
+# 全部经子agent web_fetch 验证可出 XML(2026-06)。
 KB_FEEDS = [
+    # 论坛 / 社区(发烧友一手讨论)
     ("https://www.reddit.com/r/MechanicalKeyboards/top/.rss?t=week", "r/MechanicalKeyboards", "community"),
+    ("https://keebtalk.com/latest.rss", "KeebTalk", "community"),
+    ("https://geekhack.org/index.php?action=.xml;type=rss2", "Geekhack", "community"),
+    ("https://deskthority.net/app.php/feed", "Deskthority", "community"),  # 新版 phpBB 用 /app.php/feed
+    # 独立站 / 资讯 / 轴体评测
     ("https://kbd.news/rss.xml", "kbd.news", ""),
+    ("https://www.theremingoat.com/blog?format=rss", "ThereminGoat", "hardware"),
+    # YouTube 测评 KOL(键盘频道;Atom feed,主要拿标题+链接,GLM 据此判类/写摘要)
+    ("https://www.youtube.com/feeds/videos.xml?channel_id=UCXlDgfWY2JbsYEam2m68Hyw", "Hipyo Tech", ""),
+    ("https://www.youtube.com/feeds/videos.xml?channel_id=UCMHXMAeKkI6HXlPfLiYvo9g", "Taeha Types", ""),
+    ("https://www.youtube.com/feeds/videos.xml?channel_id=UCRYOj4DmyxhBVrdvbsUwmAA", "Optimum Tech", ""),
+    ("https://www.youtube.com/feeds/videos.xml?channel_id=UCeHOkFGW-7uAZFvq3BXb8YA", ":3ildcat", ""),
+    ("https://www.youtube.com/feeds/videos.xml?channel_id=UCxOdCYPuEPY996im9u_tFBQ", "Alexotos", ""),
+    ("https://www.youtube.com/feeds/videos.xml?channel_id=UCzqmTtRqjBgQ_cybekKVGHA", "Keybored", ""),
+    # 泛科技(键盘相关由 GLM 过滤保留)
     ("https://www.theverge.com/rss/index.xml", "The Verge", ""),
 ]
 
-# 键盘 Tavily 搜索词(主力;niche RSS 不稳)。无 AI 域名白名单。
+# 键盘 Tavily 搜索词(补 RSS 抓不到的;无 AI 域名白名单)。含"新品/市场/评测/亚马逊近似"角度。
 KB_QUERIES = [
     "mechanical keyboard news",
     "gaming keyboard launch hall effect magnetic",
-    "keyboard switch keycap release",
+    "keyboard switch keycap release 2026",
     "custom keyboard group buy community",
+    "keyboard brand market trend best selling",
+    "best mechanical keyboard review 2026",
 ]
 
 
