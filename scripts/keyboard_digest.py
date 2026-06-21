@@ -34,6 +34,8 @@ CAT_COLOR = {c[0]: c[2] for c in CATEGORIES}
 PER_CAT_MAX = int(os.environ.get("KB_PER_CAT_MAX", "10"))
 RECENT_DAYS = int(os.environ.get("KB_RECENT_DAYS", "10"))
 MIN_PUBLISH = int(os.environ.get("KB_MIN_PUBLISH", "4"))
+POOL_MAX = int(os.environ.get("KB_POOL_MAX", "40"))          # 喂 GLM 前把候选裁到这么多(控批量,防输出截断)
+PER_SOURCE_CAP = int(os.environ.get("KB_PER_SOURCE_CAP", "8"))  # 裁剪时单源上限,保多样性
 
 # 键盘 RSS 源(url, 来源名, hint)。hint 留空=分类交给 GLM。单源失败不阻塞(feeds.fetch_feeds 已处理)。
 # 全部经子agent web_fetch 验证可出 XML(2026-06)。
@@ -156,7 +158,7 @@ def summarize(key, items, today):
     if not items:
         return []
     out, dropped = [], 0
-    BATCH = 30
+    BATCH = 12   # 小批:单次 GLM 输出可控,避免被 max_tokens 截断致整批 JSON 解析失败(Run#2 教训)
     for s in range(0, len(items), BATCH):
         chunk = items[s:s + BATCH]
         data = call_glm(key, build_prompt(chunk, today), max_tokens=8000)
@@ -211,6 +213,30 @@ def rank_buckets(items):
         buckets[c].sort(key=score, reverse=True)
         buckets[c] = buckets[c][:PER_CAT_MAX]
     return buckets
+
+
+def prelimit(cands, pool_max=None, per_source=None):
+    """喂 GLM 前裁候选:按(新鲜度+有图+相关性)打分 + 单源上限,取前 N。
+    防 96 条全喂导致单批过大、GLM 输出截断 → JSON 解析失败 → 0 条(Run#2 教训)。"""
+    pool_max = POOL_MAX if pool_max is None else pool_max
+    per_source = PER_SOURCE_CAP if per_source is None else per_source
+    now = time.time()
+
+    def sc(it):
+        ts = it.get("published_ts") or 0
+        fresh = 1.0 if not ts else max(0.1, 1.0 - (now - ts) / (86400 * RECENT_DAYS))
+        return fresh + (0.4 if it.get("image") else 0) + (it.get("relevance") or 0)
+
+    out, cnt = [], {}
+    for it in sorted(cands, key=sc, reverse=True):
+        s = _media_of(it)
+        if cnt.get(s, 0) >= per_source:
+            continue
+        cnt[s] = cnt.get(s, 0) + 1
+        out.append(it)
+        if len(out) >= pool_max:
+            break
+    return out
 
 
 def assemble(today, buckets):
@@ -314,6 +340,8 @@ def main():
     cands = gather(today)
     if len(cands) < MIN_PUBLISH:
         sys.exit(f"键盘候选仅 {len(cands)} 条(<{MIN_PUBLISH}),不足成稿")
+    cands = prelimit(cands)
+    print(f"裁到喂 GLM 的候选:{len(cands)} 条(单源≤{PER_SOURCE_CAP})", flush=True)
     written = summarize(key, cands, today)
     buckets = rank_buckets(written)
     for it in load_manual(today):
