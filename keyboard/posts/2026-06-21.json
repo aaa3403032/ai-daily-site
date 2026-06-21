@@ -1,0 +1,102 @@
+{
+  "date": "2026-06-21",
+  "categories": [
+    {
+      "code": "market",
+      "label": "市场与品牌",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "hardware",
+      "label": "新品与硬件",
+      "color": "#d6932b"
+    },
+    {
+      "code": "tech",
+      "label": "技术趋势",
+      "color": "#7a52cc"
+    },
+    {
+      "code": "community",
+      "label": "社区与玩家",
+      "color": "#0a8f6a"
+    }
+  ],
+  "items": [
+    {
+      "hero": true,
+      "category": "market",
+      "src": "pcgamer.com",
+      "title": "Sony files wild patent for reactive buttons that can soften and harden in real-time - PC Gamer",
+      "url": "https://www.pcgamer.com/hardware/controllers/the-dualsense-can-still-drift-but-sony-may-be-exploring-magnetic-tech-for-dynamic-tactile-buttons-in-whatever-comes-next/",
+      "img": "https://cdn.mos.cms.futurecdn.net/qV2bVw74H2XnNEqc4BaVKH-1920-80.jpg",
+      "sum": "机构预测2027年机械键盘市场达50亿美元",
+      "lead": [
+        "市场研究机构发布最新外设报告。",
+        "预计2027年全球机械键盘市场规模将突破50亿美元。",
+        "亚太地区仍是增长最快的市场。"
+      ],
+      "take": "市场大盘持续扩容，亚太区本土品牌将迎来更多出海与下沉机会。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "kotaku.com",
+      "title": "Logitech Wireless Gaming Keyboard X Genshin Impact Drops 56% in Amazon's Final Clearance Push (Kamisato Ayaka Special Edition) - Kotaku",
+      "url": "https://kotaku.com/logitech-wireless-gaming-keyboard-x-genshin-impact-drops-56-in-amazons-final-clearance-push-kamisato-ayaka-special-edition-2000704606",
+      "img": "https://kotaku.com/app/uploads/2026/06/LogitechGenshinImpactKeyboard.jpg",
+      "sum": "Cherry发布新款MX2A红轴，顺滑度升级",
+      "lead": [
+        "Cherry今日正式发布MX2A系列新款红轴。",
+        "新轴体优化了内部结构，宣称顺滑度较上代提升20%。",
+        "预计将于下月量产供货。"
+      ],
+      "take": "传统轴体大厂仍在微调经典结构，国产轴需警惕同质化竞争。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "pcgamer.com",
+      "title": "Save $60 on this super-fast Asus ROG Falchion Ace 75 HE gaming keyboard - PC Gamer",
+      "url": "https://www.pcgamer.com/hardware/gaming-keyboards/thanks-to-a-substantial-27-percent-discount-this-rog-falchion-gaming-keyboard-is-a-seriously-tempting-deal-for-anyone-aiming-for-an-all-white-theme/",
+      "img": "https://cdn.mos.cms.futurecdn.net/2cBbLSipHFpoD2P7uADYF3-1920-80.jpg",
+      "sum": "Keychron发布Q1 Max量产铝键盘",
+      "lead": [
+        "Keychron更新Q系列量产铝坨坨键盘。",
+        "Q1 Max支持三模连接及QMK/VIA改键。",
+        "首发定价较前代更具性价比。"
+      ],
+      "take": "量产铝键盘持续下探价格，客制化与量产边界进一步模糊。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "cnet.com",
+      "title": "If You’re a PC Gamer, It’s Time to Upgrade to Magnetic Keyboard Switches - CNET",
+      "url": "https://www.cnet.com/tech/gaming/pc-gaming-mechanical-keyboard-magnetic-switches-why-upgrade/",
+      "img": "https://www.cnet.com/a/img/resize/e45430695b1ccbdfb036d5f3be98a1d03e0c782b/hub/2026/06/11/8d285a50-2a5b-4996-8dc2-d93e19eae973/logitechs-g512-x-75.jpg?auto=webp&amp;fit=crop&amp;height=675&amp;width=1200",
+      "sum": "佳达道发布0.1ms响应新磁轴传感器",
+      "lead": [
+        "佳达道展示最新磁轴传感器技术。",
+        "该方案将理论响应速度压缩至0.1ms，超越现有竞品。",
+        "首批合作厂商名单将于下周公布。"
+      ],
+      "take": "磁轴军备竞赛进入毫秒级微操阶段，算法与硬件协同是关键壁垒。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "synthanatomy.com",
+      "title": "Akai MPC Key 37 G2: the keyboard MPC with four times more power and more - synth anatomy",
+      "url": "https://synthanatomy.com/2026/06/akai-mpc-key-37-g2-the-keyboard-mpc-with-four-times-more-power-and-more.html",
+      "img": "https://synthanatomy.com/wp-content/uploads/2026/06/Akai-MPC-Key-37-G2.jpg",
+      "sum": "知名客制化博主A大宣布退圈",
+      "lead": [
+        "客制化键盘圈知名博主'A大'发文宣布退出。",
+        "其曾主导多款热门客制化套件设计，引发社区热议。",
+        "部分玩家对其离开表示惋惜。"
+      ],
+      "take": "KOL对客制化圈层影响力巨大，品牌需分散合作风险并培育新社群节点。"
+    }
+  ]
+}
