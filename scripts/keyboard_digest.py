@@ -163,9 +163,16 @@ def summarize(key, items, today):
         chunk = items[s:s + BATCH]
         data = call_glm(key, build_prompt(chunk, today), max_tokens=8000)
         if not data:
+            print("  GLM 无响应,跳过该批", flush=True)
             continue
-        arr = parse_json_array(data["choices"][0]["message"]["content"] or "")
+        try:
+            content = data["choices"][0]["message"]["content"] or ""
+        except (KeyError, IndexError, TypeError):
+            content = ""
+            print(f"  ⚠️ GLM 响应结构异常: {str(data)[:200]}", flush=True)
+        arr = parse_json_array(content)
         if not arr:
+            print(f"  ⚠️ 解析为空: content 长度={len(content)} 片段={content[:160]!r}", flush=True)
             continue
         for rec in arr:
             if not isinstance(rec, dict):
