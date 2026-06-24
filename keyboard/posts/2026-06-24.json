@@ -1,0 +1,293 @@
+{
+  "date": "2026-06-24",
+  "categories": [
+    {
+      "code": "market",
+      "label": "市场与品牌",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "hardware",
+      "label": "新品与硬件",
+      "color": "#d6932b"
+    },
+    {
+      "code": "tech",
+      "label": "技术趋势",
+      "color": "#7a52cc"
+    },
+    {
+      "code": "community",
+      "label": "社区与玩家",
+      "color": "#0a8f6a"
+    }
+  ],
+  "items": [
+    {
+      "hero": true,
+      "category": "market",
+      "src": "The Verge",
+      "title": "The best Prime Day deals we found on our favorite gear",
+      "url": "https://www.theverge.com/gadgets/948610/best-prime-day-tech-deals-sale",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/268513_Amazon_Prime_Day_artwork_2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "亚马逊Prime Day开启，精选数码装备与外设优惠盘点",
+      "lead": [
+        "亚马逊Prime Day大促已开启，活动将持续四天至6月27日结束。",
+        "编辑团队正深度追踪大促期间的各类精选装备优惠信息。"
+      ],
+      "take": "大促是观察消费者价格敏感度与外设品牌促销策略的绝佳窗口。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "pcgamer.com",
+      "title": "This lubed-up optical Asus keyboard has been my daily driver for years, and it's just $80 - PC Gamer",
+      "url": "https://www.pcgamer.com/hardware/this-lubed-up-optical-gaming-keyboard-has-been-my-daily-driver-for-two-years-and-it-beats-out-boards-three-times-its-price-at-just-usd80/",
+      "img": "https://cdn.mos.cms.futurecdn.net/Q6jfeMxQczjCFJpcReB725-1920-80.jpg",
+      "sum": "PC Gamer推荐华硕80美元出厂润滑光轴键盘，性价比受肯定。",
+      "lead": [
+        "This lubed-up optical Asus keyboard has been my daily driver for years, and it's just $80",
+        "See the latest gaming news first. For the quickest way to join, simply enter your email below and get access."
+      ],
+      "take": "出厂润滑与光轴技术下放至百元内市场，正大幅挤压低端客制化生存空间。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "kotaku.com",
+      "title": "Logitech Cuts 56% Off the G515 Wireless TKL Gaming Keyboard in a Near Zero-Margin Move - Kotaku",
+      "url": "https://kotaku.com/logitech-cuts-56-off-the-g515-wireless-tkl-gaming-keyboard-in-a-near-zero-margin-move-2000708918",
+      "img": "https://kotaku.com/app/uploads/2026/06/keyb-deal.jpg",
+      "sum": "罗技G515无线TKL游戏键盘降价56%，近乎零利润促销。",
+      "lead": [
+        "Logitech Cuts 56% Off the G515 Wireless TKL Gaming Keyboard in a Near Zero-Margin Move - Kotaku",
+        "However, not all of the discounts are Amazon Prime exclusives, which means that even if you’re not looking to be a member, you can still save big. If you’ve been hoping to get a better gaming keyboard, but you just haven’t found the right deal yet, then maybe today that will change. That’s because w"
+      ],
+      "take": "头部品牌近乎零利润清仓，中低端外设市场面临严峻价格战压力。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "pcgamer.com",
+      "title": "Ready your gaming battlestation with the perfect loadout and save big with these Corsair Vengeance bundles - PC Gamer",
+      "url": "https://www.pcgamer.com/hardware/gaming-pcs/battlestation-pc-bundle-desktop-trusted-reliable-peripherals-gpu-corsair/",
+      "img": "https://cdn.mos.cms.futurecdn.net/CkieZLmZd2sarPknnb3obS-820-80.png",
+      "sum": "海盗船推出Vengeance系列外设套装优惠活动",
+      "lead": [
+        "Ready your gaming battlestation with the perfect loadout and save big with these Corsair Vengeance bundles - PC Gamer",
+        "We will send you a confirmation and sign you up to our newsletter to keep you updated on all your gaming news. By submitting your information you agree to the Terms & Conditions and Privacy Policy and are aged 16 or over. Enter your email below and we'll send confirmation, and sign you up to our newslet"
+      ],
+      "take": "外设捆绑套装与促销是厂商提升客单价与品牌曝光的有效市场策略。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "r/MechanicalKeyboards",
+      "title": "Current regular rotation",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1udinj7/current_regular_rotation/",
+      "img": "https://preview.redd.it/05wzgjptk19h1.jpeg?width=640&crop=smart&auto=webp&s=961ff869026465cf90ba0a1ecc45a859d72af535",
+      "sum": "玩家展示当前客制化键盘轮换，含V2及Boss Up等原型套件。",
+      "lead": [
+        "玩家dashkee展示当前使用的客制化键盘轮换，包含V2、Boss Up Evelyn等原型机及铣削外壳套件。",
+        "其中一款已售出，引发社区讨论。"
+      ],
+      "take": "原型机和铣削外壳展示反映高端客制化市场对材质与稀缺性的持续追求。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "r/MechanicalKeyboards",
+      "title": "Rama YOLK",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1udaqfy/rama_yolk/",
+      "img": "https://preview.redd.it/2nbk1nxikz8h1.png?width=140&height=140&crop=1:1,smart&auto=webp&s=a497a3b695e7812fcf3c031866fbd5bd370c2913",
+      "sum": "玩家分享YOLK键帽上机体验，对比其与SA及GMK高度差异。",
+      "lead": [
+        "玩家将YOLK键帽装配到客制化键盘上，发现其厚度不及预期，缺乏SA的厚重感。",
+        "同时指出YOLK键帽比GMK高度更易产生误触。"
+      ],
+      "take": "键帽高度与厚度直接影响打字手感与误触率，厂商开发新高度时需平衡外观与人体工学。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "r/MechanicalKeyboards",
+      "title": "Tofu Redux V2 with GMK Orenji",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ud58dt/tofu_redux_v2_with_gmk_orenji/",
+      "img": "https://preview.redd.it/r4yi3x086y8h1.jpg?width=140&height=111&auto=webp&s=7bd172437d795222f12331f4826e4b314ca1e6b7",
+      "sum": "玩家展示Tofu Redux V2套件，搭配GMK Orenji与Aca轴。",
+      "lead": [
+        "玩家展示Tofu Redux V2（陨石灰）套件组装成果，搭配GMK Orenji键帽与Aca线性轴。",
+        "该搭配获得了社区的关注与好评。"
+      ],
+      "take": "经典套件迭代配合热门线性轴与GMK键帽，仍是大众客制化玩家的稳妥选择。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "r/MechanicalKeyboards",
+      "title": "Minerva LX - Tycho Edition is live!",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ud2nx0/minerva_lx_tycho_edition_is_live/",
+      "img": "https://preview.redd.it/ccb8w1ltkx8h1.png?width=140&height=140&crop=1:1,smart&auto=webp&s=3f11b536b7b55a95ba0ad1339799fce2e49578a6",
+      "sum": "Tycho主题版客制化键盘/键帽正式开售。",
+      "lead": [
+        "客制化社区宣布Tycho Edition（Tycho主题版）相关产品正式上线发售。",
+        "该消息由社区成员anist提交。"
+      ],
+      "take": "联名或主题化设计是提升客制化产品溢价与破圈吸引力的有效手段。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "r/MechanicalKeyboards",
+      "title": "Neo60 Core (teal, copper bottom) with MTNU Dolch",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ucinck/neo60_core_teal_copper_bottom_with_mtnu_dolch/",
+      "img": "https://preview.redd.it/3mvo8m43pt8h1.jpeg?width=320&crop=smart&auto=webp&s=bacbbd48bfbbf204dd23b73bfda6a5e841bf3a74",
+      "sum": "玩家展示Neo60 Core紫铜底壳套件组装及近期客制化进度。",
+      "lead": [
+        "玩家分享近期客制化组装进度，展示了青色与紫铜底壳的Neo60 Core套件及委托组装作品。",
+        "该玩家表示近期因独处而集中完成了大量拼装与待办事项。"
+      ],
+      "take": "紫铜等重金属底壳的运用持续流行，为套件提供更高质感与敲击反馈，是高端化趋势体现。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "r/MechanicalKeyboards",
+      "title": "Documenting my keyboard collection with Obsidian",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ucbsjq/documenting_my_keyboard_collection_with_obsidian/",
+      "img": "https://preview.redd.it/yoreots8qr8h1.png?width=640&crop=smart&auto=webp&s=84b7c3e1a07caf644da3bee68aa78635aab0bf38",
+      "sum": "玩家使用Obsidian笔记软件记录并管理机械键盘收藏。",
+      "lead": [
+        "玩家在整理收藏时，选择使用Obsidian笔记软件来系统记录和管理自己的机械键盘收藏。",
+        "目的是为了记住已有设备并尽量避免重复购买。"
+      ],
+      "take": "玩家对收藏管理的精细化需求显现，周边工具或社区集成“装备库”功能可能成为新流量入口。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "KeebTalk",
+      "title": "Gateron Oil King Silent Tactile Switch Review",
+      "url": "https://www.keebtalk.com/t/gateron-oil-king-silent-tactile-switch-review/24136",
+      "img": "https://www.keebtalk.com/uploads/db8059/optimized/3X/f/2/f2e1a9a228689a34e9680894cd7e947564bc20c4_2_690x388.jpeg",
+      "sum": "佳达隆油王静音段落轴评测：经典油王模具的静音版回归。",
+      "lead": [
+        "Hey all, Nearly four and a half years after one of the most influential modern linear switches first made its debut, Gateron has returned to the molds, the materials, and the name that so many enthusiasts today still recognize - “Oil Kings”.",
+        "Though unlike those switches of old, these are silent tact"
+      ],
+      "take": "经典轴体IP的静音化复刻是迎合办公与静音市场需求的有效产品策略。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "ThereminGoat",
+      "title": "Gateron Oil King Silent Tactile Switch Review",
+      "url": "https://www.theremingoat.com/blog/gateron-oil-king-silent-tactile-switch-review",
+      "img": "https://images.squarespace-cdn.com/content/v1/5e5af256556661723b861bd1/4adde147-4bda-4a69-a3fa-79e926036439/VENUE.jpg?format=1000w",
+      "sum": "ThereminGoat发布佳达隆油王静音段落轴评测，提及Keycon 2026。",
+      "lead": [
+        "Despite having taken course over quite literally one whole, thirty day month, the saga of the french drain as described at the top end of last switch review, the entirety of the last review itself,",
+        "and the full weekend of visiting Chicago for Keycon 2026 has flown by leaving me feeling as if it were"
+      ],
+      "take": "知名评测博主与Keycon展会仍是轴体新品曝光与破圈的核心渠道。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Geekhack",
+      "title": "Re: [IC] Boston, a compact 120% (open-source; RNDKBD is doing a metal GB)",
+      "url": "https://geekhack.org/index.php?topic=106501.msg3217455#msg3217455",
+      "img": "",
+      "sum": "Boston紧凑120%开源键盘推出低前高3D打印外壳改装方案。",
+      "lead": [
+        "Re: [IC] Boston, a compact 120% (open-source; RNDKBD is doing a metal GB)",
+        "I made a lower-profile version of the 3D-printed case back in January and realized I forgot to post this here. This should be retrofittable onto existing 3D-printed Bostons (though you will need some new screws) This reduces front height by ~2mm, reduc..."
+      ],
+      "take": "开源客制化持续优化人体工学，低前高3D打印方案为小众配列提供新思路。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "pcgamer.com",
+      "title": "Melgeek's $140 competitive keyboard is solidly built, but with too many downsides for my liking - PC Gamer",
+      "url": "https://www.pcgamer.com/hardware/gaming-keyboards/melgeek-real81-review/",
+      "img": "https://cdn.mos.cms.futurecdn.net/UQoKbXr85QopFn23S5qEgY-2560-80.jpg",
+      "sum": "Melgeek售价140美元的竞技键盘做工扎实但存缺陷。",
+      "lead": [
+        "Melgeek's $140 competitive keyboard is solidly built, but with too many downsides for my liking",
+        "News and reviews of the latest PC hardware."
+      ],
+      "take": "竞技键盘不能仅靠堆料，手感与细节体验仍是决定口碑的关键。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "r/MechanicalKeyboards",
+      "title": "I built a pressure-sensitive mousepad for keyboard macros",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ubu84d/i_built_a_pressuresensitive_mousepad_for_keyboard/",
+      "img": "https://preview.redd.it/qdff90f5wn8h1.jpg?width=140&height=105&auto=webp&s=1c0e941c2f02ae1c24dd220a7d38dc67ab603de1",
+      "sum": "玩家自制压感鼠标垫Ghostpad，内置4x4隐形宏按键区。",
+      "lead": [
+        "I’ve been working on a strange input device and I’m not sure if it belongs here or if I’ve officially gone too far.",
+        "It’s called Ghostpad . The basic idea is: what if your mousepad was also a hidden macropad? Inside the pad there’s a pressure-sensitive 4x4 grid, so 16 invisible zones."
+      ],
+      "take": "桌面外设融合是创新方向，压感隐形宏按键为生产力与游戏提供新交互可能。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "cnet.com",
+      "title": "If You’re a PC Gamer, It’s Time to Upgrade to Magnetic Keyboard Switches - CNET",
+      "url": "https://www.cnet.com/tech/gaming/pc-gaming-mechanical-keyboard-magnetic-switches-why-upgrade/",
+      "img": "https://www.cnet.com/a/img/resize/e45430695b1ccbdfb036d5f3be98a1d03e0c782b/hub/2026/06/11/8d285a50-2a5b-4996-8dc2-d93e19eae973/logitechs-g512-x-75.jpg?auto=webp&amp;fit=crop&amp;height=675&amp;width=1200",
+      "sum": "CNET建议PC玩家升级磁轴，HE/TMR开关提升竞技表现。",
+      "lead": [
+        "If You’re a PC Gamer, It’s Time to Upgrade to Magnetic Keyboard Switches.",
+        "While they have a few downsides, if you're a competitive gamer (or hope to be), HE and TMR magnetic switches can make a huge performance difference."
+      ],
+      "take": "磁轴/TMR技术正从手柄向键盘普及，竞技场景是核心驱动力。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Smith+Rune Iron165 and Iron 120 scam continues",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uc7l03/smithrune_iron165_and_iron_120_scam_continues/",
+      "img": "https://preview.redd.it/gcgp7zsaqq8h1.jpeg?width=640&crop=smart&auto=webp&s=d508288ec8cc9d3da45fc0256d75ebedfa7139b5",
+      "sum": "Smith+Rune Iron165/120客制化团购涉嫌诈骗，延期两年未发货。",
+      "lead": [
+        "This GB was supposed to have SHIPPED 2 years ago.",
+        "There is No Covid, there is no supply disruptions. Please do a chargeback if your CC company still lets you."
+      ],
+      "take": "长期未发货的团购项目严重透支玩家信任，客制化圈需警惕品牌信用破产风险。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Geekhack",
+      "title": "Re: [IC]GMK Distortion- Group Buy, June 24th, added Artisan Collab!",
+      "url": "https://geekhack.org/index.php?topic=125823.msg3217457#msg3217457",
+      "img": "",
+      "sum": "GMK Distortion键帽套件今日开团，新增Artisan合作。",
+      "lead": [
+        "Re: [IC]GMK Distortion- Group Buy, June 24th, added Artisan Collab!",
+        "Posted GB thread.... locking this thread."
+      ],
+      "take": "Artisan合作已成GMK套件标配，键帽圈联名营销持续深化。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "KeebTalk",
+      "title": "Help identifying keycaps",
+      "url": "https://www.keebtalk.com/t/help-identifying-keycaps/24127",
+      "img": "https://www.keebtalk.com/uploads/db8059/optimized/3X/2/2/228ae505545d8ffc59cbd40ac70298d47a62abaa_2_666x500.jpeg",
+      "sum": "玩家求助识别五年前老键帽，社区互动探讨键帽模具。",
+      "lead": [
+        "I can’t remember how I got these, they’re at least 5 years old.",
+        "I don’t use them and want to pass them on. But it would be handy to know what they are first. Sculpt: 10 posts - 4 participants"
+      ],
+      "take": "老键帽二手流转与鉴定需求旺盛，社区文化是键圈生命力所在。"
+    }
+  ]
+}
