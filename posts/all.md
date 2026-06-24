@@ -2688,3 +2688,303 @@ NAACP则认为这些涡轮机带来了严重的环境污染问题。
 ## 趋势一句话
 
 今日共 49 条,覆盖 8 个分类。
+
+---
+
+# AI / Agent 领域新闻摘要 — 2026-06-24
+
+## 大模型
+
+**1. How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery**
+GPT-5 Pro助免疫学家解开3年T细胞谜题，助力癌症研究
+GPT-5 Pro协助免疫学家Derya Unutmaz解开了一项长达三年的免疫学谜题，深入揭示了T细胞（人体免疫系统的核心细胞）的行为机制。
+这一突破性进展不仅展示了大模型在复杂科研领域的推理能力，还有望为未来的癌症及自身免疫疾病研究提供关键支持。
+**PM 信号:** 大模型在垂直科研领域的深度应用正在验证其高价值场景，PM可关注AI for Science的产品化机会。
+来源:[OpenAI](https://openai.com/index/gpt-5-immunology-mystery)
+
+**2. How Omio is building the future of conversational travel**
+Omio借OpenAI打造对话式旅行体验，转型AI原生公司
+旅行平台Omio利用OpenAI技术构建对话式旅行体验（通过自然语言交互完成行程规划），大幅加速了产品开发周期。
+该公司正借此从传统平台向AI原生公司转型，展示了AI如何重塑用户交互与业务流程。
+**PM 信号:** 对话式交互正在重塑传统OTA（在线旅游平台）体验，PM需思考如何将复杂业务逻辑融入自然语言交互流中。
+来源:[OpenAI](https://openai.com/index/omio)
+
+**3. Daybreak: Tools for securing every organization in the world**
+OpenAI发Daybreak安全工具及GPT-5.5-Cyber，规模化修补漏洞
+OpenAI发布Daybreak安全工具套件，包含Codex Security与GPT-5.5-Cyber（专为网络安全微调的模型）两款新产品。
+这些工具旨在帮助企业大规模发现、验证并修补软件漏洞，将大模型能力直接应用于网络安全防御。
+**PM 信号:** 垂直领域专用模型成为新趋势，PM应关注行业特化模型带来的产品升级与安全防护机会。
+来源:[OpenAI](https://openai.com/index/daybreak-securing-the-world)
+
+**4. "Dangerous" AI models are coming no matter what**
+Anthropic因美出口管制下线Claude Fable 5与Mythos 5模型
+因美国政府出台禁止“任何外国人”使用的出口管制指令，Anthropic被迫下线其新款Claude Fable 5与Mythos 5（具备高级漏洞发现能力的模型）。
+Anthropic目前正与白宫谈判但尚未达成恢复服务的协议，凸显了强能力AI模型面临的地缘政治风险。
+**PM 信号:** AI强能力模型的监管与出口限制趋严，PM在设计出海产品时需将合规与地缘政治风险纳入核心考量。
+来源:[Ars Technica](https://arstechnica.com/ai/2026/06/dangerous-ai-models-are-coming-no-matter-what/)
+
+## Agent·智能体
+
+**5. Anthropic reimagines Claude in Slack as nosy, always-on agentic AI coworker**
+Anthropic推出Claude Tag，作为常驻Slack的智能体同事
+Anthropic将淘汰现有的Slack版Claude，推出名为Claude Tag的常驻型智能体（能自主感知并执行任务的AI）。
+它可作为团队成员加入Slack频道，监听并学习被授权访问的工具、数据和代码库。
+用户只需@Claude即可向其委派任务，实现真正的协同办公。
+**PM 信号:** 从被动问答到主动监听与常驻，AI助手正演变为深度融入工作流的数字员工，产品经理需重新思考权限边界与信任机制。
+来源:[The Register](https://www.theregister.com/ai-and-ml/2026/06/23/anthropic-reimagines-claude-in-slack-as-nosy-always-on-agentic-ai-coworker/5260422)
+
+**6. Paying to Know: Micro-Transaction Markets for Verified Product Information in Agentic E-Commerce**
+论文提出智能体电商微交易市场，用微支付购买可信商品信息
+传统电商聊天机器人侧重于推荐和转化，但当买家变为自主智能体（能独立完成任务的AI买家）时，核心瓶颈变为获取可信的决策信息。
+随着原生智能体微支付轨道（专为AI设计的微小金额支付通道，如x402）的出现，商品信息的获取方式将发生改变。
+论文提出将智能体电商视为微交易市场，通过微支付购买经过验证的商品信息。
+**PM 信号:** 当买家变成AI，电商产品的信息展示逻辑需重构，提供机器可读、可验真的高价值数据或成新商业模式。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.24783v1)
+
+**7. DeepBD: A Grounded Agentic Workflow for Variant Prioritization and Diagnosis of Genetic Birth Defects**
+DeepBD提出基于智能体工作流的遗传出生缺陷变异诊断方法
+出生缺陷的基因诊断面临表型不完整与证据异质性的挑战，测序后解释成为关键。
+论文提出DeepBD，一种基于智能体工作流（AI按步骤自主调用工具完成复杂任务）的诊断方法，用于遗传出生缺陷的变异优先级排序。
+该工作流整合了群体遗传学、表型本体（描述疾病特征的标准化词汇表）等多源异构证据，辅助临床医生进行精准诊断。
+**PM 信号:** 医疗垂类智能体展示了处理多源异构数据的复杂决策能力，为高门槛专业领域的AI Copilot产品设计提供了参考范式。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.24779v1)
+
+## 产品与工具
+
+**8. Google Home will soon get better at recognizing you**
+Google Home升级面部识别，用体型衣着等非生物信号辅助识别。
+Google Home 正在扩展其面部识别功能，当用户面部不清晰时，可通过体型、衣服颜色等非生物识别信号进行身份确认。
+此外，Familiar Faces（熟人面孔库）将开始自动更新，以减少智能摄像头认错人的情况。
+**PM 信号:** 多模态特征融合（结合非生物信号）是提升AI识别鲁棒性的有效路径，可应用于各类智能硬件的身份识别场景。
+来源:[The Verge](https://www.theverge.com/tech/955385/google-home-familiar-faces-clothing)
+
+**9. Something’s off with Midjourney’s pivot to body scanners**
+Midjourney意外转型医疗成像，推出超声波扫描仪。
+以AI图像生成器闻名的Midjourney宣布了一项不寻常的转型：进军医疗成像领域。
+该公司推出了一款未来感十足的超声波扫描仪，用户需浸入水舱中，旨在实现“像MRI（磁共振成像）一样强大，像水疗一样轻松”的体验，目标是帮助人们延长寿命。
+**PM 信号:** AI独角兽跨界医疗硬件，提示生成式AI公司在C端变现遇压时，向高壁垒垂直行业软硬结合转型的激进尝试。
+来源:[The Verge](https://www.theverge.com/report/954826/midjourney-medical-ai-ultrasound-body-scanner-lacks-evidence)
+
+**10. The Fitbit Air takes a smarter approach to the AI health dumpster fire**
+Google Fitbit Air发布，搭载AI健康教练提供个性化建议。
+Google 推出的 Fitbit Air 是一款与 AI 兼容的健康追踪器，试图在混乱的 AI 健康市场中提供更智能的方案。
+其内置的 Google Health Coach（AI健康教练）能综合分析睡眠、心率变异性等数据，甚至考虑环境温湿度，给出如“跳过锻炼”等个性化建议。
+**PM 信号:** AI健康产品正从单纯的数据记录走向结合多维上下文的主动干预，产品设计的容错与建议合理性是核心壁垒。
+来源:[The Verge](https://www.theverge.com/tech/954768/google-fitbit-air-review-fitness-tracker-wearable-ai-health-coach)
+
+**11. India’s MoEngage bets that the future of marketing is millions of AI agents**
+MoEngage押注AI代理，为单个客户分配专属AI。
+印度营销科技公司 MoEngage 通过一笔全现金收购，获得了可为单个客户分配 AI 代理的技术。
+该公司认为，营销的未来将由数以百万计的 AI 代理组成，实现高度个性化的用户触达。
+**PM 信号:** 1对1 AI Agent重塑营销SaaS，产品经理需关注从“千人千面”规则引擎向“一人一Agent”自主交互的范式转移。
+来源:[TechCrunch](https://techcrunch.com/2026/06/23/indias-moengage-bets-marketings-future-on-millions-of-ai-agents/)
+
+**12. Sony’s AI Camera Assistant is exactly as bad as it looks**
+索尼新机AI相机助手表现糟糕，实际体验不及预期。
+索尼在 Xperia 1 VIII 手机上推出了全新的 AI Camera Assistant（AI相机助手），但实际成像效果极差。
+经过一周的测试，该 AI 助手拍出的照片被评价为索尼近年来最差水平，未能达到辅助拍摄的设计初衷。
+**PM 信号:** AI功能强行上马但体验翻车，警示PM在产品宣发与实际交付间需守住底线，避免AI标签反噬品牌信任。
+来源:[The Verge](https://www.theverge.com/tech/954676/sony-xperia-1-viii-ai-camera-assistant)
+
+**13. Anthropic’s Claude Tag is learning your company, one Slack message at a time**
+Anthropic推Claude Tag，常驻Slack学习企业知识。
+Anthropic 推出了新功能 Claude Tag，将其作为常驻的 AI 队友集成到 Slack 中。
+除了提升生产力，该功能更是一步战略棋：通过持续学习 Slack 消息，捕获组织上下文、机构知识和企业工作流。
+**PM 信号:** AI从工具向“组织记忆”基础设施演进，PM需思考如何通过IM场景沉淀企业Know-how，构建更深的工作流护城河。
+来源:[TechCrunch](https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/)
+
+**14. Nvidia says its AI data center design runs hotter to use a lot less water**
+Nvidia发布Rubin世代液冷数据中心设计，大幅降低水耗。
+针对公众对数据中心能耗和水耗的批评，Nvidia 宣称其 Rubin 世代（新一代GPU架构）参考设计采用了全液冷方案。
+该设计通过提高运行温度，大幅减少了电力消耗和几乎所有的用水量，但仍未解决数据中心建设及整体发电需求等更广泛的问题。
+**PM 信号:** 算力基础设施的绿色化正成为巨头竞争焦点，AI产品长期需考量算力成本与ESG合规的平衡。
+来源:[The Verge](https://www.theverge.com/tech/954139/nvidia-data-centers-rubin-liquid-cooling)
+
+**15. Nobel Winner John Jumper to Leave Google DeepMind for Anthropic - Bloomberg.com**
+诺奖得主John Jumper离开DeepMind加入Anthropic。
+2024年诺贝尔化学奖得主、Google DeepMind 副总裁 John Jumper 宣布离职，将加入竞争对手 Anthropic。
+Jumper 一直是 Google AI 编程开发团队的核心成员，他的离职进一步加剧了科技巨头与 Anthropic 之间在 AI 人才上的争夺战。
+**PM 信号:** 顶尖AI人才流向安全导向的Anthropic，反映出行业对AI对齐与安全研究的价值重估，影响未来技术路线走向。
+来源:[bloomberg.com](https://www.bloomberg.com/news/articles/2026-06-19/nobel-winner-john-jumper-to-leave-google-deepmind-for-anthropic)
+
+**16. From PGP to Mythos: a brief history of export controls that didn’t stop anyone**
+回顾出口管制史，质疑对Anthropic网络安全模型Mythos的管制有效性。
+过去30年的经验表明，阻止网络安全相关软件的出口管制通常是无效的。
+文章质疑这一逻辑如今为何能适用于 Anthropic 新推出的 Mythos（网络安全模型），认为管制可能同样无法阻止其传播。
+**PM 信号:** AI安全与开源/出口管制的博弈加剧，PM需关注地缘政治对AI模型出海及合规分发带来的潜在阻断风险。
+来源:[TechCrunch](https://techcrunch.com/2026/06/19/encryption-spyware-and-now-mythos-history-shows-why-cyber-export-control-doesnt-work/)
+
+## 开源发布
+
+**17. Build real agentic apps using CUGA: two dozen working examples on a lightweight harness**
+CUGA发布轻量级Agent框架及20余个实战示例
+Hugging Face发布了CUGA（一种轻量级的Agent线束/框架），旨在帮助开发者构建真实的Agentic应用。
+此次发布包含二十多个可运行的实战示例，展示了如何在该轻量级架构上实现具体的Agent功能。
+这为想要落地Agent应用的开发者提供了直接可参考的代码和架构范式。
+**PM 信号:** 提供了从Demo走向真实Agent应用的轻量级脚手架，PM可借此评估Agent落地的技术可行性与交互模式。
+来源:[Hugging Face](https://huggingface.co/blog/ibm-research/cuga-apps)
+
+**18. Shipping huggingface_hub every week with AI, open tools, and a human in the loop**
+Hugging Face分享结合AI与人工实现每周发版的工程实践
+Hugging Face分享了其维护核心库huggingface_hub的工程实践，实现了每周稳定发版。
+该流程结合了AI辅助、开源工具以及人工审核（Human-in-the-loop，即在自动化流程中保留人工干预节点），提升了发版效率与质量。
+这种人机协同的工程化思路，对高频迭代的AI产品研发具有参考价值。
+**PM 信号:** AI辅助研发不仅是写代码，更可深度融入发版等工程流程，PM可思考如何用AI重塑团队协作与交付SOP。
+来源:[Hugging Face](https://huggingface.co/blog/huggingface-hub-release-ci)
+
+**19. Experimenting with the proposed Cross-Origin Storage API in Transformers.js**
+Transformers.js实验支持跨域存储API，优化浏览器端模型缓存
+Hugging Face在Transformers.js中实验性地引入了跨域存储API（Cross-Origin Storage API，允许不同源的网页共享存储空间）。
+该方案旨在解决浏览器端运行AI模型时的缓存与存储痛点，打破跨域限制。
+这将显著改善Web端AI应用的加载速度与用户体验。
+**PM 信号:** Web端AI应用的性能瓶颈正在被逐步攻克，PM可关注前端AI能力的体验优化，探索无需服务器的纯端侧产品。
+来源:[Hugging Face](https://huggingface.co/blog/cross-origin-storage)
+
+**20. We got local models to triage the OpenClaw repo for FREE!***
+使用本地模型免费实现OpenClaw仓库的Issue分流
+Hugging Face展示了如何利用本地运行的开源模型，对OpenClaw开源仓库的Issue（用户提交的问题或需求）进行自动分流。
+整个过程完全免费，无需调用付费API，验证了本地模型在代码仓库维护场景的实用性。
+这为开源社区维护者提供了一种低成本、自动化的Issue管理方案。
+**PM 信号:** 本地小模型在特定垂直场景已具备实用价值，PM可挖掘零成本AI自动化在运营维护中的落地机会。
+来源:[Hugging Face](https://huggingface.co/blog/local-models-pr-triage)
+
+## 融资与商业
+
+**21. US presses Meta to agree to AI reviews as security concerns rise, NYT reports - Reuters**
+美政府施压Meta提交AI模型接受自愿审查
+特朗普政府正向Meta施压，要求其自愿提交AI模型供政府审查。
+此举旨在让政府评估这些模型的能力与安全漏洞，反映出对AI安全风险的担忧升级。
+**PM 信号:** 监管介入大模型开发已成趋势，PM需关注合规成本及政策对产品上线节奏的影响。
+来源:[reuters.com](https://www.reuters.com/world/us/us-presses-meta-agree-ai-reviews-security-concerns-rise-nyt-reports-2026-06-23/)
+
+**22. Oracle’s 21,000 layoffs help drive its debt-fueled AI investments**
+Oracle裁员2.1万人，资金转向AI投资
+Oracle在最新SEC文件中披露，过去一年全职员工数从16.2万降至14.1万，裁员约12.9%。
+公司表示，AI技术的采用和部署是裁员的主要原因，省下的资金将用于债务驱动的AI投资。
+**PM 信号:** 传统软件巨头正通过人员优化换取AI转型资金，B端产品AI化已成生存必选项。
+来源:[Ars Technica](https://arstechnica.com/ai/2026/06/oracles-21000-layoffs-help-drive-its-debt-fueled-ai-investments/)
+
+**23. Why corporate AI super PACs spent $27 million on a local election**
+AI超级政治行动委员会斥资2700万美元干预地方选举
+企业AI超级政治行动委员会（Super PAC，美国特定政治筹款组织）在地方选举中投入了2700万美元。
+这表明AI行业正积极通过政治献金影响监管政策与立法走向。
+**PM 信号:** AI立法博弈加剧，产品合规环境可能随政治风向快速变化，需保持敏锐。
+来源:[The Verge](https://www.theverge.com/policy/954970/ai-super-pacs-alex-bores-new-york-12th-district)
+
+**24. AI startup Basis raises $34 million for accounting automation 'agent'**
+会计AI代理初创Basis获3400万美元A轮融资
+AI初创公司Basis宣布完成3400万美元A轮融资。
+其核心产品为AI驱动的会计自动化代理，旨在替代传统财务流程中的重复性工作。
+**PM 信号:** 垂直场景的AI Agent正获资本青睐，财务等高容错率领域是落地好切入点。
+来源:[reuters.com](https://www.reuters.com/technology/artificial-intelligence/ai-startup-basis-raises-34-million-accounting-automation-agent-2024-12-17)
+
+**25. With $6M in seed funding, Enso plans to bring AI agents to SMBs | TechCrunch**
+Enso获600万美元融资，为中小企业提供AI代理
+初创公司Enso走出隐身模式，宣布获得600万美元种子轮融资。
+其主打为中小企业（SMB）提供预编程的AI代理，以处理各类重复性业务任务，弥合大小企业间的技术鸿沟。
+**PM 信号:** 面向SMB的“开箱即用”AI Agent是蓝海，降低使用门槛比追求技术极致更重要。
+来源:[techcrunch.com](https://techcrunch.com/2024/07/09/with-6m-in-seed-funding-enso-plans-to-bring-ai-agents-to-smbs)
+
+**26. Fika Jobs raises $4M to build a video-first hiring platform where AI agents interview candidates**
+Fika Jobs获400万美元融资，用AI代理面试候选人
+斯德哥尔摩初创公司Fika Jobs筹集400万美元，打造视频优先的招聘平台。
+该平台结合AI面试代理与短视频简历，体验类似LinkedIn与TikTok的结合体。
+**PM 信号:** AI+视频正重塑招聘体验，用Agent做初筛能大幅提升双边匹配效率。
+来源:[TechCrunch](https://techcrunch.com/2026/06/23/fika-jobs-raises-4m-to-build-a-video-first-hiring-platform-where-ai-agents-interview-candidates/)
+
+**27. InSight: Self-Guided Skill Acquisition via Steerable VLAs**
+InSight框架：让VLA模型自主获取操作技能
+当前视觉-语言-动作模型（VLA，能看懂指令并执行动作的模型）受限于训练数据中的技能，InSight框架打破了这一限制。
+它通过自动分割管道将演示分解为标记原语，使VLA能在基础动作级别被引导，实现自主技能获取。
+**PM 信号:** 机器人学习从“模仿”走向“自主探索”，具身智能产品的泛化能力有望迎来突破。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.24884v1)
+
+**28. It's Complicated: On the Design and Evaluation of AI-Powered AAC Interfaces**
+探究AI增强AAC界面的设计与评估复杂性
+AI能增强辅助与替代通信（AAC，帮助表达障碍者的技术）系统的能力，但评估此类界面极具挑战。
+研究探索了六个AAC问题空间的复杂性，并提出了更稳健的AI界面评估方法。
+**PM 信号:** 无障碍设计是AI向善的重要场景，但评估标准需超越常规指标，关注多元真实需求。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.24854v1)
+
+**29. L3Cube-MahaPOS: A Marathi Part-of-Speech Tagging Dataset and BERT Models**
+发布马拉地语词性标注数据集与BERT模型
+尽管马拉地语全球使用者超8300万，但在NLP领域仍严重缺乏标注语料与评测基准。
+该研究发布了马拉地语词性标注数据集及配套BERT模型，以应对其复杂形态带来的建模挑战。
+**PM 信号:** 小语种NLP基建存在空白，出海产品做本地化时需警惕低资源语言的数据短板。
+来源:[arXiv cs.CL](https://arxiv.org/abs/2606.24825v1)
+
+**30. EG-VQA: Benchmarking Verifiable Video Question Answering with Grounded Temporal Evidence**
+EG-VQA：提出基于时序证据的视频问答基准
+现有视频问答基准多只看答案正确率，忽略了预测是否基于相关视频证据。
+新基准EG-VQA要求模型提供时序证据，填补了视频大模型在可验证推理评估上的空白。
+**PM 信号:** 多模态模型不能只看结果，可解释性与证据溯源将成为视频AI产品的新竞争力。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.24797v1)
+
+**31. Are We Ready For An Agent-Native Memory System?**
+探讨Agent原生记忆系统的评估现状与挑战
+LLM Agent的记忆已从简单检索演变为支持存储、更新和生命周期治理的数据管理系统。
+但现有评估仍将其视为黑盒，仅看端到端任务指标，忽略了记忆系统本身的可靠性。
+**PM 信号:** 记忆是Agent长程运行的核心，做Agent产品需建立记忆模块的专项评估体系。
+来源:[arXiv cs.CL](https://arxiv.org/abs/2606.24775v1)
+
+**32. ParaPairAudioBench: Paralinguistic Pairwise Audio Benchmark for LALM-as-a-Judge**
+ParaPairAudioBench：评估音频大模型副语言能力
+大型音频语言模型（LALM）常被用作语音评估的裁判，但现有方法忽略细粒度副语言差异。
+新基准涵盖5175对音频，发现当前LALM裁判在风格、语速等维度上落后人类判断32%。
+**PM 信号:** 用AI评AI存在感知盲区，语音类产品在细粒度情感与风格评估上仍需人工兜底。
+来源:[arXiv cs.CL](https://arxiv.org/abs/2606.24648v1)
+
+**33. Same Lesson, Different Story: Cross-Lingual Reconstruction of Cultural Narratives in Large Language Models**
+评估LLM跨语言重构文化叙事的能力
+当不同文化传达相同道德教训时，LLM能否保留文化特有形式成为新挑战。
+研究提出多语言评估框架，检验模型在跨文化语境下是否真正保留了文化根基。
+**PM 信号:** 大模型存在文化抹平风险，全球化产品需关注模型输出的文化适配与多样性。
+来源:[arXiv cs.CL](https://arxiv.org/abs/2606.24610v1)
+
+**34. To Compare, or Not to Compare: On Methodological Practices in Evaluating Social Bias**
+统一评估LLM社会偏见的方法论框架
+当前LLM社会偏见评估存在方法论碎片化，导致结论相互矛盾。
+研究提出统一可控框架，标准化异构基准，系统对比不同人群的偏见表现。
+**PM 信号:** 偏见评估不能只看单一指标，建立系统化评测框架是AI产品合规与安全的基础。
+来源:[arXiv cs.CL](https://arxiv.org/abs/2606.24596v1)
+
+**35. AI × OPC的新可能：一个人，就是一支队伍｜2026WAVES**
+AI时代OPC生态：云用户画像迁移，产品逻辑重构
+36氪WAVES大会探讨AI时代一人公司（OPC）生态，指出AI带来生产力平权，让个体拥有接近公司的交付能力。
+阿里云调研显示，云平台用户中传统开发者仅占20%，产品运营及企业主占比过半，基础设施服务对象正向普通人扩展。
+**PM 信号:** AI工具的受众正从极客走向大众，产品需降低技术门槛，拥抱“有想法的普通人”。
+来源:[36氪](https://36kr.com/p/3866649515938825?f=rss)
+
+## 政策与监管
+
+**36. How to burst the AI bubble: Strike at its roots**
+Doctorow新书探讨如何刺破AI泡沫
+科技作家Cory Doctorow推出新书《The Reverse Centaur's Guide to Life After AI》，作为前作《Enshittification》的延续，聚焦AI及其引发的问题。
+书中提出了“反向半人马”（指人类被迫适应机器逻辑而非机器辅助人类）等概念，探讨AI泡沫的根源与应对之策。
+**PM 信号:** PM需警惕AI产品陷入“反向半人马”陷阱，产品设计应坚持人机协同而非让用户迁就AI。
+来源:[Ars Technica](https://arstechnica.com/gadgets/2026/06/how-to-burst-the-ai-bubble-strike-at-its-roots/)
+
+**37. IV-CoT: Implicit Visual Chain-of-Thought for Structure-Aware Text-to-Image Generation**
+IV-CoT提升文生图结构控制力
+现有多模态大模型在文生图时，常难以准确遵循涉及物体数量、空间关系等结构化提示，原因在于结构规划与外观渲染相互纠缠。
+为此，研究者提出隐式视觉思维链（IV-CoT，即在潜空间中分步推理视觉结构），将结构规划与外观渲染解耦，显著提升了模型对复杂结构的生成能力。
+**PM 信号:** 文生图产品可借鉴解耦思路，提升对复杂空间和属性指令的精准还原，改善用户控图体验。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.24849v1)
+
+**38. The Warrant Gap: Claim-Conditioned Re-scoring for Fact-Checking**
+SIFT方法提升LLM事实验证可靠性
+基于LLM的事实验证系统常出现“证据无法推导出主张”的误判，而传统的结构化分解会丢失上下文。
+研究者提出SIFT方法，结合主张对提取的证据片段进行重新评分，并引入WSP（Warranted Supports Proportion，有依据的支持比例）指标自动检测证据与主张的逻辑支撑关系。
+**PM 信号:** 构建RAG或事实核查产品时，需关注证据与结论的逻辑支撑度，避免AI“一本正经地胡说八道”。
+来源:[arXiv cs.CL](https://arxiv.org/abs/2606.24627v1)
+
+**39. MEMPROBE: Probing Long-Term Agent Memory via Hidden User-State Recovery**
+MEMPROBE评估LLM Agent长期记忆
+LLM Agent的长期记忆通常仅通过下游任务表现间接评估，缺乏对记忆本身的直接审计。
+研究者提出MEMPROBE，通过恢复隐藏的用户状态来探查和评估长期记忆，使记忆评估从间接推断转向可审计的直接检验。
+**PM 信号:** 设计具备长期记忆的AI助手时，需建立记忆审计机制，确保AI对用户的理解准确且可追溯。
+来源:[arXiv cs.CL](https://arxiv.org/abs/2606.24595v1)
+
+## 趋势一句话
+
+今日共 39 条,覆盖 6 个分类。
