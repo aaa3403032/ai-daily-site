@@ -1,0 +1,298 @@
+{
+  "date": "2026-06-26",
+  "categories": [
+    {
+      "code": "market",
+      "label": "市场与品牌",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "hardware",
+      "label": "新品与硬件",
+      "color": "#d6932b"
+    },
+    {
+      "code": "tech",
+      "label": "技术趋势",
+      "color": "#7a52cc"
+    },
+    {
+      "code": "community",
+      "label": "社区与玩家",
+      "color": "#0a8f6a"
+    }
+  ],
+  "items": [
+    {
+      "hero": true,
+      "category": "market",
+      "src": "The Verge",
+      "title": "Framework has good news and bad news",
+      "url": "https://www.theverge.com/gadgets/957338/framework-laptop-13-pro-ssd-price-cpu",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/04/framework-laptop-13-pro-1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "模块化笔记本Framework 13 Pro受元件危机影响，但预购或有降价利好。",
+      "lead": [
+        "Thanks to the component crisis, it's a bad time to want a new computer .",
+        "But if you are waiting on a preorder for the Framework Laptop 13 Pro - which Framework's CEO has called the \"MacBook Pro for Linux users\" - the company shared good news on Thursday that might mean yours will cost less than you"
+      ],
+      "take": "元件危机波及整机制造，外设厂商需警惕供应链波动对成本与交付的连锁反应。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "The Verge",
+      "title": "RAMageddon just got extremely real",
+      "url": "https://www.theverge.com/tech/956950/ram-crisis-apple-price-increase",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/DSC03702_processed.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "内存价格危机加剧，连苹果也难以抵御供应链成本波动。",
+      "lead": [
+        "Even Tim Cook couldn’t supply chain his way out of the RAM crisis.",
+        "As far as prices go, Apple is kind of a reverse canary in the coal mine. With its famously generous margins and immense purchasing volume, it can afford to ride out price fluctuations in its suppl"
+      ],
+      "take": "内存等核心元件涨价是行业风向标，带存储或RGB的外设产品应提前做好成本对冲。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "pcgamer.com",
+      "title": "This lubed-up optical Asus keyboard has been my daily driver for years, and it's just $80 - PC Gamer",
+      "url": "https://www.pcgamer.com/hardware/this-lubed-up-optical-gaming-keyboard-has-been-my-daily-driver-for-two-years-and-it-beats-out-boards-three-times-its-price-at-just-usd80/",
+      "img": "https://cdn.mos.cms.futurecdn.net/Q6jfeMxQczjCFJpcReB725-1920-80.jpg",
+      "sum": "PC Gamer推荐华硕80美元出厂润滑光轴键盘，高性价比成主力。",
+      "lead": [
+        "See the latest gaming news first. For the quickest way to join, simply enter your email below and get access. We will send you a confirmation and sign you up to our newsletter to keep you updated on all your gaming news. By submitting your information you agree to the Terms & Conditions and Privacy Poli"
+      ],
+      "take": "出厂润滑与光轴技术下放至80美元价位，入门市场竞争加剧。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "kotaku.com",
+      "title": "Logitech Cuts 56% Off the G515 Wireless TKL Gaming Keyboard in a Near Zero-Margin Move - Kotaku",
+      "url": "https://kotaku.com/logitech-cuts-56-off-the-g515-wireless-tkl-gaming-keyboard-in-a-near-zero-margin-move-2000708918",
+      "img": "https://kotaku.com/app/uploads/2026/06/keyb-deal.jpg",
+      "sum": "罗技G515无线TKL键盘降价56%，近乎零利润促销。",
+      "lead": [
+        "However, not all of the discounts are Amazon Prime exclusives, which means that even if you’re not looking to be a member, you can still save big.",
+        "If you’ve been hoping to get a better gaming keyboard, but you just haven’t found the right deal yet, then maybe today that will change. That’s because w"
+      ],
+      "take": "头部品牌近乎零利润清仓，竞品需警惕价格战挤压生存空间。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "r/MechanicalKeyboards",
+      "title": "My very humble Neo65 Core+ build.",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uevqd9/my_very_humble_neo65_core_build/",
+      "img": "https://preview.redd.it/g39tscd8wb9h1.jpg?width=140&height=105&auto=webp&s=8a2f51d8a0487738baedce213de5a0d05bd9c00a",
+      "sum": "玩家分享Neo65 Core+客制化组装，搭配MX2A黑轴与GMK键帽。",
+      "lead": [
+        "配置包括灰色Neo65 Core+加黄铜配重，铝定位板。",
+        "轴体为仅润滑轴心的MX2A黑轴并换弹，搭配SW Knight V4卫星轴和GMK Dolch键帽。"
+      ],
+      "take": "经典配色与黄铜配重仍是高端客制化热门选择，MX2A轴体受玩家青睐。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "r/MechanicalKeyboards",
+      "title": "A KBDFans OG-60 with Alps SKCM Ivory.",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uep14z/a_kbdfans_og60_with_alps_skcm_ivory/",
+      "img": "https://preview.redd.it/qyu7m4i5ja9h1.jpg?width=140&height=140&auto=webp&s=9b77a60946edf1fd64f48c04ec9eb45dc08dfa63",
+      "sum": "玩家展示KBDFans OG-60复古组装，搭载Alps SKCM Ivory轴。",
+      "lead": [
+        "组装配置：KBDFans OG-60套件，铝定位板，Top mount结构。",
+        "轴体为经典Alps SKCM Ivory，键帽为FK-2001双色ABS，PCB为Hiney H60焊接版。"
+      ],
+      "take": "复古轴体与经典结构搭配仍有忠实受众，老轴翻新市场值得持续关注。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "nintendolife.com",
+      "title": "8BitDo Celebrates N64 In Style With New Controller And Keyboard - Nintendo Life",
+      "url": "https://www.nintendolife.com/news/2026/06/8bitdo-celebrates-n64-in-style-with-new-controller-and-keyboard",
+      "img": "https://images.nintendolife.com/ba56e166c1736/large.jpg",
+      "sum": "8BitDo推出N64主题新款手柄与机械键盘，致敬经典主机。",
+      "lead": [
+        "8BitDo Celebrates N64 In Style With New Controller And Keyboard.",
+        "As reported by Retro Dodo, accessory manufacturer 8BitDo has a couple of really neat new products in store for the console's anniversar"
+      ],
+      "take": "复古怀旧风仍是外设设计的流量密码，跨界联名与主题定制是破圈利器。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "r/MechanicalKeyboards",
+      "title": "GDK NV-70 with PBTfans 1984 Dark + GMK Orenji",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ue0spm/gdk_nv70_with_pbtfans_1984_dark_gmk_orenji/",
+      "img": "https://preview.redd.it/fbt0n7ma459h1.jpeg?width=640&crop=smart&auto=webp&s=c82e870b4e3a12bd778fb82234c098b97325b3a0",
+      "sum": "玩家评测GDK NV-70布局及Outemu静音黄玉轴",
+      "lead": [
+        "Really love this layout. Wasn’t sure about separated number row but I really like it. Numpad doubles as nav cluster in another layer. I am using Outemu Silent Yellow Jade tactile switches. Probably the quietest switch i have used and has a very satisfying tactile bump. NV-70 was extremely easy to bu"
+      ],
+      "take": "Outemu静音段落轴手感获认可，分离式数字行配列为紧凑键盘提供新思路。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "KeebTalk",
+      "title": "Gateron Oil King Silent Tactile Switch Review",
+      "url": "https://www.keebtalk.com/t/gateron-oil-king-silent-tactile-switch-review/24136",
+      "img": "https://www.keebtalk.com/uploads/db8059/optimized/3X/f/2/f2e1a9a228689a34e9680894cd7e947564bc20c4_2_690x388.jpeg",
+      "sum": "佳达隆推出Oil King静音段落轴，经典系列再添新品。",
+      "lead": [
+        "Hey all, Nearly four and a half years after one of the most influential modern linear switches first made its debut, Gateron has returned to the molds, the materials, and the name that so many enthusiasts today still recognize - “Oil Kings”. Though unlike those switches of old, these are silent tact"
+      ],
+      "take": "经典轴体IP化与静音化是当前客制化市场的重要复购驱动力。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "r/MechanicalKeyboards",
+      "title": "Current state of factory lube",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uec0so/current_state_of_factory_lube/",
+      "img": "https://preview.redd.it/7jzzo8w7489h1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=abeb3e799b457bf97c1c45907db691de73c13ed9",
+      "sum": "玩家讨论工厂润滑轴体的演变，回顾十年间出厂润滑的普及。",
+      "lead": [
+        "十年前客制化圈还没有出厂润滑轴体的概念，玩家退坑后未持续关注。",
+        "几年后回归时发现出厂润滑已成为常态，反映了轴体制造技术的进步。"
+      ],
+      "take": "出厂润滑已成行业标配，轴体厂需在润滑一致性与手感调教上持续内卷。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "KeebTalk",
+      "title": "[GB] Artisan keycaps - Dragon Balls - Cosmos",
+      "url": "https://www.keebtalk.com/t/gb-artisan-keycaps-dragon-balls-cosmos/24145",
+      "img": "https://www.keebtalk.com/uploads/db8059/optimized/3X/5/c/5c959a087b92fe892b4282eb6b96a84934d76b8e_2_500x500.jpeg",
+      "sum": "宇宙龙珠主题客制化Artisan键帽开启团购",
+      "lead": [
+        "Hello everyone, Legend says the seven Dragon Balls are scattered across the endless universe, each carrying a mysterious energy from ancient times.",
+        "This artisan keycap captures a small fragment of that cosmic journey, where a glowing Dragon Ball rests among the stars and unknown worlds. Handcrafted"
+      ],
+      "take": "主题键帽的IP化与故事性包装仍是吸引玩家下单的核心卖点。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Geekhack",
+      "title": "Re: [IC] MW Meteor Dreams - GB starts 1 June!",
+      "url": "https://geekhack.org/index.php?topic=126463.msg3217510#msg3217510",
+      "img": "https://i.postimg.cc/8Nq1R3Kd/MWmeteor-Dreams-Orders260625b.png",
+      "sum": "MW Meteor Dreams键帽套装开启6月团购",
+      "lead": [
+        "Re: [IC] MW Meteor Dreams - GB starts 1 June!"
+      ],
+      "take": "关注热门键帽IC转GB的节奏，把握玩家预期与产能释放的窗口期。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "GMK CYL Pompeii (📸 @markerchun)",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uf8h2z/gmk_cyl_pompeii_markerchun/",
+      "img": "https://preview.redd.it/fz95jh0s7f9h1.jpg?width=140&height=105&auto=webp&s=d6e9745653ecc685268de83c9aaaf2f22d4d5222",
+      "sum": "GMK发布CYL Pompeii主题键帽，在客制化社区引发关注。",
+      "lead": [
+        "GMK CYL Pompeii (📸 @markerchun)",
+        "Rising from the ashes: submitted by /u/GMK_keycaps [link] [comments]"
+      ],
+      "take": "Cyl球面工艺与主题故事性结合，高端键帽市场仍具强消费力与话题度。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "My favorite keyboard",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uf64gq/my_favorite_keyboard/",
+      "img": "https://preview.redd.it/3k2d94sene9h1.jpg?width=140&height=93&auto=webp&s=96c83bbfd2fcd2296a3c8bb9d0859becc30da9db",
+      "sum": "玩家分享Otsukimi键盘，支持三种不同安装方式。",
+      "lead": [
+        "Otsukimi是我目前最喜欢的键盘，来自本地设计师的小型GB。",
+        "它支持三种安装方式：Gasket、Tadpole和Top mount，拥有一年半后仍在探索。"
+      ],
+      "take": "多安装方式设计能持续吸引硬核玩家探索，小规模GB更注重设计师理念。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "When the theme of your keycaps matches your board perfectly",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uf0cas/when_the_theme_of_your_keycaps_matches_your_board/",
+      "img": "https://preview.redd.it/ns35k6370d9h1.jpg?width=140&height=103&auto=webp&s=718dc40be8fec51046b8e62811452fd81243fbeb",
+      "sum": "玩家展示DeskTopTribe VINTEM 75与Milkyway键帽的完美搭配。",
+      "lead": [
+        "玩家追求模拟主题的完美搭配，视觉效果极佳。",
+        "套件为DeskTopTribe VINTEM 75，键帽为Milkyway Reel to Reel。"
+      ],
+      "take": "键盘与键帽的主题一致性是玩家展示审美的重要趋势，品牌可考虑主题联动。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Ghost",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ue29ip/ghost/",
+      "img": "https://preview.redd.it/eky1fumqg59h1.jpeg?width=640&crop=smart&auto=webp&s=d2225bb9a90256b1a0481e358785af943a657620",
+      "sum": "玩家展示30% QAZ布局3D打印客制化键盘",
+      "lead": [
+        "👻 by beardgrylls 3DP case by DashKeebs HMX Sonja’s with ePBT Dreamscape this might be the board to convert me into 30% 👀 (QAZ alpha stagger layout btw! cain bars are so cozy here)"
+      ],
+      "take": "极简30%配列与3D打印结合，印证小众客制化对独特手感和外观的追求。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "KeebTalk",
+      "title": "Looking for help with Duck Raven 60%",
+      "url": "https://www.keebtalk.com/t/looking-for-help-with-duck-raven-60/24141",
+      "img": "https://www.keebtalk.com/uploads/db8059/original/3X/a/3/a30145321d1c220e8ac0d3d8d1ddfd7677d41f3f.png",
+      "sum": "玩家求助十年老物Duck Raven重装LED闪烁问题",
+      "lead": [
+        "Long story short Bought a Duck Raven about a decade ago. Desoldered it about 6 years ago with plans to rebuild. Just rebuilt today. I decided to add a caps lock led to match the red side leds. It flashes about every 1.5 seconds. No idea why. When the caps lock is on it’s steady and turns OFF every 1"
+      ],
+      "take": "经典老物翻新仍有受众，硬核玩家维修与改造需求值得关注。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "ThereminGoat",
+      "title": "Gateron Oil King Silent Tactile Switch Review",
+      "url": "https://www.theremingoat.com/blog/gateron-oil-king-silent-tactile-switch-review",
+      "img": "https://images.squarespace-cdn.com/content/v1/5e5af256556661723b861bd1/4adde147-4bda-4a69-a3fa-79e926036439/VENUE.jpg?format=1000w",
+      "sum": "知名KOL发布佳达隆Oil King静音段落轴评测，提及Keycon 2026。",
+      "lead": [
+        "Despite having taken course over quite literally one whole, thirty day month, the saga of the french drain as described at the top end of last switch review, the entirety of the last review itself, and the full weekend of visiting Chicago for Keycon 2026 has flown by leaving me feeling as if it were"
+      ],
+      "take": "头部KOL的展会动态与评测结合，是外设品牌事件营销的重要节点。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Geekhack",
+      "title": "Re: The Eye Key - Dragon Balls - Cosmos",
+      "url": "https://geekhack.org/index.php?topic=94242.msg3217509#msg3217509",
+      "img": "",
+      "sum": "玩家分享The Eye Key龙珠宇宙主题客制化键帽/键盘",
+      "lead": [
+        "Dragon Balls - Cosmos Hello everyone, Legend says the seven Dragon Balls are scattered across the endless universe, each carrying a mysterious energy from ancient times. Th..."
+      ],
+      "take": "流行动漫IP结合客制化键盘设计，仍是吸引玩家关注的有效手段。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Geekhack",
+      "title": "Re: [GB] F104+SSK+122+62+77+50+Ergo orders now open! Kishsaver+Industrial Model F",
+      "url": "https://geekhack.org/index.php?topic=79141.msg3217506#msg3217506",
+      "img": "",
+      "sum": "玩家讨论Model F团购及IBM M13键盘换键帽改造",
+      "lead": [
+        "Woah, I need to rekey my M13 to look like that. Currently only have the outer action keys around the main like that (and the main keys except H, G, B in light grey)"
+      ],
+      "take": "经典复古大键盘的翻新与键帽定制在硬核玩家圈仍有稳定需求。"
+    }
+  ]
+}
