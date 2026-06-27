@@ -1,0 +1,537 @@
+{
+  "date": "2026-06-27",
+  "generated_at": "2026-06-27T13:03:24+08:00",
+  "categories": [
+    {
+      "code": "llm",
+      "label": "大模型",
+      "color": "#4b3bff"
+    },
+    {
+      "code": "product",
+      "label": "产品与工具",
+      "color": "#d6932b"
+    },
+    {
+      "code": "oss",
+      "label": "开源发布",
+      "color": "#c8472b"
+    },
+    {
+      "code": "research",
+      "label": "研究与论文",
+      "color": "#7a52cc"
+    },
+    {
+      "code": "biz",
+      "label": "融资与商业",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "policy",
+      "label": "政策与监管",
+      "color": "#8a8d99"
+    }
+  ],
+  "items": [
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "The Verge",
+      "title": "OpenAI unveils GPT-5.6 amid US AI regulatory drama",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/957845/openai-gpt-5-6-trump-administration-ai-preview",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/kTm2Q30DT9sCOWpyFewTes78TWbe7s-fy-w68LlL6V0.jpeg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "OpenAI发布GPT-5.6系列，含旗舰Sol等三模型，长线Agent能力提升",
+      "lead": [
+        "OpenAI发布GPT-5.6模型系列，包含旗舰款Sol、主打高并发中端款Terra及轻量日常款Luna。",
+        "新系列在编程、网络安全和生物学领域表现突出，且在长周期智能体（即能自主执行多步骤复杂任务的AI）任务中保持专注。",
+        "此次发布正值美国AI监管风波，OpenAI应政府要求采取了分阶段发布策略。"
+      ],
+      "take": "模型分层（旗舰/高并发/轻量）成趋势，PM在设计Agent类产品时可针对不同场景灵活选型以平衡成本与效果。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "Using AI to help physicians diagnose rare genetic diseases affecting children",
+      "url": "https://openai.com/index/diagnose-rare-childhood-diseases",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/42SsGr6pOo6F7fcF0VZGGV/25583b98cb667d103adb7bf0476cafc5/SEO_Card_new.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI推理模型辅助诊断儿童罕见病，新增18例确诊",
+      "lead": [
+        "研究人员利用OpenAI的推理模型协助医生诊断儿童罕见遗传病。",
+        "该模型在以往未能确诊的病例中，成功识别出18个新诊断。",
+        "这展示了大模型在医疗垂直领域复杂推理和辅助决策上的巨大潜力。"
+      ],
+      "take": "AI在医疗等高壁垒垂直领域的推理价值正在兑现，PM可探索AI+专家的辅助诊断产品模式。"
+    },
+    {
+      "hero": true,
+      "category": "product",
+      "src": "The Verge",
+      "title": "Anthropic’s Mythos 5 is back",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/958458/anthropic-mythos-5-is-back-trump-negotiations",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/DCD_0617_Fable5.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "Anthropic Mythos 5部分恢复，公众版仍无期",
+      "lead": [
+        "Anthropic的Mythos 5模型在与美国政府长达两周的谈判后，已向部分特定组织恢复服务。",
+        "但面向公众的Mythos级模型Fable 5仍处于停滞状态，目前尚无明确的发布时间表。"
+      ],
+      "take": "顶级大模型受地缘政治影响加剧，产品出海或B端交付需将合规与政策风险纳入核心考量。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "WIRED",
+      "title": "Europe Is Fed Up and Wants Its Own AI",
+      "url": "https://www.wired.com/story/europe-is-fed-up-and-wants-its-own-ai/",
+      "img": "https://media.wired.com/photos/6a3d7dcc9d8ba41349d50023/master/pass/Backchannel-Macron-G7-2282316572.jpg",
+      "sum": "欧洲欲借政策倒逼发展自主AI",
+      "lead": [
+        "面对美国AI政策的不确定性，欧洲正积极寻求建立自己的顶级AI模型。",
+        "虽然欧洲在模型研发上处于劣势，但美国政府的政策干预反而成为其发展本土AI的契机。"
+      ],
+      "take": "美国政策收紧可能为欧洲AI生态腾出市场空间，关注欧洲本土合规AI产品的替代机会。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "OpenAI limits GPT-5.6 rollout after government request, says restrictions shouldn’t be the norm",
+      "url": "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/05/GettyImages-2273245180.jpg?resize=1200,800",
+      "sum": "OpenAI应政府要求限制GPT-5.6发布",
+      "lead": [
+        "OpenAI应白宫要求推迟了GPT-5.6模型的推出，这是继Anthropic模型下线后的又一政府干预事件。",
+        "OpenAI对此表示，此类政府访问流程不应成为长期默认机制，因为这会阻碍需要这些工具的用户和开发者。"
+      ],
+      "take": "顶级模型发布受政治干预成新常态，产品规划需预留政策审查缓冲期，并关注开源或海外替代方案。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "OpenAI poaches Uber India chief to lead its biggest market outside the US",
+      "url": "https://techcrunch.com/2026/06/26/openai-poaches-uber-india-chief-to-lead-its-biggest-market-outside-the-u-s/",
+      "img": "https://techcrunch.com/wp-content/uploads/2025/08/openai-india.jpg?resize=1200,800",
+      "sum": "OpenAI挖角Uber印度负责人拓展市场",
+      "lead": [
+        "OpenAI挖角Uber印度区负责人，以领导其在美国以外的最大市场。",
+        "此举标志着OpenAI正大力拓展印度市场，包括扩大办事处、建立合作关系和招聘人才。"
+      ],
+      "take": "AI巨头加速全球化布局，印度等新兴市场成必争之地，出海产品需警惕巨头下沉带来的竞争压力。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "OpenAI’s Jalapeño chip is Big Tech’s spiciest move away from Nvidia",
+      "url": "https://techcrunch.com/podcast/openais-jalapeno-chip-is-big-techs-spiciest-move-away-from-nvidia/",
+      "img": "https://techcrunch.com/wp-content/uploads/2025/09/GettyImages-2214107176.jpg?resize=1200,800",
+      "sum": "OpenAI联合Broadcom推自研推理芯片Jalapeño",
+      "lead": [
+        "OpenAI公布了与Broadcom合作开发的自研推理芯片Jalapeño，加入自研芯片行列。",
+        "此举旨在摆脱对单一供应商Nvidia的依赖，降低供应链风险，Google、Apple和SpaceX等也在采取类似策略。"
+      ],
+      "take": "推理侧自研芯片成趋势，未来大模型API调用成本有望下降，产品可提前规划更复杂的AI原生交互。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "PP-OCRv6 on Hugging Face: 50-Language OCR from 1.5M to 34.5M Parameters",
+      "url": "https://huggingface.co/blog/PaddlePaddle/pp-ocrv6",
+      "img": "https://cdn-uploads.huggingface.co/production/uploads/652b2e9166313ebb6197e706/l156KP0e5PRyDrE4woHoM.jpeg",
+      "sum": "PP-OCRv6发布，支持50种语言，参数量1.5M至34.5M。",
+      "lead": [
+        "百度飞桨开源的PP-OCRv6正式登陆Hugging Face，支持50种语言的文字识别。",
+        "该模型提供从1.5M到34.5M的不同参数量版本，方便在移动端到服务端的不同场景中灵活部署。"
+      ],
+      "take": "多语言与多参数量版本为OCR产品的国际化与多端适配提供了开箱即用的方案。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "MosaicLeaks: Can your research agent keep a secret?",
+      "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
+      "img": "https://cdn-uploads.huggingface.co/production/uploads/680ba1729f7688275d2ce0f4/hGCO4pOyJjijLPCbRT07v.webp",
+      "sum": "MosaicLeaks评估研究智能体的数据保密能力。",
+      "lead": [
+        "该研究提出了MosaicLeaks基准，专门测试AI研究智能体（能自动执行研究任务的AI）在处理任务时是否会泄露敏感数据。",
+        "随着智能体被广泛用于自动化研究，其数据隐私和安全性成为关键问题，该基准为评估这一能力提供了标准。"
+      ],
+      "take": "智能体安全性是产品落地的红线，该基准为评估AI助手的隐私合规性提供了新工具。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "Beyond LoRA: Can you beat the most popular fine-tuning technique?",
+      "url": "https://huggingface.co/blog/peft-beyond-lora",
+      "img": "https://huggingface.co/blog/assets/peft-beyond-lora/thumbnail.png",
+      "sum": "探讨能否超越LoRA这一最流行的微调技术。",
+      "lead": [
+        "该研究探索了超越LoRA（低秩自适应，一种低成本微调大模型的方法）的新型微调技术。",
+        "LoRA目前是业界主流的微调方案，寻找更高效或效果更好的替代方案对降低模型定制成本至关重要。"
+      ],
+      "take": "微调技术的突破直接关系大模型私有化部署的成本与效果，值得持续关注以优化产品算力开销。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "Is it agentic enough? Benchmarking open models on your own tooling",
+      "url": "https://huggingface.co/blog/is-it-agentic-enough",
+      "img": "https://huggingface.co/blog/assets/is-it-agentic-enough/thumbnail.png",
+      "sum": "评估开源模型在自定义工具上的智能体能力。",
+      "lead": [
+        "该研究提出了一种基准测试方法，用于评估开源模型在特定业务工具环境下的智能体（能自主调用工具完成任务的AI）表现。",
+        "通用基准难以反映真实业务场景，自定义工具测试能更准确衡量模型在实际产品中的可用性。"
+      ],
+      "take": "通用Agent评测已不够用，基于自有业务工具的评测体系才是衡量模型产品化能力的试金石。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "Google Research",
+      "title": "Accelerating Gemini Nano models on Pixel with frozen Multi-Token Prediction",
+      "url": "https://research.google/blog/accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction/",
+      "img": "https://storage.googleapis.com/gweb-research2023-media/original_images/MTP1_Architecture.png",
+      "sum": "谷歌用冻结多Token预测加速Pixel端侧Gemini Nano模型",
+      "lead": [
+        "谷歌研究提出通过冻结的多Token预测（Multi-Token Prediction，即模型一次预测多个后续Token而非单个）技术，加速Pixel设备上的Gemini Nano模型推理。",
+        "该方法在不更新模型权重的情况下优化了端侧推理效率，为移动端AI体验提供了更流畅的支撑。"
+      ],
+      "take": "端侧模型加速技术是手机AI体验的命门，此方案为端侧大模型落地提供了新思路。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "techcrunch.com",
+      "title": "Nobel laureate John Jumper is leaving DeepMind for rival Anthropic - TechCrunch",
+      "url": "https://techcrunch.com/2026/06/20/nobel-laureate-john-jumper-is-leaving-deepmind-for-rival-anthropic/",
+      "img": "https://techcrunch.com/wp-content/uploads/2024/10/GettyImages-2148577076-e1728469833661.jpg?resize=1200,676",
+      "sum": "诺奖得主John Jumper离开DeepMind加入Anthropic",
+      "lead": [
+        "AlphaFold核心作者、诺贝尔化学奖得主John Jumper宣布离开任职近9年的Google DeepMind，转投竞对Anthropic。",
+        "Jumper在X平台发文感谢DeepMind CEO的信任，并表示将在Anthropic开启新篇章。此举标志着顶级AI人才在头部大厂间的流动仍在加剧。"
+      ],
+      "take": "顶尖科研人才的流向往往预示着行业下一个突破方向，Anthropic在基础科学加AI安全的布局值得产品人关注。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "The Geometry of Updates: Fisher Alignment at Vocabulary Scale",
+      "url": "https://arxiv.org/abs/2606.27242v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "针对共享词表LLM家族的免训练源选择方法",
+      "lead": [
+        "该研究针对共享词表（Tokenizer）但预测目标不同的LLM家族，提出了一种免训练的源选择方法。",
+        "在SMILES、蛋白质等科学序列领域，传统表示相似度指标失效，而经典更新几何度量计算成本过高。论文通过Fisher Alignment（费雪对齐，一种统计几何方法）在词表规模下解决了这一激活暗区问题。"
+      ],
+      "take": "针对垂直领域微调模型时的数据源选择难题，此方法能大幅降低试错成本，提升领域模型训练效率。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "From Celebrities to Anyone: Characterizing AI Nudification Content, Technology, and Community Dynamics on 4chan",
+      "url": "https://arxiv.org/abs/2606.27234v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "大规模研究揭示4chan社区AI脱衣图像的演变与风险",
+      "lead": [
+        "研究对4chan社区上的AI脱衣（Nudification，即用生成模型制作真实人物的合成非自愿色情图像）现象进行了大规模分析，识别出超2.4万条相关内容。",
+        "研究发现，AI脱衣的目标正从女明星向普通人群蔓延，揭示了匿名社区中此类内容的生成与交换动态。"
+      ],
+      "take": "AI生成内容的滥用已从公众人物下沉到普通人，内容安全与合规防护必须作为AIGC产品的红线。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "Bridging Talk and Thought: Understanding Dialogue Dynamics Across Collaborative Problem-Solving Contexts",
+      "url": "https://arxiv.org/abs/2606.27233v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "提出人机与多智能体协作对话动态分析框架",
+      "lead": [
+        "随着智能体成为具备自主推理和策略合作能力的活跃代理，理解协作问题解决过程中的对话交互变得至关重要。",
+        "论文提出了一个概念框架，用于分析人机协作和多智能体协作中的对话动态，弥补了当前分析方法的局限性。"
+      ],
+      "take": "多智能体协作是AI应用的新范式，理解其对话动态有助于设计更高效的人机协同工作流产品。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "CARVE: Content-Aware Recurrent with Value Efficiency for Chunk-Parallel Linear Attention",
+      "url": "https://arxiv.org/abs/2606.27229v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "CARVE架构解决线性注意力循环模型的记忆盲区问题",
+      "lead": [
+        "当前主流循环模型在决定遗忘内容时，只看新到达的Token而不看即将修改的记忆，存在记忆盲区缺陷。",
+        "论文提出CARVE架构，通过内容感知机制解决这一缺陷，并证明了其在值轴擦除掩码和分块并行计算上的优势，大幅提升了线性注意力的效率。"
+      ],
+      "take": "底层架构的改进直接关系到长文本处理的成本和速度，CARVE为构建更高效的RAG和长上下文产品提供了底层支撑。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "Compositionality and the lexicon in evolutionary semantics",
+      "url": "https://arxiv.org/abs/2606.27228v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "进化语义学中词汇与组合函数的协同演化框架",
+      "lead": [
+        "形式语义学表明句子意义由词汇意义递归组合而成，但现有研究往往忽略了词汇与组合函数的共同演化。",
+        "该研究引入了一个新框架，允许词汇意义和组合函数在概念简单性和沟通压力下共同进化，填补了进化语义学的空白。"
+      ],
+      "take": "语言演化机制的研究有助于优化大模型的词表设计与预训练目标，让模型更符合人类认知规律。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "Vulnerability of Natural Language Classifiers to Evolutionary Generated Adversarial Text",
+      "url": "https://arxiv.org/abs/2606.27215v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "进化算法生成的对抗文本可轻易击溃NLP分类器",
+      "lead": [
+        "深度学习NLP模型对对抗性输入极其脆弱，现有攻击多依赖模型内部结构访问权限。",
+        "该研究提出GAversarial方法，利用进化算法生成语义相似的词替换来欺骗模型，即使在不完全访问模型内部的情况下也能发起有效攻击。"
+      ],
+      "take": "NLP模型的鲁棒性仍是痛点，产品风控系统不能仅依赖单一分类器，需引入多维度防御机制。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "Paved with True Intents: Intent-Aware Training Improves LLM Safety Classification Across Training Regimes",
+      "url": "https://arxiv.org/abs/2606.27210v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "意图感知训练显著提升LLM安全分类效果",
+      "lead": [
+        "论文主张安全分类器应将用户意图作为提示词与最终标签间的显式信号进行建模。",
+        "研究发布了包含1724个高难度安全提示词的AIMS数据集，证明在SFT、偏好学习等训练阶段引入意图描述，能训练出极具竞争力的安全分类器。"
+      ],
+      "take": "将用户意图显式化是提升内容安全审核准确率的关键，这为设计AI护栏产品提供了新思路。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "Syntactic Belief Update as the Driver of Garden Path Processing Difficulty",
+      "url": "https://arxiv.org/abs/2606.27206v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "语法信念更新驱动花园小径句子的处理难度",
+      "lead": [
+        "花园小径句子（Garden path sentences，即前半句误导理解、后半句反转的句子）会让人类产生处理困难，而传统的词汇惊奇度指标无法很好预测这种难度。",
+        "论文提出了一种主动预测语法树概率分布的替代方法，证明语法信念更新才是导致处理困难的核心驱动因素。"
+      ],
+      "take": "模型对复杂语法的理解机制研究，有助于优化AI在法律、合同等复杂长句场景下的解析能力。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "Forecasting With LLMs: Improved Generalization Through Feature Steering",
+      "url": "https://arxiv.org/abs/2606.27199v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "特征引导提升大模型在预测任务中的泛化能力",
+      "lead": [
+        "成功的预测需要识别历史与未来之间可泛化的模式。研究将LLM应用于多种预测任务，并使用稀疏自编码器检查其内部状态。",
+        "研究发现LLM存在时间感知推理和前瞻偏差推理两种特征，通过特征引导（Feature Steering，即调整模型内部特定特征激活）可有效提升模型预测的泛化能力。"
+      ],
+      "take": "大模型做预测容易陷入数据泄露或幻觉，特征引导技术为构建可靠的AI预测分析产品提供了可解释的优化路径。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "Automating Potential-based Reward Shaping with Vision Language Model Guidance",
+      "url": "https://arxiv.org/abs/2606.27180v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "视觉语言模型自动优化强化学习的奖励塑造",
+      "lead": [
+        "稀疏奖励（Sparse rewards，即仅在最终成功时给予反馈）让强化学习智能体难以探索，而人工奖励塑造容易导致奖励黑客（Reward hacking，即智能体钻规则漏洞获取高分）。",
+        "论文利用视觉语言模型自动生成基于势能的奖励塑造（PBRS），既保证了最优策略不变，又免去了人工设计启发式函数的麻烦。"
+      ],
+      "take": "VLM自动设计奖励函数，大幅降低了RLHF等对齐技术的调参门槛，加速具身智能等AI应用的落地。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "The Riddle Riddle: Testing Flexible Reasoning in Large Language Models and Humans",
+      "url": "https://arxiv.org/abs/2606.27103v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "新谜语范式测试大模型是否具备灵活推理能力",
+      "lead": [
+        "大模型在认知任务上的优异表现究竟是模式匹配还是灵活推理？论文提出了Riddle Riddle范式来测试这一问题。",
+        "这些谜语模仿流行谜语编写，但答案只需字面解释。研究发现，模型和人类在灵活转换推理策略上存在显著差异。"
+      ],
+      "take": "评估模型的真实推理能力而非记忆力，是选择底层模型时的重要考量，该范式为模型评测提供了新工具。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "NuclearQAv2: A Structured Benchmark for Evaluating Domain-Science Competence in Large Language Models",
+      "url": "https://arxiv.org/abs/2606.27047v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "NuclearQAv2：评估大模型核工程领域能力的基准",
+      "lead": [
+        "大模型在高度技术化领域的可靠性仍面临挑战，核工程问题不仅需要事实知识，还需要定量推理和概念理解。",
+        "论文推出NuclearQAv2基准测试，专门用于评估LLM在核工程领域的知识掌握程度，填补了垂直科学领域的评测空白。"
+      ],
+      "take": "垂直科学领域的评测基准是行业大模型落地的试金石，此类Benchmark的涌现预示着AI向高门槛工业场景的渗透加速。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "36氪",
+      "title": "G7易流发布货运行业首款穿戴式AI硬件「拍拍豆」，填平物流交付的“最后两米”｜最前线",
+      "url": "https://36kr.com/p/3869740772316162?f=rss",
+      "img": "https://img.36krcdn.com/hsossms/20260626/v2_ac2724e0c8b9469a949d67e3829ad251@6022551_oswg1767331oswg1804oswg1006_img_png?x-oss-process=image/quality,q_90/format,jpg/interlace,1",
+      "sum": "G7易流发布穿戴式AI硬件「拍拍豆」，解决物流交付最后两米问题。",
+      "lead": [
+        "G7易流发布货运行业首款穿戴式AI硬件“拍拍豆”，仅重30克，磁吸设计，司机佩戴胸前自动录制，放回底座自动同步云端。",
+        "该产品填补了物流数字化中“车下交付”环节的空白，实现从“看见车上”到“看见车下”的跨越。",
+        "目前全球物流与供应链管理AI市场规模增长迅速，中国AI在物流供应链领域的渗透率已超37%。"
+      ],
+      "take": "穿戴式AI硬件填补了物流场景的盲区，PM在做垂直行业AI落地时，需关注业务流程中未被数字化的“断点”，软硬件结合是破局关键。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "MIT Tech Review",
+      "title": "IBM has unveiled chip technology that could help extend Moore’s Law another decade",
+      "url": "https://www.technologyreview.com/2026/06/25/1139696/ibm-unveils-sub1nm-chip/",
+      "img": "https://wp.technologyreview.com/wp-content/uploads/2026/06/260623_sub-1nmnodechip.jpg?resize=1200,600",
+      "sum": "IBM发布新原型芯片，指甲盖大小集成千亿晶体管，有望延续摩尔定律。",
+      "lead": [
+        "IBM发布新原型芯片，在指甲盖大小的面积上集成约1000亿个晶体管，密度是2021年最先进技术的两倍。",
+        "该设计有望为未来更快速、更节能的计算机铺平道路，延续摩尔定律十年。",
+        "芯片算力密度的提升，将为AI大模型的训练和推理提供更强大的底层硬件支撑。"
+      ],
+      "take": "算力底座的持续突破意味着AI模型的运行成本将长期下降，PM在规划产品时可更大胆地考虑重度AI功能的普及。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "36氪",
+      "title": "对话张亚勤：AI不是泡沫，但AI公司有泡沫",
+      "url": "https://36kr.com/p/3866837793952769?f=rss",
+      "img": "https://img.36krcdn.com/hsossms/20260626/v2_743c8a234b744c2d984fc2202d93e3ac@5452796@ai_oswg1022477oswg1053oswg495_img_png~tplv-1marlgjv7f-ai-v3:600:400:600:400:q70.jpg",
+      "sum": "张亚勤：AI所处阶段像1999年互联网，AI没泡沫但早期公司有泡沫。",
+      "lead": [
+        "张亚勤院士认为当下AI投资创业需降温，目前AI所处阶段类似1998-1999年的互联网，正大规模投资基建。",
+        "他指出“AI没有泡沫，但早期AI公司会有泡沫”，未来万亿市值巨头很可能不是眼前的明星公司。",
+        "其创建的清华AIR孵化的十家公司累计估值达1500亿元，但多数仍处于“证明能力”阶段。"
+      ],
+      "take": "泡沫期也是基建期，PM应关注底层算力与电力等基础设施的完善，而非盲目追逐短期应用风口，做能穿越周期的产品。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "techcrunch.com",
+      "title": "Google DeepMind bets $75M on AI’s future in Hollywood with A24 deal - TechCrunch",
+      "url": "https://techcrunch.com/2026/06/22/google-deepmind-bets-75m-on-ais-future-in-hollywood-with-a24-deal/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/06/GettyImages-2252299302.jpg?w=1024",
+      "sum": "Google DeepMind投资A24七千五百万美元，合作开发影视AI工具。",
+      "lead": [
+        "Google DeepMind向知名独立电影工作室A24投资7500万美元，建立合作伙伴关系。",
+        "双方将共同创建用于电影制作的AI工具，DeepMind将获得一线艺术家的反馈与指导。",
+        "A24曾出品《瞬息全宇宙》等热门影片，此次合作标志着AI巨头深入好莱坞影视制作核心环节。"
+      ],
+      "take": "AI+影视正从边缘辅助走向核心制作流程，PM可探索AI在专业内容创作领域的深度工作流整合，借力行业专家反馈打磨产品。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "bloomberg.com",
+      "title": "The ‘Mass Affluent’ Are Losing Their Allure for Wealth Managers Navigating AI - Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-06-21/mass-affluent-lose-allure-for-wealth-managers-navigating-ai",
+      "img": "",
+      "sum": "AI提供近私人银行级服务，百万美元级财富管理客户正失去人工服务价值。",
+      "lead": [
+        "在AI时代，财富管理者发现仅有100万美元流动资产的“大众富裕”客户不再值得投入人工时间。",
+        "麦肯锡高级合伙人指出，AI现在能为这类客户提供接近私人银行质量的服务，剥夺了提供标准化建议的顾问的价值。",
+        "这迫使财富管理行业重新评估人工服务的边界与AI自动化的潜力。"
+      ],
+      "take": "AI正在重塑服务行业的成本结构，当AI能提供高质量标准化服务时，人工应转向更复杂、高附加值的情感与策略支持。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "reuters.com",
+      "title": "Three ways Trump could get a stake in AI firms for the US - Reuters",
+      "url": "https://www.reuters.com/legal/transactional/three-ways-trump-could-get-stake-ai-firms-us-2026-06-22/",
+      "img": "",
+      "sum": "分析称特朗普可能通过三种方式让美国政府获得AI公司股份。",
+      "lead": [
+        "路透社分析指出，特朗普可能通过三种方式让美国政府获取AI公司的股份。",
+        "此举意味着美国政府在AI领域的介入可能从监管延伸至资本层面的深度绑定。",
+        "具体方式及潜在影响仍在讨论中，但已引发行业对AI企业国有化或政府干预的关注。"
+      ],
+      "take": "政策与资本的结合可能改变AI行业的竞争格局，PM需警惕地缘政治与政策风险对产品供应链和数据合规的潜在影响。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "OpenAI",
+      "title": "Improving health intelligence in ChatGPT",
+      "url": "https://openai.com/index/improving-health-intelligence-in-chatgpt",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/4yWq9ysTsvnlOm2FZUVYQ1/bec481613bb7762c6afbd6bec2edbdae/16x9_Health_SEO_1.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI发布GPT-5.5 Instant，提升ChatGPT健康智能响应。",
+      "lead": [
+        "OpenAI宣布GPT-5.5 Instant模型提升了ChatGPT在健康和保健领域的响应能力。",
+        "新模型具备更强的推理能力、更好的上下文理解、更清晰的沟通能力，并经过医生评估。",
+        "这标志着AI在专业医疗健康咨询场景的可用性和准确性进一步改善。"
+      ],
+      "take": "AI在垂直领域的专业度持续提升，PM在做医疗健康类产品时，可基于更强推理能力的模型构建更可靠的智能问诊或辅助功能。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "Ars Technica",
+      "title": "NYT slams Microsoft for building copyright-infringing supercomputer for OpenAI",
+      "url": "https://arstechnica.com/tech-policy/2026/06/microsoft-built-supercomputer-to-help-openai-infringe-copyrights-nyt-alleged/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/GettyImages-2235233117-1024x648.jpg",
+      "sum": "纽约时报修改诉状，指控微软建超算助长OpenAI侵权",
+      "lead": [
+        "纽约时报提议修改对OpenAI及微软的版权诉状，指控微软为其建造定制超算，积极鼓励其窃取版权内容。",
+        "NYT此举借用了最高法院在Cox案中的裁决先例，试图明确基础设施提供方在版权侵权中的连带责任。"
+      ],
+      "take": "算力及基础设施提供方面临版权连带风险，产品侧接入大模型需加强训练数据合规审查。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "Ars Technica",
+      "title": "How Anthropic may have talked itself into an AI export ban",
+      "url": "https://arstechnica.com/ai/2026/06/how-anthropic-may-have-talked-itself-into-an-ai-export-ban/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/04/lock-anthropic-1152x648.jpg",
+      "sum": "Anthropic频发AI风险警告，或致其模型遭美国出口管制",
+      "lead": [
+        "FT分析指出，Anthropic今年提及AI风险与监管的频率远超OpenAI，被指责其游说引发了美国对先进AI模型的出口禁令。",
+        "Anthropic强调安全的风险沟通策略可能反噬自身，导致其最新模型无法向海外客户提供服务。"
+      ],
+      "take": "借监管施压竞对可能引发出口管制反噬，出海产品需警惕模型断供风险及合规政策突变。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "Ars Technica",
+      "title": "Bernie Sanders unveils $7 trillion plan to give Americans control of AI industry",
+      "url": "https://arstechnica.com/tech-policy/2026/06/bernie-sanders-unveils-7-trillion-plan-to-give-americans-control-of-ai-industry/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/GettyImages-2230233284-1152x648.jpg",
+      "sum": "桑德斯推7万亿美元法案，拟对头部AI公司征50%重税",
+      "lead": [
+        "伯尼·桑德斯公布激进法案，拟对最大AI公司股票征收50%一次性重税，以此建立主权财富基金（国家主导的投资基金）。",
+        "该法案旨在将AI行业控制权转移给公众，年AI收入超2亿美元的企业均在征税范围，意在打破巨头垄断。"
+      ],
+      "take": "针对AI巨头的重税与反垄断政策若落地将重塑行业，PM需警惕政策不确定性对AI供应链及定价的冲击。"
+    }
+  ]
+}
