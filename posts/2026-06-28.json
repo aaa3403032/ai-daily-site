@@ -1,0 +1,323 @@
+{
+  "date": "2026-06-28",
+  "generated_at": "2026-06-28T13:24:26+08:00",
+  "categories": [
+    {
+      "code": "llm",
+      "label": "大模型",
+      "color": "#4b3bff"
+    },
+    {
+      "code": "agent",
+      "label": "Agent·智能体",
+      "color": "#0a8f6a"
+    },
+    {
+      "code": "product",
+      "label": "产品与工具",
+      "color": "#d6932b"
+    },
+    {
+      "code": "oss",
+      "label": "开源发布",
+      "color": "#c8472b"
+    },
+    {
+      "code": "research",
+      "label": "研究与论文",
+      "color": "#7a52cc"
+    },
+    {
+      "code": "biz",
+      "label": "融资与商业",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "policy",
+      "label": "政策与监管",
+      "color": "#8a8d99"
+    }
+  ],
+  "items": [
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "reuters.com",
+      "title": "US allows Anthropic to release Mythos to 'trusted partners' - Reuters",
+      "url": "https://www.reuters.com/technology/us-releases-anthropic-model-mythos-some-us-companies-semafor-reports-2026-06-26/",
+      "img": "",
+      "sum": "美国允许Anthropic向受信任伙伴发布Claude Mythos 5",
+      "lead": [
+        "美国政府允许Anthropic向部分“受信任的合作伙伴”发布其强大的Claude Mythos 5模型。",
+        "此前两周，美国政府因担心该模型被中国、俄罗斯等国军事情报用户使用，曾下令Anthropic暂停部分模型的访问权限。"
+      ],
+      "take": "地缘政治与合规风险已成为大模型产品出海及全球化的核心变量，PM需密切关注监管动态。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "Previewing GPT-5.6 Sol: a next-generation model",
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/48XpR5dxhE6jJQ03HTUnWZ/ac68fbfb7761fa72ac7442c6744dba56/_.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI预览新一代模型GPT-5.6 Sol，强化代码与安全",
+      "lead": [
+        "OpenAI预览了下一代模型GPT-5.6 Sol，该模型在编程、科学和网络安全领域展现出更强的能力。",
+        "同时，该模型搭配了OpenAI目前最先进的安全栈（即保障模型安全运行的防护体系）。"
+      ],
+      "take": "大模型在垂直专业领域（如网络安全）的深度赋能是下一阶段产品竞争的焦点。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
+      "url": "https://openai.com/index/gpt-5-immunology-mystery",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/2qNRrOyIX7qjpdePUIObdS/9307a1d928c8b0167cd85e22b39c5132/derya_16x9.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "GPT-5 Pro助免疫学家解开三年T细胞行为谜团",
+      "lead": [
+        "免疫学家借助GPT-5 Pro成功解开了一个困扰学界三年的免疫学谜团，获得了关于T细胞（一种免疫细胞）行为的新见解。",
+        "这一突破性进展有望为癌症和自身免疫疾病的研究提供重要支持。"
+      ],
+      "take": "大模型在科研领域的“副驾驶”价值凸显，AI for Science是值得投入的高价值产品场景。"
+    },
+    {
+      "hero": false,
+      "category": "agent",
+      "src": "The Register",
+      "title": "Anthropic reimagines Claude in Slack as nosy, always-on agentic AI coworker",
+      "url": "https://www.theregister.com/ai-and-ml/2026/06/23/anthropic-reimagines-claude-in-slack-as-nosy-always-on-agentic-ai-coworker/5260422",
+      "img": "https://image.theregister.com/?imageId=231367&width=800",
+      "sum": "Anthropic推出常驻型Slack智能体Claude Tag，替代旧版应用。",
+      "lead": [
+        "Anthropic 宣布下线原有的 Claude in Slack 应用，转而推出名为 Claude Tag 的常驻型智能体（即能自主感知环境并执行任务的 AI 代理）。",
+        "Claude Tag 将以“团队成员”身份加入企业 Slack，管理员可授权其访问特定频道、工具、数据及代码库。它会持续监听并学习被授权的内容，员工只需 @Claude 即可委派任务。"
+      ],
+      "take": "从被动响应到主动常驻，AI 深度融入工作流，产品经理需重新思考 AI 在协同工具中的权限边界与信任机制。"
+    },
+    {
+      "hero": true,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "Apple Vision Pro exec is reportedly leaving for OpenAI",
+      "url": "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/",
+      "img": "https://techcrunch.com/wp-content/uploads/2023/06/Vision-Pro-IMG-3.jpeg?resize=1200,800",
+      "sum": "Apple Vision Pro高管离职加入OpenAI硬件团队",
+      "lead": [
+        "Apple Vision Pro副总裁Paul Meade据传即将离职，加入OpenAI的硬件团队。",
+        "这标志着OpenAI在硬件领域的布局进一步深化，开始吸引顶尖消费电子高管加入。"
+      ],
+      "take": "AI巨头正从纯软件向软硬一体演进，硬件入口的争夺战将催生新的产品形态。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "The fittest founder in the room got cancer. Here’s how he used AI to fight back.",
+      "url": "https://techcrunch.com/2026/06/27/the-fittest-founder-in-the-room-got-cancer-heres-how-he-used-ai-to-fight-back/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/06/Screenshot-2026-06-26-at-10.22.24-AM-e1782596077369.png?w=1103",
+      "sum": "创始人用Claude整合医疗数据对抗癌症",
+      "lead": [
+        "创业公司创始人Connor Christou在确诊癌症后，将所有相关数据输入Claude辅助对抗疾病。",
+        "他整合的数据包括血液结果、扫描数据、可穿戴设备输出和日记条目等，利用AI进行深度分析和模式识别。"
+      ],
+      "take": "AI在个人健康管理和医疗数据分析场景潜力巨大，PM可探索AI+可穿戴数据的垂直应用。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "WIRED",
+      "title": "Trump Administration Allows Anthropic to Release  Mythos to Select US Organizations",
+      "url": "https://www.wired.com/story/anthropic-restores-access-to-mythos/",
+      "img": "https://media.wired.com/photos/6a31dd3da349dd0edc2c4b26/master/pass/Anthropic-Restores-Fable-Access-Business.jpg",
+      "sum": "白宫允许Anthropic向特定美组织发布Mythos模型",
+      "lead": [
+        "经过数周谈判，白宫允许Anthropic向特定的美国公司和政府机构开放其最先进的AI模型Mythos。",
+        "此前Anthropic因政府要求已将该模型下线两周，此次放行标志着双方在安全与部署上达成初步妥协。"
+      ],
+      "take": "顶级AI模型的发布已受强监管，PM在设计产品时需将合规与审查机制前置。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "WIRED",
+      "title": "OpenAI Has New AI Models. Here’s Why You Can’t Use Them",
+      "url": "https://www.wired.com/story/openai-gpt-56-model-release-trump-admin-approval/",
+      "img": "https://media.wired.com/photos/6a3ea08bf7f42d4ea1deffa3/master/pass/GettyImages-2281424331.jpg",
+      "sum": "白宫要求OpenAI推迟发布GPT-5.6模型",
+      "lead": [
+        "在Anthropic被要求下线高级模型两周后，白宫要求OpenAI推迟其GPT-5.6模型的发布。",
+        "这表明美国政府对前沿AI模型的安全审查已趋于常态化，直接干预头部厂商的发布节奏。"
+      ],
+      "take": "前沿模型发布节奏不再由厂商单方面决定，产品规划需为监管审批预留缓冲期。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "Why everyone from OpenAI to SpaceX is building their own chips (and turning up the heat on Nvidia)",
+      "url": "https://techcrunch.com/video/why-everyone-from-openai-to-spacex-is-building-their-own-chips-and-turning-up-the-heat-on-nvidia/",
+      "img": "https://techcrunch.com/wp-content/uploads/2025/07/GettyImages-2219673294.jpg?resize=1200,750",
+      "sum": "OpenAI公布自研推理芯片Jalapeño，加入自研行列",
+      "lead": [
+        "OpenAI公布了与Broadcom合作开发的自定义推理芯片Jalapeño，加入Google、Apple等自研芯片行列。",
+        "此举旨在降低对Nvidia单一供应商的依赖，分散供应链风险并优化推理成本。"
+      ],
+      "take": "算力成本与供应链安全成巨头核心痛点，自研芯片将重塑AI基础设施的产品成本结构。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "Build real agentic apps using CUGA: two dozen working examples on a lightweight harness",
+      "url": "https://huggingface.co/blog/ibm-research/cuga-apps",
+      "img": "https://cdn-uploads.huggingface.co/production/uploads/649d9ad1500fd8d51a675a93/p9JwFYkZS7fB9g2PMFMft.png",
+      "sum": "CUGA发布轻量级Agent应用框架及20余个实战示例",
+      "lead": [
+        "Hugging Face发布了CUGA（一种轻量级Agent应用框架），并提供了二十多个可运行的实战示例。",
+        "该框架旨在帮助开发者构建真正的Agentic（具备自主决策和执行能力）应用，降低Agent开发门槛。"
+      ],
+      "take": "Agent应用开发正从概念走向工程化，轻量级框架和丰富示例能大幅降低产品原型的试错成本。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "Shipping huggingface_hub every week with AI, open tools, and a human in the loop",
+      "url": "https://huggingface.co/blog/huggingface-hub-release-ci",
+      "img": "https://huggingface.co/blog/assets/huggingface-hub-release-ci/thumbnail.png",
+      "sum": "Hugging Face分享用AI与人机协同实现每周发版经验",
+      "lead": [
+        "Hugging Face分享了其huggingface_hub项目实现每周高频发版的工程实践。",
+        "团队结合AI辅助、开源工具以及人工审核（人机协同）的方式，保障了发版效率与质量。"
+      ],
+      "take": "AI辅助开发已深入核心工程流程，产品团队可借鉴其人机协同机制提升迭代速度与质量。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "Experimenting with the proposed Cross-Origin Storage API in Transformers.js",
+      "url": "https://huggingface.co/blog/cross-origin-storage",
+      "img": "https://huggingface.co/blog/assets/cross-origin-storage/thumbnail.jpg",
+      "sum": "Transformers.js实验支持跨域存储API提案",
+      "lead": [
+        "Hugging Face在Transformers.js（浏览器端运行AI模型的JS库）中实验性地支持了跨域存储API提案。",
+        "该实验旨在解决浏览器端AI模型跨域存储与共享的痛点，优化Web端模型加载体验。"
+      ],
+      "take": "Web端AI应用的存储与加载瓶颈正在被攻克，产品经理可关注此进展以优化H5端AI体验。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "We got local models to triage the OpenClaw repo for FREE!*",
+      "url": "https://huggingface.co/blog/local-models-pr-triage",
+      "img": "https://huggingface.co/blog/assets/local-models-pr-triage/thumbnail.png",
+      "sum": "本地模型成功实现免费为OpenClaw仓库分流",
+      "lead": [
+        "Hugging Face展示了如何利用本地模型免费对OpenClaw代码仓库进行问题分流（Issue分类与初步处理）。",
+        "这证明了本地小模型在特定垂直场景中具备低成本、高效率的落地能力。"
+      ],
+      "take": "本地小模型在垂直场景的ROI极高，产品经理可挖掘类似低成本自动化场景。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "Google Research",
+      "title": "Thinking to recall: How reasoning unlocks parametric knowledge in LLMs",
+      "url": "https://research.google/blog/thinking-to-recall-how-reasoning-unlocks-parametric-knowledge-in-llms/",
+      "img": "https://storage.googleapis.com/gweb-research2023-media/original_images/Thinking-to-recall-1.png",
+      "sum": "研究揭示推理能力如何解锁LLM参数化知识",
+      "lead": [
+        "研究探讨了推理能力如何帮助大语言模型（LLM）提取其内部的参数化知识（即模型在预训练时学到的内在事实与信息）。",
+        "研究发现，通过引导模型进行逐步推理，可以显著提升其对深层记忆信息的召回率，这为解决模型“知道但答不出”的问题提供了新思路。"
+      ],
+      "take": "揭示了推理与知识召回的关联，PM在设计高准确率的知识型AI产品时，可通过引入思维链等推理机制来提升回答质量。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "techcrunch.com",
+      "title": "Fika Jobs raises $4M to build a video-first hiring platform where AI agents interview candidates - TechCrunch",
+      "url": "https://techcrunch.com/2026/06/23/fika-jobs-raises-4m-to-build-a-video-first-hiring-platform-where-ai-agents-interview-candidates/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/06/Torleif_Svensson-FikaJobsAI.jpeg?w=1200",
+      "sum": "Fika Jobs获400万美元融资，打造AI代理面试的视频招聘平台",
+      "lead": [
+        "Fika Jobs筹集400万美元，致力于打造以视频为主的招聘平台。",
+        "该平台结合AI面试代理与短视频简历，让候选人通过AI面试展示个性与沟通能力，体验类似LinkedIn与TikTok的结合。"
+      ],
+      "take": "AI面试代理重塑招聘漏斗，产品经理可探索短视频+AI交互在传统人力场景中的降本增效机会。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "36氪",
+      "title": "谷歌对Meta Gemini模型的使用设限，因人工智能需求紧张导致算力吃紧",
+      "url": "https://36kr.com/newsflashes/3872321240700160?f=rss",
+      "img": "https://img.36krcdn.com/20191024/v2_1571894049839_img_jpg",
+      "sum": "算力吃紧，谷歌限制Meta使用其Gemini模型",
+      "lead": [
+        "由于人工智能需求激增导致算力紧张，谷歌对Meta使用其Gemini模型施加了限制。",
+        "这反映出大模型算力资源已成为科技巨头间博弈的核心筹码。"
+      ],
+      "take": "算力已成为AI时代的新石油，产品规划时需将底层算力供应链的稳定性纳入核心风险评估。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "techcrunch.com",
+      "title": "From Fortnite to robots: General Intuition raises $2.3B on bet that video games can train AI agents for the real world - TechCrunch",
+      "url": "https://techcrunch.com/2026/06/25/from-fortnite-to-robots-general-intuitions-2-3b-bet-that-video-games-can-train-ai-agents-for-the-real-world/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/06/pic_Pim_CEO.jpg?resize=1200,800",
+      "sum": "General Intuition获23亿美元融资，用游戏数据训练AI代理",
+      "lead": [
+        "General Intuition筹集23亿美元，核心逻辑是利用视频游戏中的动作数据来训练现实世界的AI代理。",
+        "公司认为游戏玩法中嵌入的动作数据能帮助模型区分'自我'与'环境'，最终目标是出售这种具备自主行动能力的代理模型。"
+      ],
+      "take": "游戏数据成为训练具身智能的新燃料，产品经理可关注虚拟仿真数据在AI代理产品落地中的降本价值。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "Ars Technica",
+      "title": "Oracle’s 21,000 layoffs help drive its debt-fueled AI investments",
+      "url": "https://arstechnica.com/ai/2026/06/oracles-21000-layoffs-help-drive-its-debt-fueled-ai-investments/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/GettyImages-2212917669-1152x648.jpg",
+      "sum": "甲骨文裁员2.1万人，将资金转向AI投资",
+      "lead": [
+        "甲骨文在一年内裁员2.1万人，员工总数下降12.9%。",
+        "公司表示，AI技术的采用和部署是裁员的主要原因之一，节省下的资金将用于支持其债务驱动的AI投资战略。"
+      ],
+      "take": "AI对传统企业组织结构的颠覆已具规模，产品经理在设计B端工具时需更强调“替代人力”的ROI逻辑。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "techcrunch.com",
+      "title": "India’s MoEngage bets that the future of marketing is millions of AI agents - TechCrunch",
+      "url": "https://techcrunch.com/2026/06/23/indias-moengage-bets-marketings-future-on-millions-of-ai-agents/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/03/ai-bots-agents-GettyImages-2230799616.jpg?resize=1200,800",
+      "sum": "MoEngage收购Aampe，押注AI代理主导营销未来",
+      "lead": [
+        "印度客户互动软件公司MoEngage全资收购旧金山初创公司Aampe。",
+        "此次收购押注于能为个体客户做决策的AI代理将成为营销的未来，取代传统自动化营销流程。"
+      ],
+      "take": "营销自动化正升级为AI代理自主决策，产品经理需思考如何将“规则引擎”重构为“意图驱动”的智能系统。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "Ars Technica",
+      "title": "How to burst the AI bubble: Strike at its roots",
+      "url": "https://arstechnica.com/gadgets/2026/06/how-to-burst-the-ai-bubble-strike-at-its-roots/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2025/10/cory3-1152x648-1782115421.jpg",
+      "sum": "Doctorow新书探讨如何刺破AI泡沫及AI社会影响",
+      "lead": [
+        "科技作家Cory Doctorow出版新书《反向半人马指南》，聚焦AI泡沫及其引发的社会问题。",
+        "书中主张从根源打破AI泡沫，并探讨了“反向半人马”（指人类被迫像机器般为AI打补丁）等现象。"
+      ],
+      "take": "PM需警惕行业泡沫风险，关注AI真实落地价值，避免产品沦为过度炒作的牺牲品。"
+    }
+  ]
+}
