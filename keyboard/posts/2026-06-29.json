@@ -1,0 +1,241 @@
+{
+  "date": "2026-06-29",
+  "categories": [
+    {
+      "code": "hardware",
+      "label": "新品与硬件",
+      "color": "#d6932b"
+    },
+    {
+      "code": "tech",
+      "label": "技术趋势",
+      "color": "#7a52cc"
+    },
+    {
+      "code": "community",
+      "label": "社区与玩家",
+      "color": "#0a8f6a"
+    }
+  ],
+  "items": [
+    {
+      "hero": true,
+      "category": "hardware",
+      "src": "Alexotos",
+      "title": "🔴  Keycult 2/65 w/ Holy Panda Switches FULL STREAM",
+      "url": "https://www.youtube.com/watch?v=ldr2vKo8avE",
+      "img": "https://www.youtube.com/v/ldr2vKo8avE?version=3",
+      "sum": "Keycult 2/65搭配Holy Panda轴直播展示",
+      "lead": [
+        "Keycult 2/65 w/ Holy Panda Switches FULL STREAM"
+      ],
+      "take": "经典Holy Panda轴与高端客制化套件搭配仍是社区流量密码"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Alexotos",
+      "title": "🔴  The MC65. A keyboard not on the value menu?",
+      "url": "https://www.youtube.com/watch?v=LDIfIoUAANE",
+      "img": "https://www.youtube.com/v/LDIfIoUAANE?version=3",
+      "sum": "MC65键盘套件发布，定位高端市场",
+      "lead": [
+        "MC65键盘套件亮相，探讨其脱离性价比菜单的高端定位。"
+      ],
+      "take": "高端套件需在设计与材质上提供足够溢价理由，以支撑脱离性价比赛道的定价。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "nintendolife.com",
+      "title": "8BitDo Celebrates N64 In Style With New Controller And Keyboard - Nintendo Life",
+      "url": "https://www.nintendolife.com/news/2026/06/8bitdo-celebrates-n64-in-style-with-new-controller-and-keyboard",
+      "img": "https://images.nintendolife.com/ba56e166c1736/large.jpg",
+      "sum": "8BitDo推出N64周年纪念款键盘及手柄",
+      "lead": [
+        "外设厂商8BitDo为纪念N64主机推出全新主题键盘与手柄。",
+        "新产品旨在以复古风格庆祝该经典主机的周年纪念。"
+      ],
+      "take": "复古主机IP联名是外设品牌实现差异化竞争与情怀变现的有效路径。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "pcgamer.com",
+      "title": "This stonkingly-good gaming keyboard is so classy, it might as well be wearing a monocle and top hat - PC Gamer",
+      "url": "https://www.pcgamer.com/hardware/gaming-keyboards/this-gaming-keyboard-is-a-class-act-and-its-waiting-for-you-this-prime-day-with-its-top-hat-askew-and-its-monocle-popped/",
+      "img": "https://cdn.mos.cms.futurecdn.net/vD5untoAvntvaoDonveyWA-1920-80.jpg",
+      "sum": "PC Gamer称某游戏键盘极具格调，原文内容仅为邮件订阅引导",
+      "lead": [
+        "This stonkingly-good gaming keyboard is so classy, it might as well be wearing a monocle and top hat - PC Gamer",
+        "See the latest gaming news first. For the quickest way to join, simply enter your email below and get access."
+      ],
+      "take": "媒体对游戏键盘审美评价趋向复古优雅，高端化设计仍是流量密码"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "r/MechanicalKeyboards",
+      "title": "Keeeyboard-Split - RGB effects",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uhlrpw/keeeyboardsplit_rgb_effects/",
+      "img": "https://external-preview.redd.it/bHhzMHN4ZGp2eDloMYRhrYJZ6X0pWCI7ChA4XVzK8fTr4d9fj5_zRE4cO3Zz.png?width=640&crop=smart&auto=webp&s=8af0cf09d81fd10690f9e56666e32f59dbf5c5f6",
+      "sum": "DIY分体键盘Keeeyboard-Split展示RGB与多设备BLE支持。",
+      "lead": [
+        "Hi everyone! After your feedback, I’m back to show you a new implementation of the RGB effects on my custom split keyboard!",
+        "Keeeyboard-Split is my new project! I spent a long time looking for a split keyboard with mechanical switches, low profile design, USB-C, RGB lighting, multi-device BLE support"
+      ],
+      "take": "分体、矮轴、多设备BLE与RGB的融合是客制化分体键盘的进阶需求。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "KeebTalk",
+      "title": "The Concordia - A new keyboard design where symmetry prevails",
+      "url": "https://www.keebtalk.com/t/the-concordia-a-new-keyboard-design-where-symmetry-prevails/24148",
+      "img": "https://www.keebtalk.com/images/emoji/apple/stuck_out_tongue.png?v=15",
+      "sum": "新项目Concordia发布，主打对称设计并融合Topre手感。",
+      "lead": [
+        "Hello keeb lovers, In December 2025 I finished The Aquanaut , a two keyboards project (one Cherry MX and the other Topre), and I love typing on both of them!",
+        "So why doing yet another keyboard project? Well I have two (related) issues. Issue No 1: I did not realized how much I missed Topre tactility"
+      ],
+      "take": "兼顾静电容手感与对称美学的设计，是高端客制化填补市场空白的思路。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "LINWORKS DOL-TOY 40 (concept)",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uiaab6/linworks_doltoy_40_concept/",
+      "img": "https://preview.redd.it/pn6wgomzj3ah1.png?width=640&crop=smart&auto=webp&s=5efd62f413aa1b2108269a98ed15c8e81efddd4b",
+      "sum": "玩家自制LINWORKS DOL-TOY 40新配色3D渲染概念图",
+      "lead": [
+        "Although the Doltoy 40 keyboard is a real product, this color variant does not actually exist. This is a 3D render that I created.",
+        "This is a personal concept artwork created for demonstration purposes only."
+      ],
+      "take": "社区玩家的概念渲染图常能测试配色市场反馈，品牌可关注此类二创。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Keycult No. 2/60 and Setup Sunday ☕️☀️",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ui7fu2/keycult_no_260_and_setup_sunday/",
+      "img": "https://preview.redd.it/dpeo1e2gz2ah1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=3b54b9048ad914a8c7046986ad6cbdab9a8864da",
+      "sum": "玩家直播组装Keycult No. 2/60，盛赞其声音与做工",
+      "lead": [
+        "Recently got to stream a build of the Keycult No. 2/60 over on my Twitch and I realize now why this board is held to such a high standard.",
+        "The sound and finish were incredible!"
+      ],
+      "take": "顶级客制化键盘的声学表现与表面处理仍是玩家评判核心标准。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Geekhack",
+      "title": "Re: [IC] GMK CYL Kitty | New Novelties, Updated Base Kit, Vendor Update",
+      "url": "https://geekhack.org/index.php?topic=124766.msg3217540#msg3217540",
+      "img": "https://media.tenor.com/c6M9eftbjT4AAAAj/cat-cute.gif",
+      "sum": "GMK CYL Kitty键帽IC更新：新增趣味增补与套件调整",
+      "lead": [
+        "[IC] GMK CYL Kitty | New Novelties, Updated Base Kit, Vendor Update",
+        "Elegant cute look. I like it."
+      ],
+      "take": "优雅可爱风键帽持续受社区欢迎，增补更新是维持IC热度的有效手段。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Hipyo Tech",
+      "title": "What It's Like Building a PC in 2026...",
+      "url": "https://www.youtube.com/watch?v=lVhbKjO-p7s",
+      "img": "https://www.youtube.com/v/lVhbKjO-p7s?version=3",
+      "sum": "2026年DIY装机体验与趋势分享",
+      "lead": [
+        "What It's Like Building a PC in 2026..."
+      ],
+      "take": "主机装机生态与玩家习惯变化是外设市场风向的重要参考"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Evoworks Evo80 x Noctua",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uhtntu/evoworks_evo80_x_noctua/",
+      "img": "https://preview.redd.it/6agqhc0120ah1.jpg?width=140&height=140&auto=webp&s=9c11b00d05e58dea4fc0507e626f8b6b60924f8c",
+      "sum": "玩家展示Evo80搭配MT3 Noctua键帽，称赞其色彩匹配。",
+      "lead": [
+        "Keyboard: Evoworks Evo80 Switches: Keygeek Neo Oat Keycaps: Drop + MiTo MT3 Noctua",
+        "As a big Noctua fanboy i had to buy the keycap set when they released it, but it wasn’t matching my Yunzii very well, after all the good reviews of the Evo80 it was time for a upgrade and to say the colormatch is on p"
+      ],
+      "take": "联名主题键帽的配色兼容性是玩家换壳与升级的核心驱动力。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Here's my Mini Agar for big strong tough guys.",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uhltiu/heres_my_mini_agar_for_big_strong_tough_guys/",
+      "img": "https://preview.redd.it/90e2ulcyvx9h1.jpeg?width=640&crop=smart&auto=webp&s=34db74435debda1e930ae9ad0a0c91e00b633d1b",
+      "sum": "玩家展示Mini Agar键盘及HMX轴与NicePBT键帽搭配。",
+      "lead": [
+        "Mini Agar in PC Pink HMX Vintage Citrus Switches NicePBT Strawberry Milk Keycaps",
+        "submitted by /u/Knale [link] [comments]"
+      ],
+      "take": "HMX轴体与NicePBT键帽的高频出现反映中端客制化市场的流行趋势。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "KeebTalk",
+      "title": "[GB] Artisan keycaps - Dragon Balls - Cosmos",
+      "url": "https://www.keebtalk.com/t/gb-artisan-keycaps-dragon-balls-cosmos/24145",
+      "img": "https://www.keebtalk.com/uploads/db8059/optimized/3X/5/c/5c959a087b92fe892b4282eb6b96a84934d76b8e_2_500x500.jpeg",
+      "sum": "宇宙龙珠主题手工客制化键帽开启GB",
+      "lead": [
+        "传说七颗龙珠散落在无尽宇宙中，每颗都蕴含远古神秘能量。",
+        "这款手工客制化键帽捕捉了宇宙旅程的片段，发光龙珠静卧星海。"
+      ],
+      "take": "热门IP与奇幻主题客制化键帽仍是玩家情感溢价的核心驱动力。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Alexotos",
+      "title": "🔴  Double Schema M60 Build Day!!!",
+      "url": "https://www.youtube.com/watch?v=78CrtBnbtq8",
+      "img": "https://www.youtube.com/v/78CrtBnbtq8?version=3",
+      "sum": "Double Schema M60套件组装体验分享",
+      "lead": [
+        "Double Schema M60键盘套件组装日活动。"
+      ],
+      "take": "组装直播与分享仍是展示套件质感、吸引硬核玩家的有效互动形式。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Alexotos",
+      "title": "A Keyboard Themed After Aespa's Ningning",
+      "url": "https://www.youtube.com/watch?v=ziMtTNKUVlQ",
+      "img": "https://www.youtube.com/v/ziMtTNKUVlQ?version=3",
+      "sum": "Aespa成员宁宁主题客制化键盘设计",
+      "lead": [
+        "一款以韩国女团Aespa成员Ningning为主题的客制化键盘。"
+      ],
+      "take": "流行文化及饭圈跨界主题键盘能有效触达泛二次元及年轻女性用户群。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "KeebTalk",
+      "title": "Looking for help with Duck Raven 60%",
+      "url": "https://www.keebtalk.com/t/looking-for-help-with-duck-raven-60/24141",
+      "img": "https://www.keebtalk.com/uploads/db8059/original/3X/a/3/a30145321d1c220e8ac0d3d8d1ddfd7677d41f3f.png",
+      "sum": "玩家重建十年前Duck Raven 60%键盘，遇Caps Lock LED闪烁求助",
+      "lead": [
+        "Long story short Bought a Duck Raven about a decade ago. Desoldered it about 6 years ago with plans to rebuild. Just rebuilt today.",
+        "I decided to add a caps lock led to match the red side leds. It flashes about every 1.5 seconds. No idea why. When the caps lock is on it’s steady and turns OFF every 1"
+      ],
+      "take": "老客翻新与DIY改灯需求长尾存在，社区技术互助是维系硬核玩家的关键"
+    }
+  ]
+}
