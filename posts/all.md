@@ -4610,3 +4610,234 @@ DG^VoiC：真实呼叫中心条件下的说话人聚类反欺诈框架
 ## 趋势一句话
 
 今日共 42 条,覆盖 6 个分类。
+
+---
+
+# AI / Agent 领域新闻摘要 — 2026-06-30
+
+## 大模型
+
+**1. Mapping Europe’s AI Workforce Opportunity**
+OpenAI发布报告，揭示AI对欧盟就业的重塑机会
+OpenAI发布新报告，描绘了AI如何重塑欧盟各行业的就业格局。
+报告重点指出了可能面临自动化、实现增长或发生工作流变革的具体职业。
+这为政策制定者和企业应对劳动力市场转型提供了数据参考。
+**PM 信号:** PM需关注AI对岗位结构的重塑趋势，提前规划产品功能以适应工作流变革。
+来源:[OpenAI](https://openai.com/index/mapping-ai-jobs-transition-eu)
+
+**2. How agents are transforming work**
+OpenAI研究：AI Agent正推动复杂任务与生产力变革
+OpenAI发布新研究论文，探讨AI Agent（智能体）如何改变工作方式。
+研究表明，Agent能够处理耗时更长、更复杂的任务，从而全面提升各岗位的生产力。
+**PM 信号:** Agent处理复杂长任务的能力是产品演进的关键方向，PM应探索多步骤自动化的产品场景。
+来源:[OpenAI](https://openai.com/index/how-agents-are-transforming-work)
+
+**3. Samsung Electronics brings ChatGPT and Codex to employees**
+三星全球部署ChatGPT Enterprise与Codex
+三星电子向全球员工部署ChatGPT Enterprise和Codex。
+这是OpenAI迄今规模最大的企业级AI部署之一，标志着大模型在大型跨国企业的深度落地。
+**PM 信号:** 头部大厂全面拥抱企业级AI，B端PM需加速构建AI原生工作流或私有化部署方案。
+来源:[OpenAI](https://openai.com/index/samsung-electronics-chatgpt-codex-deployment)
+
+## Agent·智能体
+
+**4. AI agents are not your “coworkers”**
+MIT研究称AI智能体不应被视为同事，过度拟人化或影响人机协作。
+波士顿大学的研究探讨了企业将AI智能体（能自主执行任务的AI程序）拟人化为“员工”或“同事”的现象。研究发现，给AI赋予人类身份和职位，反而可能让人类管理者产生不切实际的期望。
+当AI被当作“下属”对待时，人类往往难以适应其非人类的出错模式或沟通方式。这提示企业在引入AI时，应更关注其工具属性而非过度包装其社会角色。
+**PM 信号:** 产品设计中应避免过度拟人化，明确AI的工具定位与能力边界，降低用户的不合理预期。
+来源:[MIT Tech Review](https://www.technologyreview.com/2026/06/29/1139849/ai-agents-are-not-your-coworkers/)
+
+## 产品与工具
+
+**5. Meta Contractors Posed as Teens to Prompt Rival Chatbots About Suicide, Sex, and Drugs**
+Meta雇人假扮青少年测试竞品AI对高风险话题的回复
+据WIRED报道，Meta雇佣了数百名承包商假扮青少年，测试Gemini和ChatGPT等竞品聊天机器人对自杀、性和毒品等高风险话题的回复。
+此举旨在评估竞品AI的安全防护能力，但也引发了关于商业伦理和测试边界的争议。
+**PM 信号:** AI安全对齐是产品红线，竞品分析不仅看功能，更需关注高风险场景的防御机制。
+来源:[WIRED](https://www.wired.com/story/meta-contractors-pretending-to-be-teens-chatbot-testing/)
+
+**6. The AI jobs debate just got messier**
+报告显示高强度AI采用企业员工数反增10.2%，初级岗位上升
+一份新报告显示，“高强度AI采用者”企业的员工总数增加了10.2%。
+其中初级岗位人数增长了12%，反驳了AI会消灭初级岗位的普遍担忧。
+**PM 信号:** AI工具的引入可能扩大业务规模而非单纯缩减编制，产品定位可更多考虑赋能初级员工。
+来源:[TechCrunch](https://techcrunch.com/2026/06/29/the-ai-jobs-debate-just-got-messier/)
+
+**7. Tidal won’t pay royalties on AI-generated music but isn’t banning it outright**
+Tidal对100% AI生成音乐停止支付版税，但仅标签化不封杀
+Tidal公布了针对AI生成音乐的新政策，自7月15日起，将对识别为100% AI生成的音轨添加图标标签。
+从即日起，这些AI音轨将不再具备变现能力，平台优先确保版税流向人类原创作品。
+Tidal并未完全封杀AI音乐，而是采取“标签化+切断收益”的折中策略。
+**PM 信号:** 内容平台面对AIGC的平衡术：不阻断上传以保活跃，但切断分成保护核心创作者生态。
+来源:[The Verge](https://www.theverge.com/tech/959211/tidal-ai-music-policy-demonetizingdetect-label)
+
+**8. OpenAI is teasing new hardware… for Codex**
+OpenAI预告7月15日发布Codex专属快捷硬件设备
+OpenAI预告将于7月15日发布一款与其AI编程工具Codex相关的硬件设备。
+该设备呈方形并带有多个按钮，是与Work Louder公司合作推出的快捷键外设，并非此前与Jony Ive合作的神秘AI硬件。
+**PM 信号:** AI编程工具开始向专属外设延伸，软硬件结合的交互创新可能成为开发者工具的新护城河。
+来源:[The Verge](https://www.theverge.com/ai-artificial-intelligence/959174/openai-codex-hardware-work-louder)
+
+**9. Vibe coding platform Base44 launches own model as AI startups seek defensibility**
+Wix旗下Base44推出自研AI模型，寻求业务护城河
+Wix旗下的氛围编程（vibe coding，指通过自然语言描述直接生成应用的编程方式）平台Base44开始推出自研AI模型。
+该举措反映了AI初创公司在基础大模型同质化竞争中，试图通过自建模型来构建产品护城河。
+**PM 信号:** 当调用通用大模型难以建立壁垒时，垂直场景自研模型或微调将成为SaaS产品的破局点。
+来源:[TechCrunch](https://techcrunch.com/2026/06/29/vibe-coding-platform-base44-launches-own-model-as-ai-startups-seek-defensibility/)
+
+**10. Gemini’s personalized AI image generation is now free for US users**
+Google向美国免费用户开放Gemini个性化AI图像生成
+Google正在将Gemini的个性化AI图像生成功能扩展至美国符合条件的免费用户。
+该功能允许聊天机器人根据用户兴趣及关联Google应用的数据来生成定制化图像。
+**PM 信号:** AI生图从通用走向个性化，深度整合用户数据是提升产品体验和留存的关键。
+来源:[TechCrunch](https://techcrunch.com/2026/06/29/geminis-personalized-ai-image-generation-is-now-free-for-u-s-users/)
+
+**11. This Humanoid Robot Is a Terrifyingly Competent Office Intern**
+前英伟达工程师创立的Flexion Robotics推出高能力公室人形机器人
+由前英伟达工程师创立的初创公司Flexion Robotics，展示了一款能胜任办公室实习工作的出色人形机器人。
+该公司开发了一种巧妙的机器人训练方法，使其能够执行实用的办公任务。
+**PM 信号:** 具身智能正加速落地办公场景，产品经理需关注物理世界与数字任务的自动化协同。
+来源:[WIRED](https://www.wired.com/story/this-robot-is-going-to-replace-your-interns-flexion/)
+
+**12. Anthropic and Gov. Newsom forge deal allowing California government to use Claude at half price**
+Anthropic与加州政府达成协议，半价提供Claude
+Anthropic与加州州长纽森达成协议，允许加州政府以半价使用Claude。
+在联邦政府对OpenAI等对手施压的背景下，Anthropic正与加州政府建立更紧密的合作关系。
+**PM 信号:** 政企合作与区域定价策略是AI厂商抢占大客户市场的有效手段，合规与政企关系成关键变量。
+来源:[TechCrunch](https://techcrunch.com/2026/06/29/anthropic-and-gov-newsom-forge-deal-allowing-california-government-to-use-claude-at-half-price/)
+
+**13. Arena, the AI leaderboard everyone uses, is now a $100M business**
+AI模型排行榜Arena商业化成功，营收达1亿美元
+运营热门免费AI排行榜的初创公司Arena，其商业服务自去年9月上线以来发展迅速。
+目前该公司已成长为一家营收达1亿美元的企业，显示出AI评测市场的巨大商业潜力。
+**PM 信号:** AI评测从开源社区走向商业化，模型能力评估本身已成为一门大生意，值得产品侧关注。
+来源:[TechCrunch](https://techcrunch.com/2026/06/29/arena-the-ai-leaderboard-everyone-uses-is-now-a-100m-business/)
+
+**14. Patronus AI lands $50M to build ‘digital worlds’ that stress-test AI agents - TechCrunch**
+Patronus AI获5000万美元融资，构建AI代理压力测试数字世界
+Patronus AI获得5000万美元融资，用于构建“数字世界”来对AI代理进行压力测试。
+由于基准测试高分无法证明AI在复杂现实场景中的可靠性，模型提供商和代理初创公司需要确保其产品在各类场景下稳定运行。
+**PM 信号:** AI Agent落地前必须过“压力测试”关，专门化的评测与沙盒环境是Agent产品化的刚需。
+来源:[techcrunch.com](https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/)
+
+**15. Anthropic Thinks Its Own Success Is Key to Making AI Safe**
+Anthropic称自身成功是AI安全的关键，被批权力过度集中
+Anthropic的批评者认为该公司正在迅速积累权力，但Anthropic表示这正是负责任的AI开发应有的样子。
+公司坚称，只有自身在商业上取得成功，才能掌握足够资源来确保AI的安全性。
+**PM 信号:** AI安全叙事正成为企业构建竞争壁垒和获取资源的护身符，产品合规设计需洞察这一底层逻辑。
+来源:[WIRED](https://www.wired.com/story/anthropic-thinks-ai-can-only-be-safe-under-its-control/)
+
+## 企业落地
+
+**16. Repositioning retail for the AI era**
+AI重塑零售业的核心在于幕后决策，而非花哨的前端应用。
+AI正在重塑零售业，但最大的变革并非消费者能直接看到的虚拟试衣或聊天机器人。
+真正的转型发生在幕后决策：商品如何在搜索结果中展现、库存如何在供应链中流转、工程师如何更快发布代码，以及零售商如何实时响应客户行为。
+传统零售商正试图在碎片化且竞争激烈的市场中，通过这些底层AI能力寻找新定位。
+**PM 信号:** 做AI+零售产品别只盯着C端交互，B端供应链优化和实时决策系统才是真正的护城河与提效利器。
+来源:[MIT Tech Review](https://www.technologyreview.com/2026/06/25/1137848/repositioning-retail-for-the-ai-era/)
+
+## 开源发布
+
+**17. DiScoFormer: One transformer for density and score, across distributions**
+DiScoFormer：跨分布处理密度与分数的统一Transformer模型
+DiScoFormer是一种新型Transformer架构，能够跨不同数据分布同时处理密度估计和评分任务。
+该模型将两种原本独立的统计计算任务统一在同一框架下，提升了计算效率与泛化能力。
+**PM 信号:** 统一架构的AI模型能降低多任务场景下的部署成本，PM可关注其在复杂概率预测产品中的应用潜力。
+来源:[Hugging Face](https://huggingface.co/blog/allenai/discoformer)
+
+**18. Multi-Agentic System Leveraging Open-Source LLMs to Mitigate Disinformation Threats**
+基于开源LLM的多智能体系统，用于对抗虚假信息威胁
+当前虚假信息泛滥，传统人工核查已无法应对海量信息，亟需自动化检测方案。
+该研究提出一种多智能体系统（多个AI协作完成任务的架构），利用开源大模型自动识别和辟谣。
+这为大规模内容审核提供了新思路，证明了开源模型在复杂事实核查场景下的可行性。
+**PM 信号:** 开源LLM驱动的多智能体方案为内容安全产品提供了低成本、可私有化部署的审核新范式。
+来源:[arXiv cs.CL](https://arxiv.org/abs/2606.30259v1)
+
+## 融资与商业
+
+**19. Omen AI’s plan to optimize data centers is all wet**
+Omen AI获3100万美元A轮融资，用AI优化数据中心冷却液。
+Omen AI完成3100万美元A轮融资。
+该公司利用AI技术监控数据中心的芯片冷却液，并预防细菌爆发，以优化数据中心运营。
+**PM 信号:** AI在数据中心运维（尤其是液冷散热）的落地场景明确，B端产品可切入高价值痛点。
+来源:[TechCrunch](https://techcrunch.com/2026/06/29/omen-ais-plan-to-optimize-data-centers-is-all-wet/)
+
+**20. The Human Creativity Benchmark**
+提出人类创造力基准HCB，区分AI评估中的收敛与分歧信号。
+现有AI评估框架常将评估者间的分歧视为需消除的噪音，但在创意领域，专业分歧反映了真实的品味差异。
+论文提出人类创造力基准（HCB），将评估信号分为两类：反映行业最佳实践的收敛信号，以及体现个人品味差异的分歧信号。
+**PM 信号:** 做AI创意类产品时，评估体系不能只看“共识”，需为用户个性化偏好留出产品机制空间。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.30561v1)
+
+**21. Poller: Are LLMs Suitable for Evaluating the Poetry Understanding Task?**
+提出Poller方法，让大模型扮演诗歌作者来评估诗歌理解。
+传统自动评估方法不适用于现代中文诗歌，而人工评估成本高且难以规模化。
+论文提出Poller（Poetry LLM Evaluator），让大语言模型扮演诗歌作者，结合详细信息来评估诗歌理解任务。
+**PM 信号:** 评估生成式AI的垂直能力（如文学创作）需定制专门策略，角色扮演是提升LLM评估准确性的有效手段。
+来源:[arXiv cs.CL](https://arxiv.org/abs/2606.30556v1)
+
+**22. 独家｜获超亿美元融资，Sand.ai 曹越：为什么视频是通往世界模型最重要的路径**
+Sand.ai获超亿美元融资，押注自回归与MoE架构的视频生成。
+视频生成模型公司Sand.ai完成超亿美元融资，创始人曹越坚持非共识路线。
+团队早期押注自回归架构而非主流Diffusion，后率先推出音画同出模型，近期又将模型架构从Dense转向MoE（混合专家模型）。
+**PM 信号:** 视频生成赛道技术路线迭代极快，从Diffusion到自回归再到MoE，产品架构需具备高度灵活性以适应底层模型突变。
+来源:[36氪](https://36kr.com/p/3873965241931014?f=rss)
+
+**23. 36氪首发｜前百度自动驾驶与机器人实验室主任创业，天使轮融资数千万，做机器人“世界通行模型”**
+纽娲机器人获5000万元天使轮融资，研发机器人世界通行模型。
+具身智能公司纽娲机器人完成5000万元天使轮融资，由蓝湖资本领投。
+创始人杨睿刚曾任百度自动驾驶与机器人实验室主任，公司主攻机器人的“世界通行模型”。
+行业共识认为具身智能不存在大一统模型，海外多按推理时间解耦，国内多按能力类型拆分。
+**PM 信号:** 具身智能的“分层解耦”已成共识，做机器人产品需在系统架构层面早做规划，避免追求单一庞大模型。
+来源:[36氪](https://36kr.com/p/3875059110221064?f=rss)
+
+**24. 自研全域柔性电子皮肤，Moxy摸喜发布首款AI陪伴机器人｜最前线**
+Moxy摸喜发布首款AI陪伴机器人，主打纯触觉交互。
+Moxy摸喜发布首款AI陪伴机器人，以“无对话、无摄像头、纯触觉交互”为核心特色。
+产品采用自研离电型柔性传感系统，具备高灵敏度与毫秒级响应，能精准识别抚摸、按压等动作。
+该产品将离电型柔性传感技术首次完整应用于消费级陪伴产品。
+**PM 信号:** 视觉和语音之外，触觉交互是陪伴类硬件的蓝海切入点，柔性传感技术的成熟为全新产品形态提供了可能。
+来源:[36氪](https://36kr.com/p/3874015941645570?f=rss)
+
+**25. Notion killing Skiff-influenced email app since most users use AI agents instead**
+Notion关闭邮件应用，因多数用户转向使用AI Agent。
+Notion宣布关闭其邮件应用Notion Mail，该应用基于此前收购的Skiff团队打造。
+Notion表示，关闭的主要原因是大批用户已转向使用AI Agent来处理邮件和日程等任务。
+**PM 信号:** AI Agent正在重塑用户工作流，传统工具型产品若不能向Agent化演进，将面临被替代的风险。
+来源:[Ars Technica](https://arstechnica.com/gadgets/2026/06/notion-killing-skiff-influenced-email-app-since-most-users-use-ai-agents-instead/)
+
+**26. Helping build shared standards for advanced AI**
+OpenAI助力建立高级AI共享标准，推动安全与评估框架。
+OpenAI宣布通过Appia基金会帮助建立高级AI的共享标准。
+该项目将支持评估框架、安全实践以及全球合作，以应对高级AI发展带来的挑战。
+**PM 信号:** AI安全与评估标准正成为行业基础设施，产品经理需关注合规与安全框架，提前适配行业标准。
+来源:[OpenAI](https://openai.com/index/helping-build-shared-standards-for-advanced-ai)
+
+## 政策与监管
+
+**27. Lawmakers want to ban AI companies from selling your health data**
+美议员拟立法禁止AI公司出售用户健康及位置数据
+美国参议员伊丽莎白·沃伦等人计划提出更新版《健康与位置数据保护法案》，以应对AI时代的数据隐私挑战。
+新法案将禁止数据经纪人出售美国人的健康和位置信息，明确涵盖用户向ChatGPT或Claude等AI聊天机器人透露的敏感数据。
+**PM 信号:** 涉及健康或定位的AI产品需警惕数据合规红线，对话式AI的隐私收集边界正面临更严监管。
+来源:[The Verge](https://www.theverge.com/ai-artificial-intelligence/959033/health-location-data-protection-act-ai-warren-scanlon)
+
+**28. C$^{2}$R: Cross-sample Consistency Regularization Mitigates Feature Splitting and Absorption in Sparse Autoencoders**
+新研究提出C2R方法，解决稀疏自编码器的特征分裂与吸收问题
+稀疏自编码器（SAE，一种将大模型激活值分解为可解释特征的常用工具）在扩大字典规模时，常出现特征分裂（将连贯概念碎片化）和特征吸收（在通用特征中制造任意例外）问题。
+研究提出跨样本一致性正则化（C2R）方法，通过约束潜在表示的一致性来缓解上述问题，提升大模型可解释特征的可靠性。
+**PM 信号:** 提升大模型可解释性是AI安全与可信产品化的基础，该研究为构建更可靠的模型监控与对齐工具提供了技术参考。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.30609v1)
+
+**29. To Tab or Not to Tab: Measuring Critical Engagement in AI Code Completion Tools Using Behavioral Signals and Attention Checks**
+研究提出Clover工具，测量AI代码补全中的用户批判性参与度
+研究发现，学生在使用GitHub Copilot等AI代码补全工具时，往往缺乏对建议的批判性评估。
+研究者开发了Clover代码补全工具，通过记录交互行为并插入注意力检查，来探测编程任务中的反思性参与度，并建立了AI辅助编程的行为交互指标分类体系。
+**PM 信号:** AI辅助工具不能只看采纳率，需关注用户的盲目依赖风险；加入行为度量与注意力校验，是提升AI副驾产品安全性与有效性的新思路。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.30549v1)
+
+## 趋势一句话
+
+今日共 29 条,覆盖 7 个分类。
