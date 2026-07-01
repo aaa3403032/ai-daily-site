@@ -1,0 +1,346 @@
+{
+  "date": "2026-07-01",
+  "categories": [
+    {
+      "code": "market",
+      "label": "市场与品牌",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "hardware",
+      "label": "新品与硬件",
+      "color": "#d6932b"
+    },
+    {
+      "code": "community",
+      "label": "社区与玩家",
+      "color": "#0a8f6a"
+    }
+  ],
+  "items": [
+    {
+      "hero": true,
+      "category": "market",
+      "src": "The Verge",
+      "title": "LG’s 27-inch Tandem OLED gaming monitor is cheaper than ever",
+      "url": "https://www.theverge.com/gadgets/906880/lg-ultragear-tandem-oled-1440p-gaming-monitor-deal-sale",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/04/lgoledwoledmain.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "LG 27英寸Tandem OLED电竞显示器降至484美元",
+      "lead": [
+        "The price of LG’s UltraGear 27GX700A-B 1440p gaming monitor that came out last August has dropped to nearly its best price yet.",
+        "You can grab it at Amazon for $484.99 or at LG for $499.99 (originally $599.99). That’s a great deal considering this is one of LG’s Primary RGB Tandem panels built with fo"
+      ],
+      "take": "OLED显示器价格下探利好高端电竞外设生态，客制化键盘可借势推高端联名。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "9to5mac.com",
+      "title": "OpenAI teases Codex-branded hardware collaboration coming, here’s what to expect - 9to5Mac",
+      "url": "https://9to5mac.com/2026/06/29/openai-teases-codex-branded-hardware-collaboration-coming-heres-what-to-expect/",
+      "img": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2026/02/codex-app-icon-openai.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "sum": "OpenAI暗示将与知名键盘厂商合作推出Codex品牌输入设备。",
+      "lead": [
+        "OpenAI预告将于7月推出合作硬件项目。",
+        "传闻称其可能与知名键盘制造商合作，发布Codex品牌输入设备。"
+      ],
+      "take": "AI大模型落地外设成新趋势，键盘或成AI交互核心入口，值得提前布局。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "cnet.com",
+      "title": "The Apple Magic Keyboard Is at a New Low Price, but Not for Long - CNET",
+      "url": "https://www.cnet.com/deals/apple-magic-usb-c-keyboard-deal/",
+      "img": "https://www.cnet.com/a/img/resize/7ef9f3e0eb2d26de71d0f975ae372ebbb7fa75e3/hub/2026/06/30/1552e3e9-ec59-424b-8913-1240d8158031/apple-magic-keyboard-july-4-bg.jpg?auto=webp&amp;fit=crop&amp;height=675&amp;width=1200",
+      "sum": "苹果妙控键盘USB-C版降至历史新低144美元。",
+      "lead": [
+        "The Apple Magic Keyboard Is at a New Low Price, but Not for Long.",
+        "Apple Magic Keyboard hits record-low price: Right now, Amazon is offering the USB-C Apple Magic Keyboard with white keys for just $144 -- a record low. This is an excellent Fourth of July discount of $35, and the lowest pric"
+      ],
+      "take": "头部品牌成品键盘降价促销，或挤压中低端客制化及成品键盘市场空间。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "pcgamer.com",
+      "title": "These peripherals are ideal for competitive FPS games and cost just $106 total - PC Gamer",
+      "url": "https://www.pcgamer.com/hardware/if-i-had-around-usd100-to-spend-this-prime-day-this-is-the-keyboard-mouse-and-set-of-earbuds-id-pick-up-for-competitive-gaming/",
+      "img": "https://cdn.mos.cms.futurecdn.net/nZZXAVFS44UUfGzubFDVSj-1920-80.jpg",
+      "sum": "PC Gamer推荐总价106美元的竞技FPS游戏高性价比外设组合。",
+      "lead": [
+        "PC Gamer推荐了一组适合竞技FPS游戏的外设。",
+        "该外设组合总价仅为106美元，主打高性价比。"
+      ],
+      "take": "百元级高性价比外设组合在FPS玩家市场仍有强劲吸引力，平价策略值得厂商关注。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "The Verge",
+      "title": "Acer’s Swift Go 16 is a lot of laptop for $900",
+      "url": "https://www.theverge.com/gadgets/959687/acer-swift-go-16-ai-deal-sale",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/Acer-Swift-Go-16-Deal-Image.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "宏碁Swift Go 16 AI笔记本降至899美元",
+      "lead": [
+        "As high memory and storage prices have driven up the cost of everything from consoles to computers, finding a competent laptop for under $1,000 has become a challenge.",
+        "Thankfully, the Acer Swift Go 16 AI is on sale for $899.99 at Best Buy , a steep discount from"
+      ],
+      "take": "AI PC价格下探将拉动电脑及外设换机潮，笔记本矮轴键盘方案值得持续关注。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "r/MechanicalKeyboards",
+      "title": "I found this in the Backrooms",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ujrp7c/i_found_this_in_the_backrooms/",
+      "img": "https://preview.redd.it/gpharx8eofah1.jpg?width=140&height=91&auto=webp&s=0e96827576b9895c765e7cc2d0f8798b61419b05",
+      "sum": "厂商推出Backrooms主题外设套装，含键盘、键帽与桌垫，美国本土制造组装。",
+      "lead": [
+        "Hi Friends! I'm excited to share our new Backrooms Collection : a keyboard, keycap set, and desk mat themed around the endless liminal yellow rooms of the backrooms.",
+        "Our US-made PBT is printed in New Jersey, and every board is assembled and tested in-house. Keyboard: Moon V2 switches (with Krytox 20"
+      ],
+      "take": "主题化套装与本土制造是差异化竞争的有效切入点。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "gizmodo.com",
+      "title": "Simon Says… Buy This OpenAI Mechanical Keyboard Thingy - Gizmodo",
+      "url": "https://gizmodo.com/simon-says-buy-this-openai-mechanical-keyboard-thingy-2000779283",
+      "img": "",
+      "sum": "OpenAI与Work Louder合作机械键盘将于7月15日发布",
+      "lead": [
+        "It's a collaboration between OpenAI and Work Louder.",
+        "OpenAI and the mechanical keyboard company Work Louder are up to something on July 15, according to a vaguepost from the OpenAI Developers X account:.",
+        "So it’s only natural that OpenAI would release a thingamabob that turns some of the common Codex"
+      ],
+      "take": "AI大厂跨界外设，键盘或成AI助手新入口，值得跟进。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "gamespace.com",
+      "title": "8BitDo Celebrates N64’s 30th With Clear Blue Retro Keyboard And Ultimate 2 Controller - GameSpace.com",
+      "url": "https://gamespace.com/all-articles/news/8bitdo-celebrates-n64s-30th-with-clear-blue-retro-keyboard-and-ultimate-2-controller/",
+      "img": "https://gamespace.com/wp-content/uploads/2026/06/8bitdo-nintendo-retro.jpg",
+      "sum": "8BitDo推N64三十周年透明蓝复古键盘及手柄",
+      "lead": [
+        "8BitDo Celebrates N64’s 30th With Clear Blue Retro Keyboard And Ultimate 2 Controller.",
+        "If you grew up staring through translucent plastic at a tangle of N64 circuit boards, 8BitDo has a very specific nostalgia hit lined up for you.",
+        "To mark the Nintendo 64’s 30th anniversary, the company is rolling"
+      ],
+      "take": "复古情怀与透明外壳仍是外设出圈的流量密码。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "pcgamer.com",
+      "title": "Logitech's new keyboard struggles to back up its clacky bark with bite - pcgamer.com",
+      "url": "https://www.pcgamer.com/hardware/gaming-keyboards/logitech-g316-x-tactile-gaming-keyboard-review/",
+      "img": "https://cdn.mos.cms.futurecdn.net/ggaGW6h7dZ2MJfcYJDpjwT-2560-80.jpg",
+      "sum": "罗技新键盘主打咔哒声但体验欠佳，评测指其华而不实。",
+      "lead": [
+        "罗技发布新款键盘，主打清脆的咔哒声体验。",
+        "但评测认为该键盘实际手感与表现未能支撑其宣传，华而不实。"
+      ],
+      "take": "声音包装需以手感打底，单纯追求“咔哒声”易遭口碑反噬。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "KeebTalk",
+      "title": "The Concordia - A new keyboard design where symmetry prevails",
+      "url": "https://www.keebtalk.com/t/the-concordia-a-new-keyboard-design-where-symmetry-prevails/24148",
+      "img": "https://www.keebtalk.com/images/emoji/apple/stuck_out_tongue.png?v=15",
+      "sum": "新键盘项目Concordia发布，主打对称设计与静电容手感。",
+      "lead": [
+        "作者在完成Aquanaut双键盘项目后，启动新设计Concordia。",
+        "动机在于发现自身难以割舍Topre静电容的段落手感。"
+      ],
+      "take": "静电容手感在客制化圈仍具不可替代性，融合多轴体手感是创新方向。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Geekhack",
+      "title": "Re: [GB] Promotype Keyboy Advance 50 Keyboard",
+      "url": "https://geekhack.org/index.php?topic=126863.msg3217651#msg3217651",
+      "img": "",
+      "sum": "Promotype Keyboy Advance 50键盘GB引发玩家关注",
+      "lead": [
+        "This looks really cute"
+      ],
+      "take": "小众客制化GB项目仍靠独特外观设计吸引核心玩家。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "nintendolife.com",
+      "title": "8BitDo Celebrates N64 In Style With New Controller And Keyboard - Nintendo Life",
+      "url": "https://www.nintendolife.com/news/2026/06/8bitdo-celebrates-n64-in-style-with-new-controller-and-keyboard",
+      "img": "https://images.nintendolife.com/ba56e166c1736/large.jpg",
+      "sum": "8BitDo推出N64主题纪念款键盘与手柄",
+      "lead": [
+        "8BitDo Celebrates N64 In Style With New Controller And Keyboard.",
+        "As reported by Retro Dodo, accessory manufacturer 8BitDo has a couple of really neat new products in store for the console's anniversary."
+      ],
+      "take": "复古主机情怀联名是外设品牌破圈吸睛、触达泛游戏用户的有效路径。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "pcgamer.com",
+      "title": "This stonkingly-good gaming keyboard is so classy, it might as well be wearing a monocle and top hat - PC Gamer",
+      "url": "https://www.pcgamer.com/hardware/gaming-keyboards/this-gaming-keyboard-is-a-class-act-and-its-waiting-for-you-this-prime-day-with-its-top-hat-askew-and-its-monocle-popped/",
+      "img": "https://cdn.mos.cms.futurecdn.net/vD5untoAvntvaoDonveyWA-1920-80.jpg",
+      "sum": "PC Gamer推荐一款极具格调的高端游戏键盘",
+      "lead": [
+        "This stonkingly-good gaming keyboard is so classy, it might as well be wearing a monocle and top hat.",
+        "See the latest gaming news first. For the quickest way to join, simply enter your email below and get access."
+      ],
+      "take": "高端游戏键盘正趋向兼顾极致性能与复古绅士美学，打破传统电竞刻板印象。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Geekhack",
+      "title": "Re: [GB] Promotype Keyboy Advance 50 Keyboard",
+      "url": "https://geekhack.org/index.php?topic=126863.msg3217649#msg3217649",
+      "img": "https://cdn.geekhack.org/Smileys/solosmileys/thumbsup.gif",
+      "sum": "Promotype Keyboy Advance 50键盘GB帖获Geekhack通过",
+      "lead": [
+        "Quote from: HoffmanMyster on Tue, 30 June 2026, 15:46:17",
+        "Approved Thank you so much!"
+      ],
+      "take": "客制化GB审核活跃，小众复古主题仍有稳定受众。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "50$ Keyboard",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uk6u2t/50_keyboard/",
+      "img": "https://preview.redd.it/8bshpbygliah1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=d290a10fe36b3560f2950a6d8e5525d188fe6dc2",
+      "sum": "玩家分享50刀Eave65 Plus体验，赞做工但缺配列",
+      "lead": [
+        "Really more like 100$ cause shipping was like $40 🫩.",
+        "Anyways for 50$ it’s really good! It’s well made - though i do wish they add more layout options.",
+        "Currently, the only options are split backspace and stepped caps. No 7u spacebar or ISO enter.",
+        "Specs: Board: Eave65 Plus Switches: HMX Macchiato Keyc"
+      ],
+      "take": "低价套件配HMX轴性价比高，但配列单一或成痛点。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Built my first keyboard!",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uj7le7/built_my_first_keyboard/",
+      "img": "https://preview.redd.it/mxenly4qwaah1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=4fbcb95af1e312aceed7eeee092719301101ff15",
+      "sum": "玩家分享首把客制化键盘组装，采用Heavy Metal 75%及HMX轴体。",
+      "lead": [
+        "My goal was to make a keyboard that fits my interior design aesthetic. I did so much research and made every rookie mistake.",
+        "Case: Heavy Metal Keyboards 75% PCB: Eon75 Plate: Polycarbonate Switches: HMX Lattes Keycaps: Keybobo Retro Mixed Lights (2024) by Han & Jr. Mars Audio dampening foam between"
+      ],
+      "take": "室内设计美学驱动的客制化需求，以及新手常犯错误，都是产品改进的契机。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "KeebTalk",
+      "title": "A video game about Mechanical Keyboard",
+      "url": "https://www.keebtalk.com/t/a-video-game-about-mechanical-keyboard/24153",
+      "img": "https://www.keebtalk.com/uploads/db8059/optimized/3X/e/a/ea62684c2e9f4bd138a9544a7bfa4fd8c4273db6_2_690x386.jpeg",
+      "sum": "玩家开发机械键盘组装模拟器游戏，还原客制化拼装与调音体验。",
+      "lead": [
+        "Hi everyone! I’ve been working on a game called Mechanical Keyboard Building Simulator.",
+        "The goal is to recreate the mechanical keyboard hobby in video game form: building keyboards, swapping switches and keycaps, experimenting with layouts, customizing designs and eventually simulating different sou"
+      ],
+      "take": "键圈文化破圈延伸至游戏领域，虚拟组装体验或可反哺实体产品营销。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "It is actually very red under sunlight.",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uivo6j/it_is_actually_very_red_under_sunlight/",
+      "img": "https://preview.redd.it/sutko4bpp8ah1.jpg?width=140&height=105&auto=webp&s=ed2c4783643d5ec06ad12724adfb1749f25df6c7",
+      "sum": "玩家展示Domikey Ruby键帽实拍，阳光下色彩鲜艳，搭配Preonic V3。",
+      "lead": [
+        "Took me some time to think whether I should get this keycaps set or not, since I already have KAP Generation.",
+        "But wow this one is such bright red, definitely eye catching and exactly what I wanted for office. Preonic V3 Domikey Ruby HMX Taro"
+      ],
+      "take": "键帽实拍色彩表现是玩家决策关键，办公场景的亮眼需求值得关注。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Neo60 Core",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uipq2w/neo60_core/",
+      "img": "https://preview.redd.it/petlngieh7ah1.jpg?width=140&height=101&auto=webp&s=e7a907a5dab09a09fc52df17c9a8f1c0e0dc0827",
+      "sum": "玩家展示Neo60 Core客制化键盘，搭载碳纤维板与GMK Norse键帽。",
+      "lead": [
+        "Neo60 Core - Teal CF Plate HMX Xinhais 45g GMK Norse Rama Awaken Artisan"
+      ],
+      "take": "碳纤维板与Artisan键帽的搭配，反映了高端客制化市场的审美偏好。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "LINWORKS DOL-TOY 40 (concept)",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uiaab6/linworks_doltoy_40_concept/",
+      "img": "https://preview.redd.it/pn6wgomzj3ah1.png?width=640&crop=smart&auto=webp&s=5efd62f413aa1b2108269a98ed15c8e81efddd4b",
+      "sum": "玩家自制LINWORKS DOL-TOY 40新配色3D渲染概念图。",
+      "lead": [
+        "LINWORKS DOL-TOY 40键盘真实存在，但该配色并非量产。",
+        "作者声明这仅为个人创作的3D渲染概念图，避免误解。"
+      ],
+      "take": "社区渲染图常引领配色风潮，品牌可关注玩家自创配色以捕捉审美趋势。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Keycult No. 2/60 and Setup Sunday ☕️☀️",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ui7fu2/keycult_no_260_and_setup_sunday/",
+      "img": "https://preview.redd.it/dpeo1e2gz2ah1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=3b54b9048ad914a8c7046986ad6cbdab9a8864da",
+      "sum": "玩家直播组装Keycult No. 2/60，盛赞其声音与做工。",
+      "lead": [
+        "玩家近期在Twitch直播了Keycult No. 2/60的组装过程。",
+        "体验后认为其声音和表面处理极佳，无愧于高评价标准。"
+      ],
+      "take": "顶级客制化键盘的声学表现与做工仍是玩家核心追求与溢价支撑。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Evoworks Evo80 x Noctua",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uhtntu/evoworks_evo80_x_noctua/",
+      "img": "https://preview.redd.it/6agqhc0120ah1.jpg?width=140&height=140&auto=webp&s=9c11b00d05e58dea4fc0507e626f8b6b60924f8c",
+      "sum": "Evoworks Evo80搭配Noctua主题键帽，色彩还原获赞。",
+      "lead": [
+        "玩家使用Evoworks Evo80键盘搭配Keygeek Neo Oat轴体。",
+        "配以Drop+MiTo MT3 Noctua键帽，完美解决了此前的配色违和感。"
+      ],
+      "take": "联名键帽与主机配色统一是玩家痛点，整机色彩协调方案具市场潜力。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "KeebTalk",
+      "title": "[GB] Artisan keycaps - Dragon Balls - Cosmos",
+      "url": "https://www.keebtalk.com/t/gb-artisan-keycaps-dragon-balls-cosmos/24145",
+      "img": "https://www.keebtalk.com/uploads/db8059/optimized/3X/5/c/5c959a087b92fe892b4282eb6b96a84934d76b8e_2_500x500.jpeg",
+      "sum": "宇宙龙珠主题客制化键帽Group Buy开启",
+      "lead": [
+        "Hello everyone, Legend says the seven Dragon Balls are scattered across the endless universe, each carrying a mysterious energy from ancient times.",
+        "This artisan keycap captures a small fragment of that cosmic journey, where a glowing Dragon Ball rests among the stars and unknown worlds. Handcrafted"
+      ],
+      "take": "客制化键帽IP化与精细工艺结合仍是玩家社区的核心付费热点。"
+    }
+  ]
+}
