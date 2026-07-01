@@ -4841,3 +4841,264 @@ OpenAI宣布通过Appia基金会帮助建立高级AI的共享标准。
 ## 趋势一句话
 
 今日共 29 条,覆盖 7 个分类。
+
+---
+
+# AI / Agent 领域新闻摘要 — 2026-07-01
+
+## 大模型
+
+**1. New attack provides one more reason why AI browsers are a bad idea**
+AI浏览器遭新攻击，暴露操作安全风险
+AI浏览器承诺通过单一提示词完成订餐、发邮件等复杂操作，但模糊了浏览与执行敏感操作的界限。
+近期出现的新型攻击暴露了此类安全隐患，目前大模型开发者仅靠构建防护栏（guardrails，即限制某些请求的安全机制）来应对。
+**PM 信号:** PM在设计AI Agent类产品时，需在自动化体验与操作权限间寻找平衡，安全护栏是核心考量。
+来源:[Ars Technica](https://arstechnica.com/security/2026/06/ai-browsers-can-be-lulled-into-a-dream-world-where-guardrails-no-longer-apply/)
+
+**2. Google's new Nano Banana 2 Lite image model is its fastest and cheapest yet**
+谷歌发布最快最廉图像模型Nano Banana 2 Lite
+谷歌DeepMind发布全新图像生成模型Nano Banana 2 Lite（属Gemini 3.1家族，正式名为Gemini 3.1 Flash Lite Image）。
+该模型主打质量与速度的最佳平衡，生成图像耗时仅为大型模型的一小部分，且成本更低，现已接入谷歌生态。
+**PM 信号:** 轻量化图像模型落地加速，PM可关注低延迟、低成本的AI生图场景（如端侧实时生成）。
+来源:[Ars Technica](https://arstechnica.com/ai/2026/06/googles-new-nano-banana-2-lite-image-model-is-its-fastest-and-cheapest-yet/)
+
+**3. Introducing GeneBench-Pro**
+OpenAI发布基因组学AI基准GeneBench-Pro
+OpenAI推出全新基准测试GeneBench-Pro，专门用于评估AI在基因组学、生物学及科研领域的表现。
+该基准使用复杂的真实世界数据集，有助于更客观地衡量大模型在垂直科学领域的实际能力。
+**PM 信号:** 垂直领域专业基准不断涌现，PM做AI+科学产品时需参考此类专业评测来验证模型能力边界。
+来源:[OpenAI](https://openai.com/index/introducing-genebench-pro)
+
+## Agent·智能体
+
+**4. Anthropic Accuses Alibaba of ‘Illicitly’ Accessing Its AI Models - Bloomberg.com**
+Anthropic指控阿里利用数千虚假账号违规访问Claude模型
+Anthropic指控阿里巴巴通过数千个欺诈性账户“非法”访问其Claude大模型。
+此举破坏了Anthropic将其产品排除在中国市场之外的决策。Anthropic声称，该行动与阿里通义千问(Qwen)AI实验室的运营人员有关。
+**PM 信号:** 大模型出海面临严峻的地缘合规与数据隔离风险，产品需前置考虑防爬虫与账号滥用机制。
+来源:[bloomberg.com](https://www.bloomberg.com/news/articles/2026-06-24/anthropic-accuses-alibaba-of-illicitly-accessing-its-ai-models)
+
+## 产品与工具
+
+**5. Anthropic’s long-sidelined Fable 5 is greenlit to return**
+Anthropic高级模型Fable 5与Mythos 5出口禁令解除，将逐步恢复访问
+经过数周谈判，美国商务部解除了对Anthropic高级模型Claude Fable 5和Mythos 5的出口管制。
+Anthropic计划从周三起在全球Claude平台逐步恢复访问权限，并将在AWS、Google Cloud和Microsoft Foundry等云平台重新上线，但具体时间未定。
+**PM 信号:** 出口管制的松绑意味着海外用户和跨国业务对顶级大模型的访问限制暂缓，PM在做全球化AI产品规划时可重新评估Claude高级模型的接入可行性。
+来源:[The Verge](https://www.theverge.com/ai-artificial-intelligence/958964/anthropic-claude-fable-5-is-back)
+
+**6. Google’s NotebookLM can sum up your research in a TikTok-style clip**
+Google NotebookLM新增TikTok风格AI短视频生成功能
+Google的NotebookLM推出新功能，可根据用户上传的资料生成60秒的TikTok风格竖屏AI短视频。
+该功能目前向Google AI Ultra和Pro订阅用户推出，通过配搭剪纸风格AI插图和旁白来总结研究内容，进一步丰富了笔记内容的交互形式。
+**PM 信号:** 将枯燥的研究资料转化为易消费的短视频形态，是AI工具降低内容消费门槛、迎合年轻化趋势的典型产品思路，值得知识管理类产品借鉴。
+来源:[The Verge](https://www.theverge.com/tech/959778/google-notebooklm-ai-clips)
+
+**7. Netflix is using an AI-generated Gene Wilder voice in its Willy Wonka reality show**
+Netflix真人秀使用ElevenLabs生成已故演员Gene Wilder的AI声音
+Netflix在即将推出的威利·旺卡真人秀中，使用了AI生成的已故演员Gene Wilder的配音。
+该AI配音由ElevenLabs制作，并获得了Wilder家属的授权许可，是AI配音在影视制作中的又一商业化落地。
+**PM 信号:** AI声音克隆在获得合法授权的前提下正加速渗透影视制作流程，产品经理在涉及数字人/声音复刻业务时，需高度重视版权合规与伦理授权机制。
+来源:[The Verge](https://www.theverge.com/streaming/959684/netflix-wonka-golden-ticket-gene-wilder)
+
+**8. Libby will filter out AI content, kind of**
+电子书借阅应用Libby将推出AI内容过滤功能
+知名电子书借阅应用Libby的新任CEO表示，面对AI生成内容的巨大冲击，平台正准备引入AI内容过滤机制。
+随着数字出版行业被AI内容淹没，Libby试图通过过滤功能帮助用户筛选内容，但具体过滤标准仍待观察。
+**PM 信号:** AI生成内容的泛滥正在倒逼内容平台增加“反AI”或“筛选”功能，内容消费类产品需提前规划内容信噪比的控制策略。
+来源:[The Verge](https://www.theverge.com/column/959433/libby-ai-filter)
+
+**9. Agriculture is ready for AI, but its data isn’t**
+MIT报告：农业AI潜力巨大，但数据基础尚未就绪
+研究表明，AI预测模型可将农作物产量提升26%，减少41%的用水和33%的化学品使用。
+然而，行业领导者警告，在缺乏高质量数据基础的情况下盲目投资AI可能存在风险，AI供应商往往回避了数据治理的难题。
+**PM 信号:** 垂直行业落地AI时，“数据先行”比“模型先行”更关键；做产业互联网AI产品的PM需优先解决数据采集与治理的痛点，而非单纯追求模型能力。
+来源:[MIT Tech Review](https://www.technologyreview.com/2026/06/30/1139513/agriculture-is-ready-for-ai-but-its-data-isnt/)
+
+**10. The DeepMind trio who built a poker AI are now making money for quant hedge funds**
+前DeepMind团队创办的AI量化实验室EquiLibre估值超5亿美元
+由三位前DeepMind研究员创立的AI实验室EquiLibre Technologies目前估值已超5亿美元。
+该团队曾开发扑克AI，现正将其AI技术应用于量化对冲基金的交易策略中。
+**PM 信号:** 顶级AI人才从通用大模型向金融量化等高变现领域流动，说明AI在垂直高利润场景的商业化闭环更容易跑通。
+来源:[TechCrunch](https://techcrunch.com/2026/06/30/the-deepmind-trio-who-built-a-poker-ai-are-now-making-money-for-quant-hedge-funds/)
+
+**11. Acti puts AI agents directly into your smartphone keyboard**
+Acti推出内置AI代理的智能手机键盘，支持跨应用自然语言快捷指令
+初创公司Acti推出了一款适用于iOS和Android的智能手机键盘，将AI代理直接集成到输入法中。
+用户可以在不同应用中通过自然语言创建自定义的AI快捷指令，让键盘成为跨应用的AI助手入口。
+**PM 信号:** 将AI能力下沉至系统级输入法，是抢占移动端流量入口的巧妙策略；这提示PM思考如何将AI功能无缝嵌入用户现有的高频交互路径中。
+来源:[TechCrunch](https://techcrunch.com/2026/06/30/acti-puts-ai-agents-directly-into-your-smartphone-keyboard/)
+
+**12. Anthropic’s Claude Science bets on workflow, not a new model, to win over scientists**
+Anthropic推出Claude Science，为科研人员打造一站式工作台
+Anthropic发布了Claude Science，这是一个专为科学家设计的计算研究工作台。
+它将数据库、流水线和工具整合在同一环境中，旨在通过优化工作流而非单纯依赖新模型来吸引科研用户。
+**PM 信号:** 面对特定职业群体，提供开箱即用的工作流整合比单纯提供模型API更有粘性；做垂直场景AI产品时，应从“提供能力”转向“解决完整工作流”。
+来源:[TechCrunch](https://techcrunch.com/2026/06/30/anthropics-claude-science-bets-on-workflow-not-a-new-model-to-win-over-scientists/)
+
+**13. X now offers an MCP server to make its platform easier for AI tools to use**
+X平台推出托管MCP服务器，便于AI工具接入
+X（原Twitter）推出了托管的MCP（模型上下文协议）服务器，方便开发者将AI应用与X的API连接。
+这一举措降低了AI应用读取和交互X平台数据的开发门槛，进一步拥抱AI生态。
+**PM 信号:** 社交平台开放MCP接口，意味着AI Agent获取实时社交数据的链路被极大缩短，做信息聚合或社交聆听类AI应用的PM应迅速跟进适配。
+来源:[TechCrunch](https://techcrunch.com/2026/06/30/x-now-offers-an-mcp-server-to-make-its-platform-easier-for-ai-tools-to-use/)
+
+**14. Lumo, Proton’s privacy-focused AI chatbot, gets an upgrade**
+Proton发布主打隐私的AI聊天机器人Lumo 2.0
+Proton推出了其主打隐私保护的AI聊天机器人Lumo的2.0版本。
+新版本为用户提供了更广泛的功能和能力升级，继续强化在隐私安全赛道上的AI产品定位。
+**PM 信号:** 隐私保护正在成为AI产品差异化竞争的重要切入点，针对政企或高敏感用户群体的AI产品，需将数据隔离与不用于模型训练作为核心卖点。
+来源:[TechCrunch](https://techcrunch.com/2026/06/30/lumo-protons-privacy-focused-ai-chatbot-gets-an-upgrade/)
+
+**15. PolicyGuard: From Organizational Policies to Neuro-SymbolicCompliance Review Engines**
+arXiv论文：PolicyGuard神经符号框架用于合规审查
+研究提出了PolicyGuard，一个用于政策合规审查的神经符号框架（结合神经网络与符号逻辑的AI系统）。
+该框架将组织政策转换为显式逻辑，解决了大模型端到端提示词在合规决策中难以检查、更新和测试的问题。
+**PM 信号:** 在金融、法务等高合规要求场景中，纯大模型的黑盒推理存在风险；引入符号逻辑提升可解释性与可控性，是AI合规审查类产品的必经之路。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.32004v1)
+
+## 开源发布
+
+**16. ScarfBench: Benchmarking AI Agents for Enterprise Java Framework Migration**
+ScarfBench发布：专测企业Java框架迁移的AI智能体基准
+ScarfBench是一个全新基准，专门用于评估AI智能体在企业级Java框架迁移任务中的表现。
+该基准填补了传统代码生成评估与真实企业级代码迁移需求之间的空白，测试环境更贴近实际业务。
+它为衡量AI在复杂遗留系统重构中的能力提供了标准化工具。
+**PM 信号:** PM可关注此基准，评估引入AI Agent辅助企业级代码重构或系统迁移的可行性与真实效果。
+来源:[Hugging Face](https://huggingface.co/blog/ibm-research/scarfbench)
+
+**17. Featuring Every Eval Ever Results on Hugging Face Model Pages**
+Hugging Face模型页新增全维度评测结果展示
+Hugging Face宣布在模型页面集成“Every Eval Ever”评测结果，一站式展示模型在各基准上的表现。
+用户无需跳转即可查看模型在各类主流评测集上的详细得分，大幅降低模型选型的信息检索成本。
+此举提升了平台作为模型发现与评估枢纽的体验。
+**PM 信号:** 模型选型成本进一步降低，PM在做AI应用底层模型选择时，可更高效地横向对比不同模型的真实能力。
+来源:[Hugging Face](https://huggingface.co/blog/eee-community-evals)
+
+**18. PP-OCRv6 on Hugging Face: 50-Language OCR from 1.5M to 34.5M Parameters**
+PP-OCRv6开源：支持50种语言，参数1.5M至34.5M
+百度飞桨发布PP-OCRv6模型并在Hugging Face开源，提供从1.5M到34.5M不同参数量的版本。
+该模型支持50种语言的文字识别，兼顾了轻量级端侧部署与高精度服务端部署的不同需求。
+这为多语言文档处理、跨境业务等场景提供了更灵活的OCR（光学字符识别）基础设施。
+**PM 信号:** 多语言OCR能力再次下探端侧，PM可评估在出海应用或移动端文档扫描产品中替换现有OCR方案以降本增效。
+来源:[Hugging Face](https://huggingface.co/blog/PaddlePaddle/pp-ocrv6)
+
+## 融资与商业
+
+**19. Anthropic launches Claude Sonnet 5 at a steep discount to its top model as the company races toward a blockbuster IPO - VentureBeat**
+Anthropic发布Claude Sonnet 5，以中端价格提供近旗舰性能，冲刺IPO。
+Anthropic发布新模型Claude Sonnet 5，主打以中端价格提供接近旗舰的性能。
+此举旨在让注重成本的企业开发者获得强大的智能体（Agentic，即能自主执行任务的AI）能力，同时也为Anthropic即将到来的重磅IPO铺路。
+**PM 信号:** 中端模型性价比战加剧，PM在做AI应用选型时可关注Sonnet 5以平衡成本与Agent能力。
+来源:[venturebeat.com](https://venturebeat.com/technology/anthropic-launches-claude-sonnet-5-at-a-steep-discount-to-its-top-model-as-the-company-races-toward-a-blockbuster-ipo)
+
+**20. Nvidia competitor Etched hits $5B valuation, $1B in sales for AI chip**
+AI芯片创企Etched估值达50亿美元，其推理芯片已签10亿美元合同。
+英伟达竞争对手Etched估值达到50亿美元，其AI推理芯片系统已录得10亿美元的合同销售额。
+这表明市场对专用推理芯片（Inference chip，用于运行已训练好的AI模型）的需求强劲，英伟达在AI芯片市场的垄断地位正面临挑战。
+**PM 信号:** 专用推理芯片市场潜力巨大，PM需关注算力供应链多元化趋势，推理成本有望进一步下降。
+来源:[TechCrunch](https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/)
+
+**21. When LLMs Read Tables Carelessly: Measuring and Reducing Data Referencing Errors**
+arXiv论文：系统评估并减少大模型处理表格时的数据引用错误。
+大模型在处理表格任务时，常出现数据引用错误（DREs，即错误引用或遗漏表格数值）。
+该研究首次对大模型在表格任务中的数据引用错误进行了系统性评估，并提出了减少此类错误的方法。
+**PM 信号:** 涉及表格解析的AI产品（如财务、数据分析）需警惕幻觉，可参考该研究优化中间推理步骤的可靠性。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.32029v1)
+
+**22. FLORA: A deep learning approach to predict forest attributes from heterogeneous LiDAR data**
+arXiv论文：提出FLORA深度学习方法，利用异构LiDAR数据预测森林属性。
+国家森林资源监测需要精确的森林属性预测，而机载激光雷达（LiDAR，一种遥感技术）是相关性最强的辅助变量。
+该研究提出FLORA深度学习方法，解决了异构条件下LiDAR数据预测森林属性的全覆盖难题。
+**PM 信号:** AI+遥感垂直应用持续深化，做智慧农业/林业等B端产品的PM可关注此类多模态深度学习方案。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.32023v1)
+
+**23. DigitalCoach: Communication and Grounding Gaps in Human and Agentic Computer Use Coaching**
+arXiv论文：发布DigitalCoach数据集，评估AI教人类使用电脑的能力。
+研究引入了DigitalCoach多模态数据集，包含72个人类专家与新手的电脑使用辅导对话记录。
+该研究评估了当前最先进模型教人类使用电脑的能力，发现模型在沟通和共识建立（Grounding，即确保双方对信息理解一致）上仍存在差距。
+**PM 信号:** AI作为软件教学助手的产品化落地仍有挑战，PM在设计“AI教练”类功能时需重点解决人机沟通对齐问题。
+来源:[arXiv cs.CL](https://arxiv.org/abs/2606.31980v1)
+
+**24. MECoBench: A Systematic Study of Multimodal Agent Collaboration in Embodied Environments**
+arXiv论文：提出MECoBench基准，研究具身环境中多模态Agent协作能力。
+当前多模态大模型作为具身智能体（Embodied Agent，能在物理或虚拟环境中行动的AI）潜力巨大，但其在视觉环境中的协作能力尚未被充分探索。
+研究提出MECoBench基准，涵盖多种真实任务、协作结构和模式，发现协作通常能带来更好的表现。
+**PM 信号:** 多Agent协作在具身智能中初见成效，做机器人或自动化流程产品的PM可探索多智能体协同架构。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.31966v1)
+
+**25. 告别硬件出海上一个十年，前安克CMO做了款AI时代的Memory产品｜硬氪专访**
+前安克CMO创业做AI Memory硬件Memoket，探索AI原生硬件形态。
+前安克CMO王时远创立穗升科技，推出AI Memory硬件产品Memoket并在海外开启预售。
+他认为粗放式硬件出海ROI已越来越低，而AI原生硬件（即从底层围绕AI能力设计的硬件）的形态尚未被定义，这是创业公司的珍贵窗口。
+**PM 信号:** AI硬件创业需跳出传统众筹铺货逻辑，PM应从“AI原生体验”出发定义产品，而非简单做硬件加法。
+来源:[36氪](https://36kr.com/p/3867992509125636?f=rss)
+
+**26. 赤子城独家投资：4人创业团队「MobAI」，推出AI互动平台「Lunaverse Stories」 | 36氪首发**
+AI互动叙事平台MobAI获赤子城数百万元天使轮融资。
+AI创业公司MobAI完成数百万元天使轮融资，由赤子城科技独家投资。
+其产品Lunaverse Stories从早期的Prompt驱动互动游戏转型而来，致力于解决长上下文交互体验累的问题。
+**PM 信号:** AI互动叙事产品需降低用户输入门槛，PM在设计AI UGC产品时应注重交互减负与体验流畅度。
+来源:[36氪](https://36kr.com/p/3875622047805447?f=rss)
+
+**27. Chamath Palihapitiya raises $135M Series A for his AI coding startup, takes CEO role - TechCrunch**
+AI编程创企8090 Labs获1.35亿美元A轮融资，Salesforce领投。
+知名VC Chamath Palihapitiya创办的AI编程初创公司8090 Labs完成1.35亿美元A轮融资。
+本轮融资由Salesforce Ventures领投，Chamath将亲自担任CEO，显示了对AI编程赛道的强烈看好。
+**PM 信号:** AI编程赛道持续吸金，大额融资频现，PM需关注代码辅助工具向企业级深度集成演进的趋势。
+来源:[techcrunch.com](https://techcrunch.com/2026/06/29/chamath-palihapitiya-raises-135m-series-a-for-his-ai-coding-startup-takes-ceo-role/)
+
+**28. 松下计划进一步拓展人工智能业务，在未来两个财年投资约5000亿日元**
+松下将在未来两财年投资5000亿日元拓展AI基础设施业务。
+松下宣布将在未来两个财年投资约5000亿日元用于拓展人工智能基础设施相关业务。
+同时，公司将裁员规模扩大至1.2万人以节省成本，目标在未来三年实现1.4万亿日元的AI基础设施销售额。
+**PM 信号:** 传统硬件巨头加速向AI基础设施转型，PM可关注传统供应链与AI算力结合带来的新B端合作机会。
+来源:[36氪](https://36kr.com/newsflashes/3876636066689287?f=rss)
+
+**29. 应对AI时代“用电荒”，韩国拟研究缩短核电站建设周期**
+为应对AI用电需求，韩国拟研究缩短核电站建设周期。
+AI发展带来庞大用电需求，韩国政府准备研究缩短核电站建设周期以加快电力供应。
+核能因其全天候稳定供电和低碳排放特性，正重新受到AI热潮下企业和政府的重视。
+**PM 信号:** AI算力瓶颈正向上游能源端传导，PM在做大规模AI部署规划时，需将能源成本与可持续性纳入考量。
+来源:[36氪](https://36kr.com/newsflashes/3876626915406082?f=rss)
+
+**30. Netris raises $15M Series A from a16z to help AI neoclouds go live faster - TechCrunch**
+AI云基础设施创企Netris获a16z 1500万美元A轮融资。
+Netris完成1500万美元A轮融资，由a16z领投，旨在帮助AI新云（Neoclouds，新兴的专注GPU的云服务商）更快上线。
+该公司提供网络交换机软件及平台，解决数据中心GPU、网络和存储的配置与运行难题。
+**PM 信号:** AI算力需求催生“新云”基础设施服务商，PM可关注底层算力调度与网络配置优化工具的生态机会。
+来源:[techcrunch.com](https://techcrunch.com/2026/06/25/netris-raises-15m-series-a-from-a16z-to-help-ai-neoclouds-go-live-faster/)
+
+## 政策与监管
+
+**31. Trump's plan to redesign every .gov website leads to AI-designed horrors**
+特朗普AI重设政府网站计划遇挫
+特朗普去年通过行政令成立国家设计工作室（NDS），旨在三年内用AI重设2.7万个.gov网站。
+但该“美国设计”计划目前进展不顺，AI生成的网页设计出现了诸多问题与乱象。
+**PM 信号:** 政府主导的大规模AI落地项目面临质量失控风险，产品经理在做AI自动化生成时需警惕缺乏人工审核带来的体验灾难。
+来源:[Ars Technica](https://arstechnica.com/tech-policy/2026/06/trumps-plan-to-redesign-every-gov-website-leads-to-ai-designed-horrors/)
+
+**32. Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs**
+新研究用元认知反馈强化学习改善LLM不确定性表达
+当前大语言模型（LLM）常以高置信度产生幻觉，无法识别知识边界，掩盖内部不确定性。
+该论文提出利用元认知反馈（即模型对自身认知过程的监控与调节能力）进行强化学习，促使LLM更忠实地表达不确定性。
+**PM 信号:** 提升模型“知之为知之”的能力是增强AI产品可信度的关键，该研究为降低AI幻觉率、提升高容错场景产品体验提供了新思路。
+来源:[arXiv cs.AI](https://arxiv.org/abs/2606.32032v1)
+
+**33. NYT slams Microsoft for building copyright-infringing supercomputer for OpenAI**
+纽约时报指控微软为OpenAI建侵权超算
+纽约时报向法院申请修改对OpenAI和微软的版权诉讼，指控微软积极鼓励OpenAI窃取其作品。
+NYT称微软专门为OpenAI建造了全球顶尖的定制超算系统，且最高法院近期在Cox案中的裁决支持了此类侵权指控。
+**PM 信号:** 版权是生成式AI商业化最大的合规雷区，产品经理在训练和微调模型时必须建立严格的数据溯源与授权机制，避免连带侵权风险。
+来源:[Ars Technica](https://arstechnica.com/tech-policy/2026/06/microsoft-built-supercomputer-to-help-openai-infringe-copyrights-nyt-alleged/)
+
+**34. How Anthropic may have talked itself into an AI export ban**
+Anthropic频繁预警AI风险或致其遭出口禁令
+据FT分析，Anthropic今年提及风险、监管或限制的频率远超OpenAI，每千字中就有5个词涉及。
+批评者指责其过度强调AI危险，反而促成了美国对其最新模型实施外国访问禁令。
+**PM 信号:** 企业的安全公关策略可能引发反噬，导致自身产品面临更严苛的监管与出海限制；做AI产品需在安全合规与商业拓展间寻找平衡。
+来源:[Ars Technica](https://arstechnica.com/ai/2026/06/how-anthropic-may-have-talked-itself-into-an-ai-export-ban/)
+
+## 趋势一句话
+
+今日共 34 条,覆盖 6 个分类。
