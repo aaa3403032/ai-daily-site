@@ -1,0 +1,353 @@
+{
+  "date": "2026-07-03",
+  "categories": [
+    {
+      "code": "market",
+      "label": "市场与品牌",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "hardware",
+      "label": "新品与硬件",
+      "color": "#d6932b"
+    },
+    {
+      "code": "tech",
+      "label": "技术趋势",
+      "color": "#7a52cc"
+    },
+    {
+      "code": "community",
+      "label": "社区与玩家",
+      "color": "#0a8f6a"
+    }
+  ],
+  "items": [
+    {
+      "hero": true,
+      "category": "market",
+      "src": "gamespace.com",
+      "title": "HYTE Partners With ATLUS To Create Persona 30th Anniversary Lineup - GameSpace.com",
+      "url": "https://gamespace.com/all-articles/news/hyte-partners-with-atlus-to-create-persona-30th-anniversary-lineup/",
+      "img": "https://gamespace.com/wp-content/uploads/2026/06/hyte-p30.jpg",
+      "sum": "HYTE与ATLUS合作推出女神异闻录30周年桌面外设系列",
+      "lead": [
+        "HYTE Partners With ATLUS To Create Persona 30th Anniversary Lineup.",
+        "Persona’s 30th anniversary is getting the kind of celebration that makes sense for 2026, a set of desk accessories aimed squarely at fans who want their battlestation to look as invested in the series as they are. ATLUS is teaming"
+      ],
+      "take": "游戏IP联名桌面外设是吸引粉丝群体、提升客单价的有效路径。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "r/MechanicalKeyboards",
+      "title": "$100 FB Marketplace Haul",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ukpmjv/100_fb_marketplace_haul/",
+      "img": "https://preview.redd.it/q3h7hsgi2nah1.jpeg?width=640&crop=smart&auto=webp&s=d1af310fbc5088a2a4f340d7473b39212b401dce",
+      "sum": "玩家分享百美元二手键盘市场淘货经历",
+      "lead": [
+        "Reddit玩家分享在Facebook Marketplace花费100美元的键盘收获。",
+        "反映了二手交易市场的活跃度。"
+      ],
+      "take": "二手交易平台是消化存量键盘与吸引预算型玩家的重要渠道。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "gizmodo.com",
+      "title": "Simon Says… Buy This OpenAI Mechanical Keyboard Thingy - Gizmodo",
+      "url": "https://gizmodo.com/simon-says-buy-this-openai-mechanical-keyboard-thingy-2000779283",
+      "img": "",
+      "sum": "OpenAI与Work Louder合作推机械键盘，7月15日揭晓。",
+      "lead": [
+        "It's a collaboration between OpenAI and Work Louder.",
+        "OpenAI and the mechanical keyboard company Work Louder are up to something on July 15, according to a vaguepost from the OpenAI Developers X account:. So it’s only natural that OpenAI would release a thingamabob that turns some of the common Codex"
+      ],
+      "take": "AI大厂入局外设联名，键盘或成AI端侧落地新载体。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Hipyo Tech",
+      "title": "Ghost in the shell keyboard!?! 😮 #ghostintheshell #customkeyboard #mechanicalkeyboard",
+      "url": "https://www.youtube.com/shorts/RvTCaaP3H9c",
+      "img": "https://www.youtube.com/v/RvTCaaP3H9c?version=3",
+      "sum": "Hipyo Tech展示攻壳机动队主题客制化机械键盘",
+      "lead": [
+        "Hipyo Tech发布视频展示攻壳机动队主题键盘。",
+        "带有客制化与机械键盘标签，引发社区关注。"
+      ],
+      "take": "经典赛博朋克动漫IP主题定制键盘在海外社区极具话题度。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Alexotos",
+      "title": "🔴  Tofu60 REDUX v2 FULL STREAM!!!!",
+      "url": "https://www.youtube.com/watch?v=8AFwwsI_psI",
+      "img": "https://www.youtube.com/v/8AFwwsI_psI?version=3",
+      "sum": "KBDfans Tofu60 REDUX v2套件直播展示。",
+      "lead": [
+        "🔴  Tofu60 REDUX v2 FULL STREAM!!!!"
+      ],
+      "take": "经典外壳迭代升级，60%配列客制化套件热度不减。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Alexotos",
+      "title": "A Nod to Pokémon Blue | The Blaine V2: SE",
+      "url": "https://www.youtube.com/watch?v=7fEWZmBn8fI",
+      "img": "https://www.youtube.com/v/7fEWZmBn8fI?version=3",
+      "sum": "Blaine V2: SE套件致敬宝可梦蓝，主打主题客制化。",
+      "lead": [
+        "A Nod to Pokémon Blue | The Blaine V2: SE"
+      ],
+      "take": "强IP主题配色是提升客制化套件溢价与情感共鸣的利器。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Hipyo Tech",
+      "title": "I didn't realize this was a mouse.... #viral #tech",
+      "url": "https://www.youtube.com/shorts/j8y_bLiLnOs",
+      "img": "https://www.youtube.com/v/j8y_bLiLnOs?version=3",
+      "sum": "Hipyo Tech分享一款造型奇特易被误认的鼠标",
+      "lead": [
+        "I didn't realize this was a mouse.... #viral #tech"
+      ],
+      "take": "外设造型创新易获病毒式传播，设计差异化仍是流量密码。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "r/MechanicalKeyboards",
+      "title": "I found this in the Backrooms",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ujrp7c/i_found_this_in_the_backrooms/",
+      "img": "https://preview.redd.it/gpharx8eofah1.jpg?width=140&height=91&auto=webp&s=0e96827576b9895c765e7cc2d0f8798b61419b05",
+      "sum": "Backrooms主题套装发布，采用美国产PBT与Moon V2轴",
+      "lead": [
+        "Hi Friends! I'm excited to share our new Backrooms Collection : a keyboard, keycap set, and desk mat themed around the endless liminal yellow rooms of the backrooms.",
+        "Our US-made PBT is printed in New Jersey, and every board is assembled and tested in-house. Keyboard: Moon V2 switches (with Krytox 20"
+      ],
+      "take": "互联网迷因主题与本土化制造结合，是小众客制化破圈的有效路径。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "gamespace.com",
+      "title": "8BitDo Celebrates N64’s 30th With Clear Blue Retro Keyboard And Ultimate 2 Controller - GameSpace.com",
+      "url": "https://gamespace.com/all-articles/news/8bitdo-celebrates-n64s-30th-with-clear-blue-retro-keyboard-and-ultimate-2-controller/",
+      "img": "https://gamespace.com/wp-content/uploads/2026/06/8bitdo-nintendo-retro.jpg",
+      "sum": "8BitDo推N64三十周年透明蓝复古键盘及手柄。",
+      "lead": [
+        "8BitDo Celebrates N64’s 30th With Clear Blue Retro Keyboard And Ultimate 2 Controller.",
+        "If you grew up staring through translucent plastic at a tangle of N64 circuit boards, 8BitDo has a very specific nostalgia hit lined up for you. To mark the Nintendo 64’s 30th anniversary, the company is rolling"
+      ],
+      "take": "复古情怀与透明外壳仍是外设破圈吸睛的有效设计路径。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Geekhack",
+      "title": "Re: [IC] GMK CYL Kitty | New Novelties, Updated Base Kit, Vendor Update",
+      "url": "https://geekhack.org/index.php?topic=124766.msg3217718#msg3217718",
+      "img": "",
+      "sum": "GMK CYL Kitty键帽IC更新双色注塑个性键",
+      "lead": [
+        "Is there an updated photo with the new double shot novelties? Very cute btw!"
+      ],
+      "take": "双色注塑个性键的加入是提升键帽IC热度与玩家购买欲的有效手段。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Geekhack",
+      "title": "Re: Selfone cases.",
+      "url": "https://geekhack.org/index.php?topic=126868.msg3217717#msg3217717",
+      "img": "",
+      "sum": "Geekhack社区讨论Selfone键盘外壳",
+      "lead": [
+        "Selfone cases."
+      ],
+      "take": "经典外壳设计的社区反馈对后续迭代或新入局者具有参考价值。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "pcgamer.com",
+      "title": "Logitech's new keyboard struggles to back up its clacky bark with bite - pcgamer.com",
+      "url": "https://www.pcgamer.com/hardware/gaming-keyboards/logitech-g316-x-tactile-gaming-keyboard-review/",
+      "img": "https://cdn.mos.cms.futurecdn.net/ggaGW6h7dZ2MJfcYJDpjwT-2560-80.jpg",
+      "sum": "PCGamer评罗技新键盘：声音响亮但体验欠佳",
+      "lead": [
+        "News and reviews of the latest PC hardware. We will send a confirmation and sign you up to our newsletter to keep you updated on all your gaming news.",
+        "By submitting your information, you confirm you are aged 16 or over, have read our Privacy Policy and agree to the Terms & Conditions. My experience"
+      ],
+      "take": "厂商需警惕“重声音调校、轻核心体验”的倾向，玩家对综合体验要求日益严苛。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "cnet.com",
+      "title": "The Clicks Communicator Phone With Blackberry Roots Demoed in New Video - CNET",
+      "url": "https://www.cnet.com/tech/mobile/clicks-communicator-blackberry-phone-video-demo/",
+      "img": "https://www.cnet.com/a/img/resize/fc85050ad9a74749fa869d56b4f14b8842a59708/hub/2026/06/30/d9eb1de9-da8f-43ff-be59-fdccf9e36a4f/screenshot-2026-06-30-at-1-23-40pm-1.jpg?auto=webp&amp;fit=crop&amp;height=675&amp;width=1200",
+      "sum": "Clicks展示黑莓风格实体键盘手机Communicator实机演示",
+      "lead": [
+        "Clicks Demoes Its BlackBerry-Like Smartphone in New Video, and I'm Thrilled.",
+        "A new video shows the $500 Clicks Communicator phone actually working. It offers a preview of all the typing and messaging that's to come. The Clicks Communicator is the phone I look forward to most in 2026. It'll be out"
+      ],
+      "take": "实体键盘手机回归，移动端打字体验仍是硬需求，外设厂商可关注移动端输入痛点。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "nbcnews.com",
+      "title": "Joanna Stern: The end of typing as we know it - NBC News",
+      "url": "https://www.nbcnews.com/tech/innovation/joanna-stern-end-typing-know-rcna352629",
+      "img": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-07/260701-stock-person-dictates-ch-1602-9bd89a.jpg",
+      "sum": "AI语音转写技术进步，或颠覆传统打字方式。",
+      "lead": [
+        "Morning Rundown: How the U.S. won despite World Cup adversity, Russia hammers Kyiv, and a sky-high influencer stunt in NYC. IE 11 is not supported. For an optimal experience visit our site on another browser.",
+        "It’s the end of typing as we know it. AI voice-transcription tech is getting better and e"
+      ],
+      "take": "语音输入威胁传统键盘，厂商需思考输入效率之外的体验价值。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Geekhack",
+      "title": "Re: [iC] GMK CYL ❖ Death Knight ❖",
+      "url": "https://geekhack.org/index.php?topic=126869.msg3217715#msg3217715",
+      "img": "https://cdn.geekhack.org/Smileys/solosmileys/smiley.gif",
+      "sum": "Geekhack社区玩家对GMK CYL Death Knight键帽表示期待",
+      "lead": [
+        "Re: [iC] GMK CYL ❖ Death Knight ❖",
+        "Very cool idea, looking forward to it"
+      ],
+      "take": "GMK CYL新高度键帽持续引发社区关注，新轮廓设计仍是玩家热议焦点。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "World Cup Desk",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ulounn/world_cup_desk/",
+      "img": "https://preview.redd.it/xqd0946epuah1.jpeg?width=640&crop=smart&auto=webp&s=509fe013b83424e847cd41b7f7717d19f5bbbd6c",
+      "sum": "世界杯主题桌面分享，玩家展示搭配并互动。",
+      "lead": [
+        "I‘m a fan of your game Japan! Hope we find ourselves in the opposite bracket next time 🇧🇷🇯🇵! submitted by /u/Sunshyni"
+      ],
+      "take": "体育赛事是激发桌面主题改造与社群互动的绝佳契机。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Marbled ceramic caps look crazyy",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ulhsvn/marbled_ceramic_caps_look_crazyy/",
+      "img": "https://preview.redd.it/kxjdlz5iftah1.jpeg?width=640&crop=smart&auto=webp&s=ed2d4df06737c790dc03c7b0d9bd293160e0097a",
+      "sum": "玩家展示大理石纹陶瓷键帽，搭配Keychron Q1等。",
+      "lead": [
+        "Keychron Q1 v2 Gateron box ink v2 Staebies Pom plate XVX marbled ceramic caps submitted by /u/bucketbrah247"
+      ],
+      "take": "陶瓷等新材质键帽持续吸引玩家，定制化材质仍是客制化卖点。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Alexotos",
+      "title": "🔴  Agar Micro Build - FULL STREAM",
+      "url": "https://www.youtube.com/watch?v=3ZseBdvTsow",
+      "img": "https://www.youtube.com/v/3ZseBdvTsow?version=3",
+      "sum": "Alexotos直播展示Agar Micro客制化键盘组装",
+      "lead": [
+        "Alexotos开启直播展示Agar Micro Build。",
+        "聚焦客制化键盘的组装过程与细节。"
+      ],
+      "take": "头部博主直播组装仍是吸引社区流量与互动的有效方式。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "KeebTalk",
+      "title": "Hi from a complete noob",
+      "url": "https://www.keebtalk.com/t/hi-from-a-complete-noob/24170",
+      "img": "https://www.keebtalk.com/images/emoji/apple/blush.png?v=15",
+      "sum": "KeebTalk新成员入坑自我介绍",
+      "lead": [
+        "KeebTalk论坛新用户Riley发帖自我介绍。",
+        "表示虽从小接触电脑，但仍是机械键盘新手。"
+      ],
+      "take": "老PC用户转化为客制化玩家是社区增量的重要来源。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "My Purple PC Agar with Atomic Purple Keycaps (build video & Sound test below)",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ukrzh2/my_purple_pc_agar_with_atomic_purple_keycaps/",
+      "img": "https://preview.redd.it/kzsg06urjnah1.jpg?width=140&height=78&auto=webp&s=3d623f112843465d6e6f92d313129c8d1c06c2bf",
+      "sum": "玩家分享紫色主题键盘组装及HMX Valerian轴试音",
+      "lead": [
+        "Reddit玩家展示紫色主题Agar键盘组装与试音。",
+        "使用HMX Valerian轴搭配Atomic Purple键帽。"
+      ],
+      "take": "HMX轴体与复古透明键帽的搭配正成为社区流行审美。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "50$ Keyboard",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uk6u2t/50_keyboard/",
+      "img": "https://preview.redd.it/8bshpbygliah1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=d290a10fe36b3560f2950a6d8e5525d188fe6dc2",
+      "sum": "玩家分享Eave65 Plus体验，做工好但配列受限。",
+      "lead": [
+        "Really more like 100$ cause shipping was like $40 🫩.",
+        "Anyways for 50$ it’s really good! It’s well made - though I do wish they add more layout options. Currently, the only options are split backspace and stepped caps. No 7u spacebar or ISO enter. Specs: Board: Eave65 Plus Switches: HMX Macchiato Keyc"
+      ],
+      "take": "入门套件做工提升明显，但配列兼容性仍是玩家痛点。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Hipyo Tech",
+      "title": "Am I Wrong about This Keyboard?! #customkeyboard #keyboard #mechanicalkeyboard",
+      "url": "https://www.youtube.com/shorts/dNkeUrngYXk",
+      "img": "https://www.youtube.com/v/dNkeUrngYXk?version=3",
+      "sum": "Hipyo Tech探讨某款客制化键盘引发争议",
+      "lead": [
+        "Am I Wrong about This Keyboard?! #customkeyboard #keyboard #mechanicalkeyboard"
+      ],
+      "take": "KOL对产品的争议性评价能显著拉动社区讨论与曝光。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Lucy tofu",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ujf4rn/lucy_tofu/",
+      "img": "https://preview.redd.it/tb70z32dlcah1.jpg?width=140&height=93&auto=webp&s=aed455c9a3cd9ebc37438c3c6385834c927a2560",
+      "sum": "玩家因原版Lucy TKL昂贵，自制平替版客制化键盘",
+      "lead": [
+        "Wanted a Lucy TKL but couldn't justify the price, so I built my own budget version T.T"
+      ],
+      "take": "高溢价催生平替DIY需求，中低端市场潜力仍待挖掘。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "wolfjaw",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ujaz9k/wolfjaw/",
+      "img": "https://preview.redd.it/ubxakvs9mbah1.jpg?width=140&height=105&auto=webp&s=1fc1fafa7737260648e25c128261c15468ca9dda",
+      "sum": "玩家展示wolfjaw套件组装，搭配Jade Rosales轴与GMK键帽",
+      "lead": [
+        "- wolfjaw - fr4 plate - jade rosales - tx stabs - 55a oring - gmk norde beige, child kits, dcs 5u bar, winkeys goon"
+      ],
+      "take": "经典GMK键帽与热门轴体搭配仍是玩家展示高配组装的标配。"
+    }
+  ]
+}
