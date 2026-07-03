@@ -1,0 +1,658 @@
+{
+  "date": "2026-07-03",
+  "generated_at": "2026-07-03T12:51:34+08:00",
+  "categories": [
+    {
+      "code": "llm",
+      "label": "大模型",
+      "color": "#4b3bff"
+    },
+    {
+      "code": "product",
+      "label": "产品与工具",
+      "color": "#d6932b"
+    },
+    {
+      "code": "oss",
+      "label": "开源发布",
+      "color": "#c8472b"
+    },
+    {
+      "code": "research",
+      "label": "研究与论文",
+      "color": "#7a52cc"
+    },
+    {
+      "code": "biz",
+      "label": "融资与商业",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "policy",
+      "label": "政策与监管",
+      "color": "#8a8d99"
+    }
+  ],
+  "items": [
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "venturebeat.com",
+      "title": "Z.ai launches ZCode to challenge Cursor, Claude Code and GitHub Copilot in AI coding - Venturebeat",
+      "url": "https://venturebeat.com/technology/z-ai-launches-zcode-to-challenge-cursor-claude-code-and-github-copilot-in-ai-coding",
+      "img": "",
+      "sum": "智谱AI发布ZCode，挑战Cursor等AI编程工具",
+      "lead": [
+        "Z.ai（原智谱AI）发布免费桌面应用ZCode，定位为“Agentic Development Environment（智能体开发环境）”。",
+        "该产品专为GLM-5.2大模型打造，标志着智谱正式进军AI编程工具市场，直接与Cursor、GitHub Copilot等竞品竞争。"
+      ],
+      "take": "AI编程赛道再添重磅玩家，免费+专属大模型的组合拳可能重塑现有定价体系，PM需关注其对开发者生态的吸引力。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "MIT Tech Review",
+      "title": "The Download: a startup has a solution for AI’s groupthink problem",
+      "url": "https://www.technologyreview.com/2026/07/02/1140027/the-download-ai-groupthink-llms/",
+      "img": "https://wp.technologyreview.com/wp-content/uploads/2026/06/260626_LLMhallucinations.jpg?fit=2128,1196",
+      "sum": "初创公司试图解决大模型的“群体思维”问题",
+      "lead": [
+        "当前主流大模型（如Claude、ChatGPT、Gemini）存在严重的群体思维（Groupthink）问题，例如在生成1到10的随机数时几乎总是输出7。",
+        "一家初创公司正尝试解决这一限制，打破大模型输出同质化的僵局。"
+      ],
+      "take": "模型输出的同质化是当前AI产品的普遍痛点，解决该问题将为需要多样性和创造力的应用场景带来产品差异化机会。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "arXiv cs.AI",
+      "title": "Automated grading of Linux/bash examinations using large language models: a four-level cognitive taxonomy approach",
+      "url": "https://arxiv.org/abs/2607.02432v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "研究评估GPT等四大模型在Linux考试自动评分中的表现",
+      "lead": [
+        "该研究评估了GPT、Claude Opus、Gemini和GLM四款前沿大模型在自动评分Linux/bash命令行考试答案时的表现。",
+        "研究采用四级认知分类法，探索大模型能否替代人工处理部分得分、等价解或语法变体等复杂情况。"
+      ],
+      "take": "LLM在教育和评估领域的应用正从简单判分走向复杂认知评估，为在线教育、企业培训等产品的智能化评测提供了技术依据。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "Ars Technica",
+      "title": "OpenAI and Broadcom announce chip designed for LLM inference at scale",
+      "url": "https://arstechnica.com/gadgets/2026/06/openai-and-broadcom-announce-chip-designed-for-llm-inference-at-scale/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/openai-broadcom-jalapeno-inference-chip-image-1152x648.webp",
+      "sum": "OpenAI与博通联合发布LLM推理专用芯片Jalapeño",
+      "lead": [
+        "OpenAI与博通联合发布了一款名为Jalapeño的专用芯片，专为数据中心的大语言模型推理而设计。",
+        "双方计划在大型数据中心部署该芯片，并表示这只是长期项目的第一代产品，未来将持续迭代。"
+      ],
+      "take": "大模型厂商自研或定制推理芯片成趋势，底层算力成本与效率的优化将直接影响上层AI应用的商业化和定价空间。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "MIT Tech Review",
+      "title": "Achieving operational excellence with AI",
+      "url": "https://www.technologyreview.com/2026/07/02/1140045/achieving-operational-excellence-with-ai/",
+      "img": "https://wp.technologyreview.com/wp-content/uploads/2026/07/MIT_TP2_2026_V9_Cover.png?w=1555",
+      "sum": "MIT报告：AI正重塑传统运营管理框架",
+      "lead": [
+        "传统管理框架如精益六西格玛和业务流程管理（BPM）曾为企业提供结构化运营秩序。",
+        "如今，AI正在接管这些重复性的测量与分析工作，推动企业运营向智能化演进。"
+      ],
+      "take": "AI不再只是提效工具，而是正在成为重构企业流程与组织习惯的核心驱动力，B端产品需从“辅助决策”向“自主执行”升级。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "Ars Technica",
+      "title": "Trump gets OpenAI to offer US 5% stake, far lower than Sanders’ target",
+      "url": "https://arstechnica.com/tech-policy/2026/07/openai-floats-giving-us-5-stake-to-win-over-ai-haters/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/GettyImages-2267710211-1024x648.jpg",
+      "sum": "OpenAI拟向美国政府出让5%股权",
+      "lead": [
+        "OpenAI CEO Sam Altman正与特朗普政府商讨，让美国收购该公司5%的股份。",
+        "Altman认为让公众持有公司财务股份是分享AI红利的最佳方式，目前谈判仍处于早期阶段。"
+      ],
+      "take": "顶级AI公司开始寻求与国家利益深度绑定，产品合规与数据安全将成为出海及本土化设计的最核心考量。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "Mark Zuckerberg tells staff that AI agents haven’t progressed as quickly as he’d hoped",
+      "url": "https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/",
+      "img": "https://techcrunch.com/wp-content/uploads/2024/10/GettyImages-1968119319.jpg?resize=1200,800",
+      "sum": "扎克伯格称AI代理进展不及预期",
+      "lead": [
+        "Meta CEO扎克伯格在内部会议上表示，AI代理（能自主执行任务的AI系统）的开发进度不如预期。",
+        "这反映出当前AI从对话向自主行动跨越时，仍面临显著的技术瓶颈。"
+      ],
+      "take": "Agent赛道降温信号，PM在设计AI Agent产品时应降低自动化预期，优先做好人机协同与兜底机制。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "Ars Technica",
+      "title": "Google’s AI buildout drove 37% increase in electricity use in 2025",
+      "url": "https://arstechnica.com/ai/2026/07/googles-ai-buildout-drove-37-increase-in-electricity-use-in-2025/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/GettyImages-2246163658-1152x648.jpg",
+      "sum": "Google去年耗电量因AI激增37%",
+      "lead": [
+        "Google 2025年电力消耗激增37%，创历史最大增幅，主要受AI数据中心建设驱动。",
+        "自2019年以来其总用电量已增长超250%，但公司通过大量采购清洁能源控制了碳排放。"
+      ],
+      "take": "AI算力的能源成本与环保压力正成为硬约束，产品规划需将算力消耗纳入成本模型，探索轻量化模型与绿色AI方案。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "WIRED",
+      "title": "Meta Is Charging a Subscription for Smart Glasses Features. Welcome to the New Era of Consumer Tech",
+      "url": "https://www.wired.com/story/why-meta-is-charging-a-subscription-for-on-device-smart-glasses-features/",
+      "img": "https://media.wired.com/photos/6a39b04cb817861918a9c777/master/pass/Meta%20Fury%20SOURCE%20Julian%20Chokkattu.jpg",
+      "sum": "Meta智能眼镜高级功能开启订阅制",
+      "lead": [
+        "Meta开始对其智能眼镜的高级功能收取订阅费，用户需付费才能获得“扩展访问”权限。",
+        "这标志着消费级硬件商业模式的新转变：硬件仅是入口，AI软件服务成为持续盈利点。"
+      ],
+      "take": "“硬件买断+AI服务订阅”模式跑通，智能硬件PM需重新设计功能边界，将高算力、高频迭代的AI能力打包为SaaS收费。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "Meta quietly launches vibe-coded gaming app Pocket",
+      "url": "https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/06/Meta-image.jpg?w=1024",
+      "sum": "Meta推出AI生成小游戏应用Pocket",
+      "lead": [
+        "Meta低调推出实验性AI应用Pocket，用户可通过文本提示词生成并分享互动小游戏。",
+        "该应用主打氛围编程（Vibe-coded，即用自然语言而非传统代码编程），降低了游戏创作门槛。"
+      ],
+      "take": "AIGC正从内容生成向交互逻辑生成延伸，PM可探索用自然语言生成轻量级交互模块的UGC新范式。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "MIT Tech Review",
+      "title": "Teaching AI to run with the turbines",
+      "url": "https://www.technologyreview.com/2026/07/02/1138433/teaching-ai-to-run-with-the-turbines/",
+      "img": "https://wp.technologyreview.com/wp-content/uploads/2026/06/Andrew-Melouney.png?resize=1200,600",
+      "sum": "MIT：AI正成为能源行业核心运营层",
+      "lead": [
+        "AI最具影响力的应用正远离消费端，在能源等重资产行业发挥关键作用。",
+        "以Woodside Energy为例，AI正在处理海量运营数据，成为保障基础设施安全与连续性的核心系统。"
+      ],
+      "take": "垂直行业的AI产品机会在于深入物理世界的业务流，PM需懂行业Know-how，将AI嵌入工业安全与连续性生产的核心链路。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "Yep, we’re using OpenClaw to date now",
+      "url": "https://techcrunch.com/2026/07/02/yep-were-using-openclaw-to-date-now/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/07/openclaw-dating.png?resize=1200,900",
+      "sum": "极客用AI脚本实现Instagram自动约会",
+      "lead": [
+        "有开发者利用OpenClaw和Claude代码编写自动化脚本，在Instagram上实现自动匹配与聊天。",
+        "这种极客玩法展示了AI Agent在社交场景中替代人工执行重复性沟通的潜力。"
+      ],
+      "take": "AI自动化正在渗透社交等非标场景，PM需警惕自动化带来的体验异化与平台风控冲突，寻找合规的提效切入点。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "Indian tech tycoon bets $30M of his own money to build AI alternative to Microsoft Office",
+      "url": "https://techcrunch.com/2026/07/01/indian-tech-tycoon-bets-30m-to-build-an-ai-alternative-to-microsoft-office/",
+      "img": "https://techcrunch.com/wp-content/uploads/2023/10/GettyImages-1452604857.jpg?resize=1200,751",
+      "sum": "印度富豪自掏3000万做AI版Office",
+      "lead": [
+        "印度科技大亨Bhavin Turakhia个人投资3000万美元，推出企业软件Neo。",
+        "该产品旨在利用AI技术挑战Microsoft Office和Google Apps的市场地位。"
+      ],
+      "take": "传统办公套件仍是AI改造的巨大存量市场，新入局者需通过AI原生交互重构工作流，而非仅做插件式功能叠加。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "Ars Technica",
+      "title": "IBM claims world’s first sub-1 nanometer chip technology",
+      "url": "https://arstechnica.com/gadgets/2026/06/ibm-claims-worlds-first-sub-1-nanometer-chip-technology/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/Sub-1nm-node-chip-3-e1782339299592-1152x648.jpg",
+      "sum": "IBM发布全球首个亚1纳米AI芯片技术",
+      "lead": [
+        "IBM宣布推出全球首个亚1纳米芯片技术，专为AI数据中心设计。",
+        "该架构能在指甲盖大小的芯片上集成近1000亿个晶体管，计算性能与能效实现跨越式提升。"
+      ],
+      "take": "底层算力突破将继续拉高AI能力上限，PM需关注端侧/边缘侧AI能力的演进，提前规划重度AI应用的本地化部署方案。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "The Register",
+      "title": "Microsoft builds a bouncer to keep bots out of Teams meetings",
+      "url": "https://www.theregister.com/software/2026/06/30/microsoft-builds-a-bouncer-to-keep-bots-out-of-teams-meetings/5264199",
+      "img": "https://image.theregister.com/?imageId=5225031&width=800",
+      "sum": "微软为Teams开发防机器人闯入功能",
+      "lead": [
+        "微软为Teams会议开发了“门卫”功能，防止第三方服务的机器人自动加入会议。",
+        "由于自动加入的机器人可能窃听敏感内容，这已成为企业协作中的安全隐患。"
+      ],
+      "take": "AI Bot的泛滥正在反噬协作工具体验，B端产品需尽快建立Bot身份识别与权限管控机制，保障企业数据安全。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "Why Specialization Is Inevitable",
+      "url": "https://huggingface.co/blog/Dharma-AI/why-specialization-is-inevitable",
+      "img": "https://cdn-uploads.huggingface.co/production/uploads/69d815b52c6db28cfdfdd422/Av4v9_l94sEUj-etRFOLb.png",
+      "sum": "Hugging Face发文称AI模型专业化不可避免",
+      "lead": [
+        "Hugging Face发布文章探讨AI模型发展趋势，指出通用模型将向专业化模型演进。",
+        "专业化模型在特定任务上能提供更优性能与效率，成为AI应用落地的关键。",
+        "这一趋势将深刻影响模型训练、部署及产品设计的整体思路。"
+      ],
+      "take": "PM在设计AI产品时，应关注垂直场景的专业化模型，而非一味追求大而全的通用模型。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel",
+      "url": "https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel",
+      "img": "https://cdn-uploads.huggingface.co/production/uploads/690d0a6c2c5acfe0e1f4777d/1N4GjIYBsZ6RCReRx_qBB.png",
+      "sum": "NVIDIA NeMo AutoModel加速Transformer微调",
+      "lead": [
+        "Hugging Face与NVIDIA合作，推出基于NeMo AutoModel（一种自动化模型框架）的Transformer微调加速方案。",
+        "该方案旨在简化并加速模型微调（用特定数据调整预训练模型）流程，提升开发效率。",
+        "通过底层优化，显著降低了微调大型Transformer模型的时间与算力成本。"
+      ],
+      "take": "模型微调门槛和成本降低，PM可更积极地规划基于私有数据微调模型的业务功能。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World",
+      "url": "https://huggingface.co/blog/ffasr-leaderboard",
+      "img": "https://huggingface.co/blog/assets/ffasr-leaderboard/thumbnail.png",
+      "sum": "FFASR排行榜发布，专注真实世界ASR评测",
+      "lead": [
+        "Hugging Face推出FFASR排行榜，专注真实世界场景的自动语音识别（ASR，即把语音转文字）模型评测。",
+        "传统ASR评测常脱离实际，该榜单旨在提供更贴近真实业务环境的性能基准。",
+        "这有助于开发者筛选出在复杂真实场景下依然稳健的语音识别模型。"
+      ],
+      "take": "真实场景ASR评测基准的推出，为PM在选型语音交互产品底层模型时提供了更可靠的参考依据。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "Distributed Attacks in Persistent-State AI Control",
+      "url": "https://arxiv.org/abs/2607.02514v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "揭示AI编程代理持久状态下的分布式攻击风险",
+      "lead": [
+        "随着AI编程代理自主性增强，代码库跨会话持久化带来了新的攻击面。",
+        "研究提出Iterative VibeCoding设定，发现不对齐或被注入的代理能跨PR（拉取请求）分散攻击，并在最佳掩护时机触发载荷。",
+        "这为安全部署高能力但不可信的AI敲响了警钟。"
+      ],
+      "take": "AI编程助手向Agent演进时，跨会话的代码安全审计将成为产品必备防线。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
+      "url": "https://arxiv.org/abs/2607.02513v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "LACUNA：评估LLM遗忘学习定位精度的新测试床",
+      "lead": [
+        "LLM常记忆敏感训练数据，亟需可靠的事后移除方法，即“遗忘学习”。",
+        "现有SOTA方法多采用“先定位、后遗忘”范式，但现有基准仅在输出层评估，无法确认知识是否真正从模型参数中抹除。",
+        "LACUNA测试床填补了这一空白，专门评估遗忘学习在模型参数层面的定位精度。"
+      ],
+      "take": "合规与隐私保护产品需关注“真遗忘”能力，仅输出层过滤无法满足GDPR等严格合规要求。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+      "url": "https://arxiv.org/abs/2607.02512v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "Program-as-Weights：将自然语言规范编译为本地神经程序",
+      "lead": [
+        "日常编程中许多模糊任务难以用规则实现，调用大模型API又牺牲了本地性、可复现性和成本。",
+        "研究提出模糊函数编程范式，将自然语言规范编译为紧凑、本地可执行的神经工件（即Program-as-Weights）。",
+        "该方法在保持大模型能力的同时，实现了本地化部署与执行。"
+      ],
+      "take": "为端侧AI应用提供了新思路，有望解决重度依赖云端API带来的延迟、成本与隐私痛点。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "Online Safety Monitoring for LLMs",
+      "url": "https://arxiv.org/abs/2607.02510v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "LLM在线安全监控：基于风险控制的实时警报机制",
+      "lead": [
+        "尽管经过对齐训练，LLM在部署时仍可能生成不安全输出，实时监控至关重要。",
+        "研究提出一种简单的实时监控器，通过阈值化外部验证模型信号并利用风险控制校准阈值来触发警报。",
+        "实验表明，该设计在数学推理和红队测试中与复杂方法具有同等竞争力。"
+      ],
+      "take": "轻量级在线安全护栏是AI应用上线的刚需，低成本的实时监控方案更易落地。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
+      "url": "https://arxiv.org/abs/2607.02509v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "ReContext：无需训练的LLM长上下文推理递归证据回放法",
+      "lead": [
+        "当前LLM虽支持长上下文窗口，但常无法有效利用输入中已有的相关证据。",
+        "研究提出ReContext，一种免训练的推理方法，通过递归证据回放（反复提取并重放关键证据）来增强长上下文推理。",
+        "该方法有效弥合了上下文访问与上下文利用之间的鸿沟。"
+      ],
+      "take": "长文本处理不能只拼窗口长度，通过工程化手段提升信息召回率是优化RAG体验的关键。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "What LLM Agents Say When No One Is Watching: Social Structure and Latent Objective Emergence in Multi-Agent Debates",
+      "url": "https://arxiv.org/abs/2607.02507v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "多智能体辩论中的社会结构与潜在目标涌现研究",
+      "lead": [
+        "LLM代理在社会化场景中，其角色、受众和关系语境会影响其表达。",
+        "研究引入双通道辩论框架，对比代理的公开发言与私下（OTR）表达。",
+        "发现即使没有明确目标，社会结构也会改变代理的公开表达，揭示出潜在目标的涌现。"
+      ],
+      "take": "多Agent产品设计需警惕“群体伪装”，私下通道的机制可能影响最终决策的客观性。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "Reasoning LLM Improves Speaker Recognition in Long-form TV Dramas",
+      "url": "https://arxiv.org/abs/2607.02504v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "推理LLM显著提升长剧中的说话人识别准确率",
+      "lead": [
+        "长篇电视剧的视频理解极具挑战，准确识别说话人是理解剧情的关键。",
+        "研究发布了DramaSR-532K基准，包含53.2万条标注对话和900多个角色。",
+        "实验证明，引入推理能力的LLM能显著提升长剧场景下的说话人识别效果。"
+      ],
+      "take": "视频理解类产品（如AI追剧助手）可借力推理模型突破复杂场景的角色归属难题。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "Beyond Adam: SOAP and Muon for Faster, Label-Efficient Training of Machine Learning Interatomic Potentials",
+      "url": "https://arxiv.org/abs/2607.02499v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "SOAP与Muon优化器加速机器学习原子间势训练",
+      "lead": [
+        "机器学习原子间势（MLIPs）是AI科学模拟的标志，但训练优化器多默认Adam。",
+        "研究系统比较了Muon、SOAP等新型矩阵结构优化器在训练NequIP等模型上的表现。",
+        "结果表明，这些优化器能实现更快、标签效率更高的训练。"
+      ],
+      "take": "AI for Science领域的底层训练效率正在提升，算力成本优化将加速科研级模型的迭代。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "G-RRM: Guiding Symbolic Solvers with Recurrent Reasoning Models",
+      "url": "https://arxiv.org/abs/2607.02491v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "G-RRM：用循环推理模型引导符号求解器",
+      "lead": [
+        "约束满足问题通常依赖符号求解器，但面对大规模问题时外推能力有限。",
+        "研究提出G-RRM神经符号方法，将符号等变循环推理模型（SE-RRMs）与经典符号求解器结合。",
+        "SE-RRMs生成完整解提案，引导回溯或SAT等符号求解器，显著提升求解效率。"
+      ],
+      "take": "神经网络与符号系统的结合是解决复杂逻辑推理的潜力方向，适用于排程、规划等B端产品。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "Audio-Based Understanding of Audiobook Narration Appeal",
+      "url": "https://arxiv.org/abs/2607.02473v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "基于音频特征理解有声书叙述吸引力",
+      "lead": [
+        "叙述质量直接影响有声书的收听体验和吸引力。",
+        "研究利用预训练音频模型提取LibriVox的声学特征（如语调、语速、音量），分析其与消费数据的关系。",
+        "发现不同体裁和受众下，声音特征对吸引力的影响存在差异。"
+      ],
+      "take": "有声书与播客产品可利用音频AI模型量化“好听”的标准，指导内容生产与个性化推荐。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "Human Capital, Not Model Benchmarks, Predicts Hybrid Intelligence in Forecasting",
+      "url": "https://arxiv.org/abs/2607.02467v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "人机协作预测效果取决于人力资本而非模型跑分",
+      "lead": [
+        "人机协作的成效通常被报告为单一平均效应，掩盖了个体差异。",
+        "基于真实货币预测市场的实验表明，协作表现呈三模态分布：盲从模型、用模型背书先验猜测、真正协同超越。",
+        "决定协作价值的是特定的人力资本，而非模型基准测试分数。"
+      ],
+      "take": "AI辅助决策产品不能只卷模型能力，用户的教育背景与提示词素养同样决定产品成效。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "Learning to Move Before Learning to Do: Task-Agnostic pretraining for VLAs",
+      "url": "https://arxiv.org/abs/2607.02466v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "VLA模型新范式：先学移动再学做事",
+      "lead": [
+        "视觉-语言-动作（VLA）模型受限于昂贵的专家演示数据稀缺。",
+        "研究提出“分解假说”，将学习目标拆分为物理能力（如何移动）和语义对齐（做什么）。",
+        "据此提出任务无关的预训练方法，仅后者需要语言监督，大幅降低了对昂贵三元组数据的依赖。"
+      ],
+      "take": "具身智能数据瓶颈的破局思路：先低成本学基础运动控制，再学语言指令映射。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "Will Scaling Improve Social Simulation with LLMs?",
+      "url": "https://arxiv.org/abs/2607.02464v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "扩展模型规模未必能提升LLM社会模拟保真度",
+      "lead": [
+        "LLM社会模拟前景广阔，但保真度不足限制了其广泛应用。",
+        "研究利用缩放定律探究计算规模、通用能力与模拟保真度之间的关系。",
+        "结果表明，通用能力的提升与社会模拟的保真度可能正交，单纯扩大规模无法弥补模拟缺陷。"
+      ],
+      "take": "用大模型做数字孪生或社会实验时，不能迷信Scaling Law，需专项优化模拟逼真度。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "OrbitQuant: Data-Agnostic Quantization for Image and Video Diffusion Transformers",
+      "url": "https://arxiv.org/abs/2607.02461v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "OrbitQuant：面向图像与视频DiT的数据无关量化",
+      "lead": [
+        "扩散Transformer（DiTs）在图像和视频生成上表现优异，但推理成本高昂。",
+        "现有后训练量化（PTQ）方法因激活值随时间步变化，需频繁重新拟合校准数据。",
+        "OrbitQuant提出数据无关的权重-激活量化器，绕过范围估计直接量化，大幅简化流程。"
+      ],
+      "take": "视频生成模型走向端侧的必经之路：摆脱数据依赖的极速量化方案将成工程标配。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "Neuron-Aware Data Selection for Annotation-Free LLM Self-Distillation",
+      "url": "https://arxiv.org/abs/2607.02460v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "神经元感知数据选择助力无标注LLM自蒸馏",
+      "lead": [
+        "在专业领域，获取专家标注成本极高，无标注自演化成为LLM进化的重要方向。",
+        "现有方法通过多数投票生成伪标签，但忽略了模型内部神经元状态。",
+        "研究提出神经元感知的数据选择方法，提升了无标注自蒸馏的效率与质量。"
+      ],
+      "take": "垂直领域大模型迭代的新思路：利用神经元反馈筛选高质量伪标签，降低人工标注依赖。"
+    },
+    {
+      "hero": true,
+      "category": "biz",
+      "src": "WIRED",
+      "title": "Can Cursor Remain a Platform for OpenAI and Anthropic’s Models Inside SpaceX?",
+      "url": "https://www.wired.com/story/can-cursor-remain-an-open-platform-inside-of-spacex/",
+      "img": "https://media.wired.com/photos/6a45a0b0f1efb2d48b192c77/master/pass/Model-Behavior-Cursor-Will-Keep-Using-Anthropic-OpenAI-Models-After-SpaceX-Deal-Business.jpg",
+      "sum": "Cursor被SpaceX收购后拟继续提供第三方模型",
+      "lead": [
+        "Cursor在被SpaceX收购后，希望继续作为平台提供OpenAI和Anthropic等第三方前沿AI模型。",
+        "这一决定将考验前沿AI实验室与被收购平台之间的商业关系及合作边界。"
+      ],
+      "take": "对于AI应用层产品，被大厂收购后如何保持模型中立的平台定位，是维持生态和用户信任的关键挑战。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "The Verge",
+      "title": "OpenAI floats giving Trump administration 5 percent cut of AI boom",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/960588/openai-government-5-percent-stake-trump",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/STK201_SAM_ALTMAN_CVIRGINIA2A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "OpenAI拟向美国政府让渡5%股权以缓和关系",
+      "lead": [
+        "据金融时报报道，OpenAI提议向美国政府提供5%的所有权股份，以缓解与特朗普政府的紧张关系并平息公众对AI的抵制。",
+        "CEO Sam Altman认为，让公众在公司中拥有财务利益是分享AI红利的最佳方式，该想法去年初已向特朗普提出。"
+      ],
+      "take": "顶尖AI公司的股权结构开始涉及国家利益博弈，产品经理需关注政策合规与公众情绪对AI商业化的深远影响。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "arXiv cs.CL",
+      "title": "Language Models as Measurement Apparatus for Culture",
+      "url": "https://arxiv.org/abs/2607.02459v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "论文探讨LLM作为文化测量仪器的构建性影响",
+      "lead": [
+        "该论文指出，语言模型正越来越多地被用于量化文化现象，但NLP对文化的处理并非被动记录，而是一种物质-话语实践。",
+        "研究借用Karen Barad的“能动切割”概念，说明模型、数据、标注和评估等装置共同构成了它所测量的文化现实。"
+      ],
+      "take": "产品中使用LLM进行文化或人群洞察时，需警惕模型并非客观镜子，其本身会塑造和扭曲被测量的文化现实。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "arXiv cs.AI",
+      "title": "EvoPolicyGym: Evaluating Autonomous Policy Evolution in Interactive Environments",
+      "url": "https://arxiv.org/abs/2607.02440v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "新基准EvoPolicyGym评估Agent在交互环境中的策略进化",
+      "lead": [
+        "该研究提出了“自主策略进化”评估设置，衡量Agent在固定交互预算下反复编辑可执行策略系统的能力。",
+        "并推出EvoPolicyGym基准，解决现有评估将策略进化简化为最终得分或与软件工程进度混淆的问题。"
+      ],
+      "take": "Agent产品的评估不能只看最终结果，EvoPolicyGym为评估Agent在复杂环境中的持续策略迭代能力提供了新思路。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "36氪",
+      "title": "达摩院AI自主发现4种全新超导材料，已获实验验证",
+      "url": "https://36kr.com/newsflashes/3879430448754952?f=rss",
+      "img": "https://img.36krcdn.com/20191024/v2_1571894049839_img_jpg",
+      "sum": "达摩院AI智能体发现4种全新超导材料并获实验验证",
+      "lead": [
+        "阿里达摩院联合中国人民大学等发布行业首个超导材料发现AI智能体ElementsClaw。",
+        "该智能体预测出6.8万个可能的超导材料，其中4种全新材料已被合成并证实存在超导性，相关数据已全部开放。"
+      ],
+      "take": "AI for Science在材料发现领域取得实质性突破，产品经理可关注垂直领域AI智能体在科研与工业落地中的巨大商业价值。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "36氪",
+      "title": "苹果iOS 27 Beta版操作系统最新SDK包括Apple智能功能",
+      "url": "https://36kr.com/newsflashes/3879365257719810?f=rss",
+      "img": "https://img.36krcdn.com/20191024/v2_1571894049839_img_jpg",
+      "sum": "苹果iOS 27 Beta版SDK发布，含新AI开发框架",
+      "lead": [
+        "苹果宣布iOS 27 Beta版操作系统现可下载，最新SDK带来了平台设计优化和Apple智能功能。",
+        "更重要的是，新SDK包含新的AI开发框架，为开发者接入系统级AI能力提供支持。"
+      ],
+      "take": "苹果端侧AI开发框架的更新将催生新一波原生AI应用，产品经理应尽早适配新框架以获取系统级AI红利。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "arXiv cs.AI",
+      "title": "DemoPSD: Disagreement-Modulated Policy Self-Distillation",
+      "url": "https://arxiv.org/abs/2607.02502v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "新方法DemoPSD解决LLM自蒸馏过拟合，提升跨域泛化能力",
+      "lead": [
+        "现有LLM推理训练常采用策略自蒸馏（OPSD，即模型同时充当老师和学生进行学习），但容易过拟合且抑制探索。",
+        "本文提出DemoPSD，通过分歧调制（根据师生输出差异调整学习）缓解过拟合，增强模型跨域泛化能力。"
+      ],
+      "take": "提升模型跨域泛化能力意味着产品在应对长尾或未知场景时表现更稳定，降低因领域偏移导致的客诉。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "arXiv cs.CL",
+      "title": "Towards Robustness against Typographic Attack with Training-free Concept Localization",
+      "url": "https://arxiv.org/abs/2607.02494v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "提出无需训练的概念定位法，修复CLIP模型排版攻击漏洞",
+      "lead": [
+        "主流视觉语言模型底座CLIP存在严重漏洞：图像中的无关文字会干扰视觉表征，使其偏向字面意思而非视觉语义（即排版攻击）。",
+        "本文提出一种免训练的概念定位方法，有效抵御排版攻击，增强模型视觉语义的鲁棒性。"
+      ],
+      "take": "视觉模型抗干扰能力提升，产品在处理含水印、排版文字的图片时误判率将显著降低，保障多模态功能可用性。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "arXiv cs.CL",
+      "title": "Visually Grounded Self-Reflection for Vision-Language Models via Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2607.02490v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "用强化学习让视觉语言模型在反思时真正看图，纠正错误",
+      "lead": [
+        "现有视觉语言模型在思维链推理中进行自我反思（复查并纠正先前错误）时，往往忽略视觉输入，导致无法针对异常图像做出有效纠正。",
+        "本文提出基于强化学习的视觉扎根自我反思方法，迫使模型在反思时关注图像，显著提升对分布外图像的纠错能力。"
+      ],
+      "take": "模型自我纠错能力增强，意味着产品在复杂图文场景下的幻觉问题有望缓解，提升用户信任度。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "arXiv cs.AI",
+      "title": "Combating Textual Noise and Redundancy: Entropy-Aware Dense Visual Token Pruning",
+      "url": "https://arxiv.org/abs/2607.02484v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "提出熵感知视觉Token剪枝法，解决密集指令下关键信息丢失",
+      "lead": [
+        "视觉Token剪枝（压缩冗余图像块以加速模型）是常用加速手段，但在密集指令下容易丢失关键细节。",
+        "本文发现文本噪声和特征碎片化是瓶颈，提出熵感知剪枝法，在去噪的同时保留细粒度视觉线索。"
+      ],
+      "take": "该算法能在加速模型推理的同时保住关键细节，为多模态产品的端侧部署或高并发场景提供更优的性价比方案。"
+    }
+  ]
+}
