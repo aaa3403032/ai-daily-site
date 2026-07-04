@@ -1,0 +1,208 @@
+{
+  "date": "2026-07-04",
+  "generated_at": "2026-07-04T12:42:51+08:00",
+  "categories": [
+    {
+      "code": "llm",
+      "label": "大模型",
+      "color": "#4b3bff"
+    },
+    {
+      "code": "product",
+      "label": "产品与工具",
+      "color": "#d6932b"
+    },
+    {
+      "code": "oss",
+      "label": "开源发布",
+      "color": "#c8472b"
+    },
+    {
+      "code": "biz",
+      "label": "融资与商业",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "policy",
+      "label": "政策与监管",
+      "color": "#8a8d99"
+    }
+  ],
+  "items": [
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "Core dump epidemiology: fixing an 18-year-old bug",
+      "url": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/6q0IdzKwG7IjuMl4cLWzIy/7e4d7c42d2961b1432fc3909cb2c68d2/Rockset___SEO_card__1_.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI用大规模核心转储分析排查罕见崩溃，修复18年老bug",
+      "lead": [
+        "OpenAI工程师利用大规模核心转储（程序崩溃时的内存快照）分析技术，成功排查了基础设施中的罕见崩溃问题。",
+        "此次排查不仅发现了硬件故障，还揪出了一个隐藏长达18年的软件底层bug，展示了AI在复杂系统运维中的潜力。"
+      ],
+      "take": "AI赋能底层运维与排障，产品经理可关注大模型在系统稳定性监控及自动化根因分析场景的落地机会。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "Mapping Europe’s AI Workforce Opportunity",
+      "url": "https://openai.com/index/mapping-ai-jobs-transition-eu",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/2p06ZCpbXiQhTAbOY9J6OH/2f69f47125b18f9ced9c6000a0bcee0b/mapping-europes-ai-workforce-opportunity-seo-card.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI发布报告，描绘AI对欧盟就业市场的重塑图景",
+      "lead": [
+        "OpenAI发布新报告，详细描绘了AI将如何重塑欧盟各国的就业市场。",
+        "报告重点指出了哪些职业可能面临自动化替代、哪些将迎来增长，以及哪些工作流程会发生深刻变革。"
+      ],
+      "take": "关注AI对工种的替代与增强趋势，为出海欧洲的B端产品规划人机协作工作流提供宏观依据。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "How agents are transforming work",
+      "url": "https://openai.com/index/how-agents-are-transforming-work",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/3JAh8VK98LHki9m4sr8KIR/3580b8ab65aca167342a3c674847531e/SEO_Card__2_.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI发文探讨AI Agent如何变革工作方式，提升生产力",
+      "lead": [
+        "OpenAI发布新研究论文，深入探讨AI智能体（能自主执行任务的AI系统）如何变革当前的工作模式。",
+        "研究表明，智能体使处理更长、更复杂的任务成为可能，并在各类岗位中显著扩展了生产力边界。"
+      ],
+      "take": "Agent能力向长链条复杂任务延伸，产品经理需思考如何将产品从“辅助工具”升级为“自主执行代理”。"
+    },
+    {
+      "hero": true,
+      "category": "product",
+      "src": "The Verge",
+      "title": "Anthropic wants to develop its own drugs",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/961311/anthropic-claude-science-ai-drug-development",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/STKB364_CLAUDE_2_A_3800fc-1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "Anthropic发布Claude Science，打造科学家专属AI工作台",
+      "lead": [
+        "Anthropic在活动上发布了Claude Science，这是一个专为科学家打造的AI工作台。",
+        "该工具将碎片化的科研工具和数据集整合到同一环境中，并能自动生成图表和可视化内容。",
+        "Anthropic希望借此大幅加速科学发现和医疗干预的研发进程。"
+      ],
+      "take": "AI产品正从通用对话向垂直专业场景深化，整合工作流和数据集的“工作台”模式是B端产品的重要演进方向。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "The Verge",
+      "title": "A behind-the-scenes look at Midjourney’s medical scanner leaves many questions unanswered",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/961265/midjourney-medical-ultrasound-scanner-behind-the-scenes-video",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/ultrasound_phantom_segmentation-b254a71d083eb5c9.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "Midjourney展示医疗扫描仪细节，但有效性仍存疑",
+      "lead": [
+        "以AI图像生成闻名的Midjourney发布了其医疗扫描仪的幕后演示视频。",
+        "这款水槽式超声波扫描仪计划部署在水疗中心，主打廉价、详细且无辐射的成像。",
+        "但目前仍缺乏该设备实际有效性的有力证明，留下了诸多疑问。"
+      ],
+      "take": "AI公司跨界做硬件需警惕技术外溢的信任危机，缺乏临床验证的消费级医疗产品面临极高的合规与声誉风险。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "WIRED",
+      "title": "Meta Contractors Posed as Teens to Prompt Rival Chatbots About Suicide, Sex, and Drugs",
+      "url": "https://www.wired.com/story/meta-contractors-pretending-to-be-teens-chatbot-testing/",
+      "img": "https://media.wired.com/photos/6a429931b8212c2a1f822da2/master/pass/Meta-Paid-Contractors-to-Pose-as-Children-Security-2268011998.jpg",
+      "sum": "Meta雇人伪装青少年测试竞品AI对高风险话题的回复",
+      "lead": [
+        "据调查，数百名为Meta工作的承包商伪装成青少年，测试Gemini和ChatGPT等竞品聊天机器人。",
+        "测试重点在于观察这些竞品AI如何处理自杀、性和毒品等高风险话题。",
+        "此举揭示了AI公司在安全合规与竞品分析上的激进策略。"
+      ],
+      "take": "高风险场景的边界测试是AI产品必修课，但通过伪装用户进行竞品攻击测试存在严重的商业伦理与公关风险。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "The Verge",
+      "title": "Tidal won’t pay royalties on AI-generated music, but isn’t banning it outright",
+      "url": "https://www.theverge.com/tech/959211/tidal-ai-music-policy-demonetizingdetect-label",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25319678/STK301_Tidal_01.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "Tidal出新规：不封杀AI音乐，但不再支付版税并加标签",
+      "lead": [
+        "音乐流媒体Tidal发布了针对AI生成音乐的新政策，选择不彻底封杀而是进行规范。",
+        "从7月15日起，被识别为100% AI生成的音轨将被标注专属图标，且不再产生任何版税收益。",
+        "Tidal表示此举旨在保护人类原创艺术家，确保版税流向由人直接创作、表演的作品。"
+      ],
+      "take": "平台对AIGC内容正走向“标签化+去商业化”的折中治理，产品经理在设计AIGC分发策略时需平衡创作者生态与技术包容性。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "DiScoFormer: One transformer for density and score, across distributions",
+      "url": "https://huggingface.co/blog/allenai/discoformer",
+      "img": "https://cdn-uploads.huggingface.co/production/uploads/638e39b249de7ae552d977b5/AnOX0pzQm-Hep_CLFOVM7.png",
+      "sum": "DiScoFormer用单一Transformer跨分布同时处理密度与分数估计",
+      "lead": [
+        "DiScoFormer提出一种新型Transformer架构，能跨分布同时处理密度估计（预测数据概率）和分数估计（计算梯度方向）。",
+        "传统方法通常需为这两个任务分别训练模型，而DiScoFormer实现了单一模型双重功能，降低了计算开销并提升泛化能力。"
+      ],
+      "take": "统一模型架构降低多任务部署成本，为需同时进行概率预测与梯度引导的AI产品提供更高效的底层方案。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "36氪",
+      "title": "秋声 | 袁进辉新公司冲港股IPO，成立不到三年",
+      "url": "https://36kr.com/p/3879814941437956?f=rss",
+      "img": "https://img.36krcdn.com/hsossms/20260703/v2_3e9ef59cd2444250a67b7714f51d40b7@430412560_oswg4040oswg900oswg145_img_000?x-oss-process=image/format,jpg/interlace,1",
+      "sum": "硅基流动冲刺港股IPO，估值77亿但毛利率为负",
+      "lead": [
+        "硅基流动向港交所递交上市申请，以18C未商业化公司身份申报，联席保荐人为华泰与海通国际。",
+        "其招股书数据亮眼：注册用户破千万，日均token吞吐量增长12倍，付费客户一年涨292倍，估值飙至77亿。",
+        "但华丽增长背后是亏本卖token（AI模型处理文本的最小单位）的现实，2025年公司毛利率为-24%。"
+      ],
+      "take": "AI Infra赛道验证了“以价换量”的规模增长逻辑，但PM需警惕底层算力服务长期负毛利的商业化风险。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "36氪",
+      "title": "豆包：智能体功能将于7月15日下线",
+      "url": "https://36kr.com/newsflashes/3880708060901641?f=rss",
+      "img": "https://img.36krcdn.com/20191024/v2_1571894049839_img_jpg",
+      "sum": "豆包智能体功能将于7月15日下线，10月清数据",
+      "lead": [
+        "豆包平台宣布因产品功能调整，智能体功能将于7月15日正式下线。",
+        "下线后用户仍有一段时间查看并保存历史对话数据，但10月15日后将根据隐私政策彻底删除且无法恢复。",
+        "平台建议用户通过截图或导出文本等方式提前完成重要内容备份。"
+      ],
+      "take": "大厂智能体平台策略生变，PM在做智能体生态依赖决策时需考虑平台稳定性及数据迁移风险。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "Ars Technica",
+      "title": "Notion killing Skiff-influenced email app since most users use AI agents instead",
+      "url": "https://arstechnica.com/gadgets/2026/06/notion-killing-skiff-influenced-email-app-since-most-users-use-ai-agents-instead/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/GettyImages-2230437159-1024x648.jpg",
+      "sum": "Notion关闭Mail应用，因多数用户转向AI智能体",
+      "lead": [
+        "Notion宣布关闭其Notion Mail应用，彻底终结了收购Skiff而来的邮件产品线。",
+        "关闭的核心原因是用户习惯变迁：多数用户已转向使用AI智能体（能自主执行任务的AI程序）来处理邮件等信息。",
+        "Notion Mail的关闭也反映出传统SaaS工具正在被AI原生交互方式所替代。"
+      ],
+      "take": "AI Agent正在重塑基础办公交互，PM在做工具类产品迭代时需重新评估传统功能模块的存留价值。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "reuters.com",
+      "title": "Argentina's plan for AI-run companies can't avoid humans - Reuters",
+      "url": "https://www.reuters.com/world/americas/argentinas-plan-ai-run-companies-cant-avoid-humans-2026-07-03/",
+      "img": "",
+      "sum": "阿根廷AI运营公司计划仍需人类参与",
+      "lead": [
+        "阿根廷总统米莱曾提出允许由AI完全运营公司的激进计划，但最新进展表明，该计划无法完全避免人类参与。",
+        "这一政策转向意味着，即使在最激进的AI治理框架下，完全脱离人类的AI实体在法律和责任归属上仍面临难以逾越的障碍。"
+      ],
+      "take": "AI完全自治实体在合规与责任界定上短期无法落地，产品设计仍需保留人类干预与审核机制。"
+    }
+  ]
+}
