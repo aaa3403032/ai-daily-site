@@ -1,0 +1,438 @@
+{
+  "date": "2026-07-05",
+  "generated_at": "2026-07-05T13:03:43+08:00",
+  "categories": [
+    {
+      "code": "llm",
+      "label": "大模型",
+      "color": "#4b3bff"
+    },
+    {
+      "code": "product",
+      "label": "产品与工具",
+      "color": "#d6932b"
+    },
+    {
+      "code": "oss",
+      "label": "开源发布",
+      "color": "#c8472b"
+    },
+    {
+      "code": "research",
+      "label": "研究与论文",
+      "color": "#7a52cc"
+    },
+    {
+      "code": "biz",
+      "label": "融资与商业",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "policy",
+      "label": "政策与监管",
+      "color": "#8a8d99"
+    }
+  ],
+  "items": [
+    {
+      "hero": true,
+      "category": "llm",
+      "src": "The Verge",
+      "title": "The fanfiction community is at war with AI — and itself",
+      "url": "https://www.theverge.com/tech/960854/ai-fanfiction-ao3-claude-detector",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/AI_Hands_A_Bernis_02.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "同人社区围剿AI写作，检测方法存疑易误伤",
+      "lead": [
+        "近期同人小说社区发起运动，试图揪出使用生成式AI的作者。",
+        "但目前的AI检测方法并不可靠，可能导致未使用AI的写手被误伤。",
+        "这反映了创意社区对Claude、ChatGPT等工具的普遍抵触情绪。"
+      ],
+      "take": "创作者对AI的抵触情绪是产品出海或社区运营时必须考虑的合规与舆论风险。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "techcrunch.com",
+      "title": "Anthropic launches Claude Sonnet 5 as a cheaper way to run agents - TechCrunch",
+      "url": "https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/06/Claude-photo.jpg?w=1024",
+      "sum": "Anthropic发布Claude Sonnet 5，主打低成本Agent",
+      "lead": [
+        "Anthropic发布中端模型Claude Sonnet 5，强化了代理（Agent，能自主规划并使用工具的AI）能力。",
+        "该模型能以更低成本实现数月前需大型昂贵模型才能达到的自主执行水平。",
+        "此举紧跟OpenAI发布GPT-5.6 Sol预览版，Agent能力已成基础模型竞争标配。"
+      ],
+      "take": "Agent能力正从旗舰模型下放至中端模型，产品经理可重新评估AI任务的成本与响应速度平衡。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "Ars Technica",
+      "title": "New attack provides one more reason why AI browsers are a bad idea",
+      "url": "https://arstechnica.com/security/2026/06/ai-browsers-can-be-lulled-into-a-dream-world-where-guardrails-no-longer-apply/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/broken-ai-robot-browser-404-1152x648.jpg",
+      "sum": "新攻击暴露AI浏览器安全软肋，敏感操作风险高",
+      "lead": [
+        "AI浏览器承诺通过单一提示词帮用户完成订餐、发邮件等复杂操作，但模糊了浏览与指令的界限。",
+        "最新攻击手段暴露了让大模型执行敏感操作的安全隐患。",
+        "目前开发者主要通过建立护栏（Guardrails，限制某些请求的安全机制）来应对，但效果有限。"
+      ],
+      "take": "AI接管用户操作的体验虽好，但安全边界是产品设计的生死线，需在便利性与风控间找平衡。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "Ars Technica",
+      "title": "Google's new Nano Banana 2 Lite image model is its fastest and cheapest yet",
+      "url": "https://arstechnica.com/ai/2026/06/googles-new-nano-banana-2-lite-image-model-is-its-fastest-and-cheapest-yet/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/Nano-Banana-2-Lite-1152x648.jpg",
+      "sum": "Google发布最快最廉图像模型Nano Banana 2 Lite",
+      "lead": [
+        "Google DeepMind推出Nano Banana 2 Lite图像模型（属Gemini 3.1家族），主打速度与成本的最优平衡。",
+        "该模型生成图像的速度远超Google此前的重型模型，已接入Google生态系统。",
+        "这为需要高频、低成本生图的应用场景提供了新选择。"
+      ],
+      "take": "图像生成模型正走向轻量化与实时化，产品经理可关注高并发、低延迟的视觉交互场景。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "Introducing GeneBench-Pro",
+      "url": "https://openai.com/index/introducing-genebench-pro",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/6ISCsbFZAwfE8rca32ZXSt/7958029f06d5bf872217476430f12549/GenebenchPro_Blog_SEO.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI推出基因组学AI基准GeneBench-Pro",
+      "lead": [
+        "OpenAI发布GeneBench-Pro，这是一个全新的基准测试。",
+        "它专门用于评估AI在基因组学、生物学和科学研究中的表现。",
+        "该基准采用复杂的真实世界数据集，填补了AI在垂直科学领域的评估空白。"
+      ],
+      "take": "垂直科学领域的AI评估标准正在建立，医疗与生物科技赛道的PM可借此衡量模型能力与产品化潜力。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "The Verge",
+      "title": "Google’s NotebookLM can sum up your research in a TikTok-style clip",
+      "url": "https://www.theverge.com/tech/959778/google-notebooklm-ai-clips",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/notebooklm-shorts.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "NotebookLM新增TikTok风格AI短视频生成功能",
+      "lead": [
+        "Google NotebookLM推出新功能，可将用户上传的研究资料生成60秒的竖屏AI短视频。",
+        "该功能目前面向Google AI Ultra和Pro订阅用户推出，采用剪纸风格AI艺术搭配旁白的形式呈现内容。",
+        "这进一步丰富了NotebookLM与个人研究资料的交互方式。"
+      ],
+      "take": "知识消费短视频化是明确趋势，PM可探索将长文本或专业内容自动转化为轻量级短视频的落地场景。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "The Verge",
+      "title": "Netflix is using an AI-generated Gene Wilder voice in its Willy Wonka reality show",
+      "url": "https://www.theverge.com/streaming/959684/netflix-wonka-golden-ticket-gene-wilder",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/videoframe_9748.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "Netflix真人秀采用ElevenLabs生成已故演员AI配音",
+      "lead": [
+        "Netflix在最新真人秀中，使用了AI生成的已故演员Gene Wilder的配音。",
+        "该AI配音由ElevenLabs提供技术支持，并在获得Wilder家属同意后制作。",
+        "这标志着AI语音克隆技术在影视制作中的合规商业化应用又进一步。"
+      ],
+      "take": "AI语音克隆的商业化已跑通合规授权路径，PM在音视频产品中可考虑引入授权AI声库来降低成本或创新体验。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "The Verge",
+      "title": "Libby will filter out AI content, kind of",
+      "url": "https://www.theverge.com/column/959433/libby-ai-filter",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24148705/PXL_20221028_153245856.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "电子书借阅应用Libby将引入AI内容过滤机制",
+      "lead": [
+        "知名电子书借阅应用Libby的母公司OverDrive表示，平台正面临AI生成内容的巨大冲击。",
+        "Libby计划推出功能，对平台上的AI生成内容进行一定程度的过滤或标识。",
+        "这反映了数字出版平台在面对AI内容泛滥时的防御性产品策略。"
+      ],
+      "take": "AI内容治理已成为内容平台PM的必答题，需提前规划内容识别、标识与分发的产品策略。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "ScarfBench: Benchmarking AI Agents for Enterprise Java Framework Migration",
+      "url": "https://huggingface.co/blog/ibm-research/scarfbench",
+      "img": "https://cdn-uploads.huggingface.co/production/uploads/649c1276a83f996b4191a8f1/iYCwB2Hl8qPTA8DCgDilB.png",
+      "sum": "ScarfBench发布，专测AI Agent企业级Java框架迁移能力。",
+      "lead": [
+        "Hugging Face 上发布了 ScarfBench（企业级Java框架迁移基准测试），专门评估 AI Agent 在此类任务上的表现。",
+        "该基准旨在衡量 AI Agent 处理复杂遗留代码迁移的能力，为企业级代码重构提供量化参考。"
+      ],
+      "take": "PM可关注AI在代码迁移场景的落地潜力，探索自动化重构工具的企业级需求。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "Featuring Every Eval Ever Results on Hugging Face Model Pages",
+      "url": "https://huggingface.co/blog/eee-community-evals",
+      "img": "https://huggingface.co/blog/assets/eee_commevals/eee_commevals_banner.png",
+      "sum": "HF模型页面现可展示所有历史评测结果，提升模型选型效率。",
+      "lead": [
+        "Hugging Face 宣布在模型页面集成“Every Eval Ever”（所有历史评测结果）功能，全面展示模型各项评测数据。",
+        "这一更新让用户在选型时无需跳转即可对比模型在不同基准下的表现，大幅降低信息检索成本。"
+      ],
+      "take": "模型选型信息更透明，PM在做技术选型时可更高效地评估模型综合能力。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "Google DeepMind",
+      "title": "Google DeepMind and A24 announce first-of-its-kind research partnership",
+      "url": "https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership/",
+      "img": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/3_SocialShare_gradient.max-1440x810.jpg",
+      "sum": "DeepMind与A24达成首创性研究合作",
+      "lead": [
+        "Google DeepMind与知名独立电影公司A24宣布达成首创性研究合作伙伴关系。",
+        "这标志着AI前沿实验室与顶尖影视内容创作者的深度结合，探索AI在影视创作与制作中的新可能。"
+      ],
+      "take": "AI在影视等高门槛创意行业的落地正从工具层走向深度共创，产品经理可关注影视/创意赛道的新范式。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "TestEvo-Bench: An Executable and Live Benchmark for Test and Code Co-Evolution",
+      "url": "https://arxiv.org/abs/2607.02469v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "TestEvo-Bench：测试与代码协同演化的可执行基准",
+      "lead": [
+        "现有测试生成基准常将测试与代码变更隔离，且依赖静态数据，难以评估自动化Agent是否理解代码变更如何影响测试套件。",
+        "本文提出TestEvo-Bench，一个可执行的动态基准，用于评估测试与代码的协同演化能力。"
+      ],
+      "take": "代码智能产品需重视测试与代码的联动演化，该基准为评估AI编程助手的工程化能力提供了新标尺。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "Reasoning effort, not tool access, buys first-try reliability in agentic code generation: an observational study",
+      "url": "https://arxiv.org/abs/2607.02436v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "研究：推理努力比工具访问更能提升Agent代码生成可靠性",
+      "lead": [
+        "当前Agentic编码助手常被赋予浏览器测试等额外能力，假设能力越多软件越好。本研究通过90次独立Agent构建同一应用的实验对此进行了验证。",
+        "结果表明，决定Agent首次生成可靠性的关键因素是推理努力程度，而非工具访问权限。"
+      ],
+      "take": "做AI编程产品时，盲目堆砌工具不如强化模型推理，提升推理深度才是保障一次做对的核心。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "WorldSample: Closed-loop Real-robot RL with World Modelling",
+      "url": "https://arxiv.org/abs/2607.02431v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "WorldSample：基于世界模型的真实机器人闭环RL框架",
+      "lead": [
+        "强化学习（RL）能克服模仿学习的演示覆盖局限，但在真实机器人上部署成本高、交互代价大。",
+        "本文提出WorldSample，一种基于世界模型的物理数据增强框架，实现真实机器人的闭环强化学习。"
+      ],
+      "take": "具身智能产品落地受限于真实训练成本，世界模型与数据增强是突破物理交互瓶颈的关键路径。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "The Future of NLP may not be at NLP Conferences: Scholarly Migration Patterns in Natural Language Processing",
+      "url": "https://arxiv.org/abs/2607.02416v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "研究称NLP学术重心正向通用机器学习会议转移",
+      "lead": [
+        "随着大模型的发展，NLP与通用机器学习（ML）的学科界限日益模糊。",
+        "研究分析了2010至2026年的NLP论文，发现学术界的重心正在发生转移，作者越来越倾向于在通用ML会议上发表论文。"
+      ],
+      "take": "学科融合趋势下，NLP能力正成为通用AI的底层能力，产品经理在技术选型时应跳出纯NLP视野，关注通用大模型进展。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "Know Your Source: A Public Knowledge Store for Media Background Checks",
+      "url": "https://arxiv.org/abs/2607.02383v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "面向媒体背景核查的公共知识库Know Your Source",
+      "lead": [
+        "基于RAG（检索增强生成）的事实核查系统常假设检索到的证据可靠，但现实信息可能冲突、过时或存在偏见。",
+        "本文提出公共知识库Know Your Source，用于媒体背景核查，以解决RAG系统中的信息源可靠性问题。"
+      ],
+      "take": "RAG产品的核心痛点之一是信源质量，建立可信的背景知识库是提升AI问答与事实核查可靠性的关键。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "HULAT2 at MER-TRANS 2026: Governed Multi-Agent Simplification for Spanish Easy-to-Read Generation",
+      "url": "https://arxiv.org/abs/2607.02381v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "基于受控多Agent的西班牙语易读生成系统",
+      "lead": [
+        "本文介绍了HULAT2-UC3M在MER-TRANS 2026共享任务西班牙语赛道的工作，专注于多语言易读翻译。",
+        "该系统采用基于LangGraph的多Agent工作流，结合内部质量信号和事件-条件-动作路由，实现受控编辑和可追溯决策。"
+      ],
+      "take": "多Agent工作流在文本改写等特定任务中展现出可控与可追溯优势，为复杂内容处理类产品提供了架构参考。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "World Wide Models: Literary Tools for Cultural AI",
+      "url": "https://arxiv.org/abs/2607.02369v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "构建文化AI：面向多元解读的文学工具框架",
+      "lead": [
+        "大模型正在塑造一种大规模、自动化且单一语言的文化碰撞形式。",
+        "本文提出一个分层框架，将文学学科中的比较阅读、叙事分析等工具引入AI，以构建更具文化素养、支持多元解读的文本模型。"
+      ],
+      "take": "AI产品的文化包容性日益重要，引入文学与批判理论工具，有助于解决大模型的文化偏见与单一视角问题。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "SkillFuzz: Fuzzing Skill Composition for Implicit Intents Discovery in Open Skill Marketplaces",
+      "url": "https://arxiv.org/abs/2607.02345v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "SkillFuzz：发现开放技能市场隐式意图的模糊测试",
+      "lead": [
+        "在开放技能市场中，用户可组合社区贡献的技能，但单独无害的技能组合后可能产生偏离预期目标的隐式意图。",
+        "本文提出SkillFuzz，通过模糊测试技能组合来发现Agent执行中的隐式意图，提升技能市场安全性。"
+      ],
+      "take": "Agent生态开放必然带来组合安全性挑战，产品经理在设计插件/技能市场时必须考虑组合风险的自动化检测。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "HNSW with Accuracy Guarantees Using Graph Spanners -- A Technical Report",
+      "url": "https://arxiv.org/abs/2607.02338v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "提供准确性保证的HNSW图检索技术报告",
+      "lead": [
+        "HNSW（分层可导航小世界图）是向量检索的工业标准，但其依赖的贪婪图遍历缺乏理论正确性保证。",
+        "本文提出“先验证后修正”框架，在保留HNSW速度优势的同时，通过图跨度器弥补其理论严谨性不足。"
+      ],
+      "take": "向量数据库是RAG的基石，该研究为HNSW提供了准确性保证，对高精度检索场景（如法律、金融）的产品升级极具价值。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "On the Role of Directionality in Structural Generalization",
+      "url": "https://arxiv.org/abs/2607.02307v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "结构泛化中方向性作用的研究：改进AM解析器",
+      "lead": [
+        "现有SOTA模型AM-Parser在处理结构泛化时，其代数操作未编码方向信息，导致在修饰语位置等测试中表现不佳。",
+        "研究重新设计了基于CCG方向类型的符号后端，在相同编码器下显著提升了逻辑形式精确匹配率。"
+      ],
+      "take": "模型的结构泛化能力直接影响其对复杂指令的理解，引入方向性等符号逻辑有助于提升AI的推理严谨性。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "Google Research",
+      "title": "Introducing TabFM: A zero-shot foundation model for tabular data",
+      "url": "https://research.google/blog/introducing-tabfm-a-zero-shot-foundation-model-for-tabular-data/",
+      "img": "https://storage.googleapis.com/gweb-research2023-media/original_images/TabFM1_Hero.png",
+      "sum": "TabFM：面向表格数据的零样本基础模型",
+      "lead": [
+        "Google Research推出了TabFM，一个专门针对表格数据的零样本基础模型。",
+        "该模型旨在提升对结构化表格数据的理解与处理能力，填补了大模型在表格数据处理上的空白。"
+      ],
+      "take": "表格数据是企业核心资产，TabFM这类专用基础模型将大幅降低企业数据分析与BI产品的开发门槛。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "Google Research",
+      "title": "Accelerating Gemini Nano models on Pixel with frozen Multi-Token Prediction",
+      "url": "https://research.google/blog/accelerating-gemini-nano-models-on-pixel-with-frozen-multi-token-prediction/",
+      "img": "https://storage.googleapis.com/gweb-research2023-media/original_images/MTP1_Architecture.png",
+      "sum": "基于冻结多令牌预测加速Pixel端Gemini Nano模型",
+      "lead": [
+        "Google Research提出使用冻结的多令牌预测（Multi-Token Prediction）技术来加速端侧模型。",
+        "该技术成功应用于Pixel设备上的Gemini Nano模型，显著提升了端侧AI的推理速度。"
+      ],
+      "take": "端侧AI的推理速度是用户体验的关键，多令牌预测技术为移动端AI应用的流畅性提供了新优化思路。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "TechCrunch",
+      "title": "What is Mistral AI? Everything to know about the OpenAI competitor",
+      "url": "https://techcrunch.com/2026/07/04/what-is-mistral-ai-everything-to-know-about-the-openai-competitor/",
+      "img": "https://techcrunch.com/wp-content/uploads/2025/07/GettyImages-2219786590.jpg?w=1024",
+      "sum": "Mistral AI融资盘点：开源模型挑战OpenAI",
+      "lead": [
+        "Mistral AI自2023年成立以来已筹集大量资金，致力于将前沿AI普及化。",
+        "该公司主打开源AI模型，被视为OpenAI的有力竞争者。"
+      ],
+      "take": "开源大模型商业化的标杆，PM需关注其开源生态对闭源API的替代潜力。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "techcrunch.com",
+      "title": "Chamath Palihapitiya raises $135M Series A for his AI coding startup, takes CEO role - TechCrunch",
+      "url": "https://techcrunch.com/2026/06/29/chamath-palihapitiya-raises-135m-series-a-for-his-ai-coding-startup-takes-ceo-role/",
+      "img": "https://techcrunch.com/wp-content/uploads/2015/10/chamath_palihapitiya_techcrunch_disrupt.jpg?resize=1200,800",
+      "sum": "8090 Labs获1.35亿美元A轮融资",
+      "lead": [
+        "知名投资人Chamath创办的AI编程公司8090 Labs完成1.35亿美元A轮融资。",
+        "本轮融资由Salesforce Ventures领投，WndrCo和Craft Ventures等跟投，Chamath亲自出任CEO。"
+      ],
+      "take": "AI Coding赛道持续吸金，PM应关注AI代码助手对开发工作流的深度重构。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "TechCrunch",
+      "title": "Alibaba reportedly bans employees from using Claude Code",
+      "url": "https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/04/GettyImages-2269811684.jpg?w=1024",
+      "sum": "阿里将Claude Code列为高风险软件并禁用",
+      "lead": [
+        "据报道，阿里已将AI编程工具Claude Code列为高风险软件，并禁止员工在工作中使用。",
+        "这一举措反映出大厂对核心代码泄露及数据合规的担忧。"
+      ],
+      "take": "PM在做AI编程工具或引入第三方大模型时，必须把数据隔离与企业级合规（防泄密）作为核心功能设计。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "Ars Technica",
+      "title": "Trump's plan to redesign every .gov website leads to AI-designed horrors",
+      "url": "https://arstechnica.com/tech-policy/2026/06/trumps-plan-to-redesign-every-gov-website-leads-to-ai-designed-horrors/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/national-design-web-vomit-1152x648.jpg",
+      "sum": "特朗普用AI重设2.7万个政府网站遇阻",
+      "lead": [
+        "特朗普此前下令成立国家设计工作室（NDS，一个临时机构），计划用AI在三年内重新设计2.7万个.gov政府网站。",
+        "但该倡议目前推进不顺，AI生成的网页设计出现了诸多问题与乱象。"
+      ],
+      "take": "AI批量生成虽能提升效率，但在政务等低容错场景中，仍需强人工审核机制，产品落地不能脱离业务约束。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "Ars Technica",
+      "title": "NYT slams Microsoft for building copyright-infringing supercomputer for OpenAI",
+      "url": "https://arstechnica.com/tech-policy/2026/06/microsoft-built-supercomputer-to-help-openai-infringe-copyrights-nyt-alleged/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/GettyImages-2235233117-1024x648.jpg",
+      "sum": "纽约时报指控微软为OpenAI建侵权超算",
+      "lead": [
+        "纽约时报（NYT）向法院提交动议，修改对OpenAI和微软的版权诉讼，指控微软专门为OpenAI建造超级计算机，主动鼓励其窃取NYT作品。",
+        "此前最高法院在Cox案中的裁决支持了版权方，为NYT追究算力提供方的连带责任提供了法律依据。"
+      ],
+      "take": "AI训练的版权风险正从模型方向上游算力提供方蔓延，产品在集成大模型时需严查训练数据来源合规性。"
+    }
+  ]
+}
