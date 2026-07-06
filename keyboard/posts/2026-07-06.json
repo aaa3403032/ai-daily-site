@@ -1,0 +1,428 @@
+{
+  "date": "2026-07-06",
+  "categories": [
+    {
+      "code": "market",
+      "label": "市场与品牌",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "hardware",
+      "label": "新品与硬件",
+      "color": "#d6932b"
+    },
+    {
+      "code": "tech",
+      "label": "技术趋势",
+      "color": "#7a52cc"
+    },
+    {
+      "code": "community",
+      "label": "社区与玩家",
+      "color": "#0a8f6a"
+    }
+  ],
+  "items": [
+    {
+      "hero": true,
+      "category": "market",
+      "src": "r/MechanicalKeyboards",
+      "title": "$10 Temu Magnetic Keyboard",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1un6sdx/10_temu_magnetic_keyboard/",
+      "img": "https://preview.redd.it/opkbclf987bh1.jpg?width=140&height=78&auto=webp&s=e1101cbf3dfc1b8347a281d5efd913ff5eac1e40",
+      "sum": "Temu售出10美元磁轴键盘，含磁力黄轴及减震棉，兼容GK68",
+      "lead": [
+        "Got this for $10 from Temu. Unfortunately, the link is no longer available.",
+        "It has magnetic yellow switches, foam on the bottom of the case, and foam between the switch plate and PCB. Build quality is plastic,. but it seems it can get spare parts from gk68 boards. You can't beat it for the price! Th"
+      ],
+      "take": "超低价磁轴键盘的出现预示着磁轴成本已探底，中高端市场将面临更大价格战压力。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "Deskthority",
+      "title": "Group buys • Re: F104+SSK+122+62+77+50+Ergo orders now open! New Kishsaver+Industrial Model F Keyboards",
+      "url": "https://deskthority.net/viewtopic.php?p=525667#p525667",
+      "img": "https://deskthority.net/download/file.php?id=82219&amp;sid=3d4303b2f398ae37f3fa524f972a589b",
+      "sum": "Model F系列键盘团购开启，含稀有意大利Model M键帽",
+      "lead": [
+        "Wow this is a big update Arkku! I am looking forward to this code being added to the xwhatsit controllers, maybe as a separate branch of the ploxiln github files.",
+        "Sharing with permission a nice F62 with the rare Italian Model M key set. The user reports that it has been in use for four years and is"
+      ],
+      "take": "复古大键盘复刻团购热度不减，控制器固件开源迭代是维持社区活跃的核心驱动力。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "Deskthority",
+      "title": "Group buys • Re: Beam Spring 104+SSK Reproduction Project!  First Batch In Stock, Shipping early next year after New Model F Project",
+      "url": "https://deskthority.net/viewtopic.php?p=525666#p525666",
+      "img": "//cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f607.svg",
+      "sum": "Beam Spring复刻项目首批到货，预计明年初发货",
+      "lead": [
+        "Group buys • Re: Beam Spring 104+SSK Reproduction Project! First Batch In Stock, Shipping early next year after New Model F Project"
+      ],
+      "take": "Beam Spring复刻项目持续推进，复古轴体市场具备持续的高净值消费潜力。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "gamespace.com",
+      "title": "HYTE Partners With ATLUS To Create Persona 30th Anniversary Lineup - GameSpace.com",
+      "url": "https://gamespace.com/all-articles/news/hyte-partners-with-atlus-to-create-persona-30th-anniversary-lineup/",
+      "img": "https://gamespace.com/wp-content/uploads/2026/06/hyte-p30.jpg",
+      "sum": "HYTE与ATLUS合作推出女神异闻录30周年桌面外设系列",
+      "lead": [
+        "HYTE Partners With ATLUS To Create Persona 30th Anniversary Lineup.",
+        "Persona’s 30th anniversary is getting the kind of celebration that makes sense for 2026, a set of desk accessories aimed squarely at fans who want their battlestation to look as invested in the series as they are."
+      ],
+      "take": "游戏IP联名桌面外设是吸引粉丝群体、提升品牌情感附加值的有效路径。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "Hipyo Tech",
+      "title": "Ghost in the shell keyboard!?! 😮 #ghostintheshell #customkeyboard #mechanicalkeyboard",
+      "url": "https://www.youtube.com/shorts/RvTCaaP3H9c",
+      "img": "https://www.youtube.com/v/RvTCaaP3H9c?version=3",
+      "sum": "Hipyo Tech展示攻壳机动队主题客制化机械键盘",
+      "lead": [
+        "Ghost in the shell keyboard!?! 😮 #ghostintheshell #customkeyboard #mechanicalkeyboard",
+        "Hipyo Tech"
+      ],
+      "take": "经典赛博朋克动漫IP与键盘结合，精准击中硬核玩家与极客的审美偏好。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "gizmodo.com",
+      "title": "Simon Says… Buy This OpenAI Mechanical Keyboard Thingy - Gizmodo",
+      "url": "https://gizmodo.com/simon-says-buy-this-openai-mechanical-keyboard-thingy-2000779283",
+      "img": "",
+      "sum": "OpenAI与Work Louder合作，将于7月15日发布AI机械键盘。",
+      "lead": [
+        "OpenAI与机械键盘厂商Work Louder达成合作。",
+        "双方将于7月15日发布一款针对Codex等AI工具的机械键盘产品。"
+      ],
+      "take": "AI大模型厂商跨界外设，软硬件生态绑定或成客制化新卖点。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Alexotos",
+      "title": "🔴  The Wing!",
+      "url": "https://www.youtube.com/watch?v=SSRO7D0oLUM",
+      "img": "https://www.youtube.com/v/SSRO7D0oLUM?version=3",
+      "sum": "Alexotos展示The Wing键盘项目",
+      "lead": [
+        "知名客制化圈博主Alexotos发布关于The Wing键盘的展示。"
+      ],
+      "take": "头部博主曝光新项目，关注其设计语言对市场风向的引导。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Alexotos",
+      "title": "🔴  KEYBOY ADVANCED + Modding my GBA.",
+      "url": "https://www.youtube.com/watch?v=g7ivhUqhFeM",
+      "img": "https://www.youtube.com/v/g7ivhUqhFeM?version=3",
+      "sum": "Alexotos展示KEYBOY ADVANCED掌机风键盘",
+      "lead": [
+        "Alexotos展示KEYBOY ADVANCED键盘项目，外观致敬GBA掌机。",
+        "同时分享了GBA掌机的改装过程。"
+      ],
+      "take": "掌机/复古游戏机主题的客制化键盘设计仍是玩家圈的高流量密码。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "KeebTalk",
+      "title": "Odd Switch Short V & VI Double Header",
+      "url": "https://www.keebtalk.com/t/odd-switch-short-v-vi-double-header/24180",
+      "img": "https://www.keebtalk.com/uploads/db8059/optimized/3X/c/9/c975bd3fbbdfe89927332d0638c3682e79727de4_2_690x369.jpeg",
+      "sum": "Odd Switch短评：可在线性与段落间切换的奇特轴体",
+      "lead": [
+        "Hey all, Rarely, I’ll encounter a scenario where I simply can’t do a full length review for a switch.",
+        "Imagine I had only one single switch that had the ability to be toggled between linear and clicky mode on the fly - I couldn’t review the performance of just one of those. Or imagine I had a tactile"
+      ],
+      "take": "可切换手感的轴体为客制化提供了新玩法，但传统单一维度的评测标准需重新定义。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Alexotos",
+      "title": "The Tofu Redux Got an Upgrade — TOFU Redux V2",
+      "url": "https://www.youtube.com/watch?v=7BkPDj_c5Og",
+      "img": "https://www.youtube.com/v/7BkPDj_c5Og?version=3",
+      "sum": "TOFU Redux 套件升级推出 V2 版本",
+      "lead": [
+        "The Tofu Redux Got an Upgrade — TOFU Redux V2"
+      ],
+      "take": "经典热销套件迭代升级，持续优化现有爆款比盲目推新更具商业确定性。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Deskthority",
+      "title": "Group buys • Re: F104+SSK+122+62+77+50+Ergo orders now open! New Kishsaver+Industrial Model F Keyboards",
+      "url": "https://deskthority.net/viewtopic.php?p=525662#p525662",
+      "img": "https://deskthority.net/download/file.php?id=82218&amp;sid=3d4303b2f398ae37f3fa524f972a589b",
+      "sum": "Model F键盘开启新团购，固件更新支持PS/2与USB",
+      "lead": [
+        "Group buys • Re: F104+SSK+122+62+77+50+Ergo orders now open! New Kishsaver+Industrial Model F Keyboards",
+        "my firmware for these Model F keyboards now supports PS/2 output. Very useful if you ever go back to the 1990's! On the USB side, it can auto-detect"
+      ],
+      "take": "复古大船键盘复兴，兼顾复古接口与USB自适应的固件开发拓宽了老轴体适用场景。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Alexotos",
+      "title": "🔴  Tofu60 REDUX v2 FULL STREAM!!!!",
+      "url": "https://www.youtube.com/watch?v=8AFwwsI_psI",
+      "img": "https://www.youtube.com/v/8AFwwsI_psI?version=3",
+      "sum": "Alexotos直播展示KBDfans Tofu60 REDUX v2机械键盘套件。",
+      "lead": [
+        "Alexotos直播展示了KBDfans Tofu60 REDUX v2套件。",
+        "Tofu60作为经典60%布局套件，其Redux版本备受玩家关注。"
+      ],
+      "take": "经典型号复刻升级仍是客制化市场的流量密码。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Alexotos",
+      "title": "A Nod to Pokémon Blue | The Blaine V2: SE",
+      "url": "https://www.youtube.com/watch?v=7fEWZmBn8fI",
+      "img": "https://www.youtube.com/v/7fEWZmBn8fI?version=3",
+      "sum": "Blaine V2 SE机械键盘套件发布，致敬宝可梦蓝主题。",
+      "lead": [
+        "Alexotos展示了Blaine V2 SE机械键盘套件。",
+        "该特别版套件采用致敬经典游戏《宝可梦蓝》的主题设计。"
+      ],
+      "take": "游戏IP联名与复古主题配色是提升客制化套件溢价的有效策略。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Hipyo Tech",
+      "title": "I didn't realize this was a mouse.... #viral #tech",
+      "url": "https://www.youtube.com/shorts/j8y_bLiLnOs",
+      "img": "https://www.youtube.com/v/j8y_bLiLnOs?version=3",
+      "sum": "Hipyo Tech展示一款形态奇特、易被误认的鼠标新品。",
+      "lead": [
+        "Hipyo Tech分享了一款造型奇特的鼠标产品。",
+        "其独特设计让人第一眼难以认出是鼠标，引发网络热议。"
+      ],
+      "take": "外设形态创新与猎奇设计易在社交媒体引发病毒式传播。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "gamespace.com",
+      "title": "8BitDo Celebrates N64’s 30th With Clear Blue Retro Keyboard And Ultimate 2 Controller - GameSpace.com",
+      "url": "https://gamespace.com/all-articles/news/8bitdo-celebrates-n64s-30th-with-clear-blue-retro-keyboard-and-ultimate-2-controller/",
+      "img": "https://gamespace.com/wp-content/uploads/2026/06/8bitdo-nintendo-retro.jpg",
+      "sum": "8BitDo推N64三十周年透明蓝复古键盘及Ultimate 2手柄。",
+      "lead": [
+        "为纪念任天堂N64诞生30周年，8BitDo推出透明蓝复古键盘。",
+        "该设计致敬早期透壳电子产品，同时发布了Ultimate 2手柄。"
+      ],
+      "take": "复古情怀与透壳设计仍是外设破圈利器，主机IP联名拓展受众。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "Deskthority",
+      "title": "Group buys • Re: F104+SSK+122+62+77+50+Ergo orders now open! New Kishsaver+Industrial Model F Keyboards",
+      "url": "https://deskthority.net/viewtopic.php?p=525672#p525672",
+      "img": "https://deskthority.net/download/file.php?id=82220&amp;sid=3d4303b2f398ae37f3fa524f972a589b",
+      "sum": "Model F键盘用户讨论将PS/2输出移植至QMK/VIAL固件",
+      "lead": [
+        "We exchanged a couple of emails with Ellipse about potentially porting the PS/2 output to QMK or VIAL firmwares.",
+        "I am not really interested in doing that myself, since I use my own AAKBD firmware and any effort that I would spend would better be spent porting VIAL or VIAL-like configurability to AAK"
+      ],
+      "take": "复古大船的固件现代化需求依然存在，QMK/VIAL兼容性是提升受众面的关键。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "Deskthority",
+      "title": "Keyboards • Re: I made new Model F output PS/2",
+      "url": "https://deskthority.net/viewtopic.php?p=525670#p525670",
+      "img": "https://deskthority.net/images/smilies/icon_e_smile.gif",
+      "sum": "社区成员成功改造Model F键盘实现PS/2输出，获高度评价",
+      "lead": [
+        "This is an incredible job that you did !",
+        "I have yet to finish my work on PS2 compatibility for the Leyden Jar and your contribution is very inspiring, thank you"
+      ],
+      "take": "硬核玩家对复古键盘接口的改造创新，为客制化固件与硬件开发提供灵感。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "Deskthority",
+      "title": "Keyboards • Re: I made new Model F output PS/2",
+      "url": "https://deskthority.net/viewtopic.php?p=525675#p525675",
+      "img": "",
+      "sum": "社区改造Model F输出PS/2，探讨USB-C接口复用与检测机制。",
+      "lead": [
+        "有用户为Model F制作了新的PS/2输出子板。",
+        "讨论焦点在于USB-C接口是否同时承载USB与PS/2信号，以及如何检测连接类型。"
+      ],
+      "take": "老键盘现代接口改造需求仍在，USB/PS2双模自动检测是技术痛点。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "nbcnews.com",
+      "title": "Joanna Stern: The end of typing as we know it - NBC News",
+      "url": "https://www.nbcnews.com/tech/innovation/joanna-stern-end-typing-know-rcna352629",
+      "img": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-07/260701-stock-person-dictates-ch-1602-9bd89a.jpg",
+      "sum": "科技记者探讨AI语音转录技术进步或将终结传统打字方式。",
+      "lead": [
+        "Joanna Stern发文探讨AI语音转录技术的进步对传统打字方式的影响。",
+        "随着AI语音技术成熟，键盘作为主要输入设备的地位面临挑战。"
+      ],
+      "take": "语音输入技术进步是键盘行业长期面临的颠覆性变量，需关注输入形态演变。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "I may have reached my peak HHKB...",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uocnty/i_may_have_reached_my_peak_hhkb/",
+      "img": "https://preview.redd.it/r35ky2ea1hbh1.jpg?width=140&height=105&auto=webp&s=6a3b5f1f0b27f7db30ef3bc923698cb44bbff784",
+      "sum": "玩家晒出绝版全新HHKB Pro 1及原装皮键帽",
+      "lead": [
+        "玩家在Reddit分享购入全新未拆封HHKB Pro 1 (PD-KB300B)。",
+        "该套装包含原装Gokukawa皮革键帽，序列号显示为2005年生产。"
+      ],
+      "take": "经典静电容老物与原厂皮键帽的收藏价值持续走高，复古溢价空间大。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Another Fun Week of Keyboard Builds 🙌🏼",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uo0ng3/another_fun_week_of_keyboard_builds/",
+      "img": "https://preview.redd.it/tnipvcq9kebh1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=8a9555ce10e35aab6b84d72a3c0fdde35ae1730f",
+      "sum": "Reddit客制化键盘组装周记：Tofu60 Redux配HE板",
+      "lead": [
+        "Another fun week of keyboard builds in the books. I had an absolute blast hanging out with everyone during the livestreams this week.",
+        "Thanks to everyone who stopped by to chat, lurk, or just kept me company while I built boards! Started the week with the Raw Tofu60 Redux V2 paired with an HE PCB, an"
+      ],
+      "take": "直播组装仍是客制化社区核心互动方式，HE磁轴PCB搭配经典外壳正成为客制化新趋势。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "I got about 1k mx blue switches. Want to use it as wedding decoration.",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1unev0p/i_got_about_1k_mx_blue_switches_want_to_use_it_as/",
+      "img": "https://preview.redd.it/trkxyfquz8bh1.jpeg?width=640&crop=smart&auto=webp&s=7ec5f5c2aa623a26343f9965f6126d30aaa9f6c8",
+      "sum": "玩家用千颗闲置MX青轴制作婚礼装饰，计划做键帽墙或3D钥匙扣",
+      "lead": [
+        "In less than 3 weeks going to get married and thought of making smth awesome with these because they have been sitting in my closet for 2+ years.",
+        "Edit: thank you everyone for ideas. Will be looking closer to the keycap wall and 3d keychains. Not angry but please don’t ask to send them over after the"
+      ],
+      "take": "轴体周边文创是消化库存与增强社区情感连接的潜在方向。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "I love this so much",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1un1pv0/i_love_this_so_much/",
+      "img": "https://preview.redd.it/q9v6byv1r5bh1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=8de2148adac17ef259f0fc930a39f7bd63a34dec",
+      "sum": "玩家盛赞KBDfans新款Alice配列键盘",
+      "lead": [
+        "The new Alice keyboard from kbdfans, I really love it.",
+        "submitted by /u/Hudson_Zhang [link] [comments]"
+      ],
+      "take": "Alice人体工学分列式配列在社区热度不减，仍是品牌吸粉的有效产品线。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "3D printed kaps and frame",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1umq0ob/3d_printed_kaps_and_frame/",
+      "img": "https://preview.redd.it/lfguphgyw2bh1.jpeg?width=640&crop=smart&auto=webp&s=c3946fa642966b45ed288e434989badbf4db130f",
+      "sum": "玩家使用XTIA的PCB和3D打印文件制作客制化键盘",
+      "lead": [
+        "XTIA provided the PCB and the 3D print files. This is my first horrah into custom keyboards."
+      ],
+      "take": "开源3D打印与PCB结合降低了客制化门槛，厂商可关注开源生态的引流潜力。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "behold",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ummwa8/behold/",
+      "img": "https://preview.redd.it/ko630vxda2bh1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=15c8ebc271eb977b5b95639c897d7ad7fb94f998",
+      "sum": "玩家展示其名为duck-board的客制化键盘作品",
+      "lead": [
+        "the duck-board!"
+      ],
+      "take": "社区创意命名与趣味设计频出，小众趣味仍是玩家圈层的重要社交货币。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Everything ready for my final build!",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1umk1mz/everything_ready_for_my_final_build/",
+      "img": "https://preview.redd.it/opnkb40oq1bh1.jpeg?width=640&crop=smart&auto=webp&s=f3ce3f796feb7c433e88690bcbe22ada60111353",
+      "sum": "玩家收到Neo65 Core Plus套件，称其为退烧终局",
+      "lead": [
+        "My Neo65 Core Plus finally arrived and I'm pretty excited to start building but I'm not rushing it.",
+        "I started in the hobby about a year and a half ago and I feel that this board will be my endgame. Yeah, I said it!"
+      ],
+      "take": "“退烧终局”概念仍是玩家购买高端套件的情感驱动力，营销可深挖此痛点。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Alexotos",
+      "title": "🔴  Agar Micro Build - FULL STREAM",
+      "url": "https://www.youtube.com/watch?v=3ZseBdvTsow",
+      "img": "https://www.youtube.com/v/3ZseBdvTsow?version=3",
+      "sum": "Alexotos直播展示Agar Micro客制化键盘组装",
+      "lead": [
+        "🔴  Agar Micro Build - FULL STREAM",
+        "Alexotos"
+      ],
+      "take": "头部博主直播组装是客制化键盘维持社区热度与展示工艺的重要方式。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "KeebTalk",
+      "title": "Hi from a complete noob",
+      "url": "https://www.keebtalk.com/t/hi-from-a-complete-noob/24170",
+      "img": "https://www.keebtalk.com/images/emoji/apple/blush.png?v=15",
+      "sum": "KeebTalk新成员入坑自我介绍，分享早期接触电脑经历",
+      "lead": [
+        "Hi from a complete noob",
+        "I am basically a complete noob to the world of mechanical k"
+      ],
+      "take": "新血液持续注入客制化社区，降低入坑门槛仍是扩大市场基盘的关键。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Deskthority",
+      "title": "Group buys • Re: F104+SSK+122+62+77+50+Ergo orders now open! New Kishsaver+Industrial Model F Keyboards",
+      "url": "https://deskthority.net/viewtopic.php?p=525676#p525676",
+      "img": "",
+      "sum": "Model F键盘团购开启，社区探讨为其Vial固件添加PS/2支持。",
+      "lead": [
+        "Model F键盘新团购项目开启，涵盖F104、SSK等多型号。",
+        "社区成员探讨为xwhatsit控制器的Vial固件添加PS/2支持分支。"
+      ],
+      "take": "复古大键盘团购仍具号召力，固件开源协作是社区活力关键。"
+    }
+  ]
+}
