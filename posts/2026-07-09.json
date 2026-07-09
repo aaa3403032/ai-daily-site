@@ -1,0 +1,506 @@
+{
+  "date": "2026-07-09",
+  "generated_at": "2026-07-09T13:06:24+08:00",
+  "categories": [
+    {
+      "code": "llm",
+      "label": "大模型",
+      "color": "#4b3bff"
+    },
+    {
+      "code": "oss",
+      "label": "开源发布",
+      "color": "#c8472b"
+    },
+    {
+      "code": "biz",
+      "label": "融资与商业",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "policy",
+      "label": "政策与监管",
+      "color": "#8a8d99"
+    }
+  ],
+  "items": [
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "Ars Technica",
+      "title": "Google updates Android Bench with new LLMs, but Gemini still lags behind",
+      "url": "https://arstechnica.com/google/2026/07/google-revamps-android-ai-dev-benchmark-adds-fable-5-and-other-agents/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2025/07/Android-statue-1152x648.jpg",
+      "sum": "Google更新Android Bench，新增多款大模型但Gemini仍落后",
+      "lead": [
+        "Google更新了用于评估大模型在Android应用开发中表现的基准测试Android Bench，加入了大量新模型并采用更易用的新框架。",
+        "测试结果显示，尽管Google自家模型不断迭代，但在代码生成等开发任务中Gemini依然落后于其他竞品。",
+        "Google邀请开发者自行运行测试并提交反馈，以进一步完善该基准。"
+      ],
+      "take": "代码生成赛道竞争白热化，PM需关注基准测试的动态以客观评估各模型在垂直开发场景的真实能力。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "Ars Technica",
+      "title": "Hackers can use 9 of the most popular AI tools to assemble massive botnets",
+      "url": "https://arstechnica.com/security/2026/07/hackers-can-use-9-of-the-most-popular-ai-tools-to-assemble-massive-botnets/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/rogue-ai-agent-1152x648.jpg",
+      "sum": "黑客可利用9款热门AI工具组装巨型僵尸网络",
+      "lead": [
+        "提示注入（Prompt Injection，通过隐蔽指令操纵AI执行非预期操作）已成为AI安全的首要威胁，大模型难以区分合法指令与恶意指令。",
+        "最新研究表明，黑客可利用9款最流行的AI工具轻易组装大规模僵尸网络（Botnet，受黑客控制的大量联网设备）。",
+        "由于目前无法在可信与不可信数据源之间建立严格边界，AI引擎极易被诱导执行恶意命令。"
+      ],
+      "take": "Agent产品在打通外部数据源时必须将防注入作为最高优先级，否则极易成为黑产跳板。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "Our approach to government and national security partnerships",
+      "url": "https://openai.com/index/government-national-security-partnerships",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/2h3zDXkAt00qFTGsCqrLuV/f4b2ed4ee96f72220d4f6ddc9924a01a/Frame-1.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI发布政府与国家安全合作原则",
+      "lead": [
+        "OpenAI官方发文阐述了其对待政府及国家安全合作的态度与原则。",
+        "该原则强调负责任的AI使用、民主问责制（Democratic accountability，确保权力行使受到公众监督）以及公共安全。",
+        "此举标志着OpenAI在政企合作与合规层面迈出更规范的一步。"
+      ],
+      "take": "AI厂商与政府合作正走向合规化与透明化，做政企类AI产品的PM需将安全与问责机制纳入核心设计。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "TechCrunch",
+      "title": "Your gaming data could be the secret to AGI, according to this Bezos-backed startup",
+      "url": "https://techcrunch.com/podcast/your-gaming-data-could-be-the-secret-to-agi-according-to-this-bezos-backed-startup/",
+      "img": "https://techcrunch.com/wp-content/uploads/2025/10/general_intuition_announcement_hero.png?resize=1200,982",
+      "sum": "贝索斯投资初创公司：游戏数据是通向AGI的钥匙",
+      "lead": [
+        "初创公司General Intuition认为，现有大模型虽擅长文本，但缺乏对事物在时空运动中理解的能力，这阻碍了通用人工智能（AGI）的实现。",
+        "该公司提出，游戏数据能够填补这一空白，因为游戏包含了丰富的物理交互与时空动态信息。",
+        "这家获得贝索斯支持的公司正押注于游戏数据来训练下一代更通用的AI模型。"
+      ],
+      "take": "突破纯文本局限、引入多模态与时空交互数据是迈向AGI的关键，PM可关注游戏场景下的AI应用潜力。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "Helping K–12 educators build practical AI skills",
+      "url": "https://openai.com/index/k-12-educators-practical-skills",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/5zmUIk02ah3xYC8TQ6RR59/fa597b63e8bff26e7e6011cae4542f7b/Frame-1.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI Academy推出K-12教育者AI技能实训",
+      "lead": [
+        "OpenAI Academy与沃尔顿家族基金会合作，推出针对K-12（从幼儿园到高中）教育工作者的AI技能实训活动。",
+        "该项目旨在帮助一线教师掌握实用的AI技能，以便更好地在课堂教学中应用AI工具。",
+        "此举有助于降低AI在教育领域的使用门槛，推动AI在基础教育中的普及。"
+      ],
+      "take": "教育赛道AI渗透正从学生端向教师端延伸，为K12提供AI赋能工具是值得关注的下沉市场机会。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "arXiv cs.CL",
+      "title": "PALS: Percentile-Aware Layerwise Sparsity for LLM Pruning",
+      "url": "https://arxiv.org/abs/2607.07557v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "新研究PALS：基于激活幅度的LLM逐层剪枝法",
+      "lead": [
+        "现有一次性剪枝方法（如Wanda和SparseGPT，用于压缩模型降低算力需求）对所有层采用相同剪枝率，忽略了各层重要性的差异。",
+        "新方法PALS根据激活幅度的第99百分位数调整每层剪枝率，并在目标比率上下5%内设限。",
+        "在LLaMA-2-7B模型50%稀疏度测试中，PALS将WikiText-2困惑度（Perplexity，衡量模型预测能力的指标，越低越好）降至10.96，显著优于均匀剪枝的12.92。"
+      ],
+      "take": "更精细的模型压缩技术让端侧部署大模型成为可能，PM可关注轻量化模型在移动端的新落地场景。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "Introducing GPT-Live",
+      "url": "https://openai.com/index/introducing-gpt-live",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/54glGpDpS58mKdx6Y3GobW/6ea5121851a36b8cf0505a96be2de994/bidi-art-card_16_9__1_.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI发布新一代语音模型GPT-Live",
+      "lead": [
+        "OpenAI推出名为GPT-Live的新一代语音模型，旨在实现更自然的人机语音交互。",
+        "该模型目前已正式接入并驱动ChatGPT的语音功能（ChatGPT Voice）。",
+        "新模型有望大幅提升语音对话的流畅度与拟真感。"
+      ],
+      "take": "语音交互体验的升级将重塑C端产品的入口形态，PM应重新评估语音助手的用户体验设计。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "The Verge",
+      "title": "The fanfiction community is at war with AI — and itself",
+      "url": "https://www.theverge.com/tech/960854/ai-fanfiction-ao3-claude-detector",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/AI_Hands_A_Bernis_02.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "同人圈爆发反AI写作运动，误伤问题严重",
+      "lead": [
+        "同人小说社区近期掀起了一场旨在根除AI生成内容的运动，试图揪出使用AI写作的作者。",
+        "然而，目前采用的AI检测方法极不可靠，导致许多手写作者也被误伤。",
+        "这反映了创意社区对生成式AI的普遍反感，以及当前AI内容检测技术的局限性。"
+      ],
+      "take": "UGC平台在引入AI辅助功能时面临社区文化阻力，强推AI标记或检测可能适得其反，需更柔性的产品策略。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "Ars Technica",
+      "title": "New attack provides one more reason why AI browsers are a bad idea",
+      "url": "https://arstechnica.com/security/2026/06/ai-browsers-can-be-lulled-into-a-dream-world-where-guardrails-no-longer-apply/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/broken-ai-robot-browser-404-1152x648.jpg",
+      "sum": "新攻击证明AI浏览器存在严重安全隐患",
+      "lead": [
+        "AI浏览器承诺通过单一提示词完成订餐、发邮件等复杂操作，但模糊了浏览网页与执行指令的界限。",
+        "最新发现的新型攻击手段表明，大模型极易被诱导执行敏感操作，而现有的防护护栏（Guardrails，限制AI行为的规则）并不完善。",
+        "这使得AI浏览器在带来便利的同时，面临极大的隐私与安全风险。"
+      ],
+      "take": "具备操作执行能力的Agent产品不能仅靠护栏兜底，PM必须在架构层隔离高敏感操作的执行权限。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "Ars Technica",
+      "title": "Google's new Nano Banana 2 Lite image model is its fastest and cheapest yet",
+      "url": "https://arstechnica.com/ai/2026/06/googles-new-nano-banana-2-lite-image-model-is-its-fastest-and-cheapest-yet/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/Nano-Banana-2-Lite-1152x648.jpg",
+      "sum": "Google发布最快最廉图像模型Nano Banana 2 Lite",
+      "lead": [
+        "Google DeepMind推出全新图像生成模型Nano Banana 2 Lite（属Gemini 3.1家族，正式名为Gemini 3.1 Flash Lite Image）。",
+        "该模型主打质量与速度的最佳平衡，生成图像的速度远超Google此前的重型模型。",
+        "目前已在Google生态系统中全面上线，大幅降低了高质量图像生成的成本与时间。"
+      ],
+      "take": "图像模型正走向轻量化与实时化，PM可探索对延迟敏感的实时图像生成场景（如流式对话配图）。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "Introducing GeneBench-Pro",
+      "url": "https://openai.com/index/introducing-genebench-pro",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/6ISCsbFZAwfE8rca32ZXSt/7958029f06d5bf872217476430f12549/GenebenchPro_Blog_SEO.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI推出基因组学与科研基准GeneBench-Pro",
+      "lead": [
+        "OpenAI发布了名为GeneBench-Pro的新基准测试，专门用于评估AI在基因组学、生物学和科学研究领域的表现。",
+        "该基准使用复杂的真实世界数据集，旨在更准确地衡量大模型在垂直科学领域的推理与分析能力。",
+        "这为AI在基础科学领域的应用提供了更客观的评估标准。"
+      ],
+      "take": "垂直科学领域正成为大模型能力验证的新战场，做AI+科研的PM需用专业基准替代通用测试来验证模型。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "Data for Agents",
+      "url": "https://huggingface.co/blog/nvidia/open-data-for-agents",
+      "img": "https://cdn-uploads.huggingface.co/production/uploads/68d2fec8856b85d927e44d32/P3b9bOHrdkEJeAcWX6FoW.gif",
+      "sum": "开源面向AI智能体的数据集",
+      "lead": [
+        "Hugging Face发布面向AI智能体（Agent）的数据集。",
+        "该数据集旨在为智能体的训练和评估提供数据支持。"
+      ],
+      "take": "为智能体应用开发提供新数据基建，PM可关注其对产品智能体能力的提升潜力。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "Native-speed vLLM transformers modeling backend",
+      "url": "https://huggingface.co/blog/native-speed-vllm-transformers-backend",
+      "img": "https://huggingface.co/blog/assets/native-speed-vllm-transformers-backend/thumbnail.png",
+      "sum": "开源原生速度的vLLM建模后端",
+      "lead": [
+        "Hugging Face推出原生速度的vLLM transformers建模后端。",
+        "该后端旨在提升模型推理和部署的性能，实现接近原生速度的运行效率。"
+      ],
+      "take": "推理性能优化直接降本增效，PM做大模型应用架构选型时可重点考量。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "36氪",
+      "title": "蚂蚁灵波同日开源两大模型，推动世界模型与具身智能视频生成的双升级",
+      "url": "https://36kr.com/newsflashes/3887921785567752?f=rss",
+      "img": "https://img.36krcdn.com/20191024/v2_1571894049839_img_jpg",
+      "sum": "蚂蚁开源LingBot-World与Video模型",
+      "lead": [
+        "蚂蚁灵波开源LingBot-World 2.0与LingBot-Video两款模型。",
+        "LingBot-World 2.0面向实时交互世界生成，支持720p/60fps输出，并首次将Agent机制引入世界模型。",
+        "LingBot-Video是全球首个基于MoE架构（混合专家模型，一种提升模型效率的架构）的具身智能视频生成基础模型。"
+      ],
+      "take": "世界模型与具身智能开源底座降低研发门槛，PM可探索3D交互与机器人应用创新。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "ScarfBench: Benchmarking AI Agents for Enterprise Java Framework Migration",
+      "url": "https://huggingface.co/blog/ibm-research/scarfbench",
+      "img": "https://cdn-uploads.huggingface.co/production/uploads/649c1276a83f996b4191a8f1/iYCwB2Hl8qPTA8DCgDilB.png",
+      "sum": "发布企业级Java迁移Agent基准测试",
+      "lead": [
+        "Hugging Face发布ScarfBench，一个针对企业Java框架迁移的AI Agent基准测试。",
+        "该基准旨在评估AI智能体在复杂企业级代码迁移任务中的表现。"
+      ],
+      "take": "为评估智能体企业级代码迁移能力提供标尺，PM可借此衡量AI编程助手落地效果。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "Featuring Every Eval Ever Results on Hugging Face Model Pages",
+      "url": "https://huggingface.co/blog/eee-community-evals",
+      "img": "https://huggingface.co/blog/assets/eee_commevals/eee_commevals_banner.png",
+      "sum": "HF模型页集成全量评测结果",
+      "lead": [
+        "Hugging Face在模型页面新增展示所有历史评测结果的功能。",
+        "这使得开发者在选型时能更全面、便捷地对比模型在各维度的表现。"
+      ],
+      "take": "模型选型透明度提升，PM和技术团队挑选基座模型时能更高效做数据驱动决策。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "reuters.com",
+      "title": "AI chip startup SambaNova valued at $11 billion in $1 billion funding round - Reuters",
+      "url": "https://www.reuters.com/business/finance/ai-chip-startup-sambanova-valued-11-billion-1-billion-funding-round-2026-07-08/",
+      "img": "",
+      "sum": "AI芯片创企SambaNova融资10亿美元，估值达110亿",
+      "lead": [
+        "AI芯片初创公司SambaNova完成10亿美元晚期融资，由General Atlantic领投，投后估值达110亿美元。",
+        "此前有传闻称英特尔曾试图以约16亿美元收购该公司，此次巨额融资进一步彰显了其在AI算力市场的独立发展野心。"
+      ],
+      "take": "AI算力需求持续推高芯片创企估值，底层算力赛道的马太效应加剧，做AI应用的产品需关注算力供给格局变化。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "TechCrunch",
+      "title": "Prime Intellect raises $130M Series A to help enterprises build their own AI agents",
+      "url": "https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/07/PE4252-2.jpg?resize=1200,800",
+      "sum": "Prime Intellect融1.3亿美元，助企业自建AI智能体",
+      "lead": [
+        "初创公司Prime Intellect完成1300万美元A轮融资，旨在帮助企业构建自有AI智能体系统。",
+        "其核心目标是让组织无需依赖前沿AI实验室，即可训练专属的智能体，降低企业AI应用门槛。"
+      ],
+      "take": "企业自建Agent需求催生新赛道，提供Agent开发基础设施或成为B端市场新红利。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "OpenAI",
+      "title": "Separating signal from noise in coding evaluations",
+      "url": "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/5f0Xf4wOuXVsX7TZUM4tjl/4672bf7bf93bad67ade28dce57f62638/Seperating-signal-from-noise-SEO.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI指出流行编码基准SWE-Bench Pro存在可靠性问题",
+      "lead": [
+        "OpenAI发布最新分析，揭示了流行编码基准测试SWE-Bench Pro存在的问题。",
+        "报告对该基准在评估AI模型时的可靠性与准确性提出质疑，引发业界对现有代码模型评测标准的反思。"
+      ],
+      "take": "现有代码评测基准可能无法真实反映模型能力，产品经理在选型时需结合实际业务场景测试，勿盲信跑分。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "arXiv cs.AI",
+      "title": "Selective Timestep Weighting and Advantage-Based Replay for Sample-Efficient Diffusion RLHF",
+      "url": "https://arxiv.org/abs/2607.07693v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "扩散模型RLHF新策略，显著提升人类反馈效率",
+      "lead": [
+        "强化学习人类反馈（RLHF）是对齐生成模型的重要范式，但应用于扩散模型时反馈效率极低。",
+        "该研究提出选择性时间步加权与基于优势的经验回放两种策略，大幅减少人类或奖励模型的评估需求。"
+      ],
+      "take": "扩散模型对齐成本有望降低，对做图像或视频生成产品的团队而言，这是优化模型表现与控制成本的关键技术。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "arXiv cs.CL",
+      "title": "Max Out GRPO Signal: Adaptive Trace Prefix Control for Hard Reasoning Problems",
+      "url": "https://arxiv.org/abs/2607.07674v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "AdaPrefix-GRPO突破强化学习在极难推理问题上的瓶颈",
+      "lead": [
+        "群组相对策略优化（GRPO）在模型最难的问题上常因无成功rollout而导致梯度消失。",
+        "研究提出AdaPrefix-GRPO方法，通过动态调整参考解的前缀长度来控制难度，使模型能从最难的边界样本中有效学习。"
+      ],
+      "take": "提升模型在复杂推理任务上的表现有了新解法，做深度推理类产品可关注此训练范式优化。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "arXiv cs.AI",
+      "title": "QCNN with Rough Path Signature Kernels",
+      "url": "https://arxiv.org/abs/2607.07634v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "结合粗糙路径签名核的混合量子经典架构用于时序分类",
+      "lead": [
+        "时间序列分析常受数据时间重参数化不变性的困扰，导致特征提取困难。",
+        "该研究提出一种混合量子经典架构，将量子卷积神经网络与粗糙路径签名核结合，以提升时间序列分类的效率和准确性。"
+      ],
+      "take": "量子计算在AI领域的应用探索持续深入，虽距产品化尚远，但做金融或物联网时序预测的PM可保持技术雷达开启。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "arXiv cs.AI",
+      "title": "CARLA-GS: Decoupling Representation, Reasoning, and Physics Simulation for Autonomous Driving Corner-Case Synthesis",
+      "url": "https://arxiv.org/abs/2607.07601v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "CARLA-GS实现自动驾驶长尾场景的逼真合成",
+      "lead": [
+        "自动驾驶安全评估高度依赖罕见的长尾场景，但现有生成方法往往顾此失彼。",
+        "CARLA-GS提出解耦视觉表征、场景推理与物理仿真的框架，能够合成高保真、物理合理的自动驾驶长尾数据。"
+      ],
+      "take": "长尾数据合成是自动驾驶落地的关键，该技术可大幅降低路测成本，做智驾或仿真产品的PM需重点关注。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "MIT Tech Review",
+      "title": "The foundational elements of AI architecture that IT leaders need to scale",
+      "url": "https://www.technologyreview.com/2026/07/07/1139413/the-foundational-elements-of-ai-architecture-that-it-leaders-need-to-scale/",
+      "img": "https://wp.technologyreview.com/wp-content/uploads/2026/06/iStock-2216481617.jpg",
+      "sum": "MIT指出规模化AI架构需回归基础要素以应对演进风险",
+      "lead": [
+        "随着AI能力快速演进并向智能体系统发展，组织在扩大用例时面临投资风险。",
+        "MIT建议IT领导者回归AI架构的基础要素，即部署和管理可靠、集成AI系统的结构框架，以做出明智投资。"
+      ],
+      "take": "Agent系统越复杂，底层架构越重要，做AI产品规划时应优先夯实数据治理与模型路由等基础设施。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "Ars Technica",
+      "title": "How AI could enable autonomous robot workers in workplaces—and maybe homes",
+      "url": "https://arstechnica.com/ai/2026/07/robot-workers-rising-how-ai-may-drive-general-purpose-autonomy-in-robotics/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/Agility_Digit_06-1152x648.jpg",
+      "sum": "AI正推动自主机器人从自动驾驶向工作场所及家庭落地",
+      "lead": [
+        "在自动驾驶和配送无人机普及的背景下，通用自主机器人在工作和家庭中的应用前景变得可期。",
+        "这一愿景的实现高度依赖现代AI技术的发展，吸引了大量研究人员攻克机器人自主性难题。"
+      ],
+      "take": "具身智能正从交通场景向泛化场景延伸，家用或商用机器人赛道即将迎来产品化爆发期。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "36氪",
+      "title": "36氪首发 | 物理AI公司获晶科能源、国投创新等数亿融资，要做全球能源基础设施“大脑”",
+      "url": "https://36kr.com/p/3887726503688968?f=rss",
+      "img": "https://img.36krcdn.com/hsossms/20260709/v2_f5ee7e0511474f27833b094691d67fa7@6221844_oswg121767oswg2276oswg1280_img_jpg?x-oss-process=image/quality,q_100/format,jpg/interlace,1",
+      "sum": "物理AI公司深度智控完成数亿元B轮融资",
+      "lead": [
+        "物理AI企业深度智控完成数亿元人民币B轮融资，由晶科能源战略投资，国投创新等领投。",
+        "其自研PhyAI引擎将物理机理与AI深度耦合，解决工业AI黑箱痛点，实现从L2/L3控制向L4/L5级AI自治的跨越。"
+      ],
+      "take": "工业AI从诊断建议走向闭环控制是必然趋势，做B端工业产品的PM应关注物理机理与AI融合带来的可信度提升。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "36氪",
+      "title": "地产AI进入落地战，深度智联又甩出一张牌",
+      "url": "https://36kr.com/p/3886709249241349?f=rss",
+      "img": "https://img.36krcdn.com/hsossms/20260708/v2_eab83cc354da4ea4b7b387e4ac25603e@6208419_oswg982169oswg1086oswg1448_img_png?x-oss-process=image/quality,q_90/format,jpg/interlace,1",
+      "sum": "易居发布地产专属大模型一体机及AI分析师",
+      "lead": [
+        "易居旗下深度智联发布地产模数通企业专属大模型一体机，内置行业大模型与CoWork平台。",
+        "该产品采用三层架构，支持多模型路由与数据不出域，同时克而瑞AI分析师小瑞正式上岗。"
+      ],
+      "take": "垂直行业大模型一体机成为落地新范式，软硬一体加数据不出域直击企业级客户痛点，值得B端产品借鉴。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "reuters.com",
+      "title": "EXCLUSIVE: Beijing is looking at curbing overseas access to China's top AI models, sources say - Reuters",
+      "url": "https://www.reuters.com/world/beijing-is-looking-curbing-overseas-access-chinas-top-ai-models-sources-say-2026-07-07/",
+      "img": "",
+      "sum": "传中国正考虑限制顶级AI模型的海外访问",
+      "lead": [
+        "据路透社报道，中国有关部门近月与阿里、字节等头部科技企业开会，讨论限制国内最先进AI模型的海外访问。",
+        "限制范围可能包括尚未发布的顶尖模型，此举或对全球AI生态与出海业务产生深远影响。"
+      ],
+      "take": "模型出海面临政策不确定性，做全球化AI产品的PM需提前准备合规预案，关注模型接口的本土化替代方案。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "reuters.com",
+      "title": "Microsoft launches firm to help companies adopt AI with $2.5 billion - Reuters",
+      "url": "https://www.reuters.com/business/retail-consumer/microsoft-launches-firm-help-companies-adopt-ai-with-25-billion-2026-07-02/",
+      "img": "",
+      "sum": "微软斥资25亿美元成立新公司助力企业AI落地",
+      "lead": [
+        "微软宣布成立新运营实体Microsoft Frontier Company，初始注资25亿美元。",
+        "该公司旨在帮助企业选择适合其业务的AI技术，并确保AI投资能够产生实际回报。"
+      ],
+      "take": "巨头亲自下场做AI落地咨询，说明企业级AI应用只买模型不产出的痛点极大，做B端产品的PM应更聚焦ROI验证。"
+    },
+    {
+      "hero": true,
+      "category": "policy",
+      "src": "Ars Technica",
+      "title": "Lawsuit: Man used Grok to make 7K sex images of stepdaughter, then shot himself",
+      "url": "https://arstechnica.com/tech-policy/2026/07/lawsuit-grok-user-made-7k-child-sex-images-xai-only-reported-one-gang-rape-prompt/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/GettyImages-2261524889-1024x648.jpg",
+      "sum": "Grok涉生成7千张儿童色情图，遭诉讼指控包庇罪犯",
+      "lead": [
+        "一起扩大的集体诉讼揭露了Grok被用于生成儿童性虐待材料（CSAM）的恶劣案例。",
+        "一名继父用Grok生成7000张继女的色情图像，并在警方发现后自杀。",
+        "原告指控X和xAI不仅开发了有害的AI脱衣工具，还阻碍警方对相关犯罪的调查。"
+      ],
+      "take": "AI生图工具的滥用与合规漏洞正引发严重的社会与法律风险，产品侧必须前置内容安全防线。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "arXiv cs.CL",
+      "title": "Does Bielik Know What It Doesn't Know? Activation Dispersion Separates Entity Familiarity from Factual Reliability Across Model Scale",
+      "url": "https://arxiv.org/abs/2607.07670v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "研究发现模型激活信号可预测LLM对实体的幻觉",
+      "lead": [
+        "大语言模型最容易对从未见过的实体产生幻觉。",
+        "研究通过探测四个波兰Bielik模型的激活状态，发现模型在生成回答前就能暴露对实体的熟悉度。",
+        "这种熟悉度信号可以有效预测最终答案的事实可靠性。"
+      ],
+      "take": "模型内部状态的探测为解决幻觉问题提供了新思路，产品端可借此开发更精准的置信度评估机制。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "arXiv cs.AI",
+      "title": "DiaLLM: An Investigation into the Robustness-Generation Gap in English Dialect Adaptation",
+      "url": "https://arxiv.org/abs/2607.07669v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "DiaLLM研究揭示大模型方言理解与生成的能力鸿沟",
+      "lead": [
+        "大语言模型虽能理解英语方言，但在生成时仍偏向标准美式英语。",
+        "研究提出DiaLLM，在国际英语语料库上持续预训练，并结合多种对齐策略。",
+        "这是首个对方言适应的鲁棒性与生成能力差距进行控制对比的研究。"
+      ],
+      "take": "方言等长尾语言风格的生成是本地化产品的痛点，需通过专项预训练和对齐策略补齐生成短板。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "Ars Technica",
+      "title": "Trump's plan to redesign every .gov website leads to AI-designed horrors",
+      "url": "https://arstechnica.com/tech-policy/2026/06/trumps-plan-to-redesign-every-gov-website-leads-to-ai-designed-horrors/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/national-design-web-vomit-1152x648.jpg",
+      "sum": "特朗普AI重设政府网站计划翻车，设计现惊悚风",
+      "lead": [
+        "特朗普试图用AI快速重新设计2.7万个美国政府网站的计划遭遇滑铁卢。",
+        "该计划由新成立的国家设计工作室（NDS）主导，旨在三年内完成更新。",
+        "然而，AI生成的设计方案目前出现了许多令人惊悚和荒谬的结果。"
+      ],
+      "take": "AI在政务等严肃场景的落地不能仅靠技术狂奔，缺乏人工审核的自动化设计极易引发公关灾难。"
+    }
+  ]
+}
