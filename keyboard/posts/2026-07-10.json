@@ -1,0 +1,334 @@
+{
+  "date": "2026-07-10",
+  "categories": [
+    {
+      "code": "market",
+      "label": "市场与品牌",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "hardware",
+      "label": "新品与硬件",
+      "color": "#d6932b"
+    },
+    {
+      "code": "tech",
+      "label": "技术趋势",
+      "color": "#7a52cc"
+    },
+    {
+      "code": "community",
+      "label": "社区与玩家",
+      "color": "#0a8f6a"
+    }
+  ],
+  "items": [
+    {
+      "hero": true,
+      "category": "market",
+      "src": "r/MechanicalKeyboards",
+      "title": "Best-selling keyboard switches of June 2026",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uptjat/bestselling_keyboard_switches_of_june_2026/",
+      "img": "https://preview.redd.it/z5u0i450wsbh1.jpeg?width=640&crop=smart&auto=webp&s=9951ef86782164fe698ae10f8781a1b9d0936c96",
+      "sum": "2026年6月最热销机械键盘轴体排行发布",
+      "lead": [
+        "Best-selling keyboard switches of June 2026",
+        "(Cover image: Wingtree Nezuko switches.) Ready for the June switch rankings? I just updated the database of the most popular mechanical keyboard switches based on real sales data shared by 20 shops/manufacturers -- this time covering somewhat less than the usual 1 million switches sold. Top 10 switc"
+      ],
+      "take": "基于真实销量数据的轴体排行是洞察市场偏好与研发方向的重要风向标。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "cnet.com",
+      "title": "Give Your Desk a Retro Touch With These Keychron Keyboards While They're as Low as $40 - CNET",
+      "url": "https://www.cnet.com/deals/keychron-deals-at-woot/",
+      "img": "https://www.cnet.com/a/img/resize/7d6c899222d59754ae8ad3a53b81c50e81dac54b/hub/2026/07/07/7b6b7088-1789-4edd-9dec-b63bbe5e5cd6/untitled-design.png?auto=webp&amp;fit=crop&amp;height=675&amp;width=1200",
+      "sum": "Keychron机械键盘Woot促销，低至40美元",
+      "lead": [
+        "If you make a purchase using our links, CNET may earn a commission. # Give Your Desk a Retro Touch With These Keychron Keyboards While They're as Low as $40.",
+        "Right now Woot is having a sale on Keychron mechanical keyboards, which brings prices down to as low as $40\"). however, Woot is always full of"
+      ],
+      "take": "低价促销有助于品牌下沉与清库存，但需关注渠道价格体系对品牌定位的长远影响。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "Geekhack",
+      "title": "Re: [GB] KKB Korean Delights | Early July 2026",
+      "url": "https://geekhack.org/index.php?topic=126852.msg3217866#msg3217866",
+      "img": "",
+      "sum": "KKB Korean Delights团购受热捧，马卡龙配色与多布局受赞",
+      "lead": [
+        "Re: [GB] KKB Korean Delights | Early July 2026",
+        "These pastel builds look fantastic — clean, soft, and full of personality. It’s always fun seeing how different layouts like compact, split, and custom boards can share the same color theme yet feel unique. This is the kind of creativity that keeps the..."
+      ],
+      "take": "马卡龙配色与多布局兼容是当前客制化市场的有效卖点。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "military.com",
+      "title": "Pokemon and Razer Team Up for New Eeveelution Gaming Accessories - Military.com",
+      "url": "https://www.military.com/pokemon-and-razer-team-up-for-new-eeveelution-gaming-accessories",
+      "img": "https://static0.mltimages.com/wordpresshttps://static0.mltimages.com/wordpress/wp-content/uploads/2026/07/pokemon-razer-espeon-umbreon-collection.jpg?w=1600&amp;h=900&amp;fit=crop",
+      "sum": "宝可梦与雷蛇合作推出伊布主题电竞外设。",
+      "lead": [
+        "# Pokemon and Razer Team Up for New Eeveelution Gaming Accessories.",
+        "Pokemon and gaming electronics company Razer partner up to create a new line of accessories based on two popular Eeveelutions. A new Pokemon and Razer collaboration is underway, which has introduced a new set of gaming periphe"
+      ],
+      "take": "大IP联名是破圈利器，外设品牌应持续拓展泛娱乐受众以拉动增量。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "bgr.com",
+      "title": "5 Useful iPad Accessories Cheaper Than Apple Brand Products - bgr.com",
+      "url": "https://www.bgr.com/2207152/useful-ipad-accessories-cheaper-than-apple/",
+      "img": "https://www.bgr.com/img/gallery/5-useful-ipad-accessories-cheaper-than-apple-brand-products/l-intro-1783018053.jpg",
+      "sum": "推荐五款比苹果官方更便宜的iPad实用配件",
+      "lead": [
+        "The iPad is a powerful device you can use for just about anything you use a computer for, ranging from work to play.",
+        "Whether you have the standard model, iPad Air, iPad Mini, or iPad Pro, the right accessories can add functionality to your tablet and keep it in good condition for longer, which is im"
+      ],
+      "take": "平替配件市场需求旺盛，外设厂商可针对平板生态推高性价比竞品。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "r/MechanicalKeyboards",
+      "title": "Tofu 3.0 x PBTFans Twist R2",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1urknqj/tofu_30_x_pbtfans_twist_r2/",
+      "img": "https://preview.redd.it/h07dzf1r46ch1.jpg?width=140&height=78&auto=webp&s=7b2bb1883d45e3069a6c81484ff7a3f6ca02e909",
+      "sum": "Tofu65 3.0套件搭配PBTFans键帽与Neo轴体客制化展示",
+      "lead": [
+        "Specs: Tofu65 3.0 RAW Aluminium Plate Stainless Steel Case & Weight No Foam",
+        "Maiz x MonacoKeys PCB-Mounted Clip-In Stabs (lubed) Neo Oat Linear Switches PBTFans Twist R2   submitted by   /u/mynameispowl [link]   [comments]"
+      ],
+      "take": "无棉化与不锈钢定位板搭配成为客制化新声学玩法，套件厂商可参考。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "gizmodo.com",
+      "title": "Razer Blade 16 (2026) Review: A Gaming Laptop You Can Actually Call ‘Portable’ - Gizmodo",
+      "url": "https://gizmodo.com/razer-blade-16-2026-review-a-gaming-laptop-you-can-actually-call-portable-2000783170",
+      "img": "",
+      "sum": "雷蛇发布2026款Blade 16游戏本，主打便携但价格高昂",
+      "lead": [
+        "Razer’s big black rectangle, the Blade 16, is the best it’s ever been.",
+        "And as you may have guessed, especially if you know anything about the ongoing RAM crisis, the revised Razer Blade 16 for 2026 is the most expensive..."
+      ],
+      "take": "雷蛇旗舰本迭代，外设大厂高端硬件整合趋势与成本压力并存。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "r/MechanicalKeyboards",
+      "title": "[IC] So we made a Ferris Mouse... Would anyone want one?",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uquice/ic_so_we_made_a_ferris_mouse_would_anyone_want_one/",
+      "img": "https://external-preview.redd.it/cnFicHI2OWlvMGNoMd_Swj436axYh31hSrjniB6kkV47bpJMZtxb9n644hwk.png?width=640&crop=smart&auto=webp&s=17044e1aaaa65930d0cc2b38ca58edfa7b02e297",
+      "sum": "Ferris分体键盘内置鼠标传感器，探索键鼠一体IC",
+      "lead": [
+        "I could never get used to track balls, points or pads, but also did not want to keep moving my hand between mouse and keyboard.",
+        "So I got our designer to build a mouse sensor into a Ferris Sweep. Would anyone else be interested in this? Final version would almost certainly be wireless. Probably other"
+      ],
+      "take": "键鼠一体化设计直击分体键盘用户痛点，无线化是此类产品必然方向。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "r/MechanicalKeyboards",
+      "title": "Matrix Plato Chaper3.S1",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1upvcbr/matrix_plato_chaper3s1/",
+      "img": "https://preview.redd.it/bcaqmjhw7tbh1.png?width=140&height=140&crop=1:1,smart&auto=webp&s=13a634809c68713702b9cf176513403f0b90d89f",
+      "sum": "Matrix Plato 3.S1套件搭配牛仔蓝键帽展示",
+      "lead": [
+        "Matrix Plato Chaper3.S1",
+        "Ocean Blue Color w/ Winmix Denim Blue Keycaps   submitted by   /u/Zealousideal-Point93 [link]   [comments]"
+      ],
+      "take": "特殊主题配色与跨界材质键帽能迅速抓住社区眼球，差异化视觉是破局点。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "KeebTalk",
+      "title": "Odd Switch Short V & VI Double Header",
+      "url": "https://www.keebtalk.com/t/odd-switch-short-v-vi-double-header/24180",
+      "img": "https://www.keebtalk.com/uploads/db8059/optimized/3X/c/9/c975bd3fbbdfe89927332d0638c3682e79727de4_2_690x369.jpeg",
+      "sum": "奇特轴体短评：可在线性与段落声间实时切换的单轴设计。",
+      "lead": [
+        "Hey all, Rarely, I’ll encounter a scenario where I simply can’t do a full length review for a switch.",
+        "Imagine I had only one single switch that had the ability to be toggled between linear and clicky mode on the fly - I couldn’t review the performance of just one of those. Or imagine I had a tactile"
+      ],
+      "take": "多模态切换轴体是差异化新方向，但需解决量产可行性与手感一致性。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "Geekhack",
+      "title": "Re: [IC] Eclipse TKL",
+      "url": "https://geekhack.org/index.php?topic=126785.msg3217865#msg3217865",
+      "img": "",
+      "sum": "Eclipse TKL兴趣检查遇重名，作者确认与FRL TKL撞名",
+      "lead": [
+        "Re: [IC] Eclipse TKL",
+        "Quote from: EdgeOfInfinity on Wed, 01 July 2026, 19:02:22 good luck with the project, but hasn't this named already been used for a board? Thankyou! yes unfortunately we found out a bit late that an FRL tkl called E..."
+      ],
+      "take": "客制化套件命名需提前做好检索，避免重名纠纷。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "Deskthority",
+      "title": "Keyboards • Apple Alive (Recreating)",
+      "url": "https://deskthority.net/viewtopic.php?p=525689#p525689",
+      "img": "https://deskthority.net/download/file.php?id=82222&amp;sid=7065371748bb1f7ad1690ed197562d15",
+      "sum": "玩家为初代苹果键盘自制QMK/VIA PCB并改造定位板",
+      "lead": [
+        "I got this old computer, I assume its Apple among the first generation. I removed all the switches and mod the switch plate.",
+        "I made my own pcb with QMK/VIA support. I make my own layout Modified the switchplate so that the pcb will be screwed to the casing. This to compensate the difference height o"
+      ],
+      "take": "复古键盘现代化改造需求仍在，QMK/VIA定制PCB是核心痛点与商机。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "KeebTalk",
+      "title": "One-handed keyboard for temporary use?",
+      "url": "https://www.keebtalk.com/t/one-handed-keyboard-for-temporary-use/24187",
+      "img": "https://www.keebtalk.com/images/emoji/apple/slight_smile.png?v=15",
+      "sum": "社区求助：因手臂受伤需推荐单手临时使用的键盘",
+      "lead": [
+        "A friend of mine has an injured left arm, surgery & recovery happening soon, and they’re facing a long period with basically only their dominant right hand available.",
+        "They’re a developer and typing is a core activity. We’re looking for recommendations for a keyboard that would assist them during thi..."
+      ],
+      "take": "单手键盘不仅是小众极客玩物，也是康复与无障碍场景的刚需，值得厂商关注。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Deskthority",
+      "title": "Keyboards • Re: DEC VT100 terminal keycaps",
+      "url": "https://deskthority.net/viewtopic.php?p=525690#p525690",
+      "img": "https://deskthority.net/images/smilies/icon_lol.gif",
+      "sum": "Deskthority论坛网友持续讨论DEC VT100终端键帽",
+      "lead": [
+        "yes very helpful, thanks harry12! Anyone else?",
+        "Statistics: Posted by tlt — Yesterday, 19:21"
+      ],
+      "take": "复古终端键帽在硬核客制化圈仍具长尾讨论热度，复古复刻或存小众市场。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Deskthority",
+      "title": "Keyboards • Re: DEC VT100 terminal keycaps",
+      "url": "https://deskthority.net/viewtopic.php?p=525687#p525687",
+      "img": "https://deskthority.net/images/smilies/icon_lol.gif",
+      "sum": "社区探讨为DEC VT100终端键盘3D打印替换键帽",
+      "lead": [
+        "If the switches are still in good shape, I'd definitely keep the keyboard.",
+        "3D printing sounds like a good option, especially as a temporary solution. You could also check whether anyone has already modeled VT100 keycaps before starting from scratch. Now that is an interesting answer with really help"
+      ],
+      "take": "复古终端键帽稀缺，3D打印是填补小众替换需求的可行路径。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Darling RAW Tofu",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1ur5l7p/darling_raw_tofu/",
+      "img": "https://preview.redd.it/dvoaxluul2ch1.jpg?width=140&height=93&auto=webp&s=0eb9ae4865a8e98fc0f619b45673f9c966ee68cc",
+      "sum": "玩家好评Tofu65 3.0套件，搭配GMK与HMX轴体",
+      "lead": [
+        "Turned out great! KBDFans have been killing it with the Tofu lineup. Sounds and feels very nice.",
+        "Tofu65 3.0 - RAW top Pink textured bottom - GMK Darling R2 - HMX Egg Yolks - Knight V4's - Alu plate / Gasket mount   submitted by   /u/Grok3 [link]   [comments]"
+      ],
+      "take": "Tofu系列迭代持续获市场认可，Gasket结构与HMX轴体成热门搭配。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Cherry G80-5000HAADE",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uqsbtb/cherry_g805000haade/",
+      "img": "https://preview.redd.it/3lkzvpco90ch1.png?width=140&height=105&auto=webp&s=7b8d5a1c48ffce54363753ad277d798b4f8f48a8",
+      "sum": "玩家晒出收到的Cherry G80-5000HAADE经典键盘",
+      "lead": [
+        "This arrived at my doorstep today, really fun.   submitted by   /u/ChickenAssassin9 [link]   [comments]"
+      ],
+      "take": "Cherry经典型号在收藏市场仍有热度，复古外设具备长尾价值。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "Tofu60 3.0 Keeping It Classy",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uqeym6/tofu60_30_keeping_it_classy/",
+      "img": "https://preview.redd.it/hr07c36kvwbh1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=12bbdff0e037fdf46ca11d0f03acd1a62818bcf1",
+      "sum": "新手玩家分享Tofu60 3.0客制化组装体验",
+      "lead": [
+        "Very excited to finally have my first real build as a relatively new enthusiast of the hobby!",
+        "After diving in with a customized Keychron Q1 Max (as one does) for the past year and change, I finally pulled the trigger on the Tofu60 3.0 as my introduction to the experience of actually building a keybo"
+      ],
+      "take": "从成品转向套件组装是典型玩家进阶路径，入门级套件市场潜力依然巨大。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Deskthority",
+      "title": "Group buys • Re: F104+SSK+122+62+77+50+Ergo orders now open! New Kishsaver+Industrial Model F Keyboards",
+      "url": "https://deskthority.net/viewtopic.php?p=525684#p525684",
+      "img": "https://deskthority.net/download/file.php?id=82221&amp;sid=7065371748bb1f7ad1690ed197562d15",
+      "sum": "Model F键盘复刻版开启团购，展示定制F122",
+      "lead": [
+        "Group buys • Re: F104+SSK+122+62+77+50+Ergo orders now open! New Kishsaver+Industrial Model F Keyboards",
+        "Sharing with permission a nice customized F122 keyboard, which combines the pearl/pebble, dark gray, and blue key sets plus the media keys. Statistics: Posted by Ellipse — 07 Jul 2026, 23:58"
+      ],
+      "take": "复古屈筒弹簧键盘仍有硬核受众，定制化配色是提升团购吸引力的关键。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Deskthority",
+      "title": "Want to buy • Re: Percent Studio CANOE gen1",
+      "url": "https://deskthority.net/viewtopic.php?p=525681#p525681",
+      "img": "https://deskthority.net/images/smilies/icon_e_biggrin.gif",
+      "sum": "玩家求购Percent Studio CANOE一代套件",
+      "lead": [
+        "Want to buy • Re: Percent Studio CANOE gen1",
+        "bump Statistics: Posted by phinix — 06 Jul 2026, 21:34"
+      ],
+      "take": "经典套件CANOE在二手市场仍有持续需求。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Geekhack",
+      "title": "Re: [IC] Eclipse TKL",
+      "url": "https://geekhack.org/index.php?topic=126785.msg3217864#msg3217864",
+      "img": "",
+      "sum": "玩家盛赞Eclipse TKL多版本设计，表示必将上车",
+      "lead": [
+        "Re: [IC] Eclipse TKL",
+        "Quote from: LotGlen on Thu, 18 June 2026, 13:44:47 This board is insane. I don't understand. How can you have EVERY SINGLE VARIANT BE SO AWESOME?!. Count me in for this one for sure. You guys keep on bringing the heat and di..."
+      ],
+      "take": "多版本差异化设计能显著提升玩家购买意愿与项目热度。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Geekhack",
+      "title": "Re: Matias 60% Keyboard Group Buy",
+      "url": "https://geekhack.org/index.php?topic=65528.msg3217863#msg3217863",
+      "img": "",
+      "sum": "Matias 60%键盘团购进度引关注，用户询问是否仍在推进。",
+      "lead": [
+        "Quote from: mohit on Wed, 08 July 2026, 04:32:15 hello, just found out about this board. is this still happening?",
+        "i would be very interesting in buying this once it comes out given the amount of time its taken to engineer"
+      ],
+      "take": "长周期团购项目需重视社区沟通，避免因信息不透明流失潜在客户。"
+    }
+  ]
+}
