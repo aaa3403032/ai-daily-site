@@ -1,0 +1,805 @@
+{
+  "date": "2026-07-11",
+  "generated_at": "2026-07-11T12:24:01+08:00",
+  "categories": [
+    {
+      "code": "llm",
+      "label": "大模型",
+      "color": "#4b3bff"
+    },
+    {
+      "code": "agent",
+      "label": "Agent·智能体",
+      "color": "#0a8f6a"
+    },
+    {
+      "code": "product",
+      "label": "产品与工具",
+      "color": "#d6932b"
+    },
+    {
+      "code": "oss",
+      "label": "开源发布",
+      "color": "#c8472b"
+    },
+    {
+      "code": "research",
+      "label": "研究与论文",
+      "color": "#7a52cc"
+    },
+    {
+      "code": "biz",
+      "label": "融资与商业",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "policy",
+      "label": "政策与监管",
+      "color": "#8a8d99"
+    }
+  ],
+  "items": [
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "openai.com",
+      "title": "GPT-5.6",
+      "url": "https://openai.com/index/gpt-5-6/",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/3T0kxQLJk1VcXVxMwXF97J/4345df401f2b08ed6a1eef88c9588d2e/OAI_ChatGPTWork_ModelBlog_OpenGraph_16x9_1200x630.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI正式发布GPT-5.6模型",
+      "lead": [
+        "OpenAI正式发布GPT-5.6模型，并同步公开了模型的安全与部署指南。",
+        "该模型在复杂推理与长时任务处理上展现出显著提升，标志着大模型基础能力的又一次迭代。"
+      ],
+      "take": "基础模型能力持续跃升，产品经理需关注新模型带来的交互范式变化及长尾场景覆盖可能。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "MIT Tech Review",
+      "title": "The Download: Claude’s inner workings and OpenAI’s “super app”",
+      "url": "https://www.technologyreview.com/2026/07/10/1140316/the-download-anthropic-claude-hidden-space-openai-super-app/",
+      "img": "https://wp.technologyreview.com/wp-content/uploads/2025/08/PigeonIntoMissile.edit_.jpg?w=3000",
+      "sum": "Anthropic用J-lens揭示Claude内部机制",
+      "lead": [
+        "MIT科技评论报道，Anthropic使用名为Jacobian lens（雅可比透镜，一种分析模型内部状态的工具）发现了大模型内部的隐藏空间。",
+        "研究发现，模型在回答问题或执行任务时，会在该隐藏空间中处理和推演概念，这为理解LLM黑盒提供了新视角。"
+      ],
+      "take": "可解释性研究的进展有助于提升AI产品的安全性和可控性，PM在涉及高风险场景的AI产品设计中可关注此类底层能力。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "Ars Technica",
+      "title": "OpenAI wants its new tool to do your work for you and with you",
+      "url": "https://arstechnica.com/ai/2026/07/openai-wants-its-new-tool-to-do-your-work-for-you-and-with-you/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/gptwork-1152x648-1783630571.webp",
+      "sum": "OpenAI发布ChatGPT Work，支持长时任务",
+      "lead": [
+        "OpenAI发布新工具ChatGPT Work，解决了此前Agent Mode（代理模式）自动化任务只能持续几分钟的痛点。",
+        "新工具能够根据目标持续数小时跟进项目并产出最终成果，OpenAI鼓励用户用自己熟悉的任务来测试其长时执行能力。"
+      ],
+      "take": "长时任务执行能力的突破意味着AI Agent从“对话助手”向“数字员工”迈进，产品经理需重新思考人机协作的交互边界与任务监控机制。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "anthropic.com",
+      "title": "A new way to reflect on how you use Claude",
+      "url": "https://www.anthropic.com/news/reflect-with-claude",
+      "img": "https://www.anthropic.com/api/opengraph-illustration?name=Hand%20Quill&amp;backgroundColor=cactus",
+      "sum": "Anthropic推出Claude使用反思功能",
+      "lead": [
+        "Anthropic推出新功能，帮助用户反思和回顾自己与Claude的交互方式。",
+        "该功能旨在让用户更清晰地了解自身的使用模式，从而优化人机协作效率。"
+      ],
+      "take": "从单纯提供回答到辅助用户反思使用习惯，AI产品正从工具向“教练”角色延伸，为提升用户留存和深度使用提供新思路。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "martinalderson.com",
+      "title": "GLM 5.2 and the coming AI margin collapse",
+      "url": "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/",
+      "img": "https://martinalderson.com/img/og/glm-5-2-and-the-coming-ai-margin-collapse-part-1.png",
+      "sum": "GLM 5.2或将引发AI利润率崩溃",
+      "lead": [
+        "文章指出，随着GLM 5.2等开源且高性能模型的发布，AI行业的利润率可能面临崩溃。",
+        "当模型能力趋同且本地部署成本降低时，基于API调用的商业模式将受到严重冲击。"
+      ],
+      "take": "开源模型逼近闭源水平将加速AI能力商品化，产品经理需思考如何在同质化模型之上构建数据与工作流壁垒。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "anthropic.com",
+      "title": "The Making of Claude Code",
+      "url": "https://www.anthropic.com/features/making-of-claude-code",
+      "img": "https://cdn.sanity.io/images/4zrzovbb/website/bfd4aa0ef6a657e6f22fe214dc177aeff4c4c247-1200x630.gif",
+      "sum": "Anthropic分享Claude Code研发历程",
+      "lead": [
+        "Anthropic发布文章，详细介绍了Claude Code（Anthropic的编程助手产品）的研发过程。",
+        "文章剖析了从概念到落地的工程挑战与设计取舍，为构建AI编程工具提供了第一手经验。"
+      ],
+      "take": "AI编程助手的工程化实践极具参考价值，PM可从中借鉴AI原生功能的设计迭代与用户反馈闭环方法。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "Ars Technica",
+      "title": "UK regulator warns of \"arms race\" to keep up with AI use in financial services",
+      "url": "https://arstechnica.com/ai/2026/07/uk-regulator-warns-of-arms-race-to-keep-up-with-ai-use-in-financial-services/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/ftcms_90ad2b22-0222-4d93-ab0a-6c1af73b39fc-1-1152x648.jpeg",
+      "sum": "英国监管机构警告金融AI军备竞赛",
+      "lead": [
+        "英国金融行为监管局高管警告，监管机构正与AI在金融服务中的应用展开“军备竞赛”。",
+        "随着数百万人使用ChatGPT等工具辅助个人财务决策，监管机构呼吁赋予更大权力以审查大模型的使用风险。"
+      ],
+      "take": "金融等强监管行业的AI产品落地面临合规收紧，PM在产品设计初期就必须将可审计性与合规红线纳入考量。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "github.com",
+      "title": "Claude-real-video － any LLM can watch a video",
+      "url": "https://github.com/HUANGCHIHHUNGLeo/claude-real-video",
+      "img": "https://opengraph.githubassets.com/f9a14e29e59368310725268a4e34aade2d2df4719c28528d88fd14b672155129/HUANGCHIHHUNGLeo/claude-real-video",
+      "sum": "开源项目让任意LLM具备视频理解能力",
+      "lead": [
+        "开发者发布开源项目Claude-real-video，旨在让任何大语言模型都能观看并理解视频内容。",
+        "该项目通过特定架构弥补了当前多数LLM仅支持文本或图像输入的局限。"
+      ],
+      "take": "低成本视频理解方案的出现，将加速多模态AI在短视频、监控、会议记录等泛视频场景的产品化落地。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "techcrunch.com",
+      "title": "Reddit is using LLMs to solve a problem LLMs largely created - TechCrunch",
+      "url": "https://techcrunch.com/2026/07/06/reddit-is-using-llms-to-solve-a-problem-llms-largely-created/",
+      "img": "https://techcrunch.com/wp-content/uploads/2023/06/reddit-glitch-1.jpg?resize=1200,675",
+      "sum": "Reddit用LLM对抗LLM生成的垃圾信息",
+      "lead": [
+        "TechCrunch报道，Reddit正在开发基于LLM的工具来打击平台上的垃圾信息，而这些垃圾信息大多是由LLM生成的。",
+        "这反映了AI时代平台方面临的新困境：必须用魔法打败魔法，用AI对抗AI产生的内容污染。"
+      ],
+      "take": "“AI对抗AI”将成为内容平台的基础设施，PM需关注内容安全与反作弊系统的AI化升级需求。"
+    },
+    {
+      "hero": false,
+      "category": "agent",
+      "src": "reuters.com",
+      "title": "Zuckerberg says AI agent development going slower than expected",
+      "url": "https://www.reuters.com/business/zuckerberg-says-ai-agent-development-going-slower-than-expected-2026-07-02/",
+      "img": "",
+      "sum": "扎克伯格称AI智能体开发进度不及预期",
+      "lead": [
+        "扎克伯格近期向内部表示，AI智能体（能自主执行任务的AI系统）的开发进展比预期更慢。",
+        "尽管行业投入巨大，但当前智能体在复杂任务上的可靠性和自主性仍有明显不足。"
+      ],
+      "take": "智能体落地面临技术瓶颈，PM在规划Agent功能时应降低预期，聚焦高确定性场景。"
+    },
+    {
+      "hero": false,
+      "category": "agent",
+      "src": "noma.security",
+      "title": "GitLost: We Tricked GitHub's AI Agent into Leaking Private Repos",
+      "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/",
+      "img": "https://noma.security/wp-content/uploads/Screenshot-2026-06-29-at-14.16.35.png",
+      "sum": "研究人员诱骗GitHub AI Agent泄露私有仓库",
+      "lead": [
+        "安全团队披露名为GitLost的攻击手法，成功诱骗GitHub的AI智能体泄露私有代码库。",
+        "该漏洞源于AI智能体在处理外部指令时缺乏足够的权限边界校验，易受提示词注入攻击。"
+      ],
+      "take": "Agent安全是产品上线前提，集成外部数据的Agent必须建立严格的权限隔离与指令防注入机制。"
+    },
+    {
+      "hero": false,
+      "category": "agent",
+      "src": "TechCrunch",
+      "title": "Meta enters the crowded AI coding battle with Muse Spark 1.1",
+      "url": "https://techcrunch.com/2026/07/09/meta-enters-the-crowded-ai-coding-battle-with-muse-spark-1-1/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/05/meta-ai-GettyImages-2264943773.jpg?w=1024",
+      "sum": "Meta发布AI编码工具Muse Spark 1.1入局智能体赛道",
+      "lead": [
+        "Meta推出AI编码工具Muse Spark 1.1，主打处理大型智能体工作负载、修复Bug及大型代码迁移。",
+        "这标志着Meta正式加入拥挤的AI编码市场，试图以企业级自动化能力差异化竞争。"
+      ],
+      "take": "AI编码赛道向企业级复杂工程场景演进，PM需关注Agent在重构、迁移等长链路任务中的产品价值。"
+    },
+    {
+      "hero": false,
+      "category": "agent",
+      "src": "github.com",
+      "title": "OfficeCLI: Office suite for AI agents to read and edit Microsoft Office files",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "img": "https://opengraph.githubassets.com/75f01cfd77f2564aed39c5944bf510fb9a3d8d250d29acf11354d6a849db5be7/iOfficeAI/OfficeCLI",
+      "sum": "OfficeCLI：专供AI Agent读写编辑Office文件的套件",
+      "lead": [
+        "开发者推出OfficeCLI，专为AI智能体提供读写和编辑微软Office文件的能力。",
+        "该工具填补了Agent在处理传统办公文档格式时的交互空白，使Agent能直接操作Word、Excel等文件。"
+      ],
+      "take": "Agent打通传统办公软件是刚需，PM在设计办公类Agent时应优先解决文件格式的兼容与读写。"
+    },
+    {
+      "hero": false,
+      "category": "agent",
+      "src": "github.com",
+      "title": "Show HN: FableCut – A browser video editor AI agents can drive (zero deps)",
+      "url": "https://github.com/ronak-create/FableCut",
+      "img": "https://opengraph.githubassets.com/b041917a598bf51d00f5bf3c4d43c4523a1149cfb66e43a2454b7317ac4c167b/ronak-create/FableCut",
+      "sum": "FableCut：AI Agent可驱动的浏览器端视频编辑器",
+      "lead": [
+        "开发者发布FableCut，这是一款零依赖、可供AI智能体驱动的浏览器视频编辑器。",
+        "它允许Agent通过API直接操控视频剪辑流程，拓展了Agent在多媒体内容生成领域的应用边界。"
+      ],
+      "take": "Agent正从文本/代码向多媒体操作延伸，PM可探索Agent在音视频工作流中的自动化切入点。"
+    },
+    {
+      "hero": false,
+      "category": "agent",
+      "src": "arxiv.org",
+      "title": "The Hitchhiker's Guide to Agentic AI",
+      "url": "https://arxiv.org/abs/2606.24937",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "arXiv论文：Agentic AI漫游指南",
+      "lead": [
+        "该论文系统梳理了Agentic AI（具备自主规划和执行能力的AI系统）的核心概念与架构。",
+        "研究为构建可靠的智能体系统提供了理论框架和实践指导，涵盖规划、工具调用及记忆机制。"
+      ],
+      "take": "理论框架逐渐成型，PM可借鉴论文中的智能体架构设计，规范产品的规划与工具调用模块。"
+    },
+    {
+      "hero": false,
+      "category": "agent",
+      "src": "The Register",
+      "title": "Avoid AI atrophy – new tool promises to reverse vibe coding skills decay",
+      "url": "https://www.theregister.com/ai-and-ml/2026/07/07/avoid-ai-atrophy-new-tool-promises-to-reverse-vibe-coding-skills-decay/5267913",
+      "img": "https://image.theregister.com/?imageId=5224005&width=800",
+      "sum": "新工具Atrophy旨在逆转过度依赖AI导致的编码技能退化",
+      "lead": [
+        "针对开发者过度依赖AI智能体编码导致的技能退化（Vibe coding skills decay），新CLI工具Atrophy应运而生。",
+        "它将编码能力视为国际象棋Elo评分，通过五个领域的定期训练来强化开发者的核心编码技能。"
+      ],
+      "take": "AI辅助工具引发用户技能焦虑，PM在设计产品时可考虑加入人机协同模式，平衡效率与用户能力成长。"
+    },
+    {
+      "hero": false,
+      "category": "agent",
+      "src": "github.com",
+      "title": "Show HN: Kastor – Terraform-style specs for AI agents",
+      "url": "https://github.com/weirdGuy/kastor",
+      "img": "https://opengraph.githubassets.com/f4bde2aea6e98def2b09af8bb263bcf7770bb43871ed0a240eb1035dda6e55f6/weirdGuy/kastor",
+      "sum": "Kastor：为AI Agent提供Terraform风格的基础设施规格",
+      "lead": [
+        "开发者推出Kastor，采用类似Terraform（一种基础设施即代码工具）的方式为AI智能体定义规格。",
+        "该工具旨在通过声明式配置管理Agent的运行环境和依赖，提升智能体部署的可复现性与稳定性。"
+      ],
+      "take": "Agent基础设施走向IaC化，PM在规划企业级Agent平台时，需提供标准化的环境配置与部署方案。"
+    },
+    {
+      "hero": false,
+      "category": "agent",
+      "src": "danluu.com",
+      "title": "Agentic test processes, LLM benchmarks, and other notes on agentic coding fr",
+      "url": "https://danluu.com/ai-coding/#llm-variance",
+      "img": "",
+      "sum": "Dan Luu发布智能体测试流程与LLM基准观察笔记",
+      "lead": [
+        "技术博主Dan Luu发文探讨了智能体测试流程、LLM基准测试及智能体编码的前沿问题。",
+        "文章指出当前智能体在复杂任务中的可靠性仍需严格的测试流程保障，并批评了部分基准测试脱离实际。"
+      ],
+      "take": "Agent评测不能迷信跑分，PM需建立基于真实业务场景的测试用例，以验证Agent的实际可用性。"
+    },
+    {
+      "hero": false,
+      "category": "agent",
+      "src": "github.com",
+      "title": "Show HN: Scan your AI agents for dangerous capabilities",
+      "url": "https://github.com/makerchecker/MakerChecker",
+      "img": "https://opengraph.githubassets.com/34244e2b97648dfaf8159a171d8eda6b5c2763a333758ba8bb5f8a33fe4d8ce0/makerchecker/MakerChecker",
+      "sum": "开源工具可扫描AI Agent的潜在危险能力",
+      "lead": [
+        "开发者发布了一款用于扫描AI智能体危险能力的开源工具。",
+        "该工具帮助开发者在部署前检测Agent是否具备越权、数据泄露等高风险行为，降低上线安全隐患。"
+      ],
+      "take": "Agent安全扫描将成为标配，PM应在产品发布流程中引入红线测试，防止Agent行为失控。"
+    },
+    {
+      "hero": false,
+      "category": "agent",
+      "src": "hic-ai.com",
+      "title": "Mouse: Precision Editing Tools for AI Coding Agents",
+      "url": "https://hic-ai.com",
+      "img": "https://hic-ai.com/opengraph-image?0965d50c6d8fc51d",
+      "sum": "Mouse：专为AI编码Agent设计的精准编辑工具",
+      "lead": [
+        "Mouse为AI编码智能体提供精准的代码编辑工具，解决现有Agent在修改代码时容易误改的问题。",
+        "它赋予Agent更细粒度的代码操作能力，提升自动编码的准确性与安全性。"
+      ],
+      "take": "Agent操作精度决定用户体验，PM需优化Agent的执行颗粒度，提供精准修改而非整段重写的能力。"
+    },
+    {
+      "hero": false,
+      "category": "agent",
+      "src": "github.com",
+      "title": "Show HN: CLI that helps AI agents avoid vulnerable dependencies",
+      "url": "https://github.com/clidey/deptrust",
+      "img": "https://opengraph.githubassets.com/7d78983013d6a7b78b90f80ca0a1c8863cc3cd8855aa1c15c5f7ddd0c51d31b0/clidey/deptrust",
+      "sum": "Deptrust：帮助AI Agent避免引入漏洞依赖的CLI工具",
+      "lead": [
+        "开发者推出Deptrust，一款命令行工具及MCP服务器，用于检查AI智能体引入的依赖包是否存在已知漏洞。",
+        "该工具直接调用公共API，解决AI编码Agent常建议过时或存在安全缺陷的依赖包的问题。"
+      ],
+      "take": "Agent生成的代码需安全兜底，PM在集成编码Agent时应接入依赖检查能力，避免引入供应链安全风险。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "WIRED",
+      "title": "OpenAI’s Head of Safety Is Leaving the Company",
+      "url": "https://www.wired.com/story/openai-head-of-safety-leaving/",
+      "img": "https://media.wired.com/photos/6a518d0cb6767a97076bfe9e/master/pass/GettyImages-2283356667.jpg",
+      "sum": "OpenAI安全负责人离职，安全与研究团队正进一步整合。",
+      "lead": [
+        "OpenAI安全负责人Johannes Heidecke宣布离职。",
+        "此时正值OpenAI试图进一步整合其研究团队与安全团队，反映出公司在加速研发与保障安全间的持续博弈。"
+      ],
+      "take": "安全负责人的离职与团队整合，反映出AI企业在加速商业化与保障安全性之间的持续博弈，产品侧需关注安全合规策略的变动。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "The Verge",
+      "title": "Meta turns off the Instagram feature that let users make AI deepfakes of public accounts",
+      "url": "https://www.theverge.com/tech/964416/meta-instagram-ai-muse-image-deepfakes",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/meta-muse-image-instagram-tag.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "Meta因强烈抵制，关闭Instagram未经许可生成AI深伪图像功能。",
+      "lead": [
+        "Meta关闭了本周宣布的一项Instagram功能，该功能允许用户仅通过@提及公开账号，即可基于其内容生成AI图像（深伪图像）。",
+        "由于该功能在未经账号所有者许可的情况下使用其公开内容，引发了强烈的公众抵制与隐私担忧。"
+      ],
+      "take": "未经授权的UGC（用户生成内容）直接用于AI生成是高危红线，产品经理在设计AI创作功能时必须将用户授权与隐私合规作为前置条件。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "casp.ac",
+      "title": "How the terrorist group Boko Haram uses frontier AI",
+      "url": "https://casp.ac/reports/ai-enabled-terrorism",
+      "img": "https://storage.googleapis.com/gpt-engineer-file-uploads/AwmrFUJUl1Miu5dNMpFBx8P372K3/social-images/social-1783516958074-CASP_Social_Logos_White.webp",
+      "sum": "恐怖组织博科圣地正在使用前沿AI技术。",
+      "lead": [
+        "文章探讨了恐怖组织博科圣地如何利用前沿AI技术。",
+        "这凸显了AI技术被恶意滥用的严峻安全风险，以及防范技术武器化的紧迫性。"
+      ],
+      "take": "极端组织使用前沿AI为技术伦理与内容安全敲响警钟，PM在设计产品时需将防滥用机制提升至更高优先级。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "WIRED",
+      "title": "Apple Is Suing OpenAI for Allegedly Stealing Hardware Secrets",
+      "url": "https://www.wired.com/story/apple-sues-openai-allegedly-stealing-ip-hardware/",
+      "img": "https://media.wired.com/photos/6a51395dba309b253cb3d458/master/pass/GettyImages-2233062347.jpg",
+      "sum": "苹果起诉OpenAI窃取硬件机密，称其鼓励挖角带秘。",
+      "lead": [
+        "苹果公司起诉OpenAI涉嫌窃取硬件商业机密。",
+        "苹果声称OpenAI鼓励被挖角员工带来机密演示文稿、秘密原型和关键供应商细节，用于制造AI设备。"
+      ],
+      "take": "巨头间的知识产权诉讼凸显了AI硬件赛道的竞争白热化，也提醒PM在涉及核心数据与竞业合规时需严守法律边界。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "The Verge",
+      "title": "Instagram’s Adam Mosseri: If you don’t like AI, ‘then you shouldn’t have it in your feed’",
+      "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/gettyimages-2239561028.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "Instagram负责人称若不喜欢AI内容就不该在推送中看到。",
+      "lead": [
+        "Instagram负责人Adam Mosseri表示，平台不应过滤掉AI内容，而应让用户知道内容是否由AI生成。",
+        "他区分了基于内容的排序和完全禁止AI，认为用户若不喜欢AI内容，就不该在信息流中看到它，主张将选择权交给用户。"
+      ],
+      "take": "社交平台对AI内容的“标识但不限流”策略，为内容型产品提供了AI生成内容治理的参考：透明度优先于一刀切封禁。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "nevo-project.epfl.ch",
+      "title": "AI-generated videos to maximally drive a target brain region",
+      "url": "https://nevo-project.epfl.ch/",
+      "img": "",
+      "sum": "研究利用AI生成视频以最大化刺激特定大脑区域。",
+      "lead": [
+        "EPFL的nevo项目发布最新研究，探索AI生成视频如何最大化地驱动特定大脑区域。",
+        "该研究结合了神经科学与生成式AI，为脑机接口与认知干预提供了新思路。"
+      ],
+      "take": "AI从“迎合偏好”走向“神经干预”，产品经理需关注生成式内容在医疗健康与神经科学领域的跨界应用潜力及伦理边界。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "The Verge",
+      "title": "Would you host part of an AI data center in your home?",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/963930/sunrun-distributed-ai-data-center",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/sunrun-distributed-compute1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "Sunrun推出分布式AI计算试点，付费让用户在家托管算力。",
+      "lead": [
+        "太阳能公司Sunrun推出“分布式AI计算”试点项目，将计算节点放置在装有太阳能和电池存储系统的用户家中。",
+        "参与该项目的用户将获得补偿，Sunrun则计划出售这些分布式算力，为AI数据中心提供新解法。"
+      ],
+      "take": "去中心化算力网络为AI基础设施提供了新解法，硬件与能源结合的商业模式创新值得智能硬件及边缘计算PM关注。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "WIRED",
+      "title": "A New Experiential Gallery Just Might Change Your Mind About AI Art",
+      "url": "https://www.wired.com/story/a-new-experiential-gallery-just-might-change-your-mind-about-ai-art/",
+      "img": "https://media.wired.com/photos/6a39b798580177a5599b11aa/master/pass/culture_dataland_Coral-Dreams-Stills-03.jpg",
+      "sum": "全球首个AI艺术博物馆Dataland融合可穿戴与生物识别。",
+      "lead": [
+        "号称全球首个AI艺术博物馆的Dataland正式亮相，旨在改变人们对AI艺术的看法。",
+        "该体验馆利用可穿戴设备和来自亚马逊的大量素材，将自然、生物识别技术与艺术相融合。"
+      ],
+      "take": "AI线下体验馆将技术具象化，为虚拟试穿、沉浸式互动等AI+文旅/零售场景提供了体验设计的灵感。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "WIRED",
+      "title": "Robot Dogs, Teslas, and Rescue Helicopters: The UN AI Summit Was a Lot",
+      "url": "https://www.wired.com/story/robot-dogs-teslas-and-rescue-helicopters-the-un-ai-summit-was-alot/",
+      "img": "https://media.wired.com/photos/6a4faec15defba4430906469/master/pass/GettyImages-2284616220.jpg",
+      "sum": "联合国AI峰会展示多项应用，探讨全球治理能否跟上技术。",
+      "lead": [
+        "联合国AI for Good峰会展示了机器狗、特斯拉和救援直升机等众多AI应用。",
+        "在硅谷乐观主义与现场编程演示中，峰会核心聚焦于全球治理能否在技术失控前迎头赶上的紧迫问题。"
+      ],
+      "take": "全球AI治理的加速将直接影响产品合规底线，PM需密切关注监管动向，提前在产品架构中预留合规扩展空间。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "pangram.com",
+      "title": "AI content is everywhere on social media, especially LinkedIn",
+      "url": "https://www.pangram.com/blog/ai-in-your-feed",
+      "img": "https://cdn.sanity.io/images/6vunltag/production/3c7bf7b542469d5572d664f321ec376ef719a9fe-1200x630.png",
+      "sum": "研究显示AI生成内容已泛滥于社交媒体，尤其是LinkedIn。",
+      "lead": [
+        "Pangram的分析指出，AI生成内容已在社交媒体上无处不在，LinkedIn尤为严重。",
+        "这反映了职场社交平台正面临AI生成内容泛滥的挑战，真实性与内容质量受到冲击。"
+      ],
+      "take": "职场社交平台成为AI水文重灾区，内容平台PM需警惕AI生成内容对社区生态的侵蚀，加速构建内容质量评估体系。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "WIRED",
+      "title": "OpenAI’s CEO of AGI Deployment, Fidji Simo, Is Stepping Down",
+      "url": "https://www.wired.com/story/fidji-simo-ceo-agi-deployment-openai/",
+      "img": "https://media.wired.com/photos/6a502a0f2e185717fadec4bb/master/pass/WEB_FIDJI%20SIMO-WIRED-2025-0Z2A8962_V3.jpg",
+      "sum": "OpenAI AGI部署CEO Fidji Simo因病休养后宣布卸任。",
+      "lead": [
+        "OpenAI负责AGI部署的CEO Fidji Simo宣布将卸任该职位。",
+        "此前Simo曾休了较长时间的病假，卸任后她将继续担任兼职顾问。"
+      ],
+      "take": "核心高管变动可能影响OpenAI的产品落地与商业化节奏，关注AGI部署策略的后续调整。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "techcrunch.com",
+      "title": "Anthropic’s new Claude feature is quietly selling you on AI - TechCrunch",
+      "url": "https://techcrunch.com/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/06/Claude-photo.jpg?w=1024",
+      "sum": "Anthropic推出Claude Reflect分析功能，侧面提升用户留存。",
+      "lead": [
+        "Anthropic为Claude推出名为Claude Reflect的新分析功能，可提供用户讨论主题、使用模式和求助任务类型的洞察。",
+        "在AI抵制声渐起的背景下，该功能通过展示AI的实际使用价值，巧妙地增强用户继续使用的意愿。"
+      ],
+      "take": "通过数据洞察反哺用户感知，是提升AI产品留存的高阶手段；将“后台数据”转化为“用户价值证明”值得PM借鉴。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "TechCrunch",
+      "title": "Open source AI matters more than ever, according to Hugging Face’s Clem Delangue",
+      "url": "https://techcrunch.com/podcast/open-source-ai-matters-more-than-ever-according-to-hugging-faces-clem-delangue/",
+      "img": "https://techcrunch.com/wp-content/uploads/2023/08/11f5fd43-3e13-4313-a003-9d36a81e3fde.png?resize=1200,602",
+      "sum": "Hugging Face CEO称开源AI空前重要，财富500强半数在用。",
+      "lead": [
+        "Hugging Face CEO Clem Delangue表示开源AI正在蓬勃发展，该公司已成长为AI界的GitHub。",
+        "目前约半数财富500强企业正在使用其平台共享和下载开源模型与数据集。",
+        "他观察到一种反复出现的现象：企业起初尝试闭源，最终往往转向开源方案。"
+      ],
+      "take": "开源模型在企业级市场的渗透率已极高，PM在做B端AI产品规划时，必须将开源生态兼容性作为核心考量。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "reuters.com",
+      "title": "China may restrict foreign access to Chinese open-source AI models",
+      "url": "https://www.reuters.com/technology/artificial-intelligence/china-weighs-silicon-curtain-around-sought-after-ai-models-2026-07-08/",
+      "img": "",
+      "sum": "路透社：中国可能限制外国访问中国开源AI模型。",
+      "lead": [
+        "据路透社报道，中国可能出台政策限制海外访问中国开源AI模型。",
+        "此举可能对全球开源AI生态产生重大影响，改变模型与数据的跨境流动格局。",
+        "这也意味着国内开源模型的国际化路径与海外开发者的使用策略可能需要调整。"
+      ],
+      "take": "开源AI的全球化正面临地缘政治风险，PM需重新评估依赖海外或国内开源模型的供应链安全与合规成本。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "LeRobot v0.6.0: Imagine, Evaluate, Improve",
+      "url": "https://huggingface.co/blog/lerobot-release-v060",
+      "img": "https://huggingface.co/blog/assets/lerobot-release-v060/thumbnail.png",
+      "sum": "Hugging Face发布LeRobot v0.6.0，强化想象与评估能力。",
+      "lead": [
+        "Hugging Face发布了面向真实世界机器人的开源库LeRobot v0.6.0版本。",
+        "新版本主打Imagine（想象）、Evaluate（评估）和Improve（改进）三大核心能力升级。",
+        "这进一步降低了具身智能（让AI拥有物理身体与环境交互）模型的开发与迭代门槛。"
+      ],
+      "take": "具身智能开源生态正在快速迭代，PM可关注AI从纯软件向软硬结合场景落地的产品化机会。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "PRX Part 4: Our Data Strategy",
+      "url": "https://huggingface.co/blog/Photoroom/prx-part4-data",
+      "img": "https://cdn-uploads.huggingface.co/production/uploads/680a58121b2c7c159d2bd481/hJldzOsDg5kYWJC_vyj09.png",
+      "sum": "Hugging Face发布PRX技术报告第四部分，阐述数据策略。",
+      "lead": [
+        "Hugging Face发布了PRX（后训练推理）技术报告的第四部分，重点阐述其数据策略。",
+        "该报告探讨了如何通过高质量的数据构建与处理，提升模型在后训练阶段的推理能力。",
+        "这为行业理解大模型推理能力提升的数据飞轮提供了重要参考。"
+      ],
+      "take": "数据策略正成为提升模型推理能力的关键，PM在做AI产品数据闭环时需重视高质量后训练数据的沉淀。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "DominoTree: Conditional Tree-Structured Drafting with Domino for Speculative Decoding",
+      "url": "https://arxiv.org/abs/2607.08642v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "DominoTree结合Domino推测解码，提升LLM推理速度",
+      "lead": [
+        "推测解码通过并行起草和验证token来加速LLM推理，但现有方法难以处理路径依赖的分布。",
+        "本文提出DominoTree，结合Domino起草器（基于GRU的因果修正）与树状结构，更好地表示路径依赖的token分布，从而提升推理效率。"
+      ],
+      "take": "LLM推理加速技术持续演进，树状推测解码有望进一步降低高并发场景下的推理成本。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.AI",
+      "title": "When Structured Sparse Autoencoders Learn Consistent Concepts Across Modalities",
+      "url": "https://arxiv.org/abs/2607.08605v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "S²AE解决视觉语言模型中稀疏自编码器跨模态概念不一致问题",
+      "lead": [
+        "稀疏自编码器（SAE）常用于大模型机制可解释性，但在视觉语言模型中难以学习跨模态一致的概念。",
+        "本文提出结构化稀疏自编码器（S²AE），强制概念在不同模态间保持一致性，解决视觉模态概念覆盖碎片化问题。"
+      ],
+      "take": "提升多模态大模型的可解释性，有助于产品侧更精准地定位和修复多模态幻觉或对齐问题。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "It Takes a MAESTRO To Prune Bad Experts",
+      "url": "https://arxiv.org/abs/2607.08601v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "MAESTRO通过马尔可夫链评估专家重要性，优化MoE模型剪枝",
+      "lead": [
+        "稀疏激活的MoE（混合专家）模型虽推理高效，但全量专家常驻内存导致部署困难，且现有剪枝方法忽略了路由的相互依赖。",
+        "本文提出MAESTRO，利用马尔可夫链评估专家重要性，实现更合理的MoE模型结构化剪枝，缓解部署内存瓶颈。"
+      ],
+      "take": "MoE模型轻量化新思路，能显著降低端侧或资源受限环境下部署大模型的硬件门槛。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "Improving Ad-hoc Search Effectiveness for Conversational Information Retrieval via Model Merging",
+      "url": "https://arxiv.org/abs/2607.08540v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "模型合并技术提升对话式信息检索的即席搜索效果",
+      "lead": [
+        "对话式信息检索需考虑历史上下文，传统微调方法成本高且泛化性差。",
+        "本文提出通过模型合并（无需重训练）来提升即席检索器在对话场景中的表现，兼顾低成本与泛化能力。"
+      ],
+      "take": "无需重训练即可增强检索模型的多轮对话能力，为RAG等产品的低成本迭代提供新路径。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "When the Judge Changes, So Does the Measurement: Auditing LLM-as-Judge Reliability",
+      "url": "https://arxiv.org/abs/2607.08535v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "审计发现LLM评判者升级后评分不可互换，存在测量有效性问题",
+      "lead": [
+        "使用LLM作为评判者时，即使候选回答不变，更换或升级评判模型也会导致分数变化。",
+        "研究将此定义为测量有效性问题，发现仅部分模型升级路径（如Qwen3 1.7B到4B）能保持稳健的相邻等级一致性。"
+      ],
+      "take": "依赖LLM做自动化评测的产品需警惕模型升级带来的评分漂移，评测基准需定期校准。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "Cross-seed explainability using Procrustes-conditioned Joint End-to-end Top-K Sparse Autoencoders",
+      "url": "https://arxiv.org/abs/2607.08499v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "普氏条件联合SAE实现跨种子训练的BERT特征对齐",
+      "lead": [
+        "机制可解释性面临跨种子特征普适性挑战：独立训练的模型特征空间因随机初始化而错位。",
+        "本文提出普氏条件联合端到端Top-K稀疏自编码器，通过正交普氏旋转提取跨种子的通用特征。"
+      ],
+      "take": "解决不同基座模型特征无法对齐的痛点，为构建标准化、可复用的模型特征库奠定基础。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "Cognitive-structured Multimodal Agent for Multimodal Understanding, Generation, and Editing",
+      "url": "https://arxiv.org/abs/2607.08497v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "认知结构多模态Agent解决长程对话视觉token爆炸问题",
+      "lead": [
+        "统一多模态模型在长程对话中易因视觉token爆炸和跨轮引用失效而受限。",
+        "本文提出认知结构多模态Agent，将视觉信息外化至情景视觉记忆（类似人脑情景记忆）并选择性激活，突破长程多模态交互瓶颈。"
+      ],
+      "take": "为多模态Agent的长程记忆和上下文管理提供了工程化解法，利好复杂多轮多模态应用。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "Ensemble Diversity Optimization for Subjective Supervision",
+      "url": "https://arxiv.org/abs/2607.08493v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "EDO框架优化主观NLP任务的集成多样性与校准",
+      "lead": [
+        "主观NLP任务常存在标注者分歧，模型需表达不确定性而非强行抹平。",
+        "本文提出集成多样性优化（EDO）框架，通过可微目标联合优化集成权重、有效基数和校准，端到端学习集成组成。"
+      ],
+      "take": "处理主观性任务（如内容审核、情感分析）时，输出不确定性比单一结论更具产品价值。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "Prompt Compression via Activation Aggregation",
+      "url": "https://arxiv.org/abs/2607.08399v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "通过激活聚合将提示词压缩为单一向量，实现无损加速",
+      "lead": [
+        "大模型处理提示词需多层激活传播，本文探索将指令信息压缩为单一激活向量并重新注入模型。",
+        "该方法通过提取中间层激活的加权和注入早期层，替代原始token序列，实现提示词压缩与推理加速。"
+      ],
+      "take": "极致的提示词压缩技术，可大幅降低系统提示词的token开销，提升API并发效率。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "Token-Flow Firewall: Semantic Runtime Auditing for Persistent AI Agents",
+      "url": "https://arxiv.org/abs/2607.08395v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "Token-Flow防火墙为持久化AI Agent提供语义运行时审计",
+      "lead": [
+        "持久化AI Agent的恶意内容可通过状态和工具交互传播，语义攻击面远大于传统对话助手。",
+        "本文提出Token-Flow防火墙，针对Agent自然语言token流（如记忆更新、工具参数）进行运行时语义审计，阻断安全风险传播。"
+      ],
+      "take": "Agent安全从单轮内容合规走向全生命周期审计，这是构建高可信自主Agent的必选项。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "arXiv cs.CL",
+      "title": "Towards Mechanistically Understanding Why Memorized Knowledge Fails to Generalize in Large Language Model Finetuning",
+      "url": "https://arxiv.org/abs/2607.08393v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "机制解释：LLM微调中记忆知识无法泛化的“知用鸿沟”",
+      "lead": [
+        "LLM微调注入新知识时，模型能快速记忆事实却无法用于推理，即存在“知用鸿沟”。",
+        "研究通过干预技术监测知识内部渗透动态，发现知识在模型中的空间渗透存在时间滞后，导致泛化慢于记忆。"
+      ],
+      "take": "揭示了RAG与微调在知识注入上的本质差异，产品侧不能指望微调能立竿见影地解决复杂推理问题。"
+    },
+    {
+      "hero": false,
+      "category": "research",
+      "src": "Google Research",
+      "title": "SensorFM: Towards a general intelligence and interface for wearable health data",
+      "url": "https://research.google/blog/sensorfm-towards-a-general-intelligence-and-interface-for-wearable-health-data/",
+      "img": "https://storage.googleapis.com/gweb-research2023-media/original_images/hero_blog_sensorfm.png",
+      "sum": "Google发布SensorFM，探索可穿戴健康数据的通用智能接口",
+      "lead": [
+        "Google Research发布SensorFM，旨在为可穿戴设备健康数据建立通用智能与接口。",
+        "该研究致力于将生成式AI与传感器数据结合，推动个性化健康监测与分析。"
+      ],
+      "take": "大模型向垂直传感数据延伸，为AI+智能穿戴设备的健康数据分析产品提供底层基座。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "36氪",
+      "title": "36氪首发 | 三个月融三轮，上交大00后博士让具身智能仿生扑翼机器人理解并驾驭流体",
+      "url": "https://36kr.com/p/3889516712065799?f=rss",
+      "img": "https://img.36krcdn.com/hsossms/20260710/v2_65133adab2b0471884c9250eef7228ae@6221844_oswg362165oswg1269oswg715_img_png?x-oss-process=image/quality,q_100/format,jpg/interlace,1",
+      "sum": "鹰瞰智翼获数千万元A轮融资，将推消费级具身智能扑翼机器人",
+      "lead": [
+        "具身智能仿生扑翼机器人公司「鹰瞰智翼」完成数千万元A轮融资，由元禾璞华领投，这是其三个月内第三轮融资。",
+        "资金将用于首款消费级产品Eagle X的量产备货与市场拓展，以及下一代具身智能扑翼机器人与流体仿真引擎的研发。",
+        "扑翼飞行（模仿鸟类通过拍打翅膀利用气流飞行）与旋翼无人机的本质差异在于对流体的处理方式，前者借势流体，后者对抗流体。"
+      ],
+      "take": "具身智能从实验室走向消费级量产，扑翼飞行借势流体的新范式为无人机产品形态和场景拓展提供了新思路。"
+    },
+    {
+      "hero": false,
+      "category": "biz",
+      "src": "36氪",
+      "title": "马斯克据悉要求特斯拉员工转向使用Grok",
+      "url": "https://36kr.com/newsflashes/3890551915411972?f=rss",
+      "img": "https://img.36krcdn.com/20191024/v2_1571894049839_img_jpg",
+      "sum": "马斯克要求特斯拉员工转向使用Grok，称其Token成本更低",
+      "lead": [
+        "马斯克在备忘录中要求特斯拉员工“尽可能”切换到使用Grok大模型。",
+        "其给出的理由是Grok 4.5的Token（模型处理文本的最小计费单位）成本低于竞争对手。",
+        "他还要求工程师直接通过电子邮件向他反馈该模型的使用情况与问题。"
+      ],
+      "take": "大模型在企业内部落地时，推理成本正成为核心考量因素，自研或生态内模型替代第三方产品的趋势明显。"
+    },
+    {
+      "hero": true,
+      "category": "policy",
+      "src": "9to5mac.com",
+      "title": "Apple sues OpenAI, accuses ex-employees of stealing trade secrets",
+      "url": "https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft/",
+      "img": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2026/05/apple-openai.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
+      "sum": "苹果起诉OpenAI，指控前员工窃取商业机密",
+      "lead": [
+        "苹果正式起诉OpenAI，指控其前员工窃取了苹果的商业机密。",
+        "此举凸显了AI领域人才争夺战背后日益激烈的知识产权冲突。"
+      ],
+      "take": "AI人才流动伴随极高的泄密风险，产品团队需强化核心技术的保密协议与离职审计。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "microsoft.github.io",
+      "title": "Show HN: Microsoft releases Flint, a visualization language for AI agents",
+      "url": "https://microsoft.github.io/flint-chart/#/",
+      "img": "",
+      "sum": "微软发布AI Agent可视化语言Flint",
+      "lead": [
+        "微软发布了Flint，一种专为AI Agent设计的可视化语言。",
+        "当前Agent生成图表面临两难：简单规格质量低，复杂规格又冗长且不可靠。Flint从语言层面解决了这一限制，使Agent能更可靠地生成高质量图表。"
+      ],
+      "take": "底层表达语言的创新能突破AI应用的上限，做AI+数据产品的PM可关注此类新范式。"
+    },
+    {
+      "hero": false,
+      "category": "policy",
+      "src": "Ars Technica",
+      "title": "Secret Claude tracker shocks users after Anthropic’s anti-surveillance stance",
+      "url": "https://arstechnica.com/tech-policy/2026/07/anthropic-outed-for-claude-tracker-that-secretly-monitored-chinese-users/",
+      "img": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/GettyImages-2277613277-1024x648.jpg",
+      "sum": "Anthropic被曝秘密追踪中国Claude用户，已紧急移除",
+      "lead": [
+        "安全研究员发现Anthropic在Claude Code中隐藏追踪代码，秘密监控中国用户。",
+        "该代码利用“提示隐写术”（在提示词中隐藏信息）进行追踪，虽非恶意，但严重违背了Anthropic一贯的反监控立场，引发信任危机，目前已被紧急移除。"
+      ],
+      "take": "数据隐私与合规是AI产品的生命线，任何“暗箱”操作都可能引发毁灭性的品牌信任危机。"
+    }
+  ]
+}
