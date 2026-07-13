@@ -1,0 +1,375 @@
+{
+  "date": "2026-07-13",
+  "categories": [
+    {
+      "code": "market",
+      "label": "市场与品牌",
+      "color": "#2b7fd6"
+    },
+    {
+      "code": "hardware",
+      "label": "新品与硬件",
+      "color": "#d6932b"
+    },
+    {
+      "code": "tech",
+      "label": "技术趋势",
+      "color": "#7a52cc"
+    },
+    {
+      "code": "community",
+      "label": "社区与玩家",
+      "color": "#0a8f6a"
+    }
+  ],
+  "items": [
+    {
+      "hero": true,
+      "category": "market",
+      "src": "The Verge",
+      "title": "One of SteelSeries’ best gaming headsets is over $100 off",
+      "url": "https://www.theverge.com/gadgets/964125/steelseries-arctis-nova-pro-wireless-headset-deal-sale",
+      "img": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25360143/akrales_220510_5209_0005.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "sum": "赛睿Arctis Nova Pro无线游戏耳机降价超100美元",
+      "lead": [
+        "SteelSeries has the Arctis Nova Pro Wireless gaming headset on sale for $239.99",
+        "currently between $300 and $350 at other retailers"
+      ],
+      "take": "高端电竞外设大幅让利，是品牌清库存或抢占市场的明显信号。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "r/MechanicalKeyboards",
+      "title": "Seen at a store in a mall",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1utwj2y/seen_at_a_store_in_a_mall/",
+      "img": "https://preview.redd.it/bk5d6k577och1.jpeg?width=640&crop=smart&auto=webp&s=84433505c109d8c709f9d449e83c5fa45b68074d",
+      "sum": "玩家在商场实体店发现酷炫机械键盘",
+      "lead": [
+        "Really cool keyboard my partner and I spotted today while in the mall"
+      ],
+      "take": "特色机械键盘正渗透线下商场渠道，品牌应关注实体展示与体验机会。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "r/MechanicalKeyboards",
+      "title": "Looks like keychron is moving up in the world",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1utdsi4/looks_like_keychron_is_moving_up_in_the_world/",
+      "img": "https://preview.redd.it/n2ecxii93kch1.jpeg?width=640&crop=smart&auto=webp&s=d53481018572d6d9e8de651cb167f7e8de517ee4",
+      "sum": "Keychron键盘入驻沃尔玛超市科技区",
+      "lead": [
+        "I've noticed that Walmart has been improving their tech section lately, so I decided to check it out. I didn't expect to see Keychron, but it makes perfect sense."
+      ],
+      "take": "Keychron进驻沃尔玛标志客制化品牌加速大众化与线下零售渠道拓展。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "gizmodo.com",
+      "title": "Razer Found a New Way to Print Money: Cinnamoroll Gaming Headphones - Gizmodo",
+      "url": "https://gizmodo.com/razer-found-a-new-way-to-print-money-cinnamoroll-gaming-headphones-2000784323",
+      "img": "",
+      "sum": "雷蛇与三丽鸥再合作，推出140美元Cinnamoroll游戏耳机。",
+      "lead": [
+        "Nothing could prepare us for Razer’s Kraken Kitty V2 BT, a pair of wireless gaming headphones with ears from Sanrio’s popular Cinnamoroll character.",
+        "The $140 gaming headphones are Razer and Sanrio’s latest collaboration."
+      ],
+      "take": "外设品牌与知名IP联名是提升溢价与破圈的有效手段，女性向及泛娱乐市场潜力巨大。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "cnet.com",
+      "title": "Give Your Desk a Retro Touch With These Keychron Keyboards While They're as Low as $40 - CNET",
+      "url": "https://www.cnet.com/deals/keychron-deals-at-woot/",
+      "img": "https://www.cnet.com/a/img/resize/7d6c899222d59754ae8ad3a53b81c50e81dac54b/hub/2026/07/07/7b6b7088-1789-4edd-9dec-b63bbe5e5cd6/untitled-design.png?auto=webp&amp;fit=crop&amp;height=675&amp;width=1200",
+      "sum": "Keychron机械键盘在Woot促销，价格低至40美元。",
+      "lead": [
+        "Give Your Desk a Retro Touch With These Keychron Keyboards While They're as Low as $40.",
+        "Right now Woot is having a sale on Keychron mechanical keyboards, which brings prices down to as low as $40. However, Woot is always full of"
+      ],
+      "take": "复古风潮与渠道特价是当前入门级机械键盘抢占桌面场景的利器。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "Deskthority",
+      "title": "For sale • Re: [WTS] [IT->EU] IBM Model F AT Keyboard",
+      "url": "https://deskthority.net/viewtopic.php?p=525698#p525698",
+      "img": "",
+      "sum": "欧区二手市场IBM Model F AT键盘降价出售。",
+      "lead": [
+        "For sale • Re: [WTS] [IT->EU] IBM Model F AT Keyboard",
+        "Price drop!"
+      ],
+      "take": "经典Model F在二手市场仍有流动性，价格波动反映复古客群购买力。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "gamespace.com",
+      "title": "HYTE Partners With ATLUS To Create Persona 30th Anniversary Lineup - GameSpace.com",
+      "url": "https://gamespace.com/all-articles/news/hyte-partners-with-atlus-to-create-persona-30th-anniversary-lineup/",
+      "img": "https://gamespace.com/wp-content/uploads/2026/06/hyte-p30.jpg",
+      "sum": "HYTE与ATLUS合作推出女神异闻录30周年桌面外设系列",
+      "lead": [
+        "HYTE Partners With ATLUS To Create Persona 30th Anniversary Lineup.",
+        "Persona’s 30th anniversary is getting the kind of celebration that makes sense for 2026, a set of desk accessories aimed squarely at fans who want their battlestation to look as invested in the series as they are."
+      ],
+      "take": "游戏IP联名桌面外设是提升客舱溢价与粉丝购买欲的有效路径。"
+    },
+    {
+      "hero": false,
+      "category": "market",
+      "src": "gizmodo.com",
+      "title": "Simon Says… Buy This OpenAI Mechanical Keyboard Thingy - Gizmodo",
+      "url": "https://gizmodo.com/simon-says-buy-this-openai-mechanical-keyboard-thingy-2000779283",
+      "img": "",
+      "sum": "OpenAI与Work Louder合作推出AI机械键盘将于7月15日发布",
+      "lead": [
+        "Simon Says… Buy This OpenAI Mechanical Keyboard Thingy",
+        "It's a collaboration between OpenAI and the mechanical keyboard company Work Louder. OpenAI and the mechanical keyboard company Work Louder are up to something on July 15, according to a vaguepost from the OpenAI Developers X account."
+      ],
+      "take": "AI大模型厂商亲自下场联名键盘，AI快捷键或成外设新标配。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "forbes.com",
+      "title": "ASUS Expands ProArt Range With Low-Profile Keyboard And Mouse - Forbes",
+      "url": "https://www.forbes.com/sites/marksparrow/2026/07/12/asus-expands-proart-range-with-low-profile-keyboard-and-mouse/",
+      "img": "https://imageio.forbes.com/specials-images/imageserve/6a520d30d68a10abe3da4d1c/0x0.jpg?format=jpg&amp;height=900&amp;width=1600&amp;fit=bounds",
+      "sum": "华硕扩展ProArt系列，发布KD300低剖面机械键盘及MD301鼠标",
+      "lead": [
+        "ASUS Expands ProArt Range With Low-Profile Keyboard And Mouse.",
+        "The ProArt Keyboard KD300 and MD301 mouse aim for minimalist, high-performance designs.",
+        "The KD300 is a 65% low-profile mechanical keyboard featuring tri-mode connectivity for up to five devices, an active touch panel, and ASUS RX Red L"
+      ],
+      "take": "低剖面与多设备连接成创作者外设新趋势，触控板集成值得厂商关注。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "r/MechanicalKeyboards",
+      "title": "Tofu60 3.0 Champagne",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1utr4r7/tofu60_30_champagne/",
+      "img": "https://preview.redd.it/75rmyqdc4nch1.jpg?width=140&height=94&auto=webp&s=ee4e9691879195aa2fb805e9d6284481c47cf6a2",
+      "sum": "Tofu60 3.0香槟色套件搭配HMX轴及碳纤维板",
+      "lead": [
+        "Champagne Top and Bottom GMK Abstract HMX Sunset Gleam V2 Carbon Fiber Plate"
+      ],
+      "take": "香槟色外壳配碳纤维定位板，高端材质与复古配色组合受玩家青睐。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "gamerant.com",
+      "title": "Brand-New Xbox Controller Officially Revealed, Releases in August - GameRant",
+      "url": "https://gamerant.com/new-xbox-controller-reveal-gamesir-t7-pro-retro-green/",
+      "img": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2026/07/xbox-logo-1.jpg?w=1600&amp;h=900&amp;fit=crop",
+      "sum": "Xbox官方发布全新透明绿色授权手柄，8月上市。",
+      "lead": [
+        "Xbox has officially added another controller to its growing lineup of licensed accessories, and this one is a blast from the past.",
+        "A brand-new controller sporting a transparent green design is on the way, along a plethora of ha"
+      ],
+      "take": "透明复古设计外设正成为厂商唤醒玩家情怀的重要设计语言。"
+    },
+    {
+      "hero": false,
+      "category": "hardware",
+      "src": "gamespace.com",
+      "title": "8BitDo Celebrates N64’s 30th With Clear Blue Retro Keyboard And Ultimate 2 Controller - GameSpace.com",
+      "url": "https://gamespace.com/all-articles/news/8bitdo-celebrates-n64s-30th-with-clear-blue-retro-keyboard-and-ultimate-2-controller/",
+      "img": "https://gamespace.com/wp-content/uploads/2026/06/8bitdo-nintendo-retro.jpg",
+      "sum": "8BitDo推出N64 30周年透明蓝复古键盘及手柄",
+      "lead": [
+        "8BitDo Celebrates N64’s 30th With Clear Blue Retro Keyboard And Ultimate 2 Controller.",
+        "If you grew up staring through translucent plastic at a tangle of N64 circuit boards, 8BitDo has a very specific nostalgia hit lined up for you. To mark the Nintendo 64’s 30th anniversary, the company is rolling"
+      ],
+      "take": "复古透明外壳设计持续吃香，怀旧主机IP仍是外设差异化破局点。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "r/MechanicalKeyboards",
+      "title": "They are sloping keyswitch description images now.",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uthtwm/they_are_sloping_keyswitch_description_images_now/",
+      "img": "https://preview.redd.it/n8zkrrx88lch1.png?width=640&crop=smart&auto=webp&s=9ac87c8d1742721eaf080d96e5b98e120d74896f",
+      "sum": "速卖通Glorious Lynx轴体商品图采用倾斜展示",
+      "lead": [
+        "Saw this for the Glorius Lynx keyswitch. It would be kind of nice XD. Is it slop or am I missing something?",
+        "EDIT : This image is from an Aliexpress listing."
+      ],
+      "take": "轴体电商展示图尝试新视角，视觉营销创新需兼顾玩家对参数严谨性的认知。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "Deskthority",
+      "title": "Keyboards • Re: I made new Model F output PS/2",
+      "url": "https://deskthority.net/viewtopic.php?p=525699#p525699",
+      "img": "https://deskthority.net/images/smilies/icon_e_wink.gif",
+      "sum": "Model F新控制器实现PS/2输出，讨论子板引脚兼容性。",
+      "lead": [
+        "The daughterboard is pin compatible with the solenoid wiring but uses additional pins in the IO expander that is in the Leyden Jar controller.",
+        "I plan to remove those additional pins in a later revision of the daugherbaord so that it is fully compatible with the connector of the solenoid driver."
+      ],
+      "take": "经典键盘现代化改造需兼顾原生硬件兼容性，开源控制器迭代为客制化提供新思路。"
+    },
+    {
+      "hero": false,
+      "category": "tech",
+      "src": "Deskthority",
+      "title": "Keyboards • Re: I made new Model F output PS/2",
+      "url": "https://deskthority.net/viewtopic.php?p=525700#p525700",
+      "img": "",
+      "sum": "玩家自制Model F PS/2输出方案，讨论子板兼容性。",
+      "lead": [
+        "Keyboards • Re: I made new Model F output PS/2",
+        "Ah, ok, too bad the daughterboard won't be compatible with the xwhatsit controllers, but I understand the need for level shifters (just forgot about them in the last message). My preferred way is anyway to use the same connector as USB, so there is no need to add an additional hole in the case (or t"
+      ],
+      "take": "客制化控制器改造需兼顾电平转换与外壳开孔美学，兼容性是痛点。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "This weeks keyboard builds! 🙌🏼",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uuq6bi/this_weeks_keyboard_builds/",
+      "img": "https://preview.redd.it/rvndyffcwuch1.jpg?width=140&height=140&crop=1:1,smart&auto=webp&s=9028146c25065c1ca71d1ac37d134bad2a911649",
+      "sum": "社区玩家分享本周客制化键盘组装，Keyboy Advance设计受热捧",
+      "lead": [
+        "I wanted to start by saying a massive thank you to everyone who stopped by to chat, lurk, or just kept me company while I built boards!",
+        "This week I built the Keyboy Advance, everyone was stoked for this one.",
+        "I think it’s such a clever design because you can actual"
+      ],
+      "take": "巧妙的创新结构设计是激发社区组装热情和话题度的关键。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "10U Gang",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uuj152/10u_gang/",
+      "img": "https://preview.redd.it/ofc5eaz1ltch1.jpg?width=140&height=105&auto=webp&s=96842f55fe24c99db2e731a1a94dcf6cca978e57",
+      "sum": "玩家展示10U配列TKL组装，采用HMX Lotus轴与GMK日文键帽",
+      "lead": [
+        "Classic TKL PP Plate HMX Lotus GMK WoB Katakana / JTK Russian",
+        "submitted by /u/Key_Statistician_182 [link] [comments]"
+      ],
+      "take": "HMX轴体与异国语言键帽搭配仍是社区高热度审美组合。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Deskthority",
+      "title": "Keyboards • Re: I made new Model F output PS/2",
+      "url": "https://deskthority.net/viewtopic.php?p=525704#p525704",
+      "img": "https://deskthority.net/images/smilies/icon_e_smile.gif",
+      "sum": "Model F实现PS/2输出，项目不依赖QMK/VIA引社区关注",
+      "lead": [
+        "If the PS/2 daughterboard works I'd gladly send one to you",
+        "I find your project to not depend on QMK/VIA(L) repository very cool"
+      ],
+      "take": "脱离QMK/VIA的硬核改键方案，在复古键盘圈仍有独特需求。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "What’s your favourite game?",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1uudf32/whats_your_favourite_game/",
+      "img": "https://preview.redd.it/j7yezsphfsch1.jpg?width=140&height=105&auto=webp&s=8273945ae89c5b3fe5b753856b59ee3c4cbdc8aa",
+      "sum": "玩家展示Geon Frog Mini等客制化键盘配置",
+      "lead": [
+        "Mine is Dota. Featuring: Geon Frog Mini GMK dualshot WS Pearl Knight v3 SS halfplate Let me know what you think."
+      ],
+      "take": "游戏场景仍是客制化键盘重要展示语境，可结合热门游戏做主题营销。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "r/MechanicalKeyboards",
+      "title": "A fun coloring project...",
+      "url": "https://www.reddit.com/r/MechanicalKeyboards/comments/1utgfyt/a_fun_coloring_project/",
+      "img": "https://preview.redd.it/4yx5vlbhtkch1.jpg?width=140&height=93&auto=webp&s=06d45544968774325ba8e42fcdfc856f7834365d",
+      "sum": "玩家手工丙烯涂装Neo60 Core外壳打造主题键盘",
+      "lead": [
+        "neo60core gmk camping classic base hmx snowcrash I painted another Neo60 Core! Last time I did Kyogre, and this time I went with Rayquaza.",
+        "The case was hand-painted with acrylics. I started with a green base coat, then lightly brushed a layer of gold over it to give it a bit more depth and texture."
+      ],
+      "take": "手工涂装展现极强DIY需求，品牌可考虑推出素壳或联名涂装版。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Deskthority",
+      "title": "Off-topic • Is forum working better?",
+      "url": "https://deskthority.net/viewtopic.php?p=525701#p525701",
+      "img": "https://deskthority.net/images/smilies/icon_razz.gif",
+      "sum": "老玩家回归论坛，分享免费获得近乎全新芬兰版Model M。",
+      "lead": [
+        "Is it just me or is this site/forum working better now?",
+        "Scored almost mint finnish Model M for free few months ago and it reminded me of this community."
+      ],
+      "take": "经典Model M仍是维系社区情感的重要纽带，复古键盘市场长尾需求稳固。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "KeebTalk",
+      "title": "One-handed keyboard for temporary use?",
+      "url": "https://www.keebtalk.com/t/one-handed-keyboard-for-temporary-use/24187",
+      "img": "https://www.keebtalk.com/images/emoji/apple/slight_smile.png?v=15",
+      "sum": "开发者因伤需单手打字，社区求助单手键盘推荐。",
+      "lead": [
+        "A friend of mine has an injured left arm, surgery & recovery happening soon, and they’re facing a long period with basically only their dominant right hand available.",
+        "We’re looking for recommendations for a keyboard that would assist them during thi"
+      ],
+      "take": "单手键盘不仅是小众客制化品类，在无障碍与康复场景下存在真实的刚需市场。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Deskthority",
+      "title": "Keyboards • Re: DEC VT100 terminal keycaps",
+      "url": "https://deskthority.net/viewtopic.php?p=525690#p525690",
+      "img": "https://deskthority.net/images/smilies/icon_lol.gif",
+      "sum": "社区讨论DEC VT100终端键帽，寻求更多相关信息。",
+      "lead": [
+        "yes very helpful, thanks harry12!",
+        "Anyone else?"
+      ],
+      "take": "复古终端键帽设计是当前键帽文化的重要灵感来源，复古风潮持续影响玩家审美。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Deskthority",
+      "title": "Off-topic • Re: Is forum working better?",
+      "url": "https://deskthority.net/viewtopic.php?p=525703#p525703",
+      "img": "",
+      "sum": "Deskthority键盘社区用户反馈论坛访问体验改善。",
+      "lead": [
+        "Is it just me or is this site/forum working better now?",
+        "Statistics: Posted by kbdfr — Yesterday, 07:52"
+      ],
+      "take": "老牌客制化社区的稳定性对维系核心硬核玩家至关重要。"
+    },
+    {
+      "hero": false,
+      "category": "community",
+      "src": "Deskthority",
+      "title": "Group buys • Re: Beam Spring 104+SSK Reproduction Project!  First Batch In Stock, Shipping early next year after New Model F Project",
+      "url": "https://deskthority.net/viewtopic.php?p=525702#p525702",
+      "img": "",
+      "sum": "Beam Spring复刻项目讨论，用户询问经典款外壳材质。",
+      "lead": [
+        "Group buys • Re: Beam Spring 104+SSK Reproduction Project! First Batch In Stock, Shipping early next year after New Model F Project",
+        "Hello, what is the outer casing of the Classic style Beamspring keyboards made of?"
+      ],
+      "take": "经典大轴复刻项目持续受关注，外壳材质等细节成玩家讨论焦点。"
+    }
+  ]
+}
