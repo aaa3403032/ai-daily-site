@@ -1,0 +1,362 @@
+{
+  "date": "2026-07-14",
+  "generated_at": "2026-07-14T12:05:55+08:00",
+  "categories": [
+    {
+      "code": "llm",
+      "label": "大模型",
+      "color": "#4b3bff"
+    },
+    {
+      "code": "agent",
+      "label": "Agent·智能体",
+      "color": "#0a8f6a"
+    },
+    {
+      "code": "product",
+      "label": "产品与工具",
+      "color": "#d6932b"
+    },
+    {
+      "code": "enterprise",
+      "label": "企业落地",
+      "color": "#0891b2"
+    },
+    {
+      "code": "oss",
+      "label": "开源发布",
+      "color": "#c8472b"
+    }
+  ],
+  "items": [
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "anthropic.com",
+      "title": "A global workspace in language models",
+      "url": "https://www.anthropic.com/research/global-workspace",
+      "img": "https://cdn.sanity.io/images/4zrzovbb/website/fbdc967f9f3d88566f25b21cce7ef523b3fabbbb-1280x720.jpg",
+      "sum": "Anthropic发布大模型全局工作空间理论研究",
+      "lead": [
+        "Anthropic发布最新研究，探讨大语言模型中的全局工作空间理论。",
+        "该理论源自认知科学，试图解释意识如何从大脑的分布式模块中涌现，现被用于解析大模型的信息整合机制。"
+      ],
+      "take": "理解大模型的类脑工作机制，有助于PM在设计AI产品时更好地预判模型的能力边界和涌现行为。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "arXiv cs.AI",
+      "title": "Playful AI in Professional Email: A Field Experiment on Tone and Recipient Engagement",
+      "url": "https://arxiv.org/abs/2607.11749v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "研究称GPT-5改写活泼语气邮件可提升收件人参与度",
+      "lead": [
+        "一项针对6家公司121名员工的田野实验发现，使用GPT-5将工作邮件改写为活泼语气，能显著提升收件人的情感积极性。",
+        "在16880封邮件的对比中，活泼语气的AI辅助写作比专业语气或纯人工写作更能促进互动。"
+      ],
+      "take": "AI辅助写作不仅提升效率，更能通过语气调控改变沟通效果，为职场SaaS产品的AI功能设计提供了新切入点。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "36氪",
+      "title": "字节探索自动驾驶，Seed世界模型团队负责｜36氪独家",
+      "url": "https://36kr.com/p/3893815451417347?f=rss",
+      "img": "https://img.36krcdn.com/hsossms/20260713/v2_5186d1a5cd5848a1850569e3228cf74c@6215398_oswg41960oswg1080oswg335_img_000?x-oss-process=image/format,jpg/interlace,1",
+      "sum": "36氪独家：字节Seed世界模型团队探索自动驾驶",
+      "lead": [
+        "36氪获悉，字节跳动正由Seed旗下周畅的世界模型团队牵头，探索进入自动驾驶领域，疑似布局无人物流场景。",
+        "字节官方回应称仅为AI大模型及物理AI（具身智能等与现实世界交互的AI）的早期研究探索，并无做智能驾驶业务的计划。"
+      ],
+      "take": "世界模型与自动驾驶的技术同源，大模型团队向物理AI延伸是必然趋势，PM需关注具身智能的底层技术复用逻辑。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "reuters.com",
+      "title": "Breakingviews - The good, bad and ugly of AI’s economic impact - Reuters",
+      "url": "https://www.reuters.com/commentary/breakingviews/good-bad-ugly-ais-economic-impact-2026-07-09/",
+      "img": "",
+      "sum": "路透社：AI替代人类工作能力8个月内翻两番",
+      "lead": [
+        "路透社评论文章指出，美国AI安全中心数据显示，顶尖大模型替代人类员工的能力在8个月内翻了两番。",
+        "这解释了菲律宾呼叫中心仍在快速招聘的同时，美国放射科医生数量却在下降等劳动力市场分化现象。"
+      ],
+      "take": "AI对劳动力市场的替代效应正在加速显性化，PM在设计产品时应将“人机协同”作为核心考量，而非单纯追求全自动替代。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "techcrunch.com",
+      "title": "New York Times says OpenAI hid evidence in ChatGPT copyright trial",
+      "url": "https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/",
+      "img": "https://techcrunch.com/wp-content/uploads/2024/12/GettyImages-2187615188.jpg?resize=1200,800",
+      "sum": "纽约时报指控OpenAI在版权案中隐瞒证据",
+      "lead": [
+        "纽约时报向法庭指控OpenAI在ChatGPT版权侵权案中故意隐瞒证据。",
+        "此案版权争议持续升级，可能对未来AI训练数据的使用规范产生深远影响。"
+      ],
+      "take": "版权诉讼的走向将直接影响AI行业的合规成本和数据获取模式，PM需密切关注生成式AI的版权红线。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/7Bf5twKHcGsjM0T5u43cg6/35ba64ea71cbb3590f551f7727c6cf71/Frame-1.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "GPT-5.6成为微软365 Copilot首选模型",
+      "lead": [
+        "OpenAI宣布GPT-5.6已成为Microsoft 365 Copilot的首选模型。",
+        "该模型将为Word、Excel等办公应用提供更强的AI能力，提升工作效率和输出质量。"
+      ],
+      "take": "顶级大模型迅速下沉至国民级办公套件，AI Native办公体验的门槛正在被极速拉高。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "GPT-5.5 Bio Bug Bounty",
+      "url": "https://openai.com/index/bio-bug-bounty",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/3dibW4TSEOQpjByxBjnpr2/6ba1a2ed9346620e8788b3e013594469/bug_bounty_16_9.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI推出GPT-5.5生物安全漏洞赏金计划",
+      "lead": [
+        "OpenAI针对GPT-5.5推出生物安全漏洞赏金计划（Bug Bounty，悬赏找漏洞）。",
+        "旨在通过社区力量发现和修复模型在生物安全领域的潜在风险。"
+      ],
+      "take": "随着模型能力逼近临界点，生物安全成为红线，PM在设计高能力模型应用时必须前置考虑安全合规风控。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "GPT-5.6: Frontier intelligence that scales with your ambition",
+      "url": "https://openai.com/index/gpt-5-6",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/3T0kxQLJk1VcXVxMwXF97J/4345df401f2b08ed6a1eef88c9588d2e/OAI_ChatGPTWork_ModelBlog_OpenGraph_16x9_1200x630.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI发布GPT-5.6：更强性能与更高性价比",
+      "lead": [
+        "OpenAI正式发布GPT-5.6模型，强调每个token（模型处理文本的最小单位）都能提供更高智能，且性能价格比进一步提升。",
+        "该模型旨在为最复杂的任务提供按需扩展的强大能力。"
+      ],
+      "take": "大模型进入“加量不加价”的算力通胀期，PM可借此降低高并发AI产品的边际成本。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "ChatGPT is now a partner for your most ambitious work",
+      "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/6wfXqEBNT0QiATjSpde6f4/fabc58fe0784ec397ec34b9e570e1700/OAI_ChatGPTWork_ProductBlog_OpenGraph_16x9_1200x630.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI发布ChatGPT Work：可跨应用操作的智能体",
+      "lead": [
+        "OpenAI推出ChatGPT Work，这是一个能够跨应用和文件执行操作的智能体（Agent，能自主执行任务的AI）。",
+        "它可以长时间跟进一个项目，将用户的宏观目标转化为最终的工作成果。"
+      ],
+      "take": "从对话工具走向自主执行项目的Agent，这标志着AI产品交互范式从“回合制辅助”向“托管式执行”的跃迁。"
+    },
+    {
+      "hero": false,
+      "category": "llm",
+      "src": "OpenAI",
+      "title": "Our approach to government and national security partnerships",
+      "url": "https://openai.com/index/government-national-security-partnerships",
+      "img": "https://images.ctfassets.net/kftzwdyauwt9/2h3zDXkAt00qFTGsCqrLuV/f4b2ed4ee96f72220d4f6ddc9924a01a/Frame-1.png?w=1600&amp;h=900&amp;fit=fill",
+      "sum": "OpenAI发布政府与国家安全合作原则",
+      "lead": [
+        "OpenAI阐述了其与政府及国家安全机构合作的方针。",
+        "强调了负责任地使用AI、民主问责制和公共安全等核心原则。"
+      ],
+      "take": "拥抱政企和国家安全场景是OpenAI商业化的重要一步，也为AI公司切入G端市场提供了合规范本。"
+    },
+    {
+      "hero": false,
+      "category": "agent",
+      "src": "36氪",
+      "title": "荣耀与阿里将开展AI智能体终端合作",
+      "url": "https://36kr.com/newsflashes/3894943679167744?f=rss",
+      "img": "https://img.36krcdn.com/20191024/v2_1571894049839_img_jpg",
+      "sum": "荣耀与阿里将合作，联手探索下一代终端操作系统Agentic OS落地。",
+      "lead": [
+        "荣耀将于7月18日在2026世界人工智能大会举办分论坛，探讨AI从“工具”到“伙伴”的演进。",
+        "阿里高管许主洪的加入引发合作猜想，内部渠道证实双方将官宣重磅合作。",
+        "联手方向极有可能是下一代终端操作系统 Agentic OS（具备自主感知与执行能力的智能体操作系统）的落地实践。"
+      ],
+      "take": "终端OS向Agentic OS演进，意味着产品交互将从“人找功能”转向“智能体代劳”，PM需重构终端产品的任务分发与交互逻辑。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "neow.in",
+      "title": "Samsung Health app threatens data deletion if users opt out AI training",
+      "url": "https://neow.in/cWsyMTV3",
+      "img": "https://cdn.neowin.com/news/images/uploaded/2026/07/1783952968_samsung-health_story.webp",
+      "sum": "三星健康App威胁退出AI训练将删数据",
+      "lead": [
+        "三星健康App更新政策，若用户拒绝其数据用于AI模型训练，将面临数据被删除的风险。",
+        "此举引发了关于用户数据权益与AI数据获取之间平衡的广泛争议。"
+      ],
+      "take": "产品在获取AI训练数据时，强制性的二选一策略极易引发用户反弹，需谨慎评估合规与公关风险。"
+    },
+    {
+      "hero": true,
+      "category": "product",
+      "src": "WIRED",
+      "title": "Siri AI Is Becoming Apple’s Everything Tool",
+      "url": "https://www.wired.com/story/siri-ai-is-now-apple-everything-tool/",
+      "img": "https://media.wired.com/photos/6a55464e20012bbe11800495/master/pass/Siri-Apple-Everything-Tool-Gear-2260718787.jpg",
+      "sum": "苹果重塑Siri为全能工具，iOS 27公测发布",
+      "lead": [
+        "苹果发布了iOS 27的首个公测版，全面重塑的Siri AI成为核心。",
+        "新版Siri不再仅是语音助手，而是作为iPhone用户体验的底层骨干，深度整合系统功能。"
+      ],
+      "take": "语音助手向系统级OS Copilot演进，产品经理需思考如何将AI能力从单点功能转化为全局交互入口。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "reuters.com",
+      "title": "Over 200 experts call for urgent action to tackle AI's economic impact - Reuters",
+      "url": "https://www.reuters.com/business/over-200-experts-call-urgent-action-tackle-ais-economic-impact-2026-07-13/",
+      "img": "",
+      "sum": "200余位专家呼吁紧急应对AI经济冲击",
+      "lead": [
+        "包括15位诺奖得主及OpenAI等机构研究员在内的200多名专家联合发声。",
+        "他们敦促各国政府与科技领袖紧急制定政策，以应对AI对经济带来的深远影响。"
+      ],
+      "take": "AI产品的社会外部性正受到顶级学界和业界关注，PM在规划产品时需提前考量政策合规与就业替代风险。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "Anthropic starts localizing Claude pricing for India, its biggest market after the US",
+      "url": "https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/",
+      "img": "https://techcrunch.com/wp-content/uploads/2026/04/GettyImages-2269811684.jpg?w=1024",
+      "sum": "Anthropic在印度本地化Claude订阅定价",
+      "lead": [
+        "Claude在印度的用户开始看到以印度卢比计价的订阅方案。",
+        "印度是Anthropic仅次于美国的最大市场，此举旨在降低支付摩擦并扩大本土用户基础。"
+      ],
+      "take": "AI出海产品的定价策略需因地制宜，本地货币计价是提升新兴市场付费转化率的基础操作。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "TechCrunch",
+      "title": "Waze adds new AI-powered features and customization updates",
+      "url": "https://techcrunch.com/2026/07/13/waze-adds-new-ai-powered-features-and-customization-updates/",
+      "img": "https://techcrunch.com/wp-content/uploads/2022/08/GettyImages-1235613908.jpg?resize=1200,806",
+      "sum": "Waze整合Gemini AI推出对话式路况报告等新功能",
+      "lead": [
+        "谷歌将旗舰AI助手Gemini整合进Waze，推出对话式语音报告路况等四项更新。",
+        "驾驶员可通过自然语言语音指令报告交通事故或建议地图更新，同时增加了个性化定制选项。",
+        "此举反映了谷歌将Gemini全面整合进产品线的战略，也使Waze更好地与Apple Maps竞争。"
+      ],
+      "take": "语音交互正在重塑传统工具类App的操作流，结合大模型能力的自然语言指令可大幅降低用户输入成本。"
+    },
+    {
+      "hero": false,
+      "category": "product",
+      "src": "arXiv cs.AI",
+      "title": "Transformer-Guided Swarm Intelligence for Frugal Neural Architecture Search",
+      "url": "https://arxiv.org/abs/2607.11826v1",
+      "img": "/static/browse/0.3.4/images/arxiv-logo-fb.png",
+      "sum": "提出基于Transformer的轻量级神经架构搜索框架",
+      "lead": [
+        "传统神经架构搜索（NAS：自动设计深度学习模型架构的技术）需消耗海量算力，该论文提出了一种节俭的框架。",
+        "它结合了基于强化学习的自回归Transformer控制器进行全局宏观搜索，以及群体智能（模拟生物群体行为的优化算法）进行局部微观开发。",
+        "该方法旨在让普通消费级硬件也能进行模型架构设计，降低算力门槛。"
+      ],
+      "take": "算力平权是AI基建的重要趋势，轻量级NAS让中小团队在端侧或消费级显卡上定制模型成为可能。"
+    },
+    {
+      "hero": false,
+      "category": "enterprise",
+      "src": "careersatdoordash.com",
+      "title": "Building Food Metadata with LLM Juries",
+      "url": "https://careersatdoordash.com/blog/building-food-metadata-with-llm-juries-context-optimization-multimodal-ai/",
+      "img": "",
+      "sum": "DoorDash用LLM陪审团机制构建食品元数据",
+      "lead": [
+        "DoorDash分享了如何利用LLM Juries（即多个大模型投票决策机制）来构建高质量的食品元数据。",
+        "该机制通过多模型交叉验证，有效解决了单一模型在提取复杂属性时容易出错的问题，显著提升了数据准确性。"
+      ],
+      "take": "多模型投票机制是提升AI数据提取准确性的有效工程解法，适合对准确率要求高的产品场景。"
+    },
+    {
+      "hero": false,
+      "category": "enterprise",
+      "src": "techstackups.com",
+      "title": "LLMs for technical editing: The good, the bad, and the ugly",
+      "url": "https://techstackups.com/articles/llms-for-technical-editing-the-good-the-bad-and-the-ugly/",
+      "img": "https://techstackups.com/img/articles/llms-for-technical-editing-the-good-the-bad-and-the-ugly/cover.jpg",
+      "sum": "探讨LLM在技术编辑工作流中的优劣与实践",
+      "lead": [
+        "文章全面评估了LLM在技术编辑工作流中的实际表现，指出了其优势与局限。",
+        "好的方面是能提升效率，坏的方面是可能产生事实性错误，丑陋的方面则是过度依赖可能导致内容同质化。"
+      ],
+      "take": "引入LLM辅助编辑时，需设计人机协同流程，重点防范事实幻觉与内容同质化风险。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "github.com",
+      "title": "Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop",
+      "url": "https://github.com/rowboatlabs/rowboat",
+      "img": "https://opengraph.githubassets.com/2f3976177b25e55fa8d0e2f565852b22e1884c38b8c4037cfd3c217c04101b6f/rowboatlabs/rowboat",
+      "sum": "Rowboat：开源本地优先的Claude Desktop替代，主打工作台模式",
+      "lead": [
+        "Rowboat是一款开源且本地优先的AI桌面应用，定位为Claude Desktop的替代品。",
+        "它将AI交互从单纯的聊天模式转变为完整的工作台模式，允许用户在应用内构建自定义的工作界面。",
+        "该项目旨在让AI深度融入日常工作流，而不仅仅是作为对话工具。"
+      ],
+      "take": "从Chat到Workbench的演进提示PM：AI原生应用需从对话交互走向深度嵌入业务流的定制化工作台。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "Data for Agents",
+      "url": "https://huggingface.co/blog/nvidia/open-data-for-agents",
+      "img": "https://cdn-uploads.huggingface.co/production/uploads/68d2fec8856b85d927e44d32/P3b9bOHrdkEJeAcWX6FoW.gif",
+      "sum": "Hugging Face发布Agent专属数据资源",
+      "lead": [
+        "Hugging Face发布了专注于AI Agent的数据资源（Data for Agents）。",
+        "该资源旨在解决Agent在规划、工具调用等复杂场景下的训练数据匮乏问题。",
+        "为开发者训练和评估更强大的Agent提供了基础数据燃料。"
+      ],
+      "take": "Agent能力突破受限于高质量数据，专属数据集的开放将直接降低Agent类产品的研发门槛。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "Hugging Face",
+      "title": "Native-speed vLLM transformers modeling backend",
+      "url": "https://huggingface.co/blog/native-speed-vllm-transformers-backend",
+      "img": "https://huggingface.co/blog/assets/native-speed-vllm-transformers-backend/thumbnail.png",
+      "sum": "vLLM推出原生速度的Transformers建模后端",
+      "lead": [
+        "vLLM为Hugging Face Transformers库推出了新的建模后端，旨在提供原生级别的推理速度。",
+        "该后端将vLLM的高效推理能力直接集成到Transformers生态中，降低开发者优化部署的门槛。",
+        "这意味着在使用Transformers加载模型时，可无缝享受vLLM带来的性能提升。"
+      ],
+      "take": "基础设施层的性能优化不断下探，PM需关注推理成本与延迟的持续下降对AI应用商业化的加速效应。"
+    },
+    {
+      "hero": false,
+      "category": "oss",
+      "src": "github.com",
+      "title": "Show HN: Otari: your open-source LLM control plane",
+      "url": "https://github.com/mozilla-ai/otari",
+      "img": "https://repository-images.githubusercontent.com/1199379933/3fab2474-bec2-48b7-a275-86d2646109f5",
+      "sum": "Otari：开源LLM控制平面",
+      "lead": [
+        "Otari是一个开源的LLM控制平面（Control Plane，即统一管理和调度模型的管控层）项目。",
+        "它提供模型路由、负载均衡、权限控制等核心企业级管控功能。",
+        "这填补了LLM基础设施中关于统一网关与管控的开源空白。"
+      ],
+      "take": "LLM应用进入深水区，统一管控与路由的“控制平面”成为企业级AI平台的刚需基建。"
+    }
+  ]
+}
